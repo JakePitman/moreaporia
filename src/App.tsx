@@ -3,6 +3,7 @@ import "./App.css";
 import ComingSoon from "./components/ComingSoon";
 
 function App() {
+  document.title = "Moreaporia";
   return (
     <div className="App">
       <ComingSoon />
