@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/moreaporia/static/css/main.073c9b0a.css",
+    "main.js": "/moreaporia/static/js/main.01de1a26.js",
+    "static/js/787.2fc9bcc6.chunk.js": "/moreaporia/static/js/787.2fc9bcc6.chunk.js",
+    "index.html": "/moreaporia/index.html",
+    "main.073c9b0a.css.map": "/moreaporia/static/css/main.073c9b0a.css.map",
+    "main.01de1a26.js.map": "/moreaporia/static/js/main.01de1a26.js.map",
+    "787.2fc9bcc6.chunk.js.map": "/moreaporia/static/js/787.2fc9bcc6.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.01de1a26.js"
+  ]
+}
