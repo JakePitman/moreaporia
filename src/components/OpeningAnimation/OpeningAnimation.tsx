@@ -44,7 +44,7 @@ const OpeningAnimation = () => {
     },
   };
 
-  const borderedSquare = {
+  const borderedSquareVariants = {
     hidden: (custom: { startOffset: number; finishOffset: number }) => ({
       opacity: 0,
       y: custom.startOffset,
@@ -85,7 +85,7 @@ const OpeningAnimation = () => {
     },
   };
 
-  const fadedSquare = {
+  const fadedSquareVariants = {
     hidden: (custom: { startOffset: number; finishOffset: number }) => ({
       opacity: 0,
       y: -custom.startOffset,
@@ -157,7 +157,7 @@ const OpeningAnimation = () => {
       <motion.div
         className={styles.borderedSquare}
         custom={{ startOffset: 15, finishOffset: 35 }}
-        variants={borderedSquare}
+        variants={borderedSquareVariants}
         transition={{
           duration: 1,
         }}
@@ -165,7 +165,7 @@ const OpeningAnimation = () => {
       <motion.div
         className={styles.borderedSquare}
         custom={{ startOffset: -15, finishOffset: -35 }}
-        variants={borderedSquare}
+        variants={borderedSquareVariants}
         transition={{
           duration: 1,
         }}
@@ -173,12 +173,12 @@ const OpeningAnimation = () => {
       <motion.div
         className={styles.fadedSquare}
         custom={{ startOffset: -15, finishOffset: -35 }}
-        variants={fadedSquare}
+        variants={fadedSquareVariants}
       />
       <motion.div
         className={styles.fadedSquare}
         custom={{ startOffset: 15, finishOffset: 35 }}
-        variants={fadedSquare}
+        variants={fadedSquareVariants}
       />
     </motion.div>
   );
