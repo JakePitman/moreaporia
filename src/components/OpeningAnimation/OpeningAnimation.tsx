@@ -41,11 +41,33 @@ const OpeningAnimation = () => {
       opacity: 1,
       x: custom.finishOffset,
       y: custom.finishOffset,
-      width: "50px",
-      height: "50px",
+      width: "60px",
+      height: "60px",
       transition: {
         duration: 0.4,
-        delay: 1,
+        delay: 1.2,
+        type: "spring",
+      },
+    }),
+  };
+
+  const fadedSquare = {
+    hidden: (custom: { startOffset: number; finishOffset: number }) => ({
+      opacity: 0,
+      y: -custom.startOffset,
+      x: custom.startOffset,
+      width: "0px",
+      height: "0px",
+    }),
+    expanding: (custom: { startOffset: number; finishOffset: number }) => ({
+      opacity: 0.5,
+      y: -custom.finishOffset,
+      x: custom.finishOffset,
+      width: "100px",
+      height: "100px",
+      transition: {
+        duration: 0.4,
+        delay: 1.4,
         type: "spring",
       },
     }),
@@ -63,7 +85,9 @@ const OpeningAnimation = () => {
       initial="hidden"
       animate={controls}
     >
-      <motion.div className={styles.mainSquare} variants={mainSquareVariants} />
+      <motion.div className={styles.mainSquare} variants={mainSquareVariants}>
+        <h1 className={styles.logoText}>MA</h1>
+      </motion.div>
       <motion.div
         className={styles.borderedSquare}
         custom={{ startOffset: 15, finishOffset: 35 }}
@@ -80,8 +104,16 @@ const OpeningAnimation = () => {
           duration: 1,
         }}
       />
-      {/* <motion.div className={styles.fadedSquare} />
-      <motion.div className={styles.fadedSquare} /> */}
+      <motion.div
+        className={styles.fadedSquare}
+        custom={{ startOffset: -15, finishOffset: -35 }}
+        variants={fadedSquare}
+      />
+      <motion.div
+        className={styles.fadedSquare}
+        custom={{ startOffset: 15, finishOffset: 35 }}
+        variants={fadedSquare}
+      />
     </motion.div>
   );
 };
