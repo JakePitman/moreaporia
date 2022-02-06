@@ -120,7 +120,18 @@ const OpeningAnimation = () => {
       x: 0,
       y: 0,
       rotate: -180,
-      transition: {},
+    },
+  };
+
+  const logoTextVariants = {
+    hidden: {
+      opacity: 0,
+    },
+    expanding: {
+      opacity: 1,
+    },
+    closing: {
+      opacity: 0,
     },
   };
 
@@ -139,7 +150,9 @@ const OpeningAnimation = () => {
       animate={controls}
     >
       <motion.div className={styles.mainSquare} variants={mainSquareVariants}>
-        <h1 className={styles.logoText}>MA</h1>
+        <motion.h1 variants={logoTextVariants} className={styles.logoText}>
+          MA
+        </motion.h1>
       </motion.div>
       <motion.div
         className={styles.borderedSquare}

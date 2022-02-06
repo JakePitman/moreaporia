@@ -6,11 +6,11 @@ $blue: rgb(0, 187, 255);
   display: flex;
   justify-content: center;
   align-items: center;
-  background: black;
+  background: white;
 }
 
 .mainSquare {
-  background: $blue;
+  background: black;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,18 +19,18 @@ $blue: rgb(0, 187, 255);
 }
 
 .logoText {
-  font-family: MyFont;
+  color: $blue;
 }
 
 .borderedSquare {
   position: absolute;
-  border: 1px solid #bfeaff;
+  border: 1px solid grey;
   z-index: 2;
 }
 
 .fadedSquare {
   position: absolute;
-  background: #41cff0;
+  background: darkGrey;
   width: 100px;
   height: 100px;
   z-index: 1;
