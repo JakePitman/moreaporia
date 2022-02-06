@@ -10,7 +10,6 @@ const OpeningAnimation = () => {
       width: "0px",
       height: "0px",
       borderRadius: "50%",
-      transform: "rotate(45deg)",
       rotate: -180,
       opacity: 0,
       transition: {},
@@ -28,7 +27,23 @@ const OpeningAnimation = () => {
         type: "spring",
       },
     },
+    aboutToClose: {
+      width: "110px",
+      height: "110px",
+      transition: {
+        delay: 0.8,
+        duration: 0.15,
+      },
+    },
+    closing: {
+      width: "0px",
+      height: "0px",
+      transition: {
+        duration: 0.3,
+      },
+    },
   };
+
   const borderedSquare = {
     hidden: (custom: { startOffset: number; finishOffset: number }) => ({
       opacity: 0,
@@ -49,6 +64,25 @@ const OpeningAnimation = () => {
         type: "spring",
       },
     }),
+    aboutToClose: {
+      width: "65px",
+      height: "65px",
+      transition: {
+        duration: 0.15,
+        delay: 0.8,
+      },
+    },
+    closing: {
+      opacity: 0,
+      width: "0px",
+      height: "0px",
+      x: 0,
+      y: 0,
+      rotate: 180,
+      transition: {
+        duration: 0.4,
+      },
+    },
   };
 
   const fadedSquare = {
@@ -71,10 +105,29 @@ const OpeningAnimation = () => {
         type: "spring",
       },
     }),
+    aboutToClose: {
+      width: "110px",
+      height: "110px",
+      transition: {
+        duration: 0.15,
+        delay: 0.8,
+      },
+    },
+    closing: {
+      opacity: 0,
+      width: "0px",
+      height: "0px",
+      x: 0,
+      y: 0,
+      rotate: -180,
+      transition: {},
+    },
   };
 
   const sequence = async () => {
     await controls.start("expanding");
+    await controls.start("aboutToClose");
+    await controls.start("closing");
     // alert("DONE");
   };
 
