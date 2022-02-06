@@ -49,14 +49,14 @@ const OpeningAnimation = ({ setCompleted }: Props) => {
       },
     },
     goingFullScreen1: {
-      width: "200vw",
+      width: "500vw",
       borderRadius: 0,
       transition: {
         duration: 0.6,
       },
     },
     goingFullScreen2: {
-      height: "200vh",
+      height: "500vh",
       transition: {
         duration: 0.6,
       },
