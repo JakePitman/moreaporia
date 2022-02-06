@@ -11,10 +11,20 @@ $blue: rgb(0, 187, 255);
 
 .mainSquare {
   background: $blue;
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 2;
 }
 
-.thing {
-  border: 1px solid $blue;
+.borderedSquare {
   position: absolute;
+  border: 1px solid white;
+  z-index: 1;
+}
+
+.fadedSquare {
+  background: yellow;
+  opacity: 0.5;
 }

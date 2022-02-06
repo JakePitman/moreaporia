@@ -7,11 +7,11 @@ const OpeningAnimation = () => {
 
   const mainSquareVariants = {
     hidden: {
-      width: "1px",
-      height: "1px",
+      width: "0px",
+      height: "0px",
       borderRadius: "50%",
       transform: "rotate(45deg)",
-      rotate: -100,
+      rotate: -180,
       opacity: 0,
       transition: {},
       y: 0,
@@ -25,21 +25,28 @@ const OpeningAnimation = () => {
       transition: {
         duration: 0.4,
         delay: 1,
+        type: "spring",
       },
     },
   };
   const borderedSquare = {
-    hidden: { opacity: 0, y: 0, x: 0, width: "0px", height: "0px" },
-    expanding: (custom: { x: number; y: number }) => ({
+    hidden: (custom: { startOffset: number; finishOffset: number }) => ({
+      opacity: 0,
+      y: custom.startOffset,
+      x: custom.startOffset,
+      width: "0px",
+      height: "0px",
+    }),
+    expanding: (custom: { startOffset: number; finishOffset: number }) => ({
       opacity: 1,
-      x: custom.x,
-      y: custom.y,
+      x: custom.finishOffset,
+      y: custom.finishOffset,
       width: "50px",
       height: "50px",
       transition: {
-        duration: 0.2,
-        delay: 1.2,
-        // delay: 2,
+        duration: 0.4,
+        delay: 1,
+        type: "spring",
       },
     }),
   };
@@ -50,32 +57,32 @@ const OpeningAnimation = () => {
   };
 
   return (
-    <div className={styles.container}>
+    <motion.div
+      className={styles.container}
+      onViewportEnter={() => sequence()}
+      initial="hidden"
+      animate={controls}
+    >
+      <motion.div className={styles.mainSquare} variants={mainSquareVariants} />
       <motion.div
-        className={styles.mainSquare}
-        variants={mainSquareVariants}
-        initial="hidden"
-        animate={controls}
-        onViewportEnter={() => sequence()}
-      >
-        <motion.div
-          className={styles.thing}
-          custom={{ x: 70, y: 70 }}
-          variants={borderedSquare}
-          transition={{
-            duration: 1,
-          }}
-        />
-        <motion.div
-          className={styles.thing}
-          custom={{ x: -25, y: -25 }}
-          variants={borderedSquare}
-          transition={{
-            duration: 1,
-          }}
-        />
-      </motion.div>
-    </div>
+        className={styles.borderedSquare}
+        custom={{ startOffset: 15, finishOffset: 35 }}
+        variants={borderedSquare}
+        transition={{
+          duration: 1,
+        }}
+      />
+      <motion.div
+        className={styles.borderedSquare}
+        custom={{ startOffset: -15, finishOffset: -35 }}
+        variants={borderedSquare}
+        transition={{
+          duration: 1,
+        }}
+      />
+      {/* <motion.div className={styles.fadedSquare} />
+      <motion.div className={styles.fadedSquare} /> */}
+    </motion.div>
   );
 };
 
