@@ -2,7 +2,11 @@ import React from "react";
 import { motion, useAnimation } from "framer-motion";
 import styles from "./OpeningAnimation.module.scss";
 
-const OpeningAnimation = () => {
+type Props = {
+  setCompleted: () => void;
+};
+
+const OpeningAnimation = ({ setCompleted }: Props) => {
   const controls = useAnimation();
 
   const mainSquareVariants = {
@@ -156,7 +160,7 @@ const OpeningAnimation = () => {
     await controls.start("closing");
     await controls.start("goingFullScreen1");
     await controls.start("goingFullScreen2");
-    // alert("DONE");
+    setCompleted();
   };
 
   return (
