@@ -36,10 +36,25 @@ const OpeningAnimation = () => {
       },
     },
     closing: {
-      width: "0px",
-      height: "0px",
+      width: "5px",
+      height: "5px",
+      rotate: 500,
+      borderRadius: "50%",
       transition: {
         duration: 0.3,
+      },
+    },
+    goingFullScreen1: {
+      width: "200vw",
+      borderRadius: 0,
+      transition: {
+        duration: 0.6,
+      },
+    },
+    goingFullScreen2: {
+      height: "200vh",
+      transition: {
+        duration: 0.6,
       },
     },
   };
@@ -139,6 +154,8 @@ const OpeningAnimation = () => {
     await controls.start("expanding");
     await controls.start("aboutToClose");
     await controls.start("closing");
+    await controls.start("goingFullScreen1");
+    await controls.start("goingFullScreen2");
     // alert("DONE");
   };
 
