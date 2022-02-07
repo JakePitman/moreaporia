@@ -99,7 +99,7 @@ const OpeningAnimation = ({ setCompleted }: Props) => {
       y: 0,
       rotate: 180,
       transition: {
-        duration: 0.4,
+        duration: 0.3,
       },
     },
   };
