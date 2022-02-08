@@ -1,5 +1,6 @@
 // Tomorrow: thin | light | regular | extra-bold italic
 @import url("https://fonts.googleapis.com/css2?family=Tomorrow:ital,wght@0,100;0,300;0,400;1,800&display=swap");
+@import "./shared/colors";
 
 .App {
   width: 100%;
@@ -8,7 +9,7 @@
   flex-direction: column;
   justify-content: center;
   position: relative;
-  background: black;
+  background: $primaryBackground;
 }
 
 * {
