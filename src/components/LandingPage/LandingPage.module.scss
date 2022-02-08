@@ -6,6 +6,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
 }
 
 .navBar {
@@ -13,32 +14,37 @@
 }
 
 .midSection {
+  width: max-content;
+  display: flex;
+  flex-direction: column;
 }
 
 .mainHeading {
+  display: inline-block;
   color: $boldBlue;
   font-family: "Tomorrow", sans-serif;
   font-weight: regular;
   // font-weight: extra-bold;
   // font-style: italic;
   font-size: 12vw;
-  margin-left: 4vw;
 }
 
 .subheading1 {
+  display: inline-block;
   color: $lightBlue;
   font-family: "Tomorrow", sans-serif;
   font-weight: regular;
   font-size: 6vw;
-  margin-left: 12vw;
+  margin-left: 13vw;
 }
 
 .subheading2 {
+  display: inline-block;
   color: $lightBlue;
   font-family: "Tomorrow", sans-serif;
   font-weight: regular;
   font-size: 6vw;
-  margin-left: 20vw;
+  margin-left: 26vw;
   opacity: 0.5;
 }
 
