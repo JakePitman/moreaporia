@@ -1,3 +1,5 @@
+@import "../../shared/colors";
+
 .container {
   height: 100vh;
   width: 100vw;
@@ -7,16 +9,39 @@
 }
 
 .navBar {
-  outline: 1px solid pink;
   flex: 1;
 }
 
 .midSection {
-  outline: 1px solid blue;
-  height: 200px;
+}
+
+.mainHeading {
+  color: $boldBlue;
+  font-family: "Tomorrow", sans-serif;
+  font-weight: regular;
+  // font-weight: extra-bold;
+  // font-style: italic;
+  font-size: 12vw;
+  margin-left: 4vw;
+}
+
+.subheading1 {
+  color: $lightBlue;
+  font-family: "Tomorrow", sans-serif;
+  font-weight: regular;
+  font-size: 6vw;
+  margin-left: 12vw;
+}
+
+.subheading2 {
+  color: $lightBlue;
+  font-family: "Tomorrow", sans-serif;
+  font-weight: regular;
+  font-size: 6vw;
+  margin-left: 20vw;
+  opacity: 0.5;
 }
 
 .footer {
-  outline: 1px solid yellow;
   flex: 1;
 }
