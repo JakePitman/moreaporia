@@ -53,6 +53,7 @@ const OpeningAnimation = ({ setCompleted }: Props) => {
       borderRadius: 0,
       transition: {
         duration: 0.6,
+        delay: 0.2,
       },
     },
     goingFullScreen2: {
@@ -139,6 +140,9 @@ const OpeningAnimation = ({ setCompleted }: Props) => {
       x: 0,
       y: 0,
       rotate: -180,
+      transition: {
+        duration: 0.3,
+      },
     },
   };
 
