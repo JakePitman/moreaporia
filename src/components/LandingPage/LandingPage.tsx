@@ -1,6 +1,6 @@
 import React from "react";
-import { VscGithubAlt } from "react-icons/vsc";
-import { FaCodepen } from "react-icons/fa";
+import { FiGithub } from "react-icons/fi";
+import { FiCodepen } from "react-icons/fi";
 
 import styles from "./LandingPage.module.scss";
 
@@ -28,10 +28,10 @@ const LandingPage = () => {
       <div className={styles.footer}>
         <div className={styles.iconsContainer}>
           <div className={styles.iconWrapper}>
-            <VscGithubAlt />
+            <FiGithub />
           </div>
           <div className={styles.iconWrapper}>
-            <FaCodepen />
+            <FiCodepen />
           </div>
           <div className={styles.footerLine} />
         </div>
