@@ -11,7 +11,7 @@ export const headingVariants = {
 };
 
 export const navItemFirstLetterVariants = {
-  hidden: { opacity: 0, transform: "translateY(-100)" },
+  hidden: { opacity: 0, transform: "translateY(-50)" },
   visible: (custom: { delay: number }) => ({
     opacity: 1,
     transform: "translateY(0px)",
@@ -27,7 +27,7 @@ export const navItemRemainingLettersVariants = {
   visible: {
     opacity: 1,
     transition: {
-      delay: 0.8,
+      delay: 0.5,
     },
   },
 };
