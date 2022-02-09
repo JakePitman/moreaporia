@@ -77,3 +77,14 @@
 .footer {
   flex: 1;
 }
+
+.iconWrapper {
+  color: $primaryYellow;
+
+  svg {
+    font-size: 4vw;
+    @media (max-width: $breakpointTablet) {
+      font-size: 10vw;
+    }
+  }
+}

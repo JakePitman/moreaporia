@@ -1,4 +1,5 @@
 import React from "react";
+import { BsGithub } from "react-icons/bs";
 
 import styles from "./LandingPage.module.scss";
 
@@ -23,7 +24,11 @@ const LandingPage = () => {
         <h2 className={styles.subheading2}>Front-end specialist</h2>
       </div>
 
-      <div className={styles.footer}></div>
+      <div className={styles.footer}>
+        <div className={styles.iconWrapper}>
+          <BsGithub />
+        </div>
+      </div>
     </div>
   );
 };
