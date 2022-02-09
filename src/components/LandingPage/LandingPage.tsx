@@ -1,5 +1,6 @@
 import React from "react";
-import { BsGithub } from "react-icons/bs";
+import { VscGithubAlt } from "react-icons/vsc";
+import { FaCodepen } from "react-icons/fa";
 
 import styles from "./LandingPage.module.scss";
 
@@ -27,7 +28,10 @@ const LandingPage = () => {
       <div className={styles.footer}>
         <div className={styles.iconsContainer}>
           <div className={styles.iconWrapper}>
-            <BsGithub />
+            <VscGithubAlt />
+          </div>
+          <div className={styles.iconWrapper}>
+            <FaCodepen />
           </div>
           <div className={styles.footerLine} />
         </div>
