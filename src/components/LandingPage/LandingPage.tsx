@@ -1,8 +1,10 @@
 import React from "react";
 import { FiGithub } from "react-icons/fi";
 import { FiCodepen } from "react-icons/fi";
+import { motion } from "framer-motion";
 
 import styles from "./LandingPage.module.scss";
+import { headingVariants } from "./landingPageVariants";
 
 const LandingPage = () => {
   return (
@@ -20,9 +22,27 @@ const LandingPage = () => {
       </div>
 
       <div className={styles.midSection}>
-        <h1 className={styles.mainHeading}>Jake Pitman</h1>
-        <h2 className={styles.subheading1}>Web & mobile engineer</h2>
-        <h2 className={styles.subheading2}>Front-end specialist</h2>
+        <motion.h1
+          className={styles.mainHeading}
+          initial={headingVariants.hidden}
+          animate={headingVariants.visible({ delay: 0 })}
+        >
+          Jake Pitman
+        </motion.h1>
+        <motion.h2
+          initial={headingVariants.hidden}
+          animate={headingVariants.visible({ delay: 0.15 })}
+          className={styles.subheading1}
+        >
+          Web & mobile engineer
+        </motion.h2>
+        <motion.h2
+          initial={headingVariants.hidden}
+          animate={headingVariants.visible({ delay: 0.3 })}
+          className={styles.subheading2}
+        >
+          Front-end specialist
+        </motion.h2>
       </div>
 
       <div className={styles.footer}>
