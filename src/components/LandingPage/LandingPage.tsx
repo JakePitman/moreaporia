@@ -4,20 +4,60 @@ import { FiCodepen } from "react-icons/fi";
 import { motion } from "framer-motion";
 
 import styles from "./LandingPage.module.scss";
-import { headingVariants } from "./landingPageVariants";
+import {
+  headingVariants,
+  navItemFirstLetterVariants,
+  navItemRemainingLettersVariants,
+} from "./landingPageVariants";
 
 const LandingPage = () => {
   return (
     <div className={styles.container}>
       <div className={styles.navBar}>
         <li className={styles.listItem}>
-          <p className={styles.listItemFirstLetter}>A</p>bout
+          <motion.p
+            initial={navItemFirstLetterVariants.hidden}
+            animate={navItemFirstLetterVariants.visible({ delay: 0 })}
+            className={styles.listItemFirstLetter}
+          >
+            A
+          </motion.p>
+          <motion.p
+            initial={navItemRemainingLettersVariants.hidden}
+            animate={navItemRemainingLettersVariants.visible}
+          >
+            bout
+          </motion.p>
         </li>
         <li className={styles.listItem}>
-          <p className={styles.listItemFirstLetter}>P</p>rojects
+          <motion.p
+            initial={navItemFirstLetterVariants.hidden}
+            animate={navItemFirstLetterVariants.visible({ delay: 0.15 })}
+            className={styles.listItemFirstLetter}
+          >
+            P
+          </motion.p>
+          <motion.p
+            initial={navItemRemainingLettersVariants.hidden}
+            animate={navItemRemainingLettersVariants.visible}
+          >
+            rojects
+          </motion.p>
         </li>
         <li className={styles.listItem}>
-          <p className={styles.listItemFirstLetter}>C</p>ontact
+          <motion.p
+            initial={navItemFirstLetterVariants.hidden}
+            animate={navItemFirstLetterVariants.visible({ delay: 0.3 })}
+            className={styles.listItemFirstLetter}
+          >
+            C
+          </motion.p>
+          <motion.p
+            initial={navItemRemainingLettersVariants.hidden}
+            animate={navItemRemainingLettersVariants.visible}
+          >
+            ontact
+          </motion.p>
         </li>
       </div>
 
