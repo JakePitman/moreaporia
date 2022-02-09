@@ -27,12 +27,15 @@ const LandingPage = () => {
 
       <div className={styles.footer}>
         <div className={styles.iconsContainer}>
-          <div className={styles.iconWrapper}>
+          <a
+            className={styles.iconWrapper}
+            href="https://github.com/jakePitman/"
+          >
             <FiGithub />
-          </div>
-          <div className={styles.iconWrapper}>
+          </a>
+          <a className={styles.iconWrapper} href="https://codepen.io/SyN219">
             <FiCodepen />
-          </div>
+          </a>
           <div className={styles.footerLine} />
         </div>
       </div>
