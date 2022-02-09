@@ -12,8 +12,8 @@ export const mainSquareVariants = {
     borderRadius: 0,
     opacity: 1,
     rotate: 0,
-    width: "100px",
-    height: "100px",
+    width: "120px",
+    height: "120px",
     transition: {
       duration: 0.4,
       delay: 1,
@@ -21,8 +21,8 @@ export const mainSquareVariants = {
     },
   },
   aboutToClose: {
-    width: "110px",
-    height: "110px",
+    width: "140px",
+    height: "140px",
     transition: {
       delay: 0.8,
       duration: 0.15,
@@ -65,8 +65,8 @@ export const borderedSquareVariants = {
     opacity: 1,
     x: custom.finishOffset,
     y: custom.finishOffset,
-    width: "60px",
-    height: "60px",
+    width: "80px",
+    height: "80px",
     transition: {
       duration: 0.4,
       delay: 1.2,
@@ -74,8 +74,8 @@ export const borderedSquareVariants = {
     },
   }),
   aboutToClose: {
-    width: "65px",
-    height: "65px",
+    width: "85px",
+    height: "85px",
     transition: {
       duration: 0.15,
       delay: 0.8,
@@ -106,8 +106,8 @@ export const fadedSquareVariants = {
     opacity: 0.5,
     y: -custom.finishOffset,
     x: custom.finishOffset,
-    width: "100px",
-    height: "100px",
+    width: "120px",
+    height: "120px",
     transition: {
       duration: 0.4,
       delay: 1.4,
@@ -115,8 +115,8 @@ export const fadedSquareVariants = {
     },
   }),
   aboutToClose: {
-    width: "110px",
-    height: "110px",
+    width: "130px",
+    height: "130px",
     transition: {
       duration: 0.15,
       delay: 0.8,
