@@ -25,8 +25,11 @@ const LandingPage = () => {
       </div>
 
       <div className={styles.footer}>
-        <div className={styles.iconWrapper}>
-          <BsGithub />
+        <div className={styles.iconsContainer}>
+          <div className={styles.iconWrapper}>
+            <BsGithub />
+          </div>
+          <div className={styles.footerLine} />
         </div>
       </div>
     </div>
