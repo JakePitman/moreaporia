@@ -25,9 +25,11 @@
   color: $offWhite;
   margin-right: 3vw;
   margin-top: 3vw;
+  font-family: "Roboto Mono";
 
   @media (max-width: $breakpointTablet) {
-    font-size: 6vw;
+    font-size: 5vw;
+    margin-right: 4vw;
   }
 }
 
@@ -48,15 +50,19 @@
   font-weight: regular;
   // font-weight: extra-bold;
   // font-style: italic;
-  font-size: 12vw;
+  font-size: 10vw;
+  @media (max-width: $breakpointTablet) {
+    font-size: 12vw;
+  }
 }
 
 @mixin subheading {
   display: inline-block;
   font-family: "Tomorrow", sans-serif;
   font-weight: regular;
-  font-size: 6vw;
+  font-size: 5vw;
   @media (max-width: $breakpointTablet) {
+    font-size: 6vw;
     margin-top: 2vh;
   }
 }
