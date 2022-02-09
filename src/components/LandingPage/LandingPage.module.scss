@@ -19,14 +19,20 @@
 }
 
 .listItem {
+  display: flex;
   font-size: 2vw;
   list-style-type: none;
   color: $offWhite;
   margin-right: 3vw;
   margin-top: 3vw;
+
   @media (max-width: $breakpointTablet) {
     font-size: 6vw;
   }
+}
+
+.listItemFirstLetter {
+  color: $primaryYellow;
 }
 
 .midSection {
@@ -45,21 +51,25 @@
   font-size: 12vw;
 }
 
-.subheading1 {
+@mixin subheading {
   display: inline-block;
-  color: $lightBlue;
   font-family: "Tomorrow", sans-serif;
   font-weight: regular;
   font-size: 6vw;
+  @media (max-width: $breakpointTablet) {
+    margin-top: 2vh;
+  }
+}
+
+.subheading1 {
+  @include subheading;
+  color: $lightBlue;
   margin-left: 13vw;
 }
 
 .subheading2 {
-  display: inline-block;
+  @include subheading;
   color: $lightBlue;
-  font-family: "Tomorrow", sans-serif;
-  font-weight: regular;
-  font-size: 6vw;
   margin-left: 26vw;
   opacity: 0.5;
 }
