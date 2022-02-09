@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./App.scss";
-import ComingSoon from "./components/ComingSoon/ComingSoon";
+import LandingPage from "./components/LandingPage";
 import OpeningAnimation from "./components/OpeningAnimation";
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
   return (
     <div className="App">
       {openingAnimationCompleted ? (
-        <ComingSoon />
+        <LandingPage />
       ) : (
         <OpeningAnimation
           setCompleted={() => setOpeningAnimationCompleted(true)}

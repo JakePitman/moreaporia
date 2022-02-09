@@ -1,0 +1,120 @@
+@import "../../shared/colors";
+@import "../../shared/breakpoints";
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  flex: 1;
+  width: 100%;
+}
+
+.listItem {
+  display: flex;
+  font-size: 2vw;
+  list-style-type: none;
+  color: $offWhite;
+  margin-right: 3vw;
+  margin-top: 3vw;
+  font-family: "Roboto Mono";
+
+  @media (max-width: $breakpointTablet) {
+    font-size: 5vw;
+    margin-right: 4vw;
+  }
+}
+
+.listItemFirstLetter {
+  color: $primaryYellow;
+}
+
+.midSection {
+  width: max-content;
+  display: flex;
+  flex-direction: column;
+}
+
+.mainHeading {
+  display: inline-block;
+  color: $boldBlue;
+  font-family: "Tomorrow", sans-serif;
+  font-weight: regular;
+  // font-weight: extra-bold;
+  // font-style: italic;
+  font-size: 10vw;
+  @media (max-width: $breakpointTablet) {
+    font-size: 12vw;
+  }
+}
+
+@mixin subheading {
+  display: inline-block;
+  font-family: "Tomorrow", sans-serif;
+  font-weight: regular;
+  font-size: 5vw;
+  @media (max-width: $breakpointTablet) {
+    font-size: 6vw;
+    margin-top: 2vh;
+  }
+}
+
+.subheading1 {
+  @include subheading;
+  color: $lightBlue;
+  margin-left: 13vw;
+}
+
+.subheading2 {
+  @include subheading;
+  color: $lightBlue;
+  margin-left: 26vw;
+  opacity: 0.5;
+}
+
+.footer {
+  flex: 1;
+  width: 100%;
+  position: relative;
+}
+
+.iconsContainer {
+  width: max-content;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  margin-left: 3vw;
+  position: absolute;
+}
+
+.iconWrapper {
+  color: $primaryYellow;
+  margin-bottom: 30px;
+
+  svg {
+    font-size: 2.5vw;
+    @media (max-width: $breakpointTablet) {
+      font-size: 10vw;
+    }
+  }
+}
+
+.footerLine {
+  outline: 1px solid $offWhite;
+  flex: 0.5;
+  min-height: 200px;
+  @media (max-width: $breakpointTablet) {
+    flex: 0.3;
+    min-height: 0;
+  }
+}
