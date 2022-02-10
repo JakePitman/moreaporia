@@ -10,24 +10,13 @@ export const headingVariants = {
   }),
 };
 
-export const navItemFirstLetterVariants = {
-  hidden: { opacity: 0, transform: "translateY(-50)" },
+export const navItemVariants = {
+  hidden: { opacity: 0, transform: "translateX(-40px)" },
   visible: (custom: { delay: number }) => ({
+    transform: "translateX(0px)",
     opacity: 1,
-    transform: "translateY(0px)",
     transition: {
       delay: custom.delay,
-      duration: 0.5,
     },
   }),
-};
-
-export const navItemRemainingLettersVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      delay: 0.5,
-    },
-  },
 };
