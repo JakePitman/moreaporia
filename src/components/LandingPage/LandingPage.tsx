@@ -4,7 +4,12 @@ import { FiCodepen } from "react-icons/fi";
 import { motion } from "framer-motion";
 
 import styles from "./LandingPage.module.scss";
-import { headingVariants, navItemVariants } from "./landingPageVariants";
+import {
+  headingVariants,
+  navItemVariants,
+  iconVariants,
+  footerLineVariants,
+} from "./landingPageVariants";
 
 const LandingPage = () => {
   return (
@@ -12,7 +17,7 @@ const LandingPage = () => {
       <div className={styles.navBar}>
         <motion.li
           initial={navItemVariants.hidden}
-          animate={navItemVariants.visible({ delay: 0.6 })}
+          animate={navItemVariants.visible({ delay: 0.4 })}
           className={styles.listItem}
         >
           <p className={styles.listItemFirstLetter}>A</p>
@@ -20,7 +25,7 @@ const LandingPage = () => {
         </motion.li>
         <motion.li
           initial={navItemVariants.hidden}
-          animate={navItemVariants.visible({ delay: 0.4 })}
+          animate={navItemVariants.visible({ delay: 0.2 })}
           className={styles.listItem}
         >
           <p className={styles.listItemFirstLetter}>P</p>
@@ -28,7 +33,7 @@ const LandingPage = () => {
         </motion.li>
         <motion.li
           initial={navItemVariants.hidden}
-          animate={navItemVariants.visible({ delay: 0.2 })}
+          animate={navItemVariants.visible({ delay: 0.0 })}
           className={styles.listItem}
         >
           <p className={styles.listItemFirstLetter}>C</p>
@@ -61,18 +66,29 @@ const LandingPage = () => {
       </motion.div>
 
       <div className={styles.footer}>
-        <div className={styles.iconsContainer}>
-          <a
+        <motion.div className={styles.iconsContainer}>
+          <motion.a
+            initial={iconVariants.hidden}
+            animate={iconVariants.visible({ delay: 0.4 })}
             className={styles.iconWrapper}
             href="https://github.com/jakePitman/"
           >
             <FiGithub />
-          </a>
-          <a className={styles.iconWrapper} href="https://codepen.io/SyN219">
+          </motion.a>
+          <motion.a
+            initial={iconVariants.hidden}
+            animate={iconVariants.visible({ delay: 0.2 })}
+            className={styles.iconWrapper}
+            href="https://codepen.io/SyN219"
+          >
             <FiCodepen />
-          </a>
-          <div className={styles.footerLine} />
-        </div>
+          </motion.a>
+          <motion.div
+            initial={footerLineVariants.hidden}
+            animate={footerLineVariants.visible}
+            className={styles.footerLine}
+          />
+        </motion.div>
       </div>
     </div>
   );
