@@ -8,6 +8,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  overflow: hidden;
 }
 
 .navBar {
@@ -50,8 +51,6 @@
   color: $boldBlue;
   font-family: "Tomorrow", sans-serif;
   font-weight: regular;
-  // font-weight: extra-bold;
-  // font-style: italic;
   font-size: 10vw;
   @media (max-width: $breakpointTablet) {
     font-size: 12vw;

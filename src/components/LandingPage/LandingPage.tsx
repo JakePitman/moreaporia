@@ -11,81 +11,81 @@ import {
   footerLineVariants,
 } from "./landingPageVariants";
 
+const secondaryAnimationsDelay = 0.5;
+const secondaryAnimationsStagger = 0.1;
+
 const LandingPage = () => {
   return (
     <div className={styles.container}>
-      <div className={styles.navBar}>
-        <motion.li
-          initial={navItemVariants.hidden}
-          animate={navItemVariants.visible({ delay: 0.4 })}
-          className={styles.listItem}
-        >
+      <motion.div
+        className={styles.navBar}
+        initial="hidden"
+        animate="visible"
+        transition={{
+          staggerChildren: secondaryAnimationsStagger,
+          delayChildren: secondaryAnimationsDelay,
+        }}
+      >
+        <motion.li variants={navItemVariants} className={styles.listItem}>
           <p className={styles.listItemFirstLetter}>A</p>
           bout
         </motion.li>
-        <motion.li
-          initial={navItemVariants.hidden}
-          animate={navItemVariants.visible({ delay: 0.2 })}
-          className={styles.listItem}
-        >
+        <motion.li variants={navItemVariants} className={styles.listItem}>
           <p className={styles.listItemFirstLetter}>P</p>
           rojects
         </motion.li>
-        <motion.li
-          initial={navItemVariants.hidden}
-          animate={navItemVariants.visible({ delay: 0.0 })}
-          className={styles.listItem}
-        >
+        <motion.li variants={navItemVariants} className={styles.listItem}>
           <p className={styles.listItemFirstLetter}>C</p>
           ontact
         </motion.li>
-      </div>
+      </motion.div>
 
-      <motion.div className={styles.midSection}>
-        <motion.h1
-          className={styles.mainHeading}
-          initial={headingVariants.hidden}
-          animate={headingVariants.visible({ delay: 0 })}
-        >
+      <motion.div
+        initial="hidden"
+        animate="visible"
+        transition={{
+          staggerChildren: 0.15,
+        }}
+        className={styles.midSection}
+      >
+        <motion.h1 variants={headingVariants} className={styles.mainHeading}>
           Jake Pitman
         </motion.h1>
-        <motion.h2
-          initial={headingVariants.hidden}
-          animate={headingVariants.visible({ delay: 0.15 })}
-          className={styles.subheading1}
-        >
+        <motion.h2 variants={headingVariants} className={styles.subheading1}>
           Web & mobile engineer
         </motion.h2>
-        <motion.h2
-          initial={headingVariants.hidden}
-          animate={headingVariants.visible({ delay: 0.3 })}
-          className={styles.subheading2}
-        >
+        <motion.h2 variants={headingVariants} className={styles.subheading2}>
           Front-end specialist
         </motion.h2>
       </motion.div>
 
       <div className={styles.footer}>
-        <motion.div className={styles.iconsContainer}>
+        <motion.div
+          className={styles.iconsContainer}
+          initial="hidden"
+          animate="visible"
+          transition={{
+            staggerChildren: secondaryAnimationsStagger,
+            delayChildren: secondaryAnimationsDelay,
+            staggerDirection: -1,
+          }}
+        >
           <motion.a
-            initial={iconVariants.hidden}
-            animate={iconVariants.visible({ delay: 0.4 })}
+            variants={iconVariants}
             className={styles.iconWrapper}
             href="https://github.com/jakePitman/"
           >
             <FiGithub />
           </motion.a>
           <motion.a
-            initial={iconVariants.hidden}
-            animate={iconVariants.visible({ delay: 0.2 })}
+            variants={iconVariants}
             className={styles.iconWrapper}
             href="https://codepen.io/SyN219"
           >
             <FiCodepen />
           </motion.a>
           <motion.div
-            initial={footerLineVariants.hidden}
-            animate={footerLineVariants.visible}
+            variants={footerLineVariants}
             className={styles.footerLine}
           />
         </motion.div>
