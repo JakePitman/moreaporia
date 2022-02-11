@@ -11,10 +11,10 @@ import {
   footerLineVariants,
 } from "./landingPageVariants";
 
-const LandingPage = () => {
-  const secondaryAnimationsDelay = 0.5;
-  const secondaryAnimationsStagger = 0.1;
+const secondaryAnimationsDelay = 0.5;
+const secondaryAnimationsStagger = 0.1;
 
+const LandingPage = () => {
   return (
     <div className={styles.container}>
       <motion.div
