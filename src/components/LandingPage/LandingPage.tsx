@@ -12,7 +12,7 @@ import {
 } from "./landingPageVariants";
 
 const LandingPage = () => {
-  const secondaryAnimationsDelay = 0.8;
+  const secondaryAnimationsDelay = 0.5;
   const secondaryAnimationsStagger = 0.2;
 
   return (
