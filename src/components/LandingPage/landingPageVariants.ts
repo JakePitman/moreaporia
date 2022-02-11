@@ -22,20 +22,14 @@ export const navItemVariants = {
 
 export const iconVariants = {
   hidden: { opacity: 0 },
-  visible: (custom: { delay: number }) => ({
+  visible: {
     opacity: 1,
-    transition: {
-      delay: secondaryAnimationsDelay + custom.delay,
-    },
-  }),
+  },
 };
 
 export const footerLineVariants = {
   hidden: { height: "0" },
   visible: {
     height: "50%",
-    transition: {
-      delay: secondaryAnimationsDelay,
-    },
   },
 };

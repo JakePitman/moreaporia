@@ -12,13 +12,19 @@ import {
 } from "./landingPageVariants";
 
 const LandingPage = () => {
+  const secondaryAnimationsDelay = 0.8;
+  const secondaryAnimationsStagger = 0.2;
+
   return (
     <div className={styles.container}>
       <motion.div
         className={styles.navBar}
         initial="hidden"
         animate="visible"
-        transition={{ staggerChildren: 0.2, delayChildren: 0.8 }}
+        transition={{
+          staggerChildren: secondaryAnimationsStagger,
+          delayChildren: secondaryAnimationsDelay,
+        }}
       >
         <motion.li variants={navItemVariants} className={styles.listItem}>
           <p className={styles.listItemFirstLetter}>A</p>
@@ -59,26 +65,32 @@ const LandingPage = () => {
       </motion.div>
 
       <div className={styles.footer}>
-        <motion.div className={styles.iconsContainer}>
+        <motion.div
+          className={styles.iconsContainer}
+          initial="hidden"
+          animate="visible"
+          transition={{
+            staggerChildren: secondaryAnimationsStagger,
+            delayChildren: secondaryAnimationsDelay,
+            staggerDirection: -1,
+          }}
+        >
           <motion.a
-            initial={iconVariants.hidden}
-            animate={iconVariants.visible({ delay: 0.4 })}
+            variants={iconVariants}
             className={styles.iconWrapper}
             href="https://github.com/jakePitman/"
           >
             <FiGithub />
           </motion.a>
           <motion.a
-            initial={iconVariants.hidden}
-            animate={iconVariants.visible({ delay: 0.2 })}
+            variants={iconVariants}
             className={styles.iconWrapper}
             href="https://codepen.io/SyN219"
           >
             <FiCodepen />
           </motion.a>
           <motion.div
-            initial={footerLineVariants.hidden}
-            animate={footerLineVariants.visible}
+            variants={footerLineVariants}
             className={styles.footerLine}
           />
         </motion.div>
