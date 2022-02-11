@@ -13,7 +13,7 @@ import {
 
 const LandingPage = () => {
   const secondaryAnimationsDelay = 0.5;
-  const secondaryAnimationsStagger = 0.2;
+  const secondaryAnimationsStagger = 0.1;
 
   return (
     <div className={styles.container}>
