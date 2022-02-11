@@ -40,26 +40,21 @@ const LandingPage = () => {
         </motion.li>
       </motion.div>
 
-      <motion.div className={styles.midSection}>
-        <motion.h1
-          className={styles.mainHeading}
-          initial={headingVariants.hidden}
-          animate={headingVariants.visible({ delay: 0 })}
-        >
+      <motion.div
+        initial="hidden"
+        animate="visible"
+        transition={{
+          staggerChildren: 0.15,
+        }}
+        className={styles.midSection}
+      >
+        <motion.h1 variants={headingVariants} className={styles.mainHeading}>
           Jake Pitman
         </motion.h1>
-        <motion.h2
-          initial={headingVariants.hidden}
-          animate={headingVariants.visible({ delay: 0.15 })}
-          className={styles.subheading1}
-        >
+        <motion.h2 variants={headingVariants} className={styles.subheading1}>
           Web & mobile engineer
         </motion.h2>
-        <motion.h2
-          initial={headingVariants.hidden}
-          animate={headingVariants.visible({ delay: 0.3 })}
-          className={styles.subheading2}
-        >
+        <motion.h2 variants={headingVariants} className={styles.subheading2}>
           Front-end specialist
         </motion.h2>
       </motion.div>
