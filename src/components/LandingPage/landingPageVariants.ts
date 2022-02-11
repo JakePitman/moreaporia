@@ -14,13 +14,10 @@ export const headingVariants = {
 
 export const navItemVariants = {
   hidden: { opacity: 0, transform: "translateX(-40px)" },
-  visible: (custom: { delay: number }) => ({
+  visible: {
     transform: "translateX(0px)",
     opacity: 1,
-    transition: {
-      delay: secondaryAnimationsDelay + custom.delay,
-    },
-  }),
+  },
 };
 
 export const iconVariants = {

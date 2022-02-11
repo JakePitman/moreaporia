@@ -14,32 +14,25 @@ import {
 const LandingPage = () => {
   return (
     <div className={styles.container}>
-      <div className={styles.navBar}>
-        <motion.li
-          initial={navItemVariants.hidden}
-          animate={navItemVariants.visible({ delay: 0.4 })}
-          className={styles.listItem}
-        >
+      <motion.div
+        className={styles.navBar}
+        initial="hidden"
+        animate="visible"
+        transition={{ staggerChildren: 0.2, delayChildren: 0.8 }}
+      >
+        <motion.li variants={navItemVariants} className={styles.listItem}>
           <p className={styles.listItemFirstLetter}>A</p>
           bout
         </motion.li>
-        <motion.li
-          initial={navItemVariants.hidden}
-          animate={navItemVariants.visible({ delay: 0.2 })}
-          className={styles.listItem}
-        >
+        <motion.li variants={navItemVariants} className={styles.listItem}>
           <p className={styles.listItemFirstLetter}>P</p>
           rojects
         </motion.li>
-        <motion.li
-          initial={navItemVariants.hidden}
-          animate={navItemVariants.visible({ delay: 0.0 })}
-          className={styles.listItem}
-        >
+        <motion.li variants={navItemVariants} className={styles.listItem}>
           <p className={styles.listItemFirstLetter}>C</p>
           ontact
         </motion.li>
-      </div>
+      </motion.div>
 
       <motion.div className={styles.midSection}>
         <motion.h1
