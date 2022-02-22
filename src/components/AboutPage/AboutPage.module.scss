@@ -22,3 +22,14 @@
   height: 50vh;
   transform-origin: top;
 }
+
+.lowerRightBackground {
+  background: #000000;
+  position: absolute;
+  transform: rotate(-35deg);
+  bottom: -40vh;
+  left: -50%;
+  width: 200vw;
+  height: 50vh;
+  transform-origin: top;
+}

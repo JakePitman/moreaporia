@@ -6,6 +6,7 @@ const AboutPage = () => {
     <div className={styles.container}>
       <h1 style={{ color: "white" }}>About me</h1>
       <div className={styles.lowerLeftBackground} />
+      <div className={styles.lowerRightBackground} />
     </div>
   );
 };
