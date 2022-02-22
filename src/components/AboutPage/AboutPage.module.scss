@@ -15,8 +15,6 @@
 .lowerLeftBackground {
   background: #1f2635;
   position: absolute;
-  transform: rotate(30deg);
-  bottom: -40vh;
   left: -50%;
   width: 200vw;
   height: 50vh;
@@ -26,10 +24,8 @@
 .lowerRightBackground {
   background: #000000;
   position: absolute;
-  transform: rotate(-35deg);
-  bottom: -40vh;
   left: -50%;
   width: 200vw;
-  height: 50vh;
+  height: 60vh;
   transform-origin: top;
 }
