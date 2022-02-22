@@ -1,4 +1,4 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import { motion } from "framer-motion";
 
 import styles from "./AboutPage.module.scss";
@@ -7,9 +7,9 @@ import {
   lowerRightBackgroundVariants,
 } from "./aboutPageVariants";
 
-const AboutPage = () => {
+const AboutPage = forwardRef<HTMLDivElement>((props, ref) => {
   return (
-    <div className={styles.container}>
+    <div className={styles.container} ref={ref}>
       <h1 style={{ color: "white" }}>About me</h1>
       <motion.div
         variants={lowerLeftBackgroundVariants}
@@ -27,6 +27,6 @@ const AboutPage = () => {
       />
     </div>
   );
-};
+});
 
 export default AboutPage;
