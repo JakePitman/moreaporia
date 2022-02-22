@@ -9,4 +9,16 @@
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  position: relative;
+}
+
+.lowerLeftBackground {
+  background: #1f2635;
+  position: absolute;
+  transform: rotate(30deg);
+  bottom: -40vh;
+  left: -50%;
+  width: 200vw;
+  height: 50vh;
+  transform-origin: top;
 }
