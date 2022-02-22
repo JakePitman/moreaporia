@@ -16,7 +16,7 @@ function App() {
         <>
           <LandingPage
             scrollToAboutPage={() => {
-              aboutPageRef.current?.scrollIntoView();
+              aboutPageRef.current?.scrollIntoView({ behavior: "smooth" });
             }}
           />
           <AboutPage ref={aboutPageRef} />
