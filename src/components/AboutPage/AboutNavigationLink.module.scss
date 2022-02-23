@@ -6,17 +6,17 @@
   cursor: pointer;
 }
 
-@mixin title {
-  display: inline-block;
+.linkArea {
   list-style: none;
+  cursor: pointer;
 }
 
 .titleFirstLetter {
-  @include title;
+  display: inline-block;
   color: $primaryYellow;
 }
 
 .titleRemainingLetters {
-  @include title;
+  display: inline-block;
   color: $offWhite;
 }

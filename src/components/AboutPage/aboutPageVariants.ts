@@ -9,7 +9,7 @@ export const lowerLeftBackgroundVariants = {
     rotate: 30,
     bottom: "-50vh",
     transition: {
-      delay: 0.1,
+      delay: 0.3,
     },
   },
 };
@@ -25,7 +25,7 @@ export const lowerRightBackgroundVariants = {
     rotate: -30,
     bottom: "-60vh",
     transition: {
-      delay: 0.1,
+      delay: 0.2,
     },
   },
 };

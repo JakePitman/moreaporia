@@ -13,7 +13,10 @@ const AboutPage = forwardRef<HTMLDivElement>((props, ref) => {
   const { width, height } = useWindowDimensions();
 
   return (
-    <div
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, margin: "-50%" }}
       className={
         width > height ? styles.containerLandscape : styles.containerPortrait
       }
@@ -21,29 +24,23 @@ const AboutPage = forwardRef<HTMLDivElement>((props, ref) => {
     >
       <motion.div
         variants={lowerLeftBackgroundVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, margin: "200px" }}
         className={styles.lowerLeftBackground}
       />
       <motion.div
         variants={lowerRightBackgroundVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, margin: "200px" }}
         className={styles.lowerRightBackground}
       />
-      <div className={styles.navigationLinksContainer}>
+      <motion.div className={styles.navigationLinksContainer}>
         <AboutNavigationLink title="Work" />
         <AboutNavigationLink title="Bio" />
         <AboutNavigationLink title="Tech" />
-      </div>
+      </motion.div>
       <div className={styles.mainContentContainer}>
         <div className={styles.mainContentOuterColumn}></div>
         <div className={styles.mainContentCenterColumn}></div>
         <div className={styles.mainContentOuterColumn}></div>
       </div>
-    </div>
+    </motion.div>
   );
 });
 
