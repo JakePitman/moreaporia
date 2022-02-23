@@ -12,7 +12,8 @@ function App() {
     useState(false);
   return (
     <div className="App">
-      {openingAnimationCompleted ? (
+      {/* {openingAnimationCompleted ? ( */}
+      {true ? (
         <>
           <LandingPage
             scrollToAboutPage={() => {
