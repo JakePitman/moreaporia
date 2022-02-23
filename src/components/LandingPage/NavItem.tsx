@@ -18,13 +18,12 @@ type Props = {
 
 const NavItem = ({ title, handleClick }: Props) => {
   return (
-    <motion.li
-      variants={navItemVariants}
-      className={styles.listItem}
-      onClick={handleClick}
-    >
-      <p className={styles.listItemFirstLetter}>{title.slice(0, 1)}</p>
-      {title.slice(1, title.length)}
+    <motion.li variants={navItemVariants} className={styles.listItem}>
+      <div className={styles.textContainer}>
+        <div className={styles.clickArea} onClick={handleClick} />
+        <p className={styles.listItemFirstLetter}>{title.slice(0, 1)}</p>
+        {title.slice(1, title.length)}
+      </div>
     </motion.li>
   );
 };

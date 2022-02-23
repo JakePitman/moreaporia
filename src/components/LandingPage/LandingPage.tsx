@@ -31,8 +31,8 @@ const LandingPage = ({ scrollToAboutPage }: Props) => {
         }}
       >
         <NavItem title="About" handleClick={scrollToAboutPage} />
-        <NavItem title="Projects" handleClick={scrollToAboutPage} />
-        <NavItem title="Contact" handleClick={scrollToAboutPage} />
+        <NavItem title="Projects" handleClick={() => {}} />
+        <NavItem title="Contact" handleClick={() => {}} />
       </motion.div>
 
       <motion.div
