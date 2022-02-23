@@ -9,7 +9,10 @@ type Props = {
 const AboutNavigationLink = ({ title }: Props) => {
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>{title}</h1>
+      <li className={styles.titleFirstLetter}>{title.slice(0, 1)}</li>
+      <li className={styles.titleRemainingLetters}>
+        {title.slice(1, title.length)}
+      </li>
     </div>
   );
 };
