@@ -10,12 +10,15 @@ type Props = {
 
 const AboutNavigationLink = ({ title }: Props) => {
   return (
-    <motion.li variants={linkVariants} className={styles.linkArea}>
-      <p className={styles.titleFirstLetter}>{title.slice(0, 1)}</p>
-      <p className={styles.titleRemainingLetters}>
-        {title.slice(1, title.length)}
-      </p>
-    </motion.li>
+    <motion.div variants={linkVariants} className={styles.container}>
+      <div className={styles.textWrapper}>
+        <div className={styles.clickArea} />
+        <p className={styles.titleFirstLetter}>{title.slice(0, 1)}</p>
+        <p className={styles.titleRemainingLetters}>
+          {title.slice(1, title.length)}
+        </p>
+      </div>
+    </motion.div>
   );
 };
 
