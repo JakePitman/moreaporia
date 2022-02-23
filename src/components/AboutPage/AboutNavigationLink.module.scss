@@ -1,0 +1,22 @@
+@import "../../shared/_colors";
+
+.container {
+  flex: 1;
+  text-align: center;
+  cursor: pointer;
+}
+
+.linkArea {
+  list-style: none;
+  cursor: pointer;
+}
+
+.titleFirstLetter {
+  display: inline-block;
+  color: $primaryYellow;
+}
+
+.titleRemainingLetters {
+  display: inline-block;
+  color: $offWhite;
+}

@@ -14,7 +14,11 @@ import {
 const secondaryAnimationsDelay = 0.5;
 const secondaryAnimationsStagger = 0.1;
 
-const LandingPage = () => {
+type Props = {
+  scrollToAboutPage: () => void;
+};
+
+const LandingPage = ({ scrollToAboutPage }: Props) => {
   return (
     <div className={styles.container}>
       <motion.div
@@ -26,7 +30,13 @@ const LandingPage = () => {
           delayChildren: secondaryAnimationsDelay,
         }}
       >
-        <motion.li variants={navItemVariants} className={styles.listItem}>
+        <motion.li
+          variants={navItemVariants}
+          className={styles.listItem}
+          onClick={() => {
+            scrollToAboutPage();
+          }}
+        >
           <p className={styles.listItemFirstLetter}>A</p>
           bout
         </motion.li>
