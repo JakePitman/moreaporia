@@ -22,7 +22,7 @@ export const lowerRightBackgroundVariants = {
   },
 
   visible: {
-    rotate: -35,
+    rotate: -30,
     bottom: "-60vh",
     transition: {
       delay: 0.1,
