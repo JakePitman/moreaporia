@@ -34,9 +34,9 @@ const AboutPage = forwardRef<HTMLDivElement>((props, ref) => {
         className={styles.lowerRightBackground}
       />
       <div className={styles.navigationLinksContainer}>
-        <AboutNavigationLink title="My work" />
-        <AboutNavigationLink title="Me" />
-        <AboutNavigationLink title="My skillset" />
+        <AboutNavigationLink title="Work" />
+        <AboutNavigationLink title="Bio" />
+        <AboutNavigationLink title="Tech" />
       </div>
       <div className={styles.mainContentContainer}>
         <div className={styles.mainContentOuterColumn}></div>
