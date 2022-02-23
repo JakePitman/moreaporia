@@ -6,10 +6,10 @@ import { motion } from "framer-motion";
 import styles from "./LandingPage.module.scss";
 import {
   headingVariants,
-  navItemVariants,
   iconVariants,
   footerLineVariants,
 } from "./landingPageVariants";
+import NavItem from "./NavItem";
 
 const secondaryAnimationsDelay = 0.5;
 const secondaryAnimationsStagger = 0.1;
@@ -30,24 +30,9 @@ const LandingPage = ({ scrollToAboutPage }: Props) => {
           delayChildren: secondaryAnimationsDelay,
         }}
       >
-        <motion.li
-          variants={navItemVariants}
-          className={styles.listItem}
-          onClick={() => {
-            scrollToAboutPage();
-          }}
-        >
-          <p className={styles.listItemFirstLetter}>A</p>
-          bout
-        </motion.li>
-        <motion.li variants={navItemVariants} className={styles.listItem}>
-          <p className={styles.listItemFirstLetter}>P</p>
-          rojects
-        </motion.li>
-        <motion.li variants={navItemVariants} className={styles.listItem}>
-          <p className={styles.listItemFirstLetter}>C</p>
-          ontact
-        </motion.li>
+        <NavItem title="About" handleClick={scrollToAboutPage} />
+        <NavItem title="Projects" handleClick={scrollToAboutPage} />
+        <NavItem title="Contact" handleClick={scrollToAboutPage} />
       </motion.div>
 
       <motion.div

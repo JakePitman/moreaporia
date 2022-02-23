@@ -9,14 +9,6 @@ export const headingVariants = {
   },
 };
 
-export const navItemVariants = {
-  hidden: { opacity: 0, transform: "translateX(-40px)" },
-  visible: {
-    transform: "translateX(0px)",
-    opacity: 1,
-  },
-};
-
 export const iconVariants = {
   hidden: { opacity: 0 },
   visible: {

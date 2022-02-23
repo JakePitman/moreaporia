@@ -19,29 +19,6 @@
   width: 100%;
 }
 
-.listItem {
-  display: flex;
-  font-size: 2vw;
-  list-style-type: none;
-  color: $offWhite;
-  margin-right: 3vw;
-  margin-top: 3vw;
-  font-family: "Roboto Mono";
-  cursor: pointer;
-  height: max-content;
-
-  @media (max-width: $breakpointTablet) {
-    font-size: 5vw;
-    margin-right: 4vw;
-  }
-}
-
-.listItemFirstLetter {
-  color: $primaryYellow;
-  font-family: "Roboto Mono";
-  font-weight: 600;
-}
-
 .midSection {
   width: max-content;
   display: flex;
