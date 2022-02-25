@@ -45,7 +45,7 @@ const AboutPage = forwardRef<HTMLDivElement>((props, ref) => {
       initial="hidden"
       onViewportEnter={openingSequence}
       animate={controls}
-      viewport={{ margin: "-50%" }}
+      viewport={{ once: true, margin: "-50%" }}
       className={
         width > height ? styles.containerLandscape : styles.containerPortrait
       }
