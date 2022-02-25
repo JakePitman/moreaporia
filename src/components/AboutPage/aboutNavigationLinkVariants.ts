@@ -1,6 +1,7 @@
 const defaultState = {
   opacity: 1,
   y: 0,
+  border: "1px solid white",
 };
 
 const defaultLinkVariants = {
@@ -10,7 +11,6 @@ const defaultLinkVariants = {
   },
   visible: {
     ...defaultState,
-    border: "1px solid white",
     transition: {
       delay: 0.3,
     },
@@ -24,20 +24,20 @@ const activeState = {
 export const workLinkVariants = {
   ...defaultLinkVariants,
   workActive: activeState,
-  jakeActive: defaultLinkVariants.visible,
-  techActive: defaultLinkVariants.visible,
+  jakeActive: defaultState,
+  techActive: defaultState,
 };
 
 export const jakeLinkVariants = {
   ...defaultLinkVariants,
-  workActive: defaultLinkVariants.visible,
+  workActive: defaultState,
   jakeActive: activeState,
-  techActive: defaultLinkVariants.visible,
+  techActive: defaultState,
 };
 
 export const techLinkVariants = {
   ...defaultLinkVariants,
-  workActive: defaultLinkVariants.visible,
-  jakeActive: defaultLinkVariants.visible,
+  workActive: defaultState,
+  jakeActive: defaultState,
   techActive: activeState,
 };

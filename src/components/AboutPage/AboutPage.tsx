@@ -1,4 +1,4 @@
-import React, { useState, forwardRef } from "react";
+import React, { useState, useEffect, forwardRef } from "react";
 import { motion, useAnimation } from "framer-motion";
 
 import styles from "./AboutPage.module.scss";
@@ -17,13 +17,25 @@ import {
 const AboutPage = forwardRef<HTMLDivElement>((props, ref) => {
   const { width, height } = useWindowDimensions();
   const [selectedNavOption, setSelectedNavOption] = useState<
-    "work" | "jake" | "tech"
-  >("jake");
+    "work" | "jake" | "tech" | null
+  >(null);
   const controls = useAnimation();
   const openingSequence = async () => {
     await controls.start("visible");
-    await controls.start("jakeActive");
+    setSelectedNavOption("jake");
   };
+
+  useEffect(() => {
+    if (selectedNavOption === "work") {
+      controls.start("workActive");
+    }
+    if (selectedNavOption === "jake") {
+      controls.start("jakeActive");
+    }
+    if (selectedNavOption === "tech") {
+      controls.start("techActive");
+    }
+  }, [selectedNavOption, controls]);
 
   return (
     <motion.div
