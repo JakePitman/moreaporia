@@ -1,43 +1,78 @@
-const defaultState = {
+const defaultContainerState = {
   opacity: 1,
   y: 0,
-  border: "1px solid white",
+  border: "none",
 };
 
-const defaultLinkVariants = {
+const defaultContainerVariants = {
   hidden: {
     opacity: 0,
     y: 100,
   },
   visible: {
-    ...defaultState,
+    ...defaultContainerState,
     transition: {
       delay: 0.3,
     },
   },
 };
 
-const activeState = {
-  border: "1px solid pink",
+const activeContainerState = {};
+
+export const workLinkContainerVariants = {
+  ...defaultContainerVariants,
+  workActive: activeContainerState,
+  jakeActive: defaultContainerState,
+  techActive: defaultContainerState,
+};
+export const jakeLinkContainerVariants = {
+  ...defaultContainerVariants,
+  workActive: defaultContainerState,
+  jakeActive: activeContainerState,
+  techActive: defaultContainerState,
+};
+export const techLinkContainerVariants = {
+  ...defaultContainerVariants,
+  workActive: defaultContainerState,
+  jakeActive: defaultContainerState,
+  techActive: activeContainerState,
 };
 
-export const workLinkVariants = {
-  ...defaultLinkVariants,
-  workActive: activeState,
-  jakeActive: defaultState,
-  techActive: defaultState,
+// ----- MINOR BORDER VARIANTS -----
+
+const defaultMinorBorderState = {
+  opacity: 0,
+  width: "0%",
+  height: "0%",
+  background: "transparent",
+};
+const activeMinorBorderState = {
+  opacity: 1,
+  width: "95%",
+  height: "95%",
+  background: "rgb(255, 255, 0, 0.1)",
 };
 
-export const jakeLinkVariants = {
-  ...defaultLinkVariants,
-  workActive: defaultState,
-  jakeActive: activeState,
-  techActive: defaultState,
+const defaultMinorBorderVariants = {
+  hidden: defaultMinorBorderState,
+  visible: defaultMinorBorderState,
 };
 
-export const techLinkVariants = {
-  ...defaultLinkVariants,
-  workActive: defaultState,
-  jakeActive: defaultState,
-  techActive: activeState,
+export const workLinkMinorBorderVariants = {
+  ...defaultMinorBorderVariants,
+  workActive: activeMinorBorderState,
+  jakeActive: defaultMinorBorderState,
+  techActive: defaultMinorBorderState,
+};
+export const jakeLinkMinorBorderVariants = {
+  ...defaultMinorBorderVariants,
+  workActive: defaultMinorBorderState,
+  jakeActive: activeMinorBorderState,
+  techActive: defaultMinorBorderState,
+};
+export const techLinkMinorBorderVariants = {
+  ...defaultMinorBorderVariants,
+  workActive: defaultMinorBorderState,
+  jakeActive: defaultMinorBorderState,
+  techActive: activeMinorBorderState,
 };
