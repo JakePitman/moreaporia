@@ -1,5 +1,5 @@
-import React, { forwardRef } from "react";
-import { motion } from "framer-motion";
+import React, { useState, useEffect, forwardRef } from "react";
+import { motion, useAnimation } from "framer-motion";
 
 import styles from "./AboutPage.module.scss";
 import AboutNavigationLink from "./AboutNavigationLink";
@@ -8,15 +8,44 @@ import {
   lowerRightBackgroundVariants,
 } from "./aboutPageVariants";
 import useWindowDimensions from "../../shared/useWindowDimensions";
+import {
+  workLinkContainerVariants,
+  jakeLinkContainerVariants,
+  techLinkContainerVariants,
+  workLinkMinorBorderVariants,
+  jakeLinkMinorBorderVariants,
+  techLinkMinorBorderVariants,
+} from "./aboutNavigationLinkVariants";
 
 const AboutPage = forwardRef<HTMLDivElement>((props, ref) => {
   const { width, height } = useWindowDimensions();
+  const [selectedNavOption, setSelectedNavOption] = useState<
+    "work" | "jake" | "tech" | null
+  >(null);
+  const controls = useAnimation();
+  const openingSequence = async () => {
+    await controls.start("visible");
+    setSelectedNavOption("jake");
+  };
+
+  useEffect(() => {
+    if (selectedNavOption === "work") {
+      controls.start("workActive");
+    }
+    if (selectedNavOption === "jake") {
+      controls.start("jakeActive");
+    }
+    if (selectedNavOption === "tech") {
+      controls.start("techActive");
+    }
+  }, [selectedNavOption, controls]);
 
   return (
     <motion.div
       initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, margin: "-50%" }}
+      onViewportEnter={openingSequence}
+      animate={controls}
+      viewport={{ margin: "-50%" }}
       className={
         width > height ? styles.containerLandscape : styles.containerPortrait
       }
@@ -31,9 +60,30 @@ const AboutPage = forwardRef<HTMLDivElement>((props, ref) => {
         className={styles.lowerRightBackground}
       />
       <motion.div className={styles.navigationLinksContainer}>
-        <AboutNavigationLink title="Work" />
-        <AboutNavigationLink title="Bio" />
-        <AboutNavigationLink title="Tech" />
+        <AboutNavigationLink
+          title="Work"
+          handleClick={() => setSelectedNavOption("work")}
+          variants={{
+            container: workLinkContainerVariants,
+            minorBorder: workLinkMinorBorderVariants,
+          }}
+        />
+        <AboutNavigationLink
+          title="Jake"
+          handleClick={() => setSelectedNavOption("jake")}
+          variants={{
+            container: jakeLinkContainerVariants,
+            minorBorder: jakeLinkMinorBorderVariants,
+          }}
+        />
+        <AboutNavigationLink
+          title="Tech"
+          handleClick={() => setSelectedNavOption("tech")}
+          variants={{
+            container: techLinkContainerVariants,
+            minorBorder: techLinkMinorBorderVariants,
+          }}
+        />
       </motion.div>
       <div className={styles.mainContentContainer}>
         <div className={styles.mainContentOuterColumn}></div>

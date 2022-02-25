@@ -2,17 +2,26 @@ import React from "react";
 import { motion } from "framer-motion";
 
 import styles from "./AboutNavigationLink.module.scss";
-import { linkVariants } from "./aboutNavigationLinkVariants";
 
 type Props = {
   title: string;
+  handleClick: () => void;
+  variants: { container: {}; minorBorder: {} };
 };
 
-const AboutNavigationLink = ({ title }: Props) => {
+const AboutNavigationLink = ({ title, handleClick, variants }: Props) => {
   return (
-    <motion.div variants={linkVariants} className={styles.container}>
+    <motion.div variants={variants.container} className={styles.container}>
       <div className={styles.textWrapper}>
-        <div className={styles.clickArea} />
+        <motion.div
+          className={styles.minorBorderContainer}
+          variants={variants.minorBorder}
+        >
+          <div className={styles.minorBorderUpperLeft} />
+          <div className={styles.minorBorderLowerRight} />
+        </motion.div>
+
+        <div className={styles.clickArea} onClick={handleClick} />
         <p className={styles.titleFirstLetter}>{title.slice(0, 1)}</p>
         <p className={styles.titleRemainingLetters}>
           {title.slice(1, title.length)}

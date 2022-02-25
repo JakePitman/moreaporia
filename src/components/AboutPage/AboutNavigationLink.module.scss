@@ -12,6 +12,10 @@
   height: max-content;
   position: relative;
   text-align: center;
+  position: relative;
+  padding-left: 4%;
+  padding-right: 4%;
+  padding-bottom: 1%;
 }
 
 .clickArea {
@@ -19,15 +23,52 @@
   width: 100%;
   height: 100%;
   position: absolute;
-  z-index: 2;
+  left: 0;
+  z-index: 3;
 }
 
 .titleFirstLetter {
   display: inline-block;
   color: $primaryYellow;
+  position: relative;
+  z-index: 2;
 }
 
 .titleRemainingLetters {
   display: inline-block;
   color: $offWhite;
+  position: relative;
+  z-index: 2;
+}
+
+.minorBorderContainer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.minorBorderUpperLeft {
+  border-left: 1px solid $primaryYellow;
+  border-top: 1px solid $primaryYellow;
+  position: absolute;
+  height: 50%;
+  aspect-ratio: 1;
+  top: 0;
+  left: 0;
+}
+
+.minorBorderLowerRight {
+  border-right: 1px solid $primaryYellow;
+  border-bottom: 1px solid $primaryYellow;
+  position: absolute;
+  height: 50%;
+  aspect-ratio: 1;
+  bottom: 0;
+  right: 0;
 }
