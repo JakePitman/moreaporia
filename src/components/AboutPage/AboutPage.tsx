@@ -25,7 +25,6 @@ const AboutPage = forwardRef<HTMLDivElement>((props, ref) => {
     await controls.start("jakeActive");
   };
 
-  // await controls.start("");
   return (
     <motion.div
       initial="hidden"
