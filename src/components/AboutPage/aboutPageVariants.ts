@@ -1,13 +1,13 @@
 export const lowerLeftBackgroundVariants = {
   hidden: {
     rotate: 0,
-    bottom: "-60vh",
+    bottom: "-110vh",
     transition: {},
   },
 
   visible: {
     rotate: 30,
-    bottom: "-50vh",
+    bottom: "-90vh",
     transition: {
       delay: 0.3,
     },
