@@ -53,14 +53,16 @@
   margin-bottom: auto;
 }
 
+$minorBorderOffset: -5px;
+
 .minorBorderUpperLeft {
   border-left: 1px solid $primaryYellow;
   border-top: 1px solid $primaryYellow;
   position: absolute;
   height: 50%;
   aspect-ratio: 1;
-  top: -5px;
-  left: -5px;
+  top: $minorBorderOffset;
+  left: $minorBorderOffset;
 }
 
 .minorBorderLowerRight {
@@ -69,6 +71,6 @@
   position: absolute;
   height: 50%;
   aspect-ratio: 1;
-  bottom: -5px;
-  right: -5px;
+  bottom: $minorBorderOffset;
+  right: $minorBorderOffset;
 }
