@@ -40,19 +40,63 @@ export const containerVariants = {
   },
 };
 
-// ----- MINOR BORDER VARIANTS -----
+// ----- MINOR BORDER CONTAINER VARIANTS -----
 
-const defaultMinorBorderState = {
+const defaultMinorBorderContainerState = {
   opacity: 0,
   width: "0%",
   height: "0%",
   background: "transparent",
 };
-const activeMinorBorderState = {
+const activeMinorBorderContainerState = {
   opacity: 1,
   width: "95%",
   height: "95%",
   background: "rgb(255, 255, 0, 0.1)",
+  transition: {
+    duration: 0.2,
+  },
+};
+
+const defaultMinorBorderContainerVariants = {
+  hidden: defaultMinorBorderContainerState,
+  visible: defaultMinorBorderContainerState,
+};
+
+export const minorBorderContainerVariants = {
+  work: {
+    ...defaultMinorBorderContainerVariants,
+    workActive: activeMinorBorderContainerState,
+    jakeActive: defaultMinorBorderContainerState,
+    techActive: defaultMinorBorderContainerState,
+  },
+  jake: {
+    ...defaultMinorBorderContainerVariants,
+    workActive: defaultMinorBorderContainerState,
+    jakeActive: activeMinorBorderContainerState,
+    techActive: defaultMinorBorderContainerState,
+  },
+  tech: {
+    ...defaultMinorBorderContainerVariants,
+    workActive: defaultMinorBorderContainerState,
+    jakeActive: defaultMinorBorderContainerState,
+    techActive: activeMinorBorderContainerState,
+  },
+};
+
+// ----- MINOR BORDER VARIANTS -----
+
+const defaultMinorBorderState = {
+  opacity: 0,
+  height: "0%",
+};
+
+const activeMinorBorderState = {
+  opacity: 1,
+  height: "50%",
+  transition: {
+    duration: 0.4,
+  },
 };
 
 const defaultMinorBorderVariants = {
@@ -60,7 +104,7 @@ const defaultMinorBorderVariants = {
   visible: defaultMinorBorderState,
 };
 
-export const minorBorderContainerVariants = {
+export const minorBorderVariants = {
   work: {
     ...defaultMinorBorderVariants,
     workActive: activeMinorBorderState,

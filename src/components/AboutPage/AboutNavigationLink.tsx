@@ -5,6 +5,7 @@ import styles from "./AboutNavigationLink.module.scss";
 import {
   containerVariants,
   minorBorderContainerVariants,
+  minorBorderVariants,
 } from "./aboutNavigationLinkVariants";
 
 type Props = {
@@ -24,8 +25,14 @@ const AboutNavigationLink = ({ title, variantKey, handleClick }: Props) => {
           className={styles.minorBorderContainer}
           variants={minorBorderContainerVariants[variantKey]}
         >
-          <motion.div className={styles.minorBorderUpperLeft} />
-          <motion.div className={styles.minorBorderLowerRight} />
+          <motion.div
+            className={styles.minorBorderUpperLeft}
+            variants={minorBorderVariants[variantKey]}
+          />
+          <motion.div
+            className={styles.minorBorderLowerRight}
+            variants={minorBorderVariants[variantKey]}
+          />
         </motion.div>
 
         <div className={styles.clickArea} onClick={handleClick} />
