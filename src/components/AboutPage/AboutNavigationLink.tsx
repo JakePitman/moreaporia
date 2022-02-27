@@ -2,23 +2,30 @@ import React from "react";
 import { motion } from "framer-motion";
 
 import styles from "./AboutNavigationLink.module.scss";
+import {
+  containerVariants,
+  minorBorderContainerVariants,
+} from "./aboutNavigationLinkVariants";
 
 type Props = {
   title: string;
+  variantKey: "work" | "jake" | "tech";
   handleClick: () => void;
-  variants: { container: {}; minorBorder: {} };
 };
 
-const AboutNavigationLink = ({ title, handleClick, variants }: Props) => {
+const AboutNavigationLink = ({ title, variantKey, handleClick }: Props) => {
   return (
-    <motion.div variants={variants.container} className={styles.container}>
+    <motion.div
+      variants={containerVariants[variantKey]}
+      className={styles.container}
+    >
       <div className={styles.textWrapper}>
         <motion.div
           className={styles.minorBorderContainer}
-          variants={variants.minorBorder}
+          variants={minorBorderContainerVariants[variantKey]}
         >
-          <div className={styles.minorBorderUpperLeft} />
-          <div className={styles.minorBorderLowerRight} />
+          <motion.div className={styles.minorBorderUpperLeft} />
+          <motion.div className={styles.minorBorderLowerRight} />
         </motion.div>
 
         <div className={styles.clickArea} onClick={handleClick} />

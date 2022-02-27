@@ -19,23 +19,25 @@ const defaultContainerVariants = {
 
 const activeContainerState = {};
 
-export const workLinkContainerVariants = {
-  ...defaultContainerVariants,
-  workActive: activeContainerState,
-  jakeActive: defaultContainerState,
-  techActive: defaultContainerState,
-};
-export const jakeLinkContainerVariants = {
-  ...defaultContainerVariants,
-  workActive: defaultContainerState,
-  jakeActive: activeContainerState,
-  techActive: defaultContainerState,
-};
-export const techLinkContainerVariants = {
-  ...defaultContainerVariants,
-  workActive: defaultContainerState,
-  jakeActive: defaultContainerState,
-  techActive: activeContainerState,
+export const containerVariants = {
+  work: {
+    ...defaultContainerVariants,
+    workActive: activeContainerState,
+    jakeActive: defaultContainerState,
+    techActive: defaultContainerState,
+  },
+  jake: {
+    ...defaultContainerVariants,
+    workActive: defaultContainerState,
+    jakeActive: activeContainerState,
+    techActive: defaultContainerState,
+  },
+  tech: {
+    ...defaultContainerVariants,
+    workActive: defaultContainerState,
+    jakeActive: defaultContainerState,
+    techActive: activeContainerState,
+  },
 };
 
 // ----- MINOR BORDER VARIANTS -----
@@ -58,21 +60,23 @@ const defaultMinorBorderVariants = {
   visible: defaultMinorBorderState,
 };
 
-export const workLinkMinorBorderVariants = {
-  ...defaultMinorBorderVariants,
-  workActive: activeMinorBorderState,
-  jakeActive: defaultMinorBorderState,
-  techActive: defaultMinorBorderState,
-};
-export const jakeLinkMinorBorderVariants = {
-  ...defaultMinorBorderVariants,
-  workActive: defaultMinorBorderState,
-  jakeActive: activeMinorBorderState,
-  techActive: defaultMinorBorderState,
-};
-export const techLinkMinorBorderVariants = {
-  ...defaultMinorBorderVariants,
-  workActive: defaultMinorBorderState,
-  jakeActive: defaultMinorBorderState,
-  techActive: activeMinorBorderState,
+export const minorBorderContainerVariants = {
+  work: {
+    ...defaultMinorBorderVariants,
+    workActive: activeMinorBorderState,
+    jakeActive: defaultMinorBorderState,
+    techActive: defaultMinorBorderState,
+  },
+  jake: {
+    ...defaultMinorBorderVariants,
+    workActive: defaultMinorBorderState,
+    jakeActive: activeMinorBorderState,
+    techActive: defaultMinorBorderState,
+  },
+  tech: {
+    ...defaultMinorBorderVariants,
+    workActive: defaultMinorBorderState,
+    jakeActive: defaultMinorBorderState,
+    techActive: activeMinorBorderState,
+  },
 };
