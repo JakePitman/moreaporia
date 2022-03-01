@@ -13,9 +13,9 @@
   position: relative;
   text-align: center;
   position: relative;
-  padding-left: 4%;
-  padding-right: 4%;
-  padding-bottom: 1%;
+  padding-left: 6%;
+  padding-right: 6%;
+  padding-bottom: 2%;
 }
 
 .clickArea {
@@ -53,14 +53,16 @@
   margin-bottom: auto;
 }
 
+$minorBorderOffset: -5px;
+
 .minorBorderUpperLeft {
   border-left: 1px solid $primaryYellow;
   border-top: 1px solid $primaryYellow;
   position: absolute;
   height: 50%;
   aspect-ratio: 1;
-  top: 0;
-  left: 0;
+  top: $minorBorderOffset;
+  left: $minorBorderOffset;
 }
 
 .minorBorderLowerRight {
@@ -69,6 +71,6 @@
   position: absolute;
   height: 50%;
   aspect-ratio: 1;
-  bottom: 0;
-  right: 0;
+  bottom: $minorBorderOffset;
+  right: $minorBorderOffset;
 }

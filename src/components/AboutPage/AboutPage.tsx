@@ -8,14 +8,6 @@ import {
   lowerRightBackgroundVariants,
 } from "./aboutPageVariants";
 import useWindowDimensions from "../../shared/useWindowDimensions";
-import {
-  workLinkContainerVariants,
-  jakeLinkContainerVariants,
-  techLinkContainerVariants,
-  workLinkMinorBorderVariants,
-  jakeLinkMinorBorderVariants,
-  techLinkMinorBorderVariants,
-} from "./aboutNavigationLinkVariants";
 
 const AboutPage = forwardRef<HTMLDivElement>((props, ref) => {
   const { width, height } = useWindowDimensions();
@@ -62,27 +54,18 @@ const AboutPage = forwardRef<HTMLDivElement>((props, ref) => {
       <motion.div className={styles.navigationLinksContainer}>
         <AboutNavigationLink
           title="Work"
+          variantKey="work"
           handleClick={() => setSelectedNavOption("work")}
-          variants={{
-            container: workLinkContainerVariants,
-            minorBorder: workLinkMinorBorderVariants,
-          }}
         />
         <AboutNavigationLink
           title="Jake"
+          variantKey="jake"
           handleClick={() => setSelectedNavOption("jake")}
-          variants={{
-            container: jakeLinkContainerVariants,
-            minorBorder: jakeLinkMinorBorderVariants,
-          }}
         />
         <AboutNavigationLink
           title="Tech"
+          variantKey="tech"
           handleClick={() => setSelectedNavOption("tech")}
-          variants={{
-            container: techLinkContainerVariants,
-            minorBorder: techLinkMinorBorderVariants,
-          }}
         />
       </motion.div>
       <div className={styles.mainContentContainer}>
