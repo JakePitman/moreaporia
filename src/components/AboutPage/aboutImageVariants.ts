@@ -11,13 +11,14 @@ const hidden = {
   opacity: 0,
 };
 
-export const aboutImageVariants = {
+export const aboutImageContainerVariants = {
   hidden: hidden,
   visible: hidden,
   shrink: {
     width: "5%",
+    opacity: 1,
     transition: {
-      duration: 0.2,
+      duration: 0.1,
       delay: 0,
     },
   },
@@ -49,5 +50,23 @@ export const aboutImageVariants = {
     top: 0,
     bottom: 0,
     opacity: 1,
+  },
+};
+
+export const aboutImageOpacityLayerVariants = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 0,
+  },
+  shrink: {
+    opacity: 1,
+    transition: {
+      delay: 0,
+    },
+  },
+  expand: {
+    opacity: 0,
   },
 };

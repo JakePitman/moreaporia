@@ -16,12 +16,14 @@ import saho from "./pictures/saho_jake_gardens.png";
 const AboutPage = forwardRef<HTMLDivElement>((props, ref) => {
   const { width, height } = useWindowDimensions();
   const [selectedNavOption, setSelectedNavOption] = useState<
-    "work" | "jake" | "tech" | null
-  >(null);
+    "work" | "jake" | "tech"
+  >("jake");
   const controls = useAnimation();
   const openingSequence = async () => {
     await controls.start("visible");
-    setSelectedNavOption("jake");
+    await controls.start("shrink");
+    await controls.start("jakeActive");
+    await controls.start("expand");
   };
 
   const navOptionToPictureMap = {
@@ -31,7 +33,6 @@ const AboutPage = forwardRef<HTMLDivElement>((props, ref) => {
   };
 
   const changeNavOptionSequence = useCallback(async () => {
-    await controls.start("shrink");
     if (selectedNavOption === "work") {
       await controls.start("workActive");
     }
@@ -47,6 +48,11 @@ const AboutPage = forwardRef<HTMLDivElement>((props, ref) => {
   useEffect(() => {
     changeNavOptionSequence();
   }, [changeNavOptionSequence]);
+
+  const handleNavOptionChange = async (navOption: "work" | "jake" | "tech") => {
+    await controls.start("shrink");
+    setSelectedNavOption(navOption);
+  };
 
   return (
     <motion.div
@@ -71,27 +77,29 @@ const AboutPage = forwardRef<HTMLDivElement>((props, ref) => {
         <AboutNavigationLink
           title="Work"
           variantKey="work"
-          handleClick={() => setSelectedNavOption("work")}
+          handleClick={() => {
+            handleNavOptionChange("work");
+          }}
         />
         <AboutNavigationLink
           title="Jake"
           variantKey="jake"
-          handleClick={() => setSelectedNavOption("jake")}
+          handleClick={() => handleNavOptionChange("jake")}
         />
         <AboutNavigationLink
           title="Tech"
           variantKey="tech"
-          handleClick={() => setSelectedNavOption("tech")}
+          handleClick={() => {
+            handleNavOptionChange("tech");
+          }}
         />
       </motion.div>
       <motion.div className={styles.mainContentContainer}>
         <motion.div className={styles.imagesLayer}>
-          {selectedNavOption && (
-            <AboutImage
-              src={navOptionToPictureMap[selectedNavOption]}
-              alt="kayak"
-            />
-          )}
+          <AboutImage
+            src={navOptionToPictureMap[selectedNavOption]}
+            alt="kayak"
+          />
         </motion.div>
         <motion.div className={styles.mainContentCenterColumn}></motion.div>
       </motion.div>
