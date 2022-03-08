@@ -1,13 +1,17 @@
-import React, { useState, useEffect, forwardRef } from "react";
+import React, { useState, useEffect, forwardRef, useCallback } from "react";
 import { motion, useAnimation } from "framer-motion";
 
 import styles from "./AboutPage.module.scss";
 import AboutNavigationLink from "./AboutNavigationLink";
+import AboutImage from "./AboutImage";
 import {
   lowerLeftBackgroundVariants,
   lowerRightBackgroundVariants,
 } from "./aboutPageVariants";
 import useWindowDimensions from "../../shared/useWindowDimensions";
+import kayak from "./pictures/kayak.png";
+import beach from "./pictures/beach.png";
+import saho from "./pictures/saho_jake_gardens.png";
 
 const AboutPage = forwardRef<HTMLDivElement>((props, ref) => {
   const { width, height } = useWindowDimensions();
@@ -20,17 +24,29 @@ const AboutPage = forwardRef<HTMLDivElement>((props, ref) => {
     setSelectedNavOption("jake");
   };
 
-  useEffect(() => {
+  const navOptionToPictureMap = {
+    work: saho,
+    jake: kayak,
+    tech: beach,
+  };
+
+  const changeNavOptionSequence = useCallback(async () => {
+    await controls.start("shrink");
     if (selectedNavOption === "work") {
-      controls.start("workActive");
+      await controls.start("workActive");
     }
     if (selectedNavOption === "jake") {
-      controls.start("jakeActive");
+      await controls.start("jakeActive");
     }
     if (selectedNavOption === "tech") {
-      controls.start("techActive");
+      await controls.start("techActive");
     }
+    await controls.start("expand");
   }, [selectedNavOption, controls]);
+
+  useEffect(() => {
+    changeNavOptionSequence();
+  }, [changeNavOptionSequence]);
 
   return (
     <motion.div
@@ -68,11 +84,17 @@ const AboutPage = forwardRef<HTMLDivElement>((props, ref) => {
           handleClick={() => setSelectedNavOption("tech")}
         />
       </motion.div>
-      <div className={styles.mainContentContainer}>
-        <div className={styles.mainContentOuterColumn}></div>
-        <div className={styles.mainContentCenterColumn}></div>
-        <div className={styles.mainContentOuterColumn}></div>
-      </div>
+      <motion.div className={styles.mainContentContainer}>
+        <motion.div className={styles.imagesLayer}>
+          {selectedNavOption && (
+            <AboutImage
+              src={navOptionToPictureMap[selectedNavOption]}
+              alt="kayak"
+            />
+          )}
+        </motion.div>
+        <motion.div className={styles.mainContentCenterColumn}></motion.div>
+      </motion.div>
     </motion.div>
   );
 });
