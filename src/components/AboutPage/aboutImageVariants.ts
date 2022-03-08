@@ -11,10 +11,8 @@ const hidden = {
   opacity: 0,
 };
 
-const jakeActiveOffset = "75%";
-
 export const aboutImageVariants = {
-  hidden: { ...hidden, left: jakeActiveOffset },
+  hidden: hidden,
   visible: hidden,
   shrink: {
     width: "5%",
