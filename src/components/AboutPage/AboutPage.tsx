@@ -14,6 +14,7 @@ import beach from "./pictures/beach.png";
 import saho from "./pictures/saho_jake_gardens.png";
 
 const AboutPage = forwardRef<HTMLDivElement>((props, ref) => {
+  const [hasEnteredViewport, setHasEnteredViewport] = useState(false);
   const { width, height } = useWindowDimensions();
   const [selectedNavOption, setSelectedNavOption] = useState<
     "work" | "jake" | "tech"
@@ -24,6 +25,7 @@ const AboutPage = forwardRef<HTMLDivElement>((props, ref) => {
     await controls.start("shrink");
     await controls.start("jakeActive");
     await controls.start("expand");
+    setHasEnteredViewport(true);
   };
 
   const navOptionToPictureMap = {
@@ -33,6 +35,9 @@ const AboutPage = forwardRef<HTMLDivElement>((props, ref) => {
   };
 
   const changeNavOptionSequence = useCallback(async () => {
+    if (!hasEnteredViewport) {
+      return;
+    }
     if (selectedNavOption === "work") {
       await controls.start("workActive");
     }
@@ -43,7 +48,7 @@ const AboutPage = forwardRef<HTMLDivElement>((props, ref) => {
       await controls.start("techActive");
     }
     await controls.start("expand");
-  }, [selectedNavOption, controls]);
+  }, [selectedNavOption, controls, hasEnteredViewport]);
 
   useEffect(() => {
     changeNavOptionSequence();
