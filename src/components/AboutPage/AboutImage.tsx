@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import styles from "./AboutImage.module.scss";
 import {
   aboutImageContainerVariants,
-  aboutImageOpacityLayerVariants,
+  aboutImageVariants,
 } from "./aboutImageVariants";
 
 type Props = {
@@ -19,10 +19,13 @@ const AboutImage = ({ src, alt }: Props) => {
       className={styles.imageContainer}
       variants={aboutImageContainerVariants}
     >
-      <img src={src} alt={alt} className={styles.image} />;
-      <motion.div
-        className={styles.opacityLayer}
-        variants={aboutImageOpacityLayerVariants}
+      <div className={styles.cornerBorderTopRight} />
+      <div className={styles.cornerBorderBottomLeft} />
+      <motion.img
+        src={src}
+        alt={alt}
+        className={styles.image}
+        variants={aboutImageVariants}
       />
     </motion.div>
   );

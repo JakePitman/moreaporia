@@ -15,7 +15,7 @@ export const aboutImageContainerVariants = {
   hidden: hidden,
   visible: hidden,
   shrink: {
-    width: "5%",
+    width: "3vw",
     opacity: 1,
     transition: {
       duration: 0.1,
@@ -40,33 +40,34 @@ export const aboutImageContainerVariants = {
   workActive: {
     left: "-75%",
     right: 0,
-    top: 0,
+    top: "40%",
     bottom: 0,
     opacity: 1,
   },
   techActive: {
     left: "75%",
     right: 0,
-    top: 0,
+    top: "-40%",
     bottom: 0,
     opacity: 1,
   },
 };
 
-export const aboutImageOpacityLayerVariants = {
+export const aboutImageVariants = {
   hidden: {
     opacity: 0,
   },
   visible: {
-    opacity: 0,
+    opacity: 1,
   },
   shrink: {
-    opacity: 1,
+    opacity: 0,
     transition: {
       delay: 0,
+      duration: 0.1,
     },
   },
   expand: {
-    opacity: 0,
+    opacity: 1,
   },
 };
