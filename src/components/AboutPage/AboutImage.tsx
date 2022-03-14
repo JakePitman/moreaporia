@@ -3,7 +3,8 @@ import { motion } from "framer-motion";
 
 import styles from "./AboutImage.module.scss";
 import {
-  aboutImageContainerVariants,
+  aboutImageContainer1Variants,
+  aboutImageContainer2Variants,
   aboutImageVariants,
   topRightCornerVariants,
   bottomLeftCornerVariants,
@@ -12,13 +13,19 @@ import {
 type Props = {
   src: string;
   alt: string;
+  type: "1" | "2";
 };
 
-const AboutImage = ({ src, alt }: Props) => {
+const typeToVariantsMap = {
+  "1": aboutImageContainer1Variants,
+  "2": aboutImageContainer2Variants,
+};
+
+const AboutImage = ({ src, alt, type }: Props) => {
   return (
     <motion.div
       className={styles.imageContainer}
-      variants={aboutImageContainerVariants}
+      variants={typeToVariantsMap[type]}
     >
       <motion.div
         className={styles.cornerBorderTopRight}

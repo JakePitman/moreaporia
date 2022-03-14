@@ -11,7 +11,7 @@ const hidden = {
   opacity: 0,
 };
 
-export const aboutImageContainerVariants = {
+export const aboutImageContainerDefaultVariants = {
   hidden: hidden,
   visible: hidden,
   shrink: {
@@ -23,13 +23,17 @@ export const aboutImageContainerVariants = {
     },
   },
   expand: {
-    width: "20%",
+    width: "30vh",
     transition: {
       duration: 0.3,
       delay: 0,
       type: "spring",
     },
   },
+};
+
+export const aboutImageContainer1Variants = {
+  ...aboutImageContainerDefaultVariants,
   jakeActive: {
     left: 0,
     right: 0,
@@ -45,9 +49,34 @@ export const aboutImageContainerVariants = {
     opacity: 1,
   },
   techActive: {
-    left: "75%",
+    left: "70%",
     right: 0,
     top: "-40%",
+    bottom: 0,
+    opacity: 1,
+  },
+};
+
+export const aboutImageContainer2Variants = {
+  ...aboutImageContainerDefaultVariants,
+  jakeActive: {
+    left: 0,
+    right: 0,
+    top: 0,
+    bottom: 0,
+    opacity: 1,
+  },
+  workActive: {
+    left: "-70%",
+    right: 0,
+    top: "-40%",
+    bottom: 0,
+    opacity: 1,
+  },
+  techActive: {
+    left: "75%",
+    right: 0,
+    top: "40%",
     bottom: 0,
     opacity: 1,
   },
