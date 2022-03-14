@@ -12,7 +12,6 @@ type Props = {
   alt: string;
 };
 
-//TODO: Find out why this appears and then shrinks when entering viewport
 const AboutImage = ({ src, alt }: Props) => {
   return (
     <motion.div
