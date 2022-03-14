@@ -71,3 +71,35 @@ export const aboutImageVariants = {
     opacity: 1,
   },
 };
+
+const cornerOffset = -8;
+
+export const topRightCornerVariants = {
+  shrink: {
+    top: 0,
+    right: 0,
+  },
+  expand: {
+    top: cornerOffset,
+    right: cornerOffset,
+    transition: {
+      duration: 0.2,
+      delay: 0.1,
+    },
+  },
+};
+
+export const bottomLeftCornerVariants = {
+  shrink: {
+    bottom: 0,
+    left: 0,
+  },
+  expand: {
+    bottom: cornerOffset,
+    left: cornerOffset,
+    transition: {
+      duration: 0.2,
+      delay: 0.1,
+    },
+  },
+};

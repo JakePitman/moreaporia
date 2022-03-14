@@ -5,6 +5,8 @@ import styles from "./AboutImage.module.scss";
 import {
   aboutImageContainerVariants,
   aboutImageVariants,
+  topRightCornerVariants,
+  bottomLeftCornerVariants,
 } from "./aboutImageVariants";
 
 type Props = {
@@ -18,8 +20,14 @@ const AboutImage = ({ src, alt }: Props) => {
       className={styles.imageContainer}
       variants={aboutImageContainerVariants}
     >
-      <div className={styles.cornerBorderTopRight} />
-      <div className={styles.cornerBorderBottomLeft} />
+      <motion.div
+        className={styles.cornerBorderTopRight}
+        variants={topRightCornerVariants}
+      />
+      <motion.div
+        className={styles.cornerBorderBottomLeft}
+        variants={bottomLeftCornerVariants}
+      />
       <motion.img
         src={src}
         alt={alt}
