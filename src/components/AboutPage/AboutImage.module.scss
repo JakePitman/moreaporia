@@ -15,24 +15,25 @@
   width: 90%;
 }
 
-$cornerSize: calc(3vw - 1px);
+$cornerBorderWidth: 1px;
+$cornerLength: calc(3vw - $cornerBorderWidth);
 
 .cornerBorderTopRight {
   position: absolute;
   top: 0;
   right: 0;
-  width: $cornerSize;
-  height: $cornerSize;
-  border-top: 1px solid $boldBlue;
-  border-right: 1px solid $boldBlue;
+  width: $cornerLength;
+  height: $cornerLength;
+  border-top: $cornerBorderWidth solid $boldBlue;
+  border-right: $cornerBorderWidth solid $boldBlue;
 }
 
 .cornerBorderBottomLeft {
   position: absolute;
   bottom: 0;
   left: 0;
-  width: $cornerSize;
-  height: $cornerSize;
-  border-bottom: 1px solid $boldBlue;
-  border-left: 1px solid $boldBlue;
+  width: $cornerLength;
+  height: $cornerLength;
+  border-bottom: $cornerBorderWidth solid $boldBlue;
+  border-left: $cornerBorderWidth solid $boldBlue;
 }
