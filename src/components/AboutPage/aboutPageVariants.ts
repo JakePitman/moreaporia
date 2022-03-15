@@ -15,21 +15,21 @@ export const lowerLeftBackgroundVariants = {
       delay: 0.3,
     },
   },
-  workActive: {
+  workActiveMove: {
     rotate: 40,
     bottom: lowerBackgroundVisibleHeight,
     transition: {
       delay: 0.1,
     },
   },
-  jakeActive: {
+  jakeActiveMove: {
     rotate: 30,
     bottom: lowerBackgroundVisibleHeight,
     transition: {
       delay: 0.1,
     },
   },
-  techActive: {
+  techActiveMove: {
     bottom: lowerBackgroundVisibleHeight,
     rotate: 20,
   },
@@ -48,15 +48,15 @@ export const lowerRightBackgroundVariants = {
       delay: 0.2,
     },
   },
-  workActive: {
+  workActiveMove: {
     bottom: lowerBackgroundVisibleHeight,
     rotate: -10,
   },
-  jakeActive: {
+  jakeActiveMove: {
     bottom: lowerBackgroundVisibleHeight,
     rotate: -30,
   },
-  techActive: {
+  techActiveMove: {
     bottom: lowerBackgroundVisibleHeight,
     rotate: -40,
     transition: {

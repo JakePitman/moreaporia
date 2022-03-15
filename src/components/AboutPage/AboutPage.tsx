@@ -26,8 +26,8 @@ const AboutPage = forwardRef<HTMLDivElement>((props, ref) => {
   const openingSequence = async () => {
     await controls.start("visible");
     await controls.start("shrink");
-    await controls.start("jakeActive");
-    await controls.start("expand");
+    await controls.start("jakeActiveMove");
+    await controls.start("jakeActiveExpand");
     setHasEnteredViewport(true);
   };
 
@@ -47,15 +47,17 @@ const AboutPage = forwardRef<HTMLDivElement>((props, ref) => {
       return;
     }
     if (selectedNavOption === "work") {
-      await controls.start("workActive");
+      await controls.start("workActiveMove");
+      await controls.start("workActiveExpand");
     }
     if (selectedNavOption === "jake") {
-      await controls.start("jakeActive");
+      await controls.start("jakeActiveMove");
+      await controls.start("jakeActiveExpand");
     }
     if (selectedNavOption === "tech") {
-      await controls.start("techActive");
+      await controls.start("techActiveMove");
+      await controls.start("techActiveExpand");
     }
-    await controls.start("expand");
   }, [selectedNavOption, controls, hasEnteredViewport]);
 
   useEffect(() => {

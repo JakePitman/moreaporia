@@ -11,6 +11,14 @@ const hidden = {
   opacity: 0,
 };
 
+const containerExpandDefaults = {
+  transition: {
+    duration: 0.3,
+    delay: 0,
+    type: "spring",
+  },
+};
+
 export const aboutImageContainerDefaultVariants = {
   hidden: hidden,
   visible: hidden,
@@ -22,63 +30,79 @@ export const aboutImageContainerDefaultVariants = {
       delay: 0,
     },
   },
-  expand: {
-    width: "30vh",
-    transition: {
-      duration: 0.3,
-      delay: 0,
-      type: "spring",
-    },
-  },
 };
 
 export const aboutImageContainer1Variants = {
   ...aboutImageContainerDefaultVariants,
-  jakeActive: {
+  jakeActiveMove: {
     left: 0,
     right: 0,
     top: 0,
     bottom: 0,
-    opacity: 1,
+    opacity: 0,
   },
-  workActive: {
+  workActiveMove: {
     left: "-75%",
     right: 0,
     top: "40%",
     bottom: 0,
     opacity: 1,
   },
-  techActive: {
+  techActiveMove: {
     left: "70%",
     right: 0,
     top: "-40%",
     bottom: 0,
     opacity: 1,
   },
+  workActiveExpand: {
+    ...containerExpandDefaults,
+    width: "30vh",
+  },
+  jakeActiveExpand: {
+    ...containerExpandDefaults,
+    width: "0vh",
+  },
+  techActiveExpand: {
+    ...containerExpandDefaults,
+    width: "30vh",
+  },
 };
 
 export const aboutImageContainer2Variants = {
   ...aboutImageContainerDefaultVariants,
-  jakeActive: {
+  jakeActiveMove: {
     left: 0,
     right: 0,
     top: 0,
     bottom: 0,
     opacity: 1,
   },
-  workActive: {
+  workActiveMove: {
     left: "-70%",
     right: 0,
     top: "-40%",
     bottom: 0,
     opacity: 1,
   },
-  techActive: {
+  techActiveMove: {
     left: "75%",
     right: 0,
     top: "40%",
     bottom: 0,
     opacity: 1,
+  },
+  workActiveExpand: {
+    ...containerExpandDefaults,
+    width: "25vh",
+  },
+  jakeActiveExpand: {
+    ...containerExpandDefaults,
+    width: "50vh",
+  },
+  techActiveExpand: {
+    ...containerExpandDefaults,
+    width: "35vh",
   },
 };
 
@@ -93,28 +117,52 @@ export const aboutImageVariants = {
     opacity: 0,
     transition: {
       delay: 0,
-      duration: 0.1,
+      duration: 0.2,
     },
   },
-  expand: {
+  workActiveExpand: {
+    opacity: 1,
+  },
+  jakeActiveExpand: {
+    opacity: 1,
+  },
+  techActiveExpand: {
     opacity: 1,
   },
 };
 
 const cornerOffset = -8;
 
+const cornerExpandDefaults = {
+  transition: {
+    duration: 0.2,
+    delay: 0.1,
+  },
+};
+const topRightCornerExpandDefaults = {
+  ...cornerExpandDefaults,
+  top: cornerOffset,
+  right: cornerOffset,
+};
+const bottomLeftCornerExpandDefaults = {
+  ...cornerExpandDefaults,
+  bottom: cornerOffset,
+  left: cornerOffset,
+};
+
 export const topRightCornerVariants = {
   shrink: {
     top: 0,
     right: 0,
   },
-  expand: {
-    top: cornerOffset,
-    right: cornerOffset,
-    transition: {
-      duration: 0.2,
-      delay: 0.1,
-    },
+  workActiveExpand: {
+    ...topRightCornerExpandDefaults,
+  },
+  jakeActiveExpand: {
+    ...topRightCornerExpandDefaults,
+  },
+  techActiveExpand: {
+    ...topRightCornerExpandDefaults,
   },
 };
 
@@ -123,12 +171,13 @@ export const bottomLeftCornerVariants = {
     bottom: 0,
     left: 0,
   },
-  expand: {
-    bottom: cornerOffset,
-    left: cornerOffset,
-    transition: {
-      duration: 0.2,
-      delay: 0.1,
-    },
+  workActiveExpand: {
+    ...bottomLeftCornerExpandDefaults,
+  },
+  jakeActiveExpand: {
+    ...bottomLeftCornerExpandDefaults,
+  },
+  techActiveExpand: {
+    ...bottomLeftCornerExpandDefaults,
   },
 };
