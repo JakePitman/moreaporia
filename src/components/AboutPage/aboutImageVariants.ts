@@ -111,7 +111,7 @@ export const aboutImageVariants = {
     opacity: 0,
   },
   visible: {
-    opacity: 1,
+    opacity: 0,
   },
   shrink: {
     opacity: 0,
