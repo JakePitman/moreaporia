@@ -65,6 +65,9 @@ const AboutPage = forwardRef<HTMLDivElement>((props, ref) => {
   }, [changeNavOptionSequence]);
 
   const handleNavOptionChange = async (navOption: "work" | "jake" | "tech") => {
+    if (navOption === selectedNavOption) {
+      return;
+    }
     await controls.start("shrink");
     setSelectedNavOption(navOption);
   };
