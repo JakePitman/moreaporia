@@ -1,7 +1,7 @@
 const defaultContainerState = {
   opacity: 1,
   y: 0,
-  border: "none",
+  border: "0px solid transparent",
 };
 
 const defaultContainerVariants = {
@@ -46,7 +46,7 @@ const defaultMinorBorderContainerState = {
   opacity: 0,
   width: "0%",
   height: "0%",
-  background: "transparent",
+  background: "rgba(0,0,0,0)",
 };
 const activeMinorBorderContainerState = {
   opacity: 1,
