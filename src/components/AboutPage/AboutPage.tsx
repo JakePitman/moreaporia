@@ -12,7 +12,6 @@ import useWindowDimensions from "../../shared/useWindowDimensions";
 import kayak from "./pictures/kayak.png";
 import beach from "./pictures/beach.png";
 import sahoGardens from "./pictures/saho_jake_gardens.png";
-import sahoNeko from "./pictures/saho_jake_neko.png";
 import guitar from "./pictures/guitar.png";
 import tree from "./pictures/tree.png";
 
@@ -32,13 +31,13 @@ const AboutPage = forwardRef<HTMLDivElement>((props, ref) => {
   };
 
   const navOptionToPicture1Map = {
-    work: sahoGardens,
-    jake: kayak,
+    work: guitar,
+    jake: null,
     tech: beach,
   };
   const navOptionToPicture2Map = {
-    work: sahoNeko,
-    jake: guitar,
+    work: sahoGardens,
+    jake: kayak,
     tech: tree,
   };
 

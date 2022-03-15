@@ -11,7 +11,7 @@ import {
 } from "./aboutImageVariants";
 
 type Props = {
-  src: string;
+  src: string | null;
   alt: string;
   type: "1" | "2";
 };
@@ -35,12 +35,14 @@ const AboutImage = ({ src, alt, type }: Props) => {
         className={styles.cornerBorderBottomLeft}
         variants={bottomLeftCornerVariants}
       />
-      <motion.img
-        src={src}
-        alt={alt}
-        className={styles.image}
-        variants={aboutImageVariants}
-      />
+      {!!src && (
+        <motion.img
+          src={src}
+          alt={alt}
+          className={styles.image}
+          variants={aboutImageVariants}
+        />
+      )}
     </motion.div>
   );
 };
