@@ -65,13 +65,10 @@
   }
 }
 
-.mainContentOuterColumn {
+.imagesLayer {
   height: 100%;
-  width: 25%;
-  .containerPortrait & {
-    height: 25%;
-    width: 100%;
-  }
+  width: 100%;
+  position: relative;
 }
 
 .mainContentCenterColumn {

@@ -1,7 +1,7 @@
 const defaultContainerState = {
   opacity: 1,
   y: 0,
-  border: "none",
+  border: "0px solid transparent",
 };
 
 const defaultContainerVariants = {
@@ -22,21 +22,21 @@ const activeContainerState = {};
 export const containerVariants = {
   work: {
     ...defaultContainerVariants,
-    workActive: activeContainerState,
-    jakeActive: defaultContainerState,
-    techActive: defaultContainerState,
+    workActiveExpand: activeContainerState,
+    jakeActiveExpand: defaultContainerState,
+    techActiveExpand: defaultContainerState,
   },
   jake: {
     ...defaultContainerVariants,
-    workActive: defaultContainerState,
-    jakeActive: activeContainerState,
-    techActive: defaultContainerState,
+    workActiveExpand: defaultContainerState,
+    jakeActiveExpand: activeContainerState,
+    techActiveExpand: defaultContainerState,
   },
   tech: {
     ...defaultContainerVariants,
-    workActive: defaultContainerState,
-    jakeActive: defaultContainerState,
-    techActive: activeContainerState,
+    workActiveExpand: defaultContainerState,
+    jakeActiveExpand: defaultContainerState,
+    techActiveExpand: activeContainerState,
   },
 };
 
@@ -46,7 +46,7 @@ const defaultMinorBorderContainerState = {
   opacity: 0,
   width: "0%",
   height: "0%",
-  background: "transparent",
+  background: "rgba(0,0,0,0)",
 };
 const activeMinorBorderContainerState = {
   opacity: 1,
@@ -61,26 +61,27 @@ const activeMinorBorderContainerState = {
 const defaultMinorBorderContainerVariants = {
   hidden: defaultMinorBorderContainerState,
   visible: defaultMinorBorderContainerState,
+  shrink: defaultMinorBorderContainerState,
 };
 
 export const minorBorderContainerVariants = {
   work: {
     ...defaultMinorBorderContainerVariants,
-    workActive: activeMinorBorderContainerState,
-    jakeActive: defaultMinorBorderContainerState,
-    techActive: defaultMinorBorderContainerState,
+    workActiveExpand: activeMinorBorderContainerState,
+    jakeActiveExpand: defaultMinorBorderContainerState,
+    techActiveExpand: defaultMinorBorderContainerState,
   },
   jake: {
     ...defaultMinorBorderContainerVariants,
-    workActive: defaultMinorBorderContainerState,
-    jakeActive: activeMinorBorderContainerState,
-    techActive: defaultMinorBorderContainerState,
+    workActiveExpand: defaultMinorBorderContainerState,
+    jakeActiveExpand: activeMinorBorderContainerState,
+    techActiveExpand: defaultMinorBorderContainerState,
   },
   tech: {
     ...defaultMinorBorderContainerVariants,
-    workActive: defaultMinorBorderContainerState,
-    jakeActive: defaultMinorBorderContainerState,
-    techActive: activeMinorBorderContainerState,
+    workActiveExpand: defaultMinorBorderContainerState,
+    jakeActiveExpand: defaultMinorBorderContainerState,
+    techActiveExpand: activeMinorBorderContainerState,
   },
 };
 
@@ -95,7 +96,7 @@ const activeMinorBorderState = {
   opacity: 1,
   height: "50%",
   transition: {
-    duration: 0.4,
+    duration: 0.2,
   },
 };
 
@@ -107,20 +108,20 @@ const defaultMinorBorderVariants = {
 export const minorBorderVariants = {
   work: {
     ...defaultMinorBorderVariants,
-    workActive: activeMinorBorderState,
-    jakeActive: defaultMinorBorderState,
-    techActive: defaultMinorBorderState,
+    workActiveExpand: activeMinorBorderState,
+    jakeActiveExpand: defaultMinorBorderState,
+    techActiveExpand: defaultMinorBorderState,
   },
   jake: {
     ...defaultMinorBorderVariants,
-    workActive: defaultMinorBorderState,
-    jakeActive: activeMinorBorderState,
-    techActive: defaultMinorBorderState,
+    workActiveExpand: defaultMinorBorderState,
+    jakeActiveExpand: activeMinorBorderState,
+    techActiveExpand: defaultMinorBorderState,
   },
   tech: {
     ...defaultMinorBorderVariants,
-    workActive: defaultMinorBorderState,
-    jakeActive: defaultMinorBorderState,
-    techActive: activeMinorBorderState,
+    workActiveExpand: defaultMinorBorderState,
+    jakeActiveExpand: defaultMinorBorderState,
+    techActiveExpand: activeMinorBorderState,
   },
 };

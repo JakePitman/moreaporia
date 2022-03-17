@@ -1,0 +1,65 @@
+@import "../../shared/_colors.scss";
+
+.imageContainer {
+  position: absolute;
+  width: 20%;
+  aspect-ratio: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(148, 226, 255, 0.1);
+}
+
+.image {
+  position: absolute;
+  width: 92%;
+  opacity: 0;
+}
+
+$cornerBorderWidth: 1px;
+$cornerLengthLandscape: calc(2vw - $cornerBorderWidth);
+$cornerLengthPortrait: calc(4vw - $cornerBorderWidth);
+
+@mixin cornerBorderTopRight {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-top: $cornerBorderWidth solid $boldBlue;
+  border-right: $cornerBorderWidth solid $boldBlue;
+}
+
+@mixin cornerBorderBottomLeft {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-bottom: $cornerBorderWidth solid $boldBlue;
+  border-left: $cornerBorderWidth solid $boldBlue;
+}
+
+.cornerBorderTopRightLandscape {
+  @include cornerBorderTopRight;
+
+  width: $cornerLengthLandscape;
+  height: $cornerLengthLandscape;
+}
+
+.cornerBorderTopRightPortrait {
+  @include cornerBorderTopRight;
+
+  width: $cornerLengthPortrait;
+  height: $cornerLengthPortrait;
+}
+
+.cornerBorderBottomLeftLandscape {
+  @include cornerBorderBottomLeft;
+
+  width: $cornerLengthLandscape;
+  height: $cornerLengthLandscape;
+}
+
+.cornerBorderBottomLeftPortrait {
+  @include cornerBorderBottomLeft;
+
+  width: $cornerLengthPortrait;
+  height: $cornerLengthPortrait;
+}

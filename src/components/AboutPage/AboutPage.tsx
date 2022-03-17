@@ -1,36 +1,75 @@
-import React, { useState, useEffect, forwardRef } from "react";
+import React, { useState, useEffect, forwardRef, useCallback } from "react";
 import { motion, useAnimation } from "framer-motion";
 
 import styles from "./AboutPage.module.scss";
 import AboutNavigationLink from "./AboutNavigationLink";
+import AboutImage from "./AboutImage";
 import {
   lowerLeftBackgroundVariants,
   lowerRightBackgroundVariants,
 } from "./aboutPageVariants";
 import useWindowDimensions from "../../shared/useWindowDimensions";
+import kayak from "./pictures/kayak.png";
+import beach from "./pictures/beach.png";
+import sahoGardens from "./pictures/saho_jake_gardens.png";
+import guitar from "./pictures/guitar.png";
+import tree from "./pictures/tree.png";
 
 const AboutPage = forwardRef<HTMLDivElement>((props, ref) => {
+  const [hasEnteredViewport, setHasEnteredViewport] = useState(false);
   const { width, height } = useWindowDimensions();
   const [selectedNavOption, setSelectedNavOption] = useState<
-    "work" | "jake" | "tech" | null
-  >(null);
+    "work" | "jake" | "tech"
+  >("jake");
   const controls = useAnimation();
   const openingSequence = async () => {
     await controls.start("visible");
-    setSelectedNavOption("jake");
+    await controls.start("shrink");
+    await controls.start("jakeActiveMove");
+    await controls.start("jakeActiveExpand");
+    setHasEnteredViewport(true);
   };
 
-  useEffect(() => {
+  const navOptionToPicture1Map = {
+    work: guitar,
+    jake: null,
+    tech: beach,
+  };
+  const navOptionToPicture2Map = {
+    work: sahoGardens,
+    jake: kayak,
+    tech: tree,
+  };
+
+  const changeNavOptionSequence = useCallback(async () => {
+    if (!hasEnteredViewport) {
+      return;
+    }
     if (selectedNavOption === "work") {
-      controls.start("workActive");
+      await controls.start("workActiveMove");
+      await controls.start("workActiveExpand");
     }
     if (selectedNavOption === "jake") {
-      controls.start("jakeActive");
+      await controls.start("jakeActiveMove");
+      await controls.start("jakeActiveExpand");
     }
     if (selectedNavOption === "tech") {
-      controls.start("techActive");
+      await controls.start("techActiveMove");
+      await controls.start("techActiveExpand");
     }
-  }, [selectedNavOption, controls]);
+  }, [selectedNavOption, controls, hasEnteredViewport]);
+
+  useEffect(() => {
+    changeNavOptionSequence();
+  }, [changeNavOptionSequence]);
+
+  const handleNavOptionChange = async (navOption: "work" | "jake" | "tech") => {
+    if (navOption === selectedNavOption) {
+      return;
+    }
+    await controls.start("shrink");
+    setSelectedNavOption(navOption);
+  };
 
   return (
     <motion.div
@@ -55,24 +94,38 @@ const AboutPage = forwardRef<HTMLDivElement>((props, ref) => {
         <AboutNavigationLink
           title="Work"
           variantKey="work"
-          handleClick={() => setSelectedNavOption("work")}
+          handleClick={() => {
+            handleNavOptionChange("work");
+          }}
         />
         <AboutNavigationLink
           title="Jake"
           variantKey="jake"
-          handleClick={() => setSelectedNavOption("jake")}
+          handleClick={() => handleNavOptionChange("jake")}
         />
         <AboutNavigationLink
           title="Tech"
           variantKey="tech"
-          handleClick={() => setSelectedNavOption("tech")}
+          handleClick={() => {
+            handleNavOptionChange("tech");
+          }}
         />
       </motion.div>
-      <div className={styles.mainContentContainer}>
-        <div className={styles.mainContentOuterColumn}></div>
-        <div className={styles.mainContentCenterColumn}></div>
-        <div className={styles.mainContentOuterColumn}></div>
-      </div>
+      <motion.div className={styles.mainContentContainer}>
+        <motion.div className={styles.imagesLayer}>
+          <AboutImage
+            src={navOptionToPicture1Map[selectedNavOption]}
+            alt="image_1"
+            type="1"
+          />
+          <AboutImage
+            src={navOptionToPicture2Map[selectedNavOption]}
+            alt="image_2"
+            type="2"
+          />
+        </motion.div>
+        <motion.div className={styles.mainContentCenterColumn}></motion.div>
+      </motion.div>
     </motion.div>
   );
 });
