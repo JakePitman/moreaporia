@@ -9,6 +9,7 @@ import {
   topRightCornerVariants,
   bottomLeftCornerVariants,
 } from "./aboutImageVariants";
+import useWindowDimensions from "../../shared/useWindowDimensions";
 
 type Props = {
   src: string | null;
@@ -16,23 +17,33 @@ type Props = {
   type: "1" | "2";
 };
 
-const typeToVariantsMap = {
-  "1": aboutImageContainer1Variants,
-  "2": aboutImageContainer2Variants,
-};
-
 const AboutImage = ({ src, alt, type }: Props) => {
+  const { width, height } = useWindowDimensions();
+  const isLandscape = width > height;
+  const typeToVariantsMap = {
+    "1": aboutImageContainer1Variants(isLandscape),
+    "2": aboutImageContainer2Variants(isLandscape),
+  };
+
   return (
     <motion.div
       className={styles.imageContainer}
       variants={typeToVariantsMap[type]}
     >
       <motion.div
-        className={styles.cornerBorderTopRight}
+        className={
+          isLandscape
+            ? styles.cornerBorderTopRightLandscape
+            : styles.cornerBorderTopRightPortrait
+        }
         variants={topRightCornerVariants}
       />
       <motion.div
-        className={styles.cornerBorderBottomLeft}
+        className={
+          isLandscape
+            ? styles.cornerBorderBottomLeftLandscape
+            : styles.cornerBorderBottomLeftPortrait
+        }
         variants={bottomLeftCornerVariants}
       />
       {!!src && (

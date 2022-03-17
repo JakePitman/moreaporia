@@ -17,24 +17,49 @@
 }
 
 $cornerBorderWidth: 1px;
-$cornerLength: calc(3vw - $cornerBorderWidth);
+$cornerLengthLandscape: calc(2vw - $cornerBorderWidth);
+$cornerLengthPortrait: calc(4vw - $cornerBorderWidth);
 
-.cornerBorderTopRight {
+@mixin cornerBorderTopRight {
   position: absolute;
   top: 0;
   right: 0;
-  width: $cornerLength;
-  height: $cornerLength;
   border-top: $cornerBorderWidth solid $boldBlue;
   border-right: $cornerBorderWidth solid $boldBlue;
 }
 
-.cornerBorderBottomLeft {
+@mixin cornerBorderBottomLeft {
   position: absolute;
   bottom: 0;
   left: 0;
-  width: $cornerLength;
-  height: $cornerLength;
   border-bottom: $cornerBorderWidth solid $boldBlue;
   border-left: $cornerBorderWidth solid $boldBlue;
+}
+
+.cornerBorderTopRightLandscape {
+  @include cornerBorderTopRight;
+
+  width: $cornerLengthLandscape;
+  height: $cornerLengthLandscape;
+}
+
+.cornerBorderTopRightPortrait {
+  @include cornerBorderTopRight;
+
+  width: $cornerLengthPortrait;
+  height: $cornerLengthPortrait;
+}
+
+.cornerBorderBottomLeftLandscape {
+  @include cornerBorderBottomLeft;
+
+  width: $cornerLengthLandscape;
+  height: $cornerLengthLandscape;
+}
+
+.cornerBorderBottomLeftPortrait {
+  @include cornerBorderBottomLeft;
+
+  width: $cornerLengthPortrait;
+  height: $cornerLengthPortrait;
 }

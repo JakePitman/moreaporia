@@ -19,11 +19,10 @@ const containerExpandDefaults = {
   },
 };
 
-export const aboutImageContainerDefaultVariants = {
+const aboutImageContainerDefaultVariants = {
   hidden: hidden,
   visible: hidden,
   shrink: {
-    width: "3vw",
     opacity: 1,
     transition: {
       duration: 0.1,
@@ -32,8 +31,14 @@ export const aboutImageContainerDefaultVariants = {
   },
 };
 
-export const aboutImageContainer1Variants = {
-  ...aboutImageContainerDefaultVariants,
+export const aboutImageContainer1Variants = (isLandscape: boolean) => ({
+  ...{
+    ...aboutImageContainerDefaultVariants,
+    shrink: {
+      ...aboutImageContainerDefaultVariants.shrink,
+      width: isLandscape ? "5vw" : "20vw",
+    },
+  },
   jakeActiveMove: {
     left: 0,
     right: 0,
@@ -42,22 +47,22 @@ export const aboutImageContainer1Variants = {
     opacity: 0,
   },
   workActiveMove: {
-    left: "-75%",
+    left: isLandscape ? "-75%" : "-45%",
     right: 0,
-    top: "40%",
+    top: isLandscape ? "40%" : "-70%",
     bottom: 0,
     opacity: 1,
   },
   techActiveMove: {
-    left: "70%",
+    left: isLandscape ? "70%" : "45%",
     right: 0,
-    top: "-40%",
+    top: isLandscape ? "-40%" : "70%",
     bottom: 0,
     opacity: 1,
   },
   workActiveExpand: {
     ...containerExpandDefaults,
-    width: "30vh",
+    width: isLandscape ? "30vh" : "40vw",
   },
   jakeActiveExpand: {
     ...containerExpandDefaults,
@@ -65,12 +70,18 @@ export const aboutImageContainer1Variants = {
   },
   techActiveExpand: {
     ...containerExpandDefaults,
-    width: "30vh",
+    width: isLandscape ? "30vh" : "40vw",
   },
-};
+});
 
-export const aboutImageContainer2Variants = {
-  ...aboutImageContainerDefaultVariants,
+export const aboutImageContainer2Variants = (isLandscape: boolean) => ({
+  ...{
+    ...aboutImageContainerDefaultVariants,
+    shrink: {
+      ...aboutImageContainerDefaultVariants.shrink,
+      width: isLandscape ? "5vw" : "20vw",
+    },
+  },
   jakeActiveMove: {
     left: 0,
     right: 0,
@@ -79,32 +90,32 @@ export const aboutImageContainer2Variants = {
     opacity: 1,
   },
   workActiveMove: {
-    left: "-70%",
+    left: isLandscape ? "-70%" : "45%",
     right: 0,
-    top: "-40%",
+    top: isLandscape ? "-40%" : "-70%",
     bottom: 0,
     opacity: 1,
   },
   techActiveMove: {
-    left: "75%",
+    left: isLandscape ? "75%" : "-45%",
     right: 0,
-    top: "40%",
+    top: isLandscape ? "40%" : "70%",
     bottom: 0,
     opacity: 1,
   },
   workActiveExpand: {
     ...containerExpandDefaults,
-    width: "25vh",
+    width: isLandscape ? "25vh" : "40vw",
   },
   jakeActiveExpand: {
     ...containerExpandDefaults,
-    width: "50vh",
+    width: isLandscape ? "50vh" : "70vw",
   },
   techActiveExpand: {
     ...containerExpandDefaults,
-    width: "35vh",
+    width: isLandscape ? "25vh" : "40vw",
   },
-};
+});
 
 export const aboutImageVariants = {
   hidden: {
