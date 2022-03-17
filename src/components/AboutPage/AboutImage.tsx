@@ -17,12 +17,25 @@ type Props = {
   type: "1" | "2";
 };
 
+const aboutImageContainer1VariantsLandscape =
+  aboutImageContainer1Variants(true);
+const aboutImageContainer1VariantsPortrait =
+  aboutImageContainer1Variants(false);
+const aboutImageContainer2VariantsLandscape =
+  aboutImageContainer2Variants(true);
+const aboutImageContainer2VariantsPortrait =
+  aboutImageContainer2Variants(false);
+
 const AboutImage = ({ src, alt, type }: Props) => {
   const { width, height } = useWindowDimensions();
   const isLandscape = width > height;
   const typeToVariantsMap = {
-    "1": aboutImageContainer1Variants(isLandscape),
-    "2": aboutImageContainer2Variants(isLandscape),
+    "1": isLandscape
+      ? aboutImageContainer1VariantsLandscape
+      : aboutImageContainer1VariantsPortrait,
+    "2": isLandscape
+      ? aboutImageContainer2VariantsLandscape
+      : aboutImageContainer2VariantsPortrait,
   };
 
   return (
