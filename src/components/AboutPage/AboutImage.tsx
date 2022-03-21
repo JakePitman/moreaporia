@@ -1,6 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
 
+import kayak from "./pictures/kayak.png";
+import beach from "./pictures/beach.png";
+import sahoGardens from "./pictures/saho_jake_gardens.png";
+import guitar from "./pictures/guitar.png";
+import tree from "./pictures/tree.png";
+
 import styles from "./AboutImage.module.scss";
 import {
   aboutImageContainer1Variants,
@@ -12,9 +18,8 @@ import {
 import useWindowDimensions from "../../shared/useWindowDimensions";
 
 type Props = {
-  src: string | null;
-  alt: string;
   type: "1" | "2";
+  selectedNavOption: "work" | "jake" | "tech";
 };
 
 const aboutImageContainer1VariantsLandscape =
@@ -26,7 +31,20 @@ const aboutImageContainer2VariantsLandscape =
 const aboutImageContainer2VariantsPortrait =
   aboutImageContainer2Variants(false);
 
-const AboutImage = ({ src, alt, type }: Props) => {
+const optionToPictureMaps = {
+  "1": {
+    work: guitar,
+    jake: null,
+    tech: beach,
+  },
+  "2": {
+    work: sahoGardens,
+    jake: kayak,
+    tech: tree,
+  },
+};
+
+const AboutImage = ({ type, selectedNavOption }: Props) => {
   const { width, height } = useWindowDimensions();
   const isLandscape = width > height;
   const typeToVariantsMap = {
@@ -59,14 +77,38 @@ const AboutImage = ({ src, alt, type }: Props) => {
         }
         variants={bottomLeftCornerVariants}
       />
-      {!!src && (
+      <motion.img
+        src={optionToPictureMaps[type].work}
+        alt={"jake"}
+        className={
+          selectedNavOption === "work"
+            ? styles.imageActive
+            : styles.imageInactive
+        }
+        variants={aboutImageVariants}
+      />
+      {!!optionToPictureMaps[type].jake ? (
         <motion.img
-          src={src}
-          alt={alt}
-          className={styles.image}
+          src={optionToPictureMaps[type].jake as string}
+          alt={"jake"}
+          className={
+            selectedNavOption === "jake"
+              ? styles.imageActive
+              : styles.imageInactive
+          }
           variants={aboutImageVariants}
         />
-      )}
+      ) : null}
+      <motion.img
+        src={optionToPictureMaps[type].tech}
+        alt={"jake"}
+        className={
+          selectedNavOption === "tech"
+            ? styles.imageActive
+            : styles.imageInactive
+        }
+        variants={aboutImageVariants}
+      />
     </motion.div>
   );
 };
