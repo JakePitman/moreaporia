@@ -10,10 +10,20 @@
   background: rgba(148, 226, 255, 0.1);
 }
 
-.image {
+@mixin image {
   position: absolute;
   width: 92%;
   opacity: 0;
+}
+
+.imageActive {
+  @include image;
+  display: block;
+}
+
+.imageInactive {
+  @include image;
+  display: none;
 }
 
 $cornerBorderWidth: 1px;

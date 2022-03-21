@@ -9,11 +9,6 @@ import {
   lowerRightBackgroundVariants,
 } from "./aboutPageVariants";
 import useWindowDimensions from "../../shared/useWindowDimensions";
-import kayak from "./pictures/kayak.png";
-import beach from "./pictures/beach.png";
-import sahoGardens from "./pictures/saho_jake_gardens.png";
-import guitar from "./pictures/guitar.png";
-import tree from "./pictures/tree.png";
 
 const AboutPage = forwardRef<HTMLDivElement>((props, ref) => {
   const [hasEnteredViewport, setHasEnteredViewport] = useState(false);
@@ -28,17 +23,6 @@ const AboutPage = forwardRef<HTMLDivElement>((props, ref) => {
     await controls.start("jakeActiveMove");
     await controls.start("jakeActiveExpand");
     setHasEnteredViewport(true);
-  };
-
-  const navOptionToPicture1Map = {
-    work: guitar,
-    jake: null,
-    tech: beach,
-  };
-  const navOptionToPicture2Map = {
-    work: sahoGardens,
-    jake: kayak,
-    tech: tree,
   };
 
   const changeNavOptionSequence = useCallback(async () => {
@@ -113,16 +97,8 @@ const AboutPage = forwardRef<HTMLDivElement>((props, ref) => {
       </motion.div>
       <motion.div className={styles.mainContentContainer}>
         <motion.div className={styles.imagesLayer}>
-          <AboutImage
-            src={navOptionToPicture1Map[selectedNavOption]}
-            alt="image_1"
-            type="1"
-          />
-          <AboutImage
-            src={navOptionToPicture2Map[selectedNavOption]}
-            alt="image_2"
-            type="2"
-          />
+          <AboutImage type="1" selectedNavOption={selectedNavOption} />
+          <AboutImage type="2" selectedNavOption={selectedNavOption} />
         </motion.div>
         <motion.div className={styles.mainContentCenterColumn}></motion.div>
       </motion.div>
