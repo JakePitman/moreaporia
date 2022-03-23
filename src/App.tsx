@@ -10,6 +10,10 @@ function App() {
 
   const [openingAnimationCompleted, setOpeningAnimationCompleted] =
     useState(false);
+
+  const img = new Image();
+  img.src = "./components/AboutPage/pictures/kayak.png";
+
   return (
     <div className="App">
       {openingAnimationCompleted ? (
