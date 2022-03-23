@@ -4,6 +4,8 @@ import LandingPage from "./components/LandingPage";
 import AboutPage from "./components/AboutPage";
 import OpeningAnimation from "./components/OpeningAnimation";
 
+import kayakImage from "./components/AboutPage/pictures/kayak.png";
+
 function App() {
   document.title = "Moreaporia";
   const aboutPageRef = useRef<HTMLDivElement>(null);
@@ -16,6 +18,7 @@ function App() {
 
   return (
     <div className="App">
+      <img src={kayakImage} style={{ display: "none" }} alt="" />
       {openingAnimationCompleted ? (
         <>
           <LandingPage
