@@ -18,6 +18,7 @@ function App() {
 
   return (
     <div className="App">
+      {/* TODO: Try new Image(); img.src */}
       <img src={kayakImage} style={{ display: "none" }} alt="" />
       {openingAnimationCompleted ? (
         <>
