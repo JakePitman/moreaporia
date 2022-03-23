@@ -1,6 +1,6 @@
 @import "../../shared/_colors.scss";
 
-.imageContainer {
+.container {
   position: absolute;
   width: 20%;
   aspect-ratio: 1;
@@ -10,10 +10,15 @@
   background: rgba(148, 226, 255, 0.1);
 }
 
-@mixin image {
+.imagesContainer {
   position: absolute;
   width: 92%;
+  aspect-ratio: 1;
   opacity: 0;
+}
+
+@mixin image {
+  width: 100%;
 }
 
 .imageActive {

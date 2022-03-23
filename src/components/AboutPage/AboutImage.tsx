@@ -57,10 +57,7 @@ const AboutImage = ({ type, selectedNavOption }: Props) => {
   };
 
   return (
-    <motion.div
-      className={styles.imageContainer}
-      variants={typeToVariantsMap[type]}
-    >
+    <motion.div className={styles.container} variants={typeToVariantsMap[type]}>
       <motion.div
         className={
           isLandscape
@@ -77,38 +74,40 @@ const AboutImage = ({ type, selectedNavOption }: Props) => {
         }
         variants={bottomLeftCornerVariants}
       />
-      <motion.img
-        src={optionToPictureMaps[type].work}
-        alt={"jake"}
-        className={
-          selectedNavOption === "work"
-            ? styles.imageActive
-            : styles.imageInactive
-        }
+      <motion.div
+        className={styles.imagesContainer}
         variants={aboutImageVariants}
-      />
-      {!!optionToPictureMaps[type].jake ? (
-        <motion.img
-          src={optionToPictureMaps[type].jake as string}
+      >
+        <img
+          src={optionToPictureMaps[type].work}
           alt={"jake"}
           className={
-            selectedNavOption === "jake"
+            selectedNavOption === "work"
               ? styles.imageActive
               : styles.imageInactive
           }
-          variants={aboutImageVariants}
         />
-      ) : null}
-      <motion.img
-        src={optionToPictureMaps[type].tech}
-        alt={"jake"}
-        className={
-          selectedNavOption === "tech"
-            ? styles.imageActive
-            : styles.imageInactive
-        }
-        variants={aboutImageVariants}
-      />
+        {!!optionToPictureMaps[type].jake ? (
+          <img
+            src={optionToPictureMaps[type].jake as string}
+            alt={"jake"}
+            className={
+              selectedNavOption === "jake"
+                ? styles.imageActive
+                : styles.imageInactive
+            }
+          />
+        ) : null}
+        <img
+          src={optionToPictureMaps[type].tech}
+          alt={"jake"}
+          className={
+            selectedNavOption === "tech"
+              ? styles.imageActive
+              : styles.imageInactive
+          }
+        />
+      </motion.div>
     </motion.div>
   );
 };
