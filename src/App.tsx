@@ -4,7 +4,10 @@ import LandingPage from "./components/LandingPage";
 import AboutPage from "./components/AboutPage";
 import OpeningAnimation from "./components/OpeningAnimation";
 
+// cache first AboutPage image before AboutPage loads
 import kayakImage from "./components/AboutPage/pictures/kayak.png";
+const img = new Image();
+img.src = kayakImage;
 
 function App() {
   document.title = "Moreaporia";
@@ -13,13 +16,8 @@ function App() {
   const [openingAnimationCompleted, setOpeningAnimationCompleted] =
     useState(false);
 
-  const img = new Image();
-  img.src = "./components/AboutPage/pictures/kayak.png";
-
   return (
     <div className="App">
-      {/* TODO: Try new Image(); img.src */}
-      <img src={kayakImage} style={{ display: "none" }} alt="" />
       {openingAnimationCompleted ? (
         <>
           <LandingPage
