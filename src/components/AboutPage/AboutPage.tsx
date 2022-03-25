@@ -96,11 +96,10 @@ const AboutPage = forwardRef<HTMLDivElement>((props, ref) => {
         />
       </motion.div>
       <motion.div className={styles.mainContentContainer}>
-        <motion.div className={styles.imagesLayer}>
-          <AboutImage type="1" selectedNavOption={selectedNavOption} />
-          <AboutImage type="2" selectedNavOption={selectedNavOption} />
-        </motion.div>
-        <motion.div className={styles.mainContentCenterColumn}></motion.div>
+        {/* <motion.div className={styles.imagesLayer}> */}
+        <AboutImage type="1" selectedNavOption={selectedNavOption} />
+        <AboutImage type="2" selectedNavOption={selectedNavOption} />
+        {/* </motion.div> */}
       </motion.div>
     </motion.div>
   );

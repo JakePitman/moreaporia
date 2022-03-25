@@ -60,15 +60,10 @@
   width: 100%;
   display: flex;
   justify-content: "center";
+  position: relative;
   .containerPortrait & {
     flex-direction: column;
   }
-}
-
-.imagesLayer {
-  height: 100%;
-  width: 100%;
-  position: relative;
 }
 
 .mainContentCenterColumn {
