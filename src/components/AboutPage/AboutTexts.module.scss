@@ -28,7 +28,40 @@
   @include defaults;
   position: absolute;
   bottom: 5vh;
-  // TODO: Make sure pictures have max-width/height to match with these
   height: 60%;
+  width: 100%;
+}
+
+.jakeTextContainerLeftLandscape {
+  border: 1px solid gold;
+  position: absolute;
+  left: 5vw;
+  width: 28vw;
+  height: 95%;
+}
+
+.jakeTextContainerLeftPortrait {
+  border: 1px solid gold;
+  @include defaults;
+  position: absolute;
+  top: 0;
+  height: 30%;
+  width: 100%;
+}
+
+.jakeTextContainerRightLandscape {
+  border: 1px solid yellow;
+  position: absolute;
+  right: 5vw;
+  width: 28vw;
+  height: 95%;
+}
+
+.jakeTextContainerRightPortrait {
+  border: 1px solid yellow;
+  @include defaults;
+  position: absolute;
+  bottom: 0;
+  height: 30%;
   width: 100%;
 }

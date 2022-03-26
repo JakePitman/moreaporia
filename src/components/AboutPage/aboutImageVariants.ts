@@ -111,7 +111,7 @@ export const aboutImageContainer2Variants = (isLandscape: boolean) => ({
   },
   jakeActiveExpand: {
     ...containerExpandDefaults,
-    width: isLandscape ? "50vh" : "70vw",
+    width: isLandscape ? "30vw" : "30vh",
   },
   techActiveExpand: {
     ...containerExpandDefaults,
