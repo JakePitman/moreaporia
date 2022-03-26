@@ -35,8 +35,8 @@ const AboutTexts = ({ selectedNavOption }: Props) => {
         <motion.div
           className={
             isLandscape
-              ? styles.jakeTextContainerLeftLandscape
-              : styles.jakeTextContainerLeftPortrait
+              ? styles.jakeTextContainerRightLandscape
+              : styles.jakeTextContainerRightPortrait
           }
         >
           <AboutText visible={selectedNavOption === "jake"}>
@@ -46,8 +46,8 @@ const AboutTexts = ({ selectedNavOption }: Props) => {
         <motion.div
           className={
             isLandscape
-              ? styles.jakeTextContainerRightLandscape
-              : styles.jakeTextContainerRightPortrait
+              ? styles.jakeTextContainerLeftLandscape
+              : styles.jakeTextContainerLeftPortrait
           }
         >
           <AboutText visible={selectedNavOption === "jake"}>
