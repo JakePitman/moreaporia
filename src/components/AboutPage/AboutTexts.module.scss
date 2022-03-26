@@ -65,3 +65,20 @@
   height: 30%;
   width: 100%;
 }
+
+.techTextContainerLandscape {
+  border: 1px solid pink;
+  position: absolute;
+  left: 5vw;
+  width: 60vw;
+  height: 95%;
+}
+
+.techTextContainerPortrait {
+  border: 1px solid pink;
+  @include defaults;
+  position: absolute;
+  top: 5vh;
+  height: 60%;
+  width: 100%;
+}
