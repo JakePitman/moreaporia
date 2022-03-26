@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import styles from "./AboutText.module.scss";
 
 type Props = {
-  text: string;
+  children: React.ReactNode;
   visible: boolean;
 };
 
@@ -15,7 +15,7 @@ const expandDefaults = {
   },
 };
 
-const AboutText = ({ text, visible }: Props) => {
+const AboutText = ({ children, visible }: Props) => {
   if (!visible) {
     return <></>;
   }
@@ -29,7 +29,7 @@ const AboutText = ({ text, visible }: Props) => {
       }}
       className={styles.container}
     >
-      <p className={styles.text}>{text}</p>
+      {children}
     </motion.div>
   );
 };

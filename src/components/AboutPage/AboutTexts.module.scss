@@ -1,23 +1,16 @@
-@mixin defaults {
-  position: absolute;
+@import "../../shared/_colors.scss";
+
+.text {
+  color: $offWhite;
 }
 
-@mixin workTextContainer {
-  border: 1px solid pink;
-}
-@mixin jakeTextContainerLeft {
-  border: 1px solid green;
-}
-@mixin jakeTextContainerRight {
-  border: 1px solid blue;
-}
-@mixin techTextContainer {
-  border: 1px solid red;
+@mixin area-defaults {
+  position: absolute;
 }
 
 .workTextContainerLandscape {
+  @include area-defaults;
   border: 1px solid pink;
-  position: absolute;
   right: 5vw;
   width: 60vw;
   height: 95%;
@@ -25,7 +18,7 @@
 
 .workTextContainerPortrait {
   border: 1px solid pink;
-  @include defaults;
+  @include area-defaults;
   position: absolute;
   bottom: 5vh;
   height: 60%;
@@ -42,7 +35,7 @@
 
 .jakeTextContainerLeftPortrait {
   border: 1px solid gold;
-  @include defaults;
+  @include area-defaults;
   position: absolute;
   top: 0;
   height: 30%;
@@ -59,7 +52,7 @@
 
 .jakeTextContainerRightPortrait {
   border: 1px solid yellow;
-  @include defaults;
+  @include area-defaults;
   position: absolute;
   bottom: 0;
   height: 30%;
@@ -76,7 +69,7 @@
 
 .techTextContainerPortrait {
   border: 1px solid pink;
-  @include defaults;
+  @include area-defaults;
   position: absolute;
   top: 5vh;
   height: 60%;

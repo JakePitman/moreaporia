@@ -22,7 +22,9 @@ const AboutTexts = ({ selectedNavOption }: Props) => {
             : styles.workTextContainerPortrait
         }
       >
-        <AboutText text="My cool work" visible={selectedNavOption === "work"} />
+        <AboutText visible={selectedNavOption === "work"}>
+          <p className={styles.text}>My cool work</p>
+        </AboutText>
       </motion.div>
     );
   }
@@ -37,10 +39,9 @@ const AboutTexts = ({ selectedNavOption }: Props) => {
               : styles.jakeTextContainerLeftPortrait
           }
         >
-          <AboutText
-            text="My cool jake"
-            visible={selectedNavOption === "jake"}
-          />
+          <AboutText visible={selectedNavOption === "jake"}>
+            <p className={styles.text}>My cool jake, Right</p>
+          </AboutText>
         </motion.div>
         <motion.div
           className={
@@ -49,10 +50,9 @@ const AboutTexts = ({ selectedNavOption }: Props) => {
               : styles.jakeTextContainerRightPortrait
           }
         >
-          <AboutText
-            text="My cool jake 2"
-            visible={selectedNavOption === "jake"}
-          />
+          <AboutText visible={selectedNavOption === "jake"}>
+            <p className={styles.text}>My cool jake, Left</p>
+          </AboutText>
         </motion.div>
       </>
     );
@@ -67,7 +67,9 @@ const AboutTexts = ({ selectedNavOption }: Props) => {
             : styles.techTextContainerPortrait
         }
       >
-        <AboutText text="My cool tech" visible={selectedNavOption === "tech"} />
+        <AboutText visible={selectedNavOption === "tech"}>
+          <p className={styles.text}>My cool tech</p>
+        </AboutText>
       </motion.div>
     );
   }
