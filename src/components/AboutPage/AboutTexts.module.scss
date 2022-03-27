@@ -2,6 +2,14 @@
 
 .text {
   color: $offWhite;
+  font-size: 2rem;
+  font-family: "Roboto";
+}
+
+.heading {
+  color: $boldBlue;
+  font-size: 5rem;
+  font-family: "Tomorrow";
 }
 
 @mixin area-defaults {

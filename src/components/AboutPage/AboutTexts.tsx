@@ -35,23 +35,32 @@ const AboutTexts = ({ selectedNavOption }: Props) => {
         <motion.div
           className={
             isLandscape
+              ? styles.jakeTextContainerLeftLandscape
+              : styles.jakeTextContainerLeftPortrait
+          }
+        >
+          <AboutText visible={selectedNavOption === "jake"}>
+            <h1 className={styles.heading}>Why coding?</h1>
+            <p className={styles.text}>
+              Coding is a creative outlet for me. I love designing and building
+              beautiful and unique solutions to standard front-end problems.
+            </p>
+            <h1 className={styles.heading}>Why coding?</h1>
+            <p className={styles.text}>
+              Coding is a creative outlet for me. I love designing and building
+              beautiful and unique solutions to standard front-end problems.
+            </p>
+          </AboutText>
+        </motion.div>
+        <motion.div
+          className={
+            isLandscape
               ? styles.jakeTextContainerRightLandscape
               : styles.jakeTextContainerRightPortrait
           }
         >
           <AboutText visible={selectedNavOption === "jake"}>
             <p className={styles.text}>My cool jake, Right</p>
-          </AboutText>
-        </motion.div>
-        <motion.div
-          className={
-            isLandscape
-              ? styles.jakeTextContainerLeftLandscape
-              : styles.jakeTextContainerLeftPortrait
-          }
-        >
-          <AboutText visible={selectedNavOption === "jake"}>
-            <p className={styles.text}>My cool jake, Left</p>
           </AboutText>
         </motion.div>
       </>

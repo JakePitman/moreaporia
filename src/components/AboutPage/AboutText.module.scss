@@ -1,7 +1,8 @@
 .container {
   opacity: 0;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
   height: 100%;
   width: 100%;
