@@ -45,10 +45,11 @@ const AboutTexts = ({ selectedNavOption }: Props) => {
               Coding is a creative outlet for me. I love designing and building
               beautiful and unique solutions to standard front-end problems.
             </p>
-            <h1 className={styles.heading}>Why coding?</h1>
+            <h1 className={styles.heading}>Before coding?</h1>
             <p className={styles.text}>
-              Coding is a creative outlet for me. I love designing and building
-              beautiful and unique solutions to standard front-end problems.
+              I used to be an English teacher. Learning & life-long study are
+              important to me, but I decided I wanted to build things as well.
+              Coding lets me do it all!
             </p>
           </AboutText>
         </motion.div>
