@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import AboutText from "./AboutText";
 import styles from "./AboutTexts.module.scss";
 import useWindowDimensions from "../../shared/useWindowDimensions";
+import AboutHobbies from "./AboutHobbies";
 
 type Props = {
   selectedNavOption: "jake" | "work" | "tech" | null;
@@ -61,7 +62,7 @@ const AboutTexts = ({ selectedNavOption }: Props) => {
           }
         >
           <AboutText visible={selectedNavOption === "jake"}>
-            <p className={styles.text}>My cool jake, Right</p>
+            <AboutHobbies />
           </AboutText>
         </motion.div>
       </>
