@@ -8,17 +8,18 @@ import { cardVariants } from "./hobbyCardVariants";
 type Props = {
   Icon: React.ReactElement;
   rotate: number;
-  xOffset: number;
 };
 
-const HobbyCard = ({ Icon, rotate, xOffset }: Props) => {
+const HobbyCard = ({ Icon, rotate }: Props) => {
   const IconWithDefaults = React.cloneElement(Icon, {
     color: colors.primaryBackground,
     size: 120,
   });
   return (
     <motion.div
-      style={{ transform: `rotate(${rotate}deg)`, paddingLeft: `${xOffset}px` }}
+      style={{
+        transform: `rotate(${rotate}deg)`,
+      }}
       className={styles.container}
     >
       <motion.div variants={cardVariants} className={styles.card}>
