@@ -8,9 +8,10 @@ import { cardVariants } from "./hobbyCardVariants";
 type Props = {
   Icon: React.ReactElement;
   rotate: number;
+  delay: number;
 };
 
-const HobbyCard = ({ Icon, rotate }: Props) => {
+const HobbyCard = ({ Icon, rotate, delay }: Props) => {
   const IconWithDefaults = React.cloneElement(Icon, {
     color: colors.primaryBackground,
     size: 120,
@@ -22,7 +23,11 @@ const HobbyCard = ({ Icon, rotate }: Props) => {
       }}
       className={styles.container}
     >
-      <motion.div variants={cardVariants} className={styles.card}>
+      <motion.div
+        variants={cardVariants}
+        className={styles.card}
+        custom={{ delay }}
+      >
         <div className={styles.front}>{IconWithDefaults}</div>
         <div className={styles.back} />
       </motion.div>
