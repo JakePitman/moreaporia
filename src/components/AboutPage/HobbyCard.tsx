@@ -3,7 +3,10 @@ import { motion } from "framer-motion";
 
 import colors from "../../shared/_colors.module.scss";
 import styles from "./HobbyCard.module.scss";
-import { cardVariants } from "./hobbyCardVariants";
+import {
+  cardVariantsLandscape,
+  cardVariantsPortrait,
+} from "./hobbyCardVariants";
 import useWindowDimensions from "../../shared/useWindowDimensions";
 
 type Props = {
@@ -31,11 +34,15 @@ const HobbyCard = ({ Icon, rotate, delay }: Props) => {
       }
     >
       <motion.div
-        variants={cardVariants}
+        variants={isLandscape ? cardVariantsLandscape : cardVariantsPortrait}
         className={styles.card}
         custom={{ delay }}
       >
-        <div className={styles.front}>{IconWithDefaults}</div>
+        <div
+          className={isLandscape ? styles.frontLandscape : styles.frontPortrait}
+        >
+          {IconWithDefaults}
+        </div>
         <div className={styles.back} />
       </motion.div>
     </motion.div>

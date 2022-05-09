@@ -19,7 +19,7 @@
   height: 100%;
 }
 
-.front {
+@mixin front {
   position: absolute;
   backface-visibility: hidden;
   width: 100%;
@@ -29,6 +29,14 @@
   align-items: center;
   background: $boldBlue;
   transform: rotateY(180deg);
+}
+.frontLandscape {
+  @include front;
+  transform: rotateY(180deg);
+}
+.frontPortrait {
+  @include front;
+  transform: rotateX(180deg);
 }
 
 .back {
