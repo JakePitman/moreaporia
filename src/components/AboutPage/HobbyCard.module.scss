@@ -1,9 +1,15 @@
 @import "../../shared/_colors.module.scss";
 
-.container {
+.containerLandscape {
   position: relative;
   width: 130px;
   height: 130px;
+}
+
+.containerPortrait {
+  position: relative;
+  width: 25%;
+  aspect-ratio: 1;
 }
 
 .card {

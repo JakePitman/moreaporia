@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import colors from "../../shared/_colors.module.scss";
 import styles from "./HobbyCard.module.scss";
 import { cardVariants } from "./hobbyCardVariants";
+import useWindowDimensions from "../../shared/useWindowDimensions";
 
 type Props = {
   Icon: React.ReactElement;
@@ -12,16 +13,22 @@ type Props = {
 };
 
 const HobbyCard = ({ Icon, rotate, delay }: Props) => {
+  const { height, width } = useWindowDimensions();
+  const isLandscape = width > height;
+
   const IconWithDefaults = React.cloneElement(Icon, {
     color: colors.primaryBackground,
-    size: 120,
+    size: isLandscape ? 120 : 70,
   });
+
   return (
     <motion.div
       style={{
         transform: `rotate(${rotate}deg)`,
       }}
-      className={styles.container}
+      className={
+        isLandscape ? styles.containerLandscape : styles.containerPortrait
+      }
     >
       <motion.div
         variants={cardVariants}
