@@ -1,7 +1,4 @@
 export const cardVariantsLandscape = {
-  shrink: {
-    right: 200,
-  },
   jakeActiveMove: {
     right: 150,
   },
@@ -16,9 +13,6 @@ export const cardVariantsLandscape = {
 };
 
 export const cardVariantsPortrait = {
-  shrink: {
-    bottom: 200,
-  },
   jakeActiveMove: {
     bottom: 150,
   },
@@ -27,6 +21,20 @@ export const cardVariantsPortrait = {
     top: 0,
     transition: {
       duration: 0.5,
+      delay: delay,
+    },
+  }),
+};
+
+export const tagVariants = {
+  jakeActiveMove: {
+    right: 150,
+  },
+  jakeActiveExpand: ({ delay }: { delay: number }) => ({
+    left: 0,
+    transform: "rotateY(180deg)",
+    transition: {
+      duration: 0.8,
       delay: delay,
     },
   }),

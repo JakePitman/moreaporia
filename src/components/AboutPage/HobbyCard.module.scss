@@ -46,3 +46,28 @@
   height: 100%;
   background: $boldBlue;
 }
+
+.tag {
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.tagFront {
+  background: $lightBlue;
+  font-size: 22px;
+  text-align: center;
+  font-family: "Roboto Mono";
+  width: 70%;
+  backface-visibility: hidden;
+  position: absolute;
+  transform: rotateY(180deg);
+}
+
+.tagBack {
+  background: $lightBlue;
+  color: transparent;
+  font-size: 22px;
+  width: 70%;
+  backface-visibility: hidden;
+  position: absolute;
+}

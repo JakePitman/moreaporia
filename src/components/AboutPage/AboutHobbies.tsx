@@ -14,17 +14,22 @@ import styles from "./AboutHobbies.module.scss";
 
 const landscapeLayout = () => (
   <motion.div className={styles.containerLandscape}>
-    <HobbyCard Icon={<FaChess />} rotate={-15} delay={0} />
-    <HobbyCard Icon={<FaGuitar />} rotate={-10} delay={0.1} />
-    <HobbyCard Icon={<FaTerminal />} rotate={2} delay={0.2} />
-    <HobbyCard Icon={<FaPlaneDeparture />} rotate={20} delay={0.3} />
+    <HobbyCard title="Chess" Icon={<FaChess />} rotate={-15} delay={0} />
+    <HobbyCard title="Guitar" Icon={<FaGuitar />} rotate={-10} delay={0.1} />
+    <HobbyCard title="Code" Icon={<FaTerminal />} rotate={2} delay={0.2} />
+    <HobbyCard
+      title="Travel"
+      Icon={<FaPlaneDeparture />}
+      rotate={20}
+      delay={0.3}
+    />
   </motion.div>
 );
 const portraitLayout = () => (
   <motion.div className={styles.containerPortrait}>
-    <HobbyCard Icon={<FaChess />} rotate={8} delay={0} />
-    <HobbyCard Icon={<FaGuitar />} rotate={2} delay={0.1} />
-    <HobbyCard Icon={<FaTerminal />} rotate={-10} delay={0.2} />
+    <HobbyCard title="Chess" Icon={<FaChess />} rotate={8} delay={0} />
+    <HobbyCard title="Guitar" Icon={<FaGuitar />} rotate={2} delay={0.1} />
+    <HobbyCard title="Code" Icon={<FaTerminal />} rotate={-10} delay={0.2} />
   </motion.div>
 );
 
