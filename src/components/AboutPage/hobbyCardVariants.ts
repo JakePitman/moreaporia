@@ -28,14 +28,15 @@ export const cardVariantsPortrait = {
 
 export const tagVariants = {
   jakeActiveMove: {
-    right: -400,
+    right: -160,
   },
   jakeActiveExpand: ({ delay }: { delay: number }) => ({
     left: "40%",
     transform: "rotateY(180deg)",
     transition: {
-      duration: 0.8,
+      duration: 0.5,
       delay: delay,
+      type: "spring",
     },
   }),
 };

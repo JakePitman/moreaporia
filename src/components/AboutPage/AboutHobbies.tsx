@@ -12,6 +12,13 @@ import useWindowDimensions from "../../shared/useWindowDimensions";
 
 import styles from "./AboutHobbies.module.scss";
 
+const colorGradients: [string, string][] = [
+  ["#00fffb", "#00c8ff"],
+  ["#00c8ff", "#0084ff"],
+  ["#0084ff", "#0059ff"],
+  ["#0059ff", "#0026ff"],
+];
+
 const landscapeLayout = () => (
   <motion.div className={styles.containerLandscape}>
     <HobbyCard
@@ -20,6 +27,7 @@ const landscapeLayout = () => (
       rotate={-15}
       tagRotation={10}
       delay={0}
+      backgroundGradients={colorGradients[0]}
     />
     <HobbyCard
       title="Guitar"
@@ -27,6 +35,7 @@ const landscapeLayout = () => (
       rotate={-10}
       delay={0.1}
       tagRotation={5}
+      backgroundGradients={colorGradients[1]}
     />
     <HobbyCard
       title="Code"
@@ -34,6 +43,7 @@ const landscapeLayout = () => (
       rotate={2}
       delay={0.2}
       tagRotation={-5}
+      backgroundGradients={colorGradients[2]}
     />
     <HobbyCard
       title="Travel"
@@ -41,6 +51,7 @@ const landscapeLayout = () => (
       rotate={20}
       tagRotation={-5}
       delay={0.3}
+      backgroundGradients={colorGradients[3]}
     />
   </motion.div>
 );
@@ -52,6 +63,7 @@ const portraitLayout = () => (
       rotate={8}
       tagRotation={5}
       delay={0}
+      backgroundGradients={colorGradients[0]}
     />
     <HobbyCard
       title="Guitar"
@@ -59,6 +71,7 @@ const portraitLayout = () => (
       rotate={2}
       tagRotation={5}
       delay={0.1}
+      backgroundGradients={colorGradients[1]}
     />
     <HobbyCard
       title="Code"
@@ -66,6 +79,7 @@ const portraitLayout = () => (
       rotate={-10}
       tagRotation={5}
       delay={0.2}
+      backgroundGradients={colorGradients[2]}
     />
   </motion.div>
 );
