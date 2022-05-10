@@ -15,9 +15,10 @@ type Props = {
   rotate: number;
   delay: number;
   title: string;
+  tagRotation: number;
 };
 
-const HobbyCard = ({ Icon, rotate, delay, title }: Props) => {
+const HobbyCard = ({ Icon, rotate, delay, title, tagRotation }: Props) => {
   const { height, width } = useWindowDimensions();
   const isLandscape = width > height;
 
@@ -47,14 +48,22 @@ const HobbyCard = ({ Icon, rotate, delay, title }: Props) => {
         </div>
         <div className={styles.back} />
       </motion.div>
-      <motion.div
-        className={styles.tag}
-        variants={tagVariants}
-        custom={{ delay: delay + 0.1 }}
+      <div
+        style={{
+          transform: `rotate(${tagRotation}deg)`,
+        }}
+        className={styles.tagContainer}
       >
-        <div className={styles.tagFront}>{title}</div>
-        <div className={styles.tagBack}>{title}</div>
-      </motion.div>
+        <motion.div
+          className={styles.tag}
+          variants={tagVariants}
+          // custom={{ delay: delay + 0.1 }}
+          custom={{ delay: delay }}
+        >
+          <div className={styles.tagFront}>{title}</div>
+          <div className={styles.tagBack}>{title}</div>
+        </motion.div>
+      </div>
     </motion.div>
   );
 };

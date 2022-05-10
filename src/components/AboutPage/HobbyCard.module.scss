@@ -47,9 +47,15 @@
   background: $boldBlue;
 }
 
+.tagContainer {
+  width: 100%;
+  height: 100%;
+}
+
 .tag {
   position: relative;
   transform-style: preserve-3d;
+  bottom: 50%;
 }
 
 .tagFront {

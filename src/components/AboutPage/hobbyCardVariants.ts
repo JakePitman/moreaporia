@@ -31,7 +31,7 @@ export const tagVariants = {
     right: 150,
   },
   jakeActiveExpand: ({ delay }: { delay: number }) => ({
-    left: 0,
+    left: "40%",
     transform: "rotateY(180deg)",
     transition: {
       duration: 0.8,
