@@ -18,7 +18,7 @@ const landscapeLayout = () => (
       title="Chess"
       Icon={<FaChess />}
       rotate={-15}
-      tagRotation={20}
+      tagRotation={10}
       delay={0}
     />
     <HobbyCard

@@ -28,7 +28,7 @@ export const cardVariantsPortrait = {
 
 export const tagVariants = {
   jakeActiveMove: {
-    right: 150,
+    right: -400,
   },
   jakeActiveExpand: ({ delay }: { delay: number }) => ({
     left: "40%",

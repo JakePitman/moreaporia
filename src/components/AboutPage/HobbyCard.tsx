@@ -57,8 +57,7 @@ const HobbyCard = ({ Icon, rotate, delay, title, tagRotation }: Props) => {
         <motion.div
           className={styles.tag}
           variants={tagVariants}
-          // custom={{ delay: delay + 0.1 }}
-          custom={{ delay: delay }}
+          custom={{ delay: delay + 0.5 }}
         >
           <div className={styles.tagFront}>{title}</div>
           <div className={styles.tagBack}>{title}</div>
