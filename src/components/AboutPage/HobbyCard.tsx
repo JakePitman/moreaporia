@@ -1,7 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-import colors from "../../shared/_colors.module.scss";
 import styles from "./HobbyCard.module.scss";
 import {
   cardVariantsLandscape,
@@ -11,12 +10,12 @@ import {
 import useWindowDimensions from "../../shared/useWindowDimensions";
 
 type Props = {
-  Icon: React.ReactElement;
   rotate: number;
   delay: number;
   title: string;
   tagRotation: number;
   backgroundGradients: [string, string];
+  children: React.ReactNode;
 };
 
 const gradient = (
@@ -32,20 +31,15 @@ const gradient = (
         backgroundGradients[1]
       }, ${backgroundGradients[0]})`;
 const HobbyCard = ({
-  Icon,
   rotate,
   delay,
   title,
   tagRotation,
   backgroundGradients,
+  children,
 }: Props) => {
   const { height, width } = useWindowDimensions();
   const isLandscape = width > height;
-
-  const IconWithDefaults = React.cloneElement(Icon, {
-    color: colors.primaryBackground,
-    size: isLandscape ? 120 : 70,
-  });
 
   return (
     <>
@@ -60,7 +54,7 @@ const HobbyCard = ({
           }}
           className={isLandscape ? styles.frontLandscape : styles.frontPortrait}
         >
-          {IconWithDefaults}
+          {children}
         </div>
         <div
           style={{

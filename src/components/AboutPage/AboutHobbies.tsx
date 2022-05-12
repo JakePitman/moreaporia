@@ -9,6 +9,7 @@ import {
 
 import HobbyCard from "./HobbyCard";
 import useWindowDimensions from "../../shared/useWindowDimensions";
+import colors from "../../shared/_colors.module.scss";
 
 import styles from "./AboutHobbies.module.scss";
 
@@ -41,12 +42,16 @@ const landscapeLayout = () => (
       >
         <HobbyCard
           title={title}
-          Icon={icon}
           rotate={rotate}
           tagRotation={tagRotation}
           delay={i / 10}
           backgroundGradients={colorGradients[i]}
-        />
+        >
+          {React.cloneElement(icon, {
+            color: colors.primaryBackground,
+            size: 115,
+          })}
+        </HobbyCard>
       </div>
     ))}
   </motion.div>
@@ -60,12 +65,16 @@ const portraitLayout = () => (
       >
         <HobbyCard
           title={title}
-          Icon={icon}
           rotate={rotate}
           tagRotation={0}
           delay={i / 10}
           backgroundGradients={colorGradients[i]}
-        />
+        >
+          {React.cloneElement(icon, {
+            color: colors.primaryBackground,
+            size: 70,
+          })}
+        </HobbyCard>
       </div>
     ))}
   </motion.div>
