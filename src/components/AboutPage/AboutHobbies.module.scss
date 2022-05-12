@@ -16,3 +16,13 @@
   justify-content: space-around;
   flex-direction: row;
 }
+
+
+.hobbyCardContainerLandscape {
+  height: 130px;
+  width: 130px
+}
+.hobbyCardContainerPortrait {
+  width: 25%;
+  aspect-ratio: 1;
+}

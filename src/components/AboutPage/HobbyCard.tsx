@@ -48,14 +48,7 @@ const HobbyCard = ({
   });
 
   return (
-    <motion.div
-      style={{
-        transform: `rotate(${rotate}deg)`,
-      }}
-      className={
-        isLandscape ? styles.containerLandscape : styles.containerPortrait
-      }
-    >
+    <>
       <motion.div
         variants={isLandscape ? cardVariantsLandscape : cardVariantsPortrait}
         className={styles.card}
@@ -93,7 +86,7 @@ const HobbyCard = ({
           </motion.div>
         </div>
       )}
-    </motion.div>
+    </>
   );
 };
 

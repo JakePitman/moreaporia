@@ -19,68 +19,55 @@ const colorGradients: [string, string][] = [
   ["#0059ff", "#0026ff"],
 ];
 
+const hobbyCardDataLandscape = [
+  { title: "Chess", icon: <FaChess />, rotate: -15, tagRotation: 15 },
+  { title: "Guitar", icon: <FaGuitar />, rotate: -10, tagRotation: 5 },
+  { title: "Code", icon: <FaTerminal />, rotate: 2, tagRotation: -6 },
+  { title: "Travel", icon: <FaPlaneDeparture />, rotate: 20, tagRotation: -6 },
+];
+const hobbyCardDataPortrait = [
+  { title: "Chess", icon: <FaChess />, rotate: 8 },
+  { title: "Guitar", icon: <FaGuitar />, rotate: 2 },
+  { title: "Code", icon: <FaTerminal />, rotate: -10 },
+];
+
 const landscapeLayout = () => (
   <motion.div className={styles.containerLandscape}>
-    <HobbyCard
-      title="Chess"
-      Icon={<FaChess />}
-      rotate={-15}
-      tagRotation={10}
-      delay={0}
-      backgroundGradients={colorGradients[0]}
-    />
-    <HobbyCard
-      title="Guitar"
-      Icon={<FaGuitar />}
-      rotate={-10}
-      delay={0.1}
-      tagRotation={5}
-      backgroundGradients={colorGradients[1]}
-    />
-    <HobbyCard
-      title="Code"
-      Icon={<FaTerminal />}
-      rotate={2}
-      delay={0.2}
-      tagRotation={-5}
-      backgroundGradients={colorGradients[2]}
-    />
-    <HobbyCard
-      title="Travel"
-      Icon={<FaPlaneDeparture />}
-      rotate={20}
-      tagRotation={-5}
-      delay={0.3}
-      backgroundGradients={colorGradients[3]}
-    />
+    {/* TODO: Add rotation rules to these */}
+    {hobbyCardDataLandscape.map(({ title, icon, rotate, tagRotation }, i) => (
+      <div
+        className={styles.hobbyCardContainerLandscape}
+        style={{ transform: `rotate(${rotate}deg)` }}
+      >
+        <HobbyCard
+          title={title}
+          Icon={icon}
+          rotate={rotate}
+          tagRotation={tagRotation}
+          delay={i / 10}
+          backgroundGradients={colorGradients[i]}
+        />
+      </div>
+    ))}
   </motion.div>
 );
 const portraitLayout = () => (
   <motion.div className={styles.containerPortrait}>
-    <HobbyCard
-      title="Chess"
-      Icon={<FaChess />}
-      rotate={8}
-      tagRotation={5}
-      delay={0}
-      backgroundGradients={colorGradients[0]}
-    />
-    <HobbyCard
-      title="Guitar"
-      Icon={<FaGuitar />}
-      rotate={2}
-      tagRotation={5}
-      delay={0.1}
-      backgroundGradients={colorGradients[1]}
-    />
-    <HobbyCard
-      title="Code"
-      Icon={<FaTerminal />}
-      rotate={-10}
-      tagRotation={5}
-      delay={0.2}
-      backgroundGradients={colorGradients[2]}
-    />
+    {hobbyCardDataPortrait.map(({ title, icon, rotate }, i) => (
+      <div
+        className={styles.hobbyCardContainerPortrait}
+        style={{ transform: `rotate(${rotate}deg)` }}
+      >
+        <HobbyCard
+          title={title}
+          Icon={icon}
+          rotate={rotate}
+          tagRotation={0}
+          delay={i / 10}
+          backgroundGradients={colorGradients[i]}
+        />
+      </div>
+    ))}
   </motion.div>
 );
 
