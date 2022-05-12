@@ -1,12 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-import styles from "./HobbyCard.module.scss";
+import styles from "./FlipCard.module.scss";
 import {
   cardVariantsLandscape,
   cardVariantsPortrait,
   tagVariants,
-} from "./hobbyCardVariants";
+} from "./flipCardVariants";
 import useWindowDimensions from "../../shared/useWindowDimensions";
 
 type Props = {
@@ -30,7 +30,7 @@ const gradient = (
     : `linear-gradient(-${Math.abs(90 + rotate)}deg, ${
         backgroundGradients[1]
       }, ${backgroundGradients[0]})`;
-const HobbyCard = ({
+const FlipCard = ({
   rotate,
   delay,
   title,
@@ -84,4 +84,4 @@ const HobbyCard = ({
   );
 };
 
-export default HobbyCard;
+export default FlipCard;

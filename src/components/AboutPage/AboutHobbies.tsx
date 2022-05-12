@@ -7,7 +7,7 @@ import {
   FaPlaneDeparture,
 } from "react-icons/fa";
 
-import HobbyCard from "./HobbyCard";
+import FlipCard from "./FlipCard";
 import useWindowDimensions from "../../shared/useWindowDimensions";
 import colors from "../../shared/_colors.module.scss";
 
@@ -20,13 +20,13 @@ const colorGradients: [string, string][] = [
   ["#0059ff", "#0026ff"],
 ];
 
-const hobbyCardDataLandscape = [
+const flipCardDataLandscape = [
   { title: "Chess", icon: <FaChess />, rotate: -15, tagRotation: 15 },
   { title: "Guitar", icon: <FaGuitar />, rotate: -10, tagRotation: 5 },
   { title: "Code", icon: <FaTerminal />, rotate: 2, tagRotation: -6 },
   { title: "Travel", icon: <FaPlaneDeparture />, rotate: 20, tagRotation: -6 },
 ];
-const hobbyCardDataPortrait = [
+const flipCardDataPortrait = [
   { title: "Chess", icon: <FaChess />, rotate: 8 },
   { title: "Guitar", icon: <FaGuitar />, rotate: 2 },
   { title: "Code", icon: <FaTerminal />, rotate: -10 },
@@ -35,12 +35,13 @@ const hobbyCardDataPortrait = [
 const landscapeLayout = () => (
   <motion.div className={styles.containerLandscape}>
     {/* TODO: Add rotation rules to these */}
-    {hobbyCardDataLandscape.map(({ title, icon, rotate, tagRotation }, i) => (
+    {flipCardDataLandscape.map(({ title, icon, rotate, tagRotation }, i) => (
       <div
         className={styles.hobbyCardContainerLandscape}
         style={{ transform: `rotate(${rotate}deg)` }}
+        key={`hobby-card-${i}`}
       >
-        <HobbyCard
+        <FlipCard
           title={title}
           rotate={rotate}
           tagRotation={tagRotation}
@@ -51,19 +52,20 @@ const landscapeLayout = () => (
             color: colors.primaryBackground,
             size: 115,
           })}
-        </HobbyCard>
+        </FlipCard>
       </div>
     ))}
   </motion.div>
 );
 const portraitLayout = () => (
   <motion.div className={styles.containerPortrait}>
-    {hobbyCardDataPortrait.map(({ title, icon, rotate }, i) => (
+    {flipCardDataPortrait.map(({ title, icon, rotate }, i) => (
       <div
         className={styles.hobbyCardContainerPortrait}
         style={{ transform: `rotate(${rotate}deg)` }}
+        key={`hobby-card-${i}`}
       >
-        <HobbyCard
+        <FlipCard
           title={title}
           rotate={rotate}
           tagRotation={0}
@@ -74,7 +76,7 @@ const portraitLayout = () => (
             color: colors.primaryBackground,
             size: 70,
           })}
-        </HobbyCard>
+        </FlipCard>
       </div>
     ))}
   </motion.div>
