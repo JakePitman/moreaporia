@@ -17,6 +17,7 @@
   align-items: center;
   background: $boldBlue;
   transform: rotateY(180deg);
+  border-radius: 5px;
 }
 
 .frontLandscape {
@@ -34,6 +35,7 @@
   width: 100%;
   height: 100%;
   background: $boldBlue;
+  border-radius: 5px;
 }
 
 .tagContainer {

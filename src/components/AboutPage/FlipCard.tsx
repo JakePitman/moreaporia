@@ -61,7 +61,8 @@ const FlipCard = ({
           className={styles.back}
         />
       </motion.div>
-      {isLandscape && (
+      {/* Tags, may or may not include */}
+      {/* {isLandscape && (
         <div
           style={{
             transform: `rotate(${tagRotation}deg)`,
@@ -77,7 +78,7 @@ const FlipCard = ({
             <div className={styles.tagBack}>{title}</div>
           </motion.div>
         </div>
-      )}
+      )} */}
     </>
   );
 };
