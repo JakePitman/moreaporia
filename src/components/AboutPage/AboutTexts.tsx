@@ -10,6 +10,9 @@ import {
   cardVariantsRightToLeft,
   cardVariantsBottomToTop,
 } from "./flipCardVariants";
+import colors from "../../shared/_colors.module.scss";
+
+const { gradient1, gradient3, gradient5 } = colors;
 
 type Props = {
   selectedNavOption: "jake" | "work" | "tech" | null;
@@ -61,7 +64,7 @@ const AboutTexts = ({ selectedNavOption }: Props) => {
                 delay={0}
                 rotate={firstFlipCardRotation}
                 tagRotation={5}
-                backgroundGradients={["white", "blue"]}
+                backgroundGradients={[gradient1, gradient3]}
                 variants={
                   isLandscape
                     ? cardVariantsRightToLeft
@@ -81,7 +84,7 @@ const AboutTexts = ({ selectedNavOption }: Props) => {
                   delay={0.1}
                   rotate={-2}
                   tagRotation={5}
-                  backgroundGradients={["white", "blue"]}
+                  backgroundGradients={[gradient3, gradient5]}
                   variants={cardVariantsRightToLeft}
                 >
                   <p>My cool content</p>

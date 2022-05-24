@@ -16,7 +16,14 @@ import useWindowDimensions from "../../shared/useWindowDimensions";
 import colors from "../../shared/_colors.module.scss";
 import styles from "./AboutHobbies.module.scss";
 
-const { gradient1, gradient2, gradient3, gradient4, gradient5 } = colors;
+const {
+  gradient1,
+  gradient2,
+  gradient3,
+  gradient4,
+  gradient5,
+  primaryBackground,
+} = colors;
 
 const colorGradients: [string, string][] = [
   [gradient1, gradient2],
@@ -55,7 +62,7 @@ const landscapeLayout = () => (
           variants={cardVariantsLeftToRight}
         >
           {React.cloneElement(icon, {
-            color: colors.primaryBackground,
+            color: primaryBackground,
             size: 115,
           })}
         </FlipCard>
@@ -80,7 +87,7 @@ const portraitLayout = () => (
           variants={cardVariantsTopToBottom}
         >
           {React.cloneElement(icon, {
-            color: colors.primaryBackground,
+            color: primaryBackground,
             size: 70,
           })}
         </FlipCard>
