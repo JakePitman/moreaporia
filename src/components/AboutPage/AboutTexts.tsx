@@ -58,6 +58,21 @@ const AboutTexts = ({ selectedNavOption }: Props) => {
                 <p>My cool content</p>
               </FlipCard>
             </div>
+            <div
+              className={styles.jakeFlipCardContainer}
+              style={{ transform: "rotate(-3deg)" }}
+            >
+              <FlipCard
+                title="My cool card"
+                delay={0.1}
+                rotate={-3}
+                tagRotation={5}
+                backgroundGradients={["white", "blue"]}
+                variants={cardVariantsRightToLeft}
+              >
+                <p>My cool content</p>
+              </FlipCard>
+            </div>
           </AboutText>
         </motion.div>
         <motion.div
