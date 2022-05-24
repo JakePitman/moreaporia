@@ -1,4 +1,4 @@
-export const cardVariantsLandscape = {
+export const cardVariantsLeftToRight = {
   jakeActiveMove: {
     right: 150,
   },
@@ -12,7 +12,21 @@ export const cardVariantsLandscape = {
   }),
 };
 
-export const cardVariantsPortrait = {
+export const cardVariantsRightToLeft = {
+  jakeActiveMove: {
+    right: -150,
+  },
+  jakeActiveExpand: ({ delay }: { delay: number }) => ({
+    transform: "rotateY(180deg)",
+    left: 0,
+    transition: {
+      duration: 0.5,
+      delay: delay,
+    },
+  }),
+};
+
+export const cardVariantsTopToBottom = {
   jakeActiveMove: {
     bottom: 150,
   },

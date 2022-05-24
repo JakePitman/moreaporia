@@ -2,11 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 
 import styles from "./FlipCard.module.scss";
-import {
-  cardVariantsLandscape,
-  cardVariantsPortrait,
-  tagVariants,
-} from "./flipCardVariants";
+import { tagVariants } from "./flipCardVariants";
 import useWindowDimensions from "../../shared/useWindowDimensions";
 
 type Props = {
@@ -16,6 +12,7 @@ type Props = {
   tagRotation: number;
   backgroundGradients: [string, string];
   children: React.ReactNode;
+  variants: {};
 };
 
 const gradient = (
@@ -37,6 +34,7 @@ const FlipCard = ({
   tagRotation,
   backgroundGradients,
   children,
+  variants,
 }: Props) => {
   const { height, width } = useWindowDimensions();
   const isLandscape = width > height;
@@ -44,7 +42,7 @@ const FlipCard = ({
   return (
     <>
       <motion.div
-        variants={isLandscape ? cardVariantsLandscape : cardVariantsPortrait}
+        variants={variants}
         className={styles.card}
         custom={{ delay }}
       >

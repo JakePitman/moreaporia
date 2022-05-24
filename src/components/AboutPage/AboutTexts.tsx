@@ -2,9 +2,11 @@ import React from "react";
 import { motion } from "framer-motion";
 
 import AboutText from "./AboutText";
+import FlipCard from "./FlipCard";
 import styles from "./AboutTexts.module.scss";
 import useWindowDimensions from "../../shared/useWindowDimensions";
 import AboutHobbies from "./AboutHobbies";
+import { cardVariantsRightToLeft } from "./flipCardVariants";
 
 type Props = {
   selectedNavOption: "jake" | "work" | "tech" | null;
@@ -41,17 +43,21 @@ const AboutTexts = ({ selectedNavOption }: Props) => {
           }
         >
           <AboutText visible={selectedNavOption === "jake"}>
-            <h1 className={styles.heading}>Why coding?</h1>
-            <p className={styles.text}>
-              Coding is a creative outlet for me. I love designing and building
-              beautiful and unique solutions to standard front-end problems.
-            </p>
-            <h1 className={styles.heading}>Before coding?</h1>
-            <p className={styles.text}>
-              I used to be an English teacher. Learning & life-long study are
-              important to me, but I decided I wanted to build things as well.
-              Coding lets me do it all!
-            </p>
+            <div
+              className={styles.jakeFlipCardContainer}
+              style={{ transform: "rotate(5deg)" }}
+            >
+              <FlipCard
+                title="My cool card"
+                delay={0}
+                rotate={5}
+                tagRotation={5}
+                backgroundGradients={["white", "blue"]}
+                variants={cardVariantsRightToLeft}
+              >
+                <p>My cool content</p>
+              </FlipCard>
+            </div>
           </AboutText>
         </motion.div>
         <motion.div

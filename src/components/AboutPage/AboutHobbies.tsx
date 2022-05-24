@@ -8,6 +8,10 @@ import {
 } from "react-icons/fa";
 
 import FlipCard from "./FlipCard";
+import {
+  cardVariantsLeftToRight,
+  cardVariantsTopToBottom,
+} from "./flipCardVariants";
 import useWindowDimensions from "../../shared/useWindowDimensions";
 import colors from "../../shared/_colors.module.scss";
 
@@ -47,6 +51,7 @@ const landscapeLayout = () => (
           tagRotation={tagRotation}
           delay={i / 10}
           backgroundGradients={colorGradients[i]}
+          variants={cardVariantsLeftToRight}
         >
           {React.cloneElement(icon, {
             color: colors.primaryBackground,
@@ -71,6 +76,7 @@ const portraitLayout = () => (
           tagRotation={0}
           delay={i / 10}
           backgroundGradients={colorGradients[i]}
+          variants={cardVariantsTopToBottom}
         >
           {React.cloneElement(icon, {
             color: colors.primaryBackground,
