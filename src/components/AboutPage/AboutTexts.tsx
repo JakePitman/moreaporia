@@ -6,7 +6,10 @@ import FlipCard from "./FlipCard";
 import styles from "./AboutTexts.module.scss";
 import useWindowDimensions from "../../shared/useWindowDimensions";
 import AboutHobbies from "./AboutHobbies";
-import { cardVariantsRightToLeft } from "./flipCardVariants";
+import {
+  cardVariantsRightToLeft,
+  cardVariantsBottomToTop,
+} from "./flipCardVariants";
 
 type Props = {
   selectedNavOption: "jake" | "work" | "tech" | null;
@@ -32,6 +35,8 @@ const AboutTexts = ({ selectedNavOption }: Props) => {
     );
   }
 
+  const firstFlipCardRotation = isLandscape ? 3 : -1;
+
   if (selectedNavOption === "jake") {
     return (
       <>
@@ -44,35 +49,45 @@ const AboutTexts = ({ selectedNavOption }: Props) => {
         >
           <AboutText visible={selectedNavOption === "jake"}>
             <div
-              className={styles.jakeFlipCardContainer}
-              style={{ transform: "rotate(5deg)" }}
+              className={
+                isLandscape
+                  ? styles.jakeFlipCardContainerLandscape
+                  : styles.jakeFlipCardContainerPortrait
+              }
+              style={{ transform: `rotate(${firstFlipCardRotation}deg)` }}
             >
               <FlipCard
                 title="My cool card"
                 delay={0}
-                rotate={5}
+                rotate={firstFlipCardRotation}
                 tagRotation={5}
                 backgroundGradients={["white", "blue"]}
-                variants={cardVariantsRightToLeft}
+                variants={
+                  isLandscape
+                    ? cardVariantsRightToLeft
+                    : cardVariantsBottomToTop
+                }
               >
                 <p>My cool content</p>
               </FlipCard>
             </div>
-            <div
-              className={styles.jakeFlipCardContainer}
-              style={{ transform: "rotate(-3deg)" }}
-            >
-              <FlipCard
-                title="My cool card"
-                delay={0.1}
-                rotate={-3}
-                tagRotation={5}
-                backgroundGradients={["white", "blue"]}
-                variants={cardVariantsRightToLeft}
+            {isLandscape && (
+              <div
+                className={styles.jakeFlipCardContainerLandscape}
+                style={{ transform: "rotate(-2deg)" }}
               >
-                <p>My cool content</p>
-              </FlipCard>
-            </div>
+                <FlipCard
+                  title="My cool card"
+                  delay={0.1}
+                  rotate={-2}
+                  tagRotation={5}
+                  backgroundGradients={["white", "blue"]}
+                  variants={cardVariantsRightToLeft}
+                >
+                  <p>My cool content</p>
+                </FlipCard>
+              </div>
+            )}
           </AboutText>
         </motion.div>
         <motion.div

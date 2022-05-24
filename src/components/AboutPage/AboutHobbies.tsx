@@ -14,14 +14,15 @@ import {
 } from "./flipCardVariants";
 import useWindowDimensions from "../../shared/useWindowDimensions";
 import colors from "../../shared/_colors.module.scss";
-
 import styles from "./AboutHobbies.module.scss";
 
+const { gradient1, gradient2, gradient3, gradient4, gradient5 } = colors;
+
 const colorGradients: [string, string][] = [
-  ["#00fffb", "#00c8ff"],
-  ["#00c8ff", "#0084ff"],
-  ["#0084ff", "#0059ff"],
-  ["#0059ff", "#0026ff"],
+  [gradient1, gradient2],
+  [gradient2, gradient3],
+  [gradient3, gradient4],
+  [gradient4, gradient5],
 ];
 
 const flipCardDataLandscape = [

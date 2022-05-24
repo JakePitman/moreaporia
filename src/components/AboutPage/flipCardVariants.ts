@@ -40,6 +40,19 @@ export const cardVariantsTopToBottom = {
   }),
 };
 
+export const cardVariantsBottomToTop = {
+  jakeActiveMove: {
+    bottom: -150,
+  },
+  jakeActiveExpand: ({ delay }: { delay: number }) => ({
+    transform: "rotateX(180deg)",
+    top: 0,
+    transition: {
+      duration: 0.5,
+      delay: delay,
+    },
+  }),
+};
 export const tagVariants = {
   jakeActiveMove: {
     right: -160,
