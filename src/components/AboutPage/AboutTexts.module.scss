@@ -85,8 +85,9 @@
 }
 
 .jakeFlipCardContainerLandscape {
-  width: 80%;
-  height: 40%;
+  width: 70%;
+  max-height: 40%;
+  aspect-ratio: 1 / 1;
 }
 
 .jakeFlipCardContainerPortrait {
