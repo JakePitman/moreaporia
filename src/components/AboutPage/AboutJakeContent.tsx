@@ -1,61 +1,37 @@
 import React from "react";
+import { motion } from "framer-motion";
 
+import AboutHobbies from "./AboutHobbies";
 import styles from "./AboutJakeContent.module.scss";
-import FlipCard from "./FlipCard";
-import {
-  cardVariantsRightToLeft,
-  cardVariantsBottomToTop,
-} from "./flipCardVariants";
-import colors from "../../shared/_colors.module.scss";
-const { gradient1, gradient3, gradient5 } = colors;
+import AboutText from "./AboutText";
 
 type Props = {
   isLandscape: boolean;
 };
 
 const AboutJakeContent = ({ isLandscape }: Props) => {
-  const firstFlipCardRotation = isLandscape ? 3 : -1;
-
   return (
     <>
-      <div
+      <motion.div
         className={
           isLandscape
-            ? styles.jakeFlipCardContainerLandscape
-            : styles.jakeFlipCardContainerPortrait
+            ? styles.textContainerLeftLandscape
+            : styles.textContainerLeftPortrait
         }
-        style={{ transform: `rotate(${firstFlipCardRotation}deg)` }}
       >
-        <FlipCard
-          title="My cool card"
-          delay={0}
-          rotate={firstFlipCardRotation}
-          tagRotation={5}
-          backgroundGradients={[gradient1, gradient3]}
-          variants={
-            isLandscape ? cardVariantsRightToLeft : cardVariantsBottomToTop
-          }
-        >
-          <p>My cool content</p>
-        </FlipCard>
-      </div>
-      {isLandscape && (
-        <div
-          className={styles.jakeFlipCardContainerLandscape}
-          style={{ transform: "rotate(-2deg)" }}
-        >
-          <FlipCard
-            title="My cool card"
-            delay={0.1}
-            rotate={-2}
-            tagRotation={5}
-            backgroundGradients={[gradient3, gradient5]}
-            variants={cardVariantsRightToLeft}
-          >
-            <p>My cool content</p>
-          </FlipCard>
-        </div>
-      )}{" "}
+        <AboutText visible>My cool left column</AboutText>
+      </motion.div>
+      <motion.div
+        className={
+          isLandscape
+            ? styles.textContainerRightLandscape
+            : styles.textContainerRightPortrait
+        }
+      >
+        <AboutText visible>
+          <AboutHobbies />
+        </AboutText>
+      </motion.div>
     </>
   );
 };

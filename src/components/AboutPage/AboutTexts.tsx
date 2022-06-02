@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import AboutText from "./AboutText";
 import styles from "./AboutTexts.module.scss";
 import useWindowDimensions from "../../shared/useWindowDimensions";
-import AboutHobbies from "./AboutHobbies";
 import AboutJakeContent from "./AboutJakeContent";
 
 type Props = {
@@ -32,32 +31,7 @@ const AboutTexts = ({ selectedNavOption }: Props) => {
   }
 
   if (selectedNavOption === "jake") {
-    return (
-      <>
-        <motion.div
-          className={
-            isLandscape
-              ? styles.jakeTextContainerLeftLandscape
-              : styles.jakeTextContainerLeftPortrait
-          }
-        >
-          <AboutText visible={selectedNavOption === "jake"}>
-            <AboutJakeContent isLandscape={isLandscape} />
-          </AboutText>
-        </motion.div>
-        <motion.div
-          className={
-            isLandscape
-              ? styles.jakeTextContainerRightLandscape
-              : styles.jakeTextContainerRightPortrait
-          }
-        >
-          <AboutText visible={selectedNavOption === "jake"}>
-            <AboutHobbies />
-          </AboutText>
-        </motion.div>
-      </>
-    );
+    return <AboutJakeContent isLandscape={isLandscape} />;
   }
 
   if (selectedNavOption === "tech") {
