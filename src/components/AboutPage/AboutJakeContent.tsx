@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 
 import AboutHobbies from "./AboutHobbies";
@@ -9,7 +9,25 @@ type Props = {
   isLandscape: boolean;
 };
 
+type MenuOption = {
+  title: string;
+  component: React.ReactElement;
+};
+function createMenuOptionsArray<
+  T extends readonly MenuOption[] & Array<{ title: V }>,
+  V extends string
+>(...args: T) {
+  return args;
+}
+const menuOptions = createMenuOptionsArray(
+  { title: "Why do I code?", component: <p>Why indeed</p> },
+  { title: "Interests", component: <AboutHobbies /> }
+);
+type MenuOptionTitles = typeof menuOptions[number]["title"];
+
 const AboutJakeContent = ({ isLandscape }: Props) => {
+  const [selectedMenuOption, setSelectedMenuOption] =
+    useState<MenuOptionTitles>(menuOptions[0].title);
   return (
     <>
       <motion.div
@@ -19,7 +37,15 @@ const AboutJakeContent = ({ isLandscape }: Props) => {
             : styles.textContainerLeftPortrait
         }
       >
-        <AboutText visible>My cool left column</AboutText>
+        <AboutText visible>
+          <div className={styles.menuOptionsContainer}>
+            {menuOptions.map((menuOption) => (
+              <p onClick={() => setSelectedMenuOption(menuOption.title)}>
+                {menuOption.title}
+              </p>
+            ))}
+          </div>
+        </AboutText>
       </motion.div>
       <motion.div
         className={
@@ -29,7 +55,11 @@ const AboutJakeContent = ({ isLandscape }: Props) => {
         }
       >
         <AboutText visible>
-          <AboutHobbies />
+          {
+            menuOptions.find(
+              (menuOption) => menuOption.title === selectedMenuOption
+            )?.component
+          }
         </AboutText>
       </motion.div>
     </>
