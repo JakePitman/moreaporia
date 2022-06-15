@@ -34,7 +34,6 @@
 }
 
 .jakeTextContainerLeftLandscape {
-  border: 1px solid gold;
   position: absolute;
   left: 5vw;
   width: 28vw;
@@ -42,7 +41,6 @@
 }
 
 .jakeTextContainerLeftPortrait {
-  border: 1px solid gold;
   @include area-defaults;
   position: absolute;
   top: 0;
@@ -51,7 +49,6 @@
 }
 
 .jakeTextContainerRightLandscape {
-  border: 1px solid yellow;
   position: absolute;
   right: 5vw;
   width: 28vw;
@@ -59,7 +56,6 @@
 }
 
 .jakeTextContainerRightPortrait {
-  border: 1px solid yellow;
   @include area-defaults;
   position: absolute;
   bottom: 0;
