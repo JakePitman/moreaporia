@@ -73,7 +73,7 @@ const landscapeLayout = () => (
 const portraitLayout = () => (
   <motion.div className={styles.containerPortrait}>
     {flipCardDataPortrait.map(({ title, icon, rotate }, i) => (
-      <motion.div
+      <div
         className={styles.hobbyCardContainerPortrait}
         style={{ transform: `rotate(${rotate}deg)` }}
         key={`hobby-card-${i}`}
@@ -91,7 +91,7 @@ const portraitLayout = () => (
             size: 70,
           })}
         </FlipCard>
-      </motion.div>
+      </div>
     ))}
   </motion.div>
 );
