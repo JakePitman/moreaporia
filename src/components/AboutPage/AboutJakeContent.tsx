@@ -36,7 +36,10 @@ const AboutJakeContent = ({ isLandscape }: Props) => {
             isLandscape ? cardVariantsRightToLeft : cardVariantsBottomToTop
           }
         >
-          <p>My cool content</p>
+          <p className={styles.contentCardText}>
+            A teacher turned software engineer with a love of creativity and
+            problem solving.
+          </p>
         </FlipCard>
       </div>
       {isLandscape && (
@@ -52,7 +55,9 @@ const AboutJakeContent = ({ isLandscape }: Props) => {
             backgroundGradients={[gradient3, gradient5]}
             variants={cardVariantsRightToLeft}
           >
-            <p>My cool content</p>
+            <p className={styles.contentCardText}>
+              I turned to coding so I could consume less and build more.
+            </p>
           </FlipCard>
         </div>
       )}{" "}
