@@ -1,0 +1,81 @@
+@import "../../shared/_colors.module.scss";
+
+.text {
+  color: $offWhite;
+  font-size: 1.5rem;
+  font-family: "Roboto";
+}
+
+.heading {
+  color: $boldBlue;
+  font-size: 3rem;
+  font-family: "Tomorrow";
+}
+
+@mixin area-defaults {
+  position: absolute;
+}
+
+.workTextContainerLandscape {
+  @include area-defaults;
+  border: 1px solid pink;
+  right: 5vw;
+  width: 60vw;
+  height: 95%;
+}
+
+.workTextContainerPortrait {
+  border: 1px solid pink;
+  @include area-defaults;
+  position: absolute;
+  bottom: 5vh;
+  height: 60%;
+  width: 100%;
+}
+
+.jakeTextContainerLeftLandscape {
+  position: absolute;
+  left: 5vw;
+  width: 28vw;
+  height: 95%;
+}
+
+.jakeTextContainerLeftPortrait {
+  @include area-defaults;
+  position: absolute;
+  top: 0;
+  height: 30%;
+  width: 100%;
+}
+
+.jakeTextContainerRightLandscape {
+  position: absolute;
+  right: 5vw;
+  width: 28vw;
+  height: 95%;
+}
+
+.jakeTextContainerRightPortrait {
+  @include area-defaults;
+  position: absolute;
+  bottom: 0;
+  height: 30%;
+  width: 100%;
+}
+
+.techTextContainerLandscape {
+  border: 1px solid pink;
+  position: absolute;
+  left: 5vw;
+  width: 60vw;
+  height: 95%;
+}
+
+.techTextContainerPortrait {
+  border: 1px solid pink;
+  @include area-defaults;
+  position: absolute;
+  top: 5vh;
+  height: 60%;
+  width: 100%;
+}

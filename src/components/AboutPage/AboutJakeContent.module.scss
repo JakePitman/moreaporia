@@ -1,0 +1,16 @@
+.jakeFlipCardContainerLandscape {
+  width: 70%;
+  max-height: 40%;
+  aspect-ratio: 1 / 1;
+}
+
+.jakeFlipCardContainerPortrait {
+  width: 70%;
+  height: 90%;
+}
+
+.contentCardText {
+  font-family: "Roboto Mono";
+  text-align: center;
+  font-size: 130%;
+}

@@ -1,0 +1,31 @@
+$primaryBackground: #070d18;
+$secondaryBackground: #11161f;
+
+$offWhite: #e5e5e5;
+
+$boldBlue: #00e0ff;
+$lightBlue: #b6f2ff;
+$greyBlue: #658492;
+
+$primaryYellow: #fff500;
+
+$gradient1: #00fffb;
+$gradient2: #00c8ff;
+$gradient3: #0084ff;
+$gradient4: #0059ff;
+$gradient5: #0026ff;
+
+:export {
+  primaryBackground: $primaryBackground;
+  secondaryBackground: $secondaryBackground;
+  offWhite: $offWhite;
+  boldBlue: $boldBlue;
+  lightBlue: $lightBlue;
+  greyBlue: $greyBlue;
+  primaryYellow: $primaryYellow;
+  gradient1: $gradient1;
+  gradient2: $gradient2;
+  gradient3: $gradient3;
+  gradient4: $gradient4;
+  gradient5: $gradient5;
+}

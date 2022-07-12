@@ -9,6 +9,7 @@ import {
   lowerRightBackgroundVariants,
 } from "./aboutPageVariants";
 import useWindowDimensions from "../../shared/useWindowDimensions";
+import AboutTexts from "./AboutTexts";
 
 const AboutPage = forwardRef<HTMLDivElement>((props, ref) => {
   const [hasEnteredViewport, setHasEnteredViewport] = useState(false);
@@ -96,11 +97,9 @@ const AboutPage = forwardRef<HTMLDivElement>((props, ref) => {
         />
       </motion.div>
       <motion.div className={styles.mainContentContainer}>
-        <motion.div className={styles.imagesLayer}>
-          <AboutImage type="1" selectedNavOption={selectedNavOption} />
-          <AboutImage type="2" selectedNavOption={selectedNavOption} />
-        </motion.div>
-        <motion.div className={styles.mainContentCenterColumn}></motion.div>
+        <AboutTexts selectedNavOption={selectedNavOption} />
+        <AboutImage type="1" selectedNavOption={selectedNavOption} />
+        <AboutImage type="2" selectedNavOption={selectedNavOption} />
       </motion.div>
     </motion.div>
   );
