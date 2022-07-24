@@ -1,13 +1,28 @@
 import React from "react";
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
+import { motion } from "framer-motion";
+import NavItem from "./NavItem";
+import styles from "./AppNavigation.module.scss";
 
 const AppNavigation = () => {
-  if (useLocation().pathname === "/") return <></>;
+  const pathname = useLocation().pathname;
+
+  if (pathname === "/") return <></>;
+
   return (
-    <ul>
-      <Link to="/home">Home</Link>
-      <Link to="/about">About</Link>
-    </ul>
+    <motion.div
+      className={styles.navBar}
+      initial="hidden"
+      animate="visible"
+      transition={{
+        staggerChildren: 0.1,
+        delayChildren: 0.5,
+      }}
+    >
+      <NavItem title="About" to="/about" />
+      <NavItem title="Projects" to="/projects" />
+      <NavItem title="Contact" to="/contact" />
+    </motion.div>
   );
 };
 

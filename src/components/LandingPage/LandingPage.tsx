@@ -10,7 +10,6 @@ import {
   iconVariants,
   footerLineVariants,
 } from "./landingPageVariants";
-import NavItem from "./NavItem";
 
 const secondaryAnimationsDelay = 0.5;
 const secondaryAnimationsStagger = 0.1;
@@ -34,20 +33,6 @@ const LandingPage = () => {
           />
         )}
       </div>
-      <motion.div
-        className={styles.navBar}
-        initial="hidden"
-        animate="visible"
-        transition={{
-          staggerChildren: secondaryAnimationsStagger,
-          delayChildren: secondaryAnimationsDelay,
-        }}
-      >
-        <NavItem title="About" handleClick={() => {}} />
-        <NavItem title="Projects" handleClick={() => {}} />
-        <NavItem title="Contact" handleClick={() => {}} />
-      </motion.div>
-
       <motion.div
         initial="hidden"
         animate="visible"

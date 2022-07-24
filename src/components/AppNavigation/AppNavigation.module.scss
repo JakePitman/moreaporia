@@ -1,0 +1,10 @@
+.navBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  flex: 1;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 100
+}
