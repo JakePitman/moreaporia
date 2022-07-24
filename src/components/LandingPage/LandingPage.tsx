@@ -15,11 +15,7 @@ import NavItem from "./NavItem";
 const secondaryAnimationsDelay = 0.5;
 const secondaryAnimationsStagger = 0.1;
 
-type Props = {
-  scrollToAboutPage: () => void;
-};
-
-const LandingPage = ({ scrollToAboutPage }: Props) => {
+const LandingPage = () => {
   const [animationCompleted, setAnimationCompleted] = useState(false);
   const [splineStarted, setSplineStarted] = useState(false);
   return (
@@ -47,7 +43,7 @@ const LandingPage = ({ scrollToAboutPage }: Props) => {
           delayChildren: secondaryAnimationsDelay,
         }}
       >
-        <NavItem title="About" handleClick={scrollToAboutPage} />
+        <NavItem title="About" handleClick={() => {}} />
         <NavItem title="Projects" handleClick={() => {}} />
         <NavItem title="Contact" handleClick={() => {}} />
       </motion.div>
