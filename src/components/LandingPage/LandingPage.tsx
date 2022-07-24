@@ -33,7 +33,7 @@ const LandingPage = ({ scrollToAboutPage }: Props) => {
       >
         {animationCompleted && (
           <Spline
-            scene="https://prod.spline.design/iBlRhRWC3VzcilUz/scene.splinecode"
+            scene="https://prod.spline.design/urecjewqLGNYS7lp/scene.splinecode"
             onStart={() => setSplineStarted(true)}
           />
         )}

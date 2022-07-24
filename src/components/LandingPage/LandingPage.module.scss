@@ -29,6 +29,9 @@
   top: 50%;
   transform: translate(-50%, -50%);
   transition: all 1s;
+  display: flex;
+  justify-content: center;
+  align-items: center
 }
 
 .splineContainerWaiting {
@@ -38,7 +41,7 @@
 
 .splineContainerStarted {
   @include splineContainer;
-  opacity: 1;
+  opacity: 0.3;
 }
 
 .midSection {
