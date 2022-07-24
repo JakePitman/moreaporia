@@ -1,10 +1,21 @@
-.navBar {
+@mixin navbar {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
+  align-items: center;
   flex: 1;
   width: 100%;
   position: absolute;
   top: 0;
-  z-index: 100
+  z-index: 100;
+}
+
+.navbarLandscape {
+  @include navbar;
+  height: 10vh;
+}
+
+.navbarPortrait {
+  @include navbar;
+  height: 5vh;
 }

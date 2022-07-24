@@ -75,6 +75,11 @@ const AboutPage = forwardRef<HTMLDivElement>((props, ref) => {
         variants={lowerRightBackgroundVariants}
         className={styles.lowerRightBackground}
       />
+      <motion.div className={styles.mainContentContainer}>
+        <AboutTexts selectedNavOption={selectedNavOption} />
+        <AboutImage type="1" selectedNavOption={selectedNavOption} />
+        <AboutImage type="2" selectedNavOption={selectedNavOption} />
+      </motion.div>
       <motion.div className={styles.navigationLinksContainer}>
         <AboutNavigationLink
           title="Work"
@@ -95,11 +100,6 @@ const AboutPage = forwardRef<HTMLDivElement>((props, ref) => {
             handleNavOptionChange("tech");
           }}
         />
-      </motion.div>
-      <motion.div className={styles.mainContentContainer}>
-        <AboutTexts selectedNavOption={selectedNavOption} />
-        <AboutImage type="1" selectedNavOption={selectedNavOption} />
-        <AboutImage type="2" selectedNavOption={selectedNavOption} />
       </motion.div>
     </motion.div>
   );
