@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useRef } from "react";
 import "./App.scss";
 import LandingPage from "./components/LandingPage";
 import AboutPage from "./components/AboutPage";
