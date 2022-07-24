@@ -1,8 +1,7 @@
 @import "../../shared/colors.module.scss";
 
 @mixin container {
-  background: $secondaryBackground;
-  height: 100vh;
+  background: $primaryBackground;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -13,10 +12,14 @@
 }
 
 .containerLandscape {
+  margin-top: 10vh;
+  height: 90vh;
   @include container;
 }
 
 .containerPortrait {
+  margin-top: 5vh;
+  height: 95vh;
   @include container;
 }
 

@@ -10,16 +10,11 @@ import {
   iconVariants,
   footerLineVariants,
 } from "./landingPageVariants";
-import NavItem from "./NavItem";
 
 const secondaryAnimationsDelay = 0.5;
 const secondaryAnimationsStagger = 0.1;
 
-type Props = {
-  scrollToAboutPage: () => void;
-};
-
-const LandingPage = ({ scrollToAboutPage }: Props) => {
+const LandingPage = () => {
   const [animationCompleted, setAnimationCompleted] = useState(false);
   const [splineStarted, setSplineStarted] = useState(false);
   return (
@@ -38,20 +33,6 @@ const LandingPage = ({ scrollToAboutPage }: Props) => {
           />
         )}
       </div>
-      <motion.div
-        className={styles.navBar}
-        initial="hidden"
-        animate="visible"
-        transition={{
-          staggerChildren: secondaryAnimationsStagger,
-          delayChildren: secondaryAnimationsDelay,
-        }}
-      >
-        <NavItem title="About" handleClick={scrollToAboutPage} />
-        <NavItem title="Projects" handleClick={() => {}} />
-        <NavItem title="Contact" handleClick={() => {}} />
-      </motion.div>
-
       <motion.div
         initial="hidden"
         animate="visible"

@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 import styles from "./NavItem.module.scss";
 
@@ -13,14 +14,14 @@ const navItemVariants = {
 
 type Props = {
   title: string;
-  handleClick: () => void;
+  to: string;
 };
 
-const NavItem = ({ title, handleClick }: Props) => {
+const NavItem = ({ title, to }: Props) => {
   return (
     <motion.li variants={navItemVariants} className={styles.listItem}>
       <div className={styles.textContainer}>
-        <div className={styles.clickArea} onClick={handleClick} />
+        <Link to={to} className={styles.clickArea} />
         <p className={styles.listItemFirstLetter}>{title.slice(0, 1)}</p>
         {title.slice(1, title.length)}
       </div>

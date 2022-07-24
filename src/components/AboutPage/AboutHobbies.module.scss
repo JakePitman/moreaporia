@@ -9,6 +9,7 @@
   @include container;
   justify-content: space-between;
   flex-direction: column;
+  padding: 30px
 }
 
 .containerPortrait {
@@ -19,8 +20,8 @@
 
 
 .hobbyCardContainerLandscape {
-  height: 130px;
-  width: 130px
+  height: 150px;
+  width: 150px
 }
 .hobbyCardContainerPortrait {
   width: 25%;
