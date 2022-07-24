@@ -14,31 +14,23 @@ function App() {
   document.title = "Moreaporia";
   const aboutPageRef = useRef<HTMLDivElement>(null);
 
-  const [openingAnimationCompleted, setOpeningAnimationCompleted] =
-    useState(false);
-
   return (
     <Router>
       <div className="App">
-        {openingAnimationCompleted ? (
-          <Routes>
-            <Route
-              path="/"
-              element={
-                <LandingPage
-                  scrollToAboutPage={() =>
-                    aboutPageRef.current?.scrollIntoView({ behavior: "smooth" })
-                  }
-                />
-              }
-            />
-            <Route path="/about" element={<AboutPage ref={aboutPageRef} />} />
-          </Routes>
-        ) : (
-          <OpeningAnimation
-            setCompleted={() => setOpeningAnimationCompleted(true)}
+        <Routes>
+          <Route path="/" element={<OpeningAnimation />} />
+          <Route
+            path="/home"
+            element={
+              <LandingPage
+                scrollToAboutPage={() =>
+                  aboutPageRef.current?.scrollIntoView({ behavior: "smooth" })
+                }
+              />
+            }
           />
-        )}
+          <Route path="/about" element={<AboutPage ref={aboutPageRef} />} />
+        </Routes>
       </div>
     </Router>
   );

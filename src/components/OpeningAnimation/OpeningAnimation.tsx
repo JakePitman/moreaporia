@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion, useAnimation } from "framer-motion";
+import { Navigate } from "react-router-dom";
 
 import styles from "./OpeningAnimation.module.scss";
 import {
@@ -9,12 +10,9 @@ import {
   fadedSquareVariants,
 } from "./variants";
 
-type Props = {
-  setCompleted: () => void;
-};
-
-const OpeningAnimation = ({ setCompleted }: Props) => {
+const OpeningAnimation = () => {
   const controls = useAnimation();
+  const [completed, setCompleted] = useState(false);
 
   const sequence = async () => {
     await controls.start("expanding");
@@ -22,10 +20,12 @@ const OpeningAnimation = ({ setCompleted }: Props) => {
     await controls.start("closing");
     await controls.start("goingFullScreen1");
     await controls.start("goingFullScreen2");
-    setCompleted();
+    setCompleted(true);
   };
 
-  return (
+  return completed ? (
+    <Navigate to="/home" />
+  ) : (
     <motion.div
       className={styles.container}
       onViewportEnter={() => sequence()}
