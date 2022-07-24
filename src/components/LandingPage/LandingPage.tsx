@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { FiGithub } from "react-icons/fi";
 import { FiCodepen } from "react-icons/fi";
 import { motion } from "framer-motion";
+import Spline from "@splinetool/react-spline";
 
 import styles from "./LandingPage.module.scss";
 import {
@@ -19,8 +20,24 @@ type Props = {
 };
 
 const LandingPage = ({ scrollToAboutPage }: Props) => {
+  const [animationCompleted, setAnimationCompleted] = useState(false);
+  const [splineStarted, setSplineStarted] = useState(false);
   return (
     <div className={styles.container}>
+      <div
+        className={
+          splineStarted
+            ? styles.splineContainerStarted
+            : styles.splineContainerWaiting
+        }
+      >
+        {animationCompleted && (
+          <Spline
+            scene="https://prod.spline.design/urecjewqLGNYS7lp/scene.splinecode"
+            onStart={() => setSplineStarted(true)}
+          />
+        )}
+      </div>
       <motion.div
         className={styles.navBar}
         initial="hidden"
@@ -42,6 +59,7 @@ const LandingPage = ({ scrollToAboutPage }: Props) => {
           staggerChildren: 0.15,
         }}
         className={styles.midSection}
+        onAnimationComplete={() => setAnimationCompleted(true)}
       >
         <motion.h1 variants={headingVariants} className={styles.mainHeading}>
           Jake Pitman
