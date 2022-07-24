@@ -1,11 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import {
-  FaGuitar,
-  FaChess,
-  FaTerminal,
-  FaPlaneDeparture,
-} from "react-icons/fa";
+import { FaGuitar, FaChess, FaTerminal } from "react-icons/fa";
 
 import FlipCard from "./FlipCard";
 import {
