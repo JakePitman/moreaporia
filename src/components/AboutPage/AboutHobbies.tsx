@@ -27,16 +27,14 @@ const {
 
 const colorGradients: [string, string][] = [
   [gradient1, gradient2],
-  [gradient2, gradient3],
-  [gradient3, gradient4],
+  [gradient2, gradient4],
   [gradient4, gradient5],
 ];
 
 const flipCardDataLandscape = [
   { title: "Chess", icon: <FaChess />, rotate: -15, tagRotation: 15 },
-  { title: "Guitar", icon: <FaGuitar />, rotate: -10, tagRotation: 5 },
-  { title: "Code", icon: <FaTerminal />, rotate: 2, tagRotation: -6 },
-  { title: "Travel", icon: <FaPlaneDeparture />, rotate: 20, tagRotation: -6 },
+  { title: "Guitar", icon: <FaGuitar />, rotate: -3, tagRotation: 5 },
+  { title: "Code", icon: <FaTerminal />, rotate: 13, tagRotation: -6 },
 ];
 const flipCardDataPortrait = [
   { title: "Chess", icon: <FaChess />, rotate: 8 },
