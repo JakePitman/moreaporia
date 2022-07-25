@@ -4,12 +4,9 @@ import { FiCodepen } from "react-icons/fi";
 import { motion } from "framer-motion";
 import Spline from "@splinetool/react-spline";
 
+import Icon from "../shared/Icon";
 import styles from "./LandingPage.module.scss";
-import {
-  headingVariants,
-  iconVariants,
-  footerLineVariants,
-} from "./landingPageVariants";
+import { headingVariants, footerLineVariants } from "./landingPageVariants";
 
 const secondaryAnimationsDelay = 0.5;
 const secondaryAnimationsStagger = 0.1;
@@ -64,20 +61,8 @@ const LandingPage = () => {
             staggerDirection: -1,
           }}
         >
-          <motion.a
-            variants={iconVariants}
-            className={styles.iconWrapper}
-            href="https://github.com/jakePitman/"
-          >
-            <FiGithub />
-          </motion.a>
-          <motion.a
-            variants={iconVariants}
-            className={styles.iconWrapper}
-            href="https://codepen.io/SyN219"
-          >
-            <FiCodepen />
-          </motion.a>
+          <Icon Icon={<FiGithub />} href="https://github.com/jakePitman/" />
+          <Icon Icon={<FiCodepen />} href="https://codepen.io/SyN219" />
           <motion.div
             variants={footerLineVariants}
             className={styles.footerLine}
