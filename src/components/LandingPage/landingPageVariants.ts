@@ -9,14 +9,6 @@ export const headingVariants = {
   },
 };
 
-export const iconVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    transform: "scale(1)",
-    opacity: 1,
-  },
-};
-
 export const footerLineVariants = {
   hidden: { opacity: 0, height: "0" },
   visible: {

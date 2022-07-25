@@ -1,3 +1,5 @@
+@import "../shared/Icon/Icon.module.scss";
+
 @mixin navbar {
   display: flex;
   flex-direction: row;
@@ -21,8 +23,10 @@
 }
 
 .homeButton {
+  @include iconWrapper;
   display: flex;
-  padding-left: 3vw
+  padding-left: 3vw;
+  margin-bottom: 0;
 }
 
 .rightNavItems {

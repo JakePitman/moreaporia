@@ -35,7 +35,7 @@ const AppNavigation = () => {
     >
       <Link to="/home">
         <motion.div className={styles.homeButton} variants={homeButtonVariants}>
-          <FiHome size="30px" color={colors.primaryYellow} />
+          <FiHome color={colors.primaryYellow} />
         </motion.div>
       </Link>
       <div className={styles.rightNavItems}>

@@ -105,18 +105,6 @@ height: 300px;
   position: absolute;
 }
 
-.iconWrapper {
-  color: $primaryYellow;
-  margin-bottom: 30px;
-
-  svg {
-    font-size: 2.5vw;
-    @media (max-width: $breakpointTablet) {
-      font-size: 10vw;
-    }
-  }
-}
-
 .footerLine {
   outline: 1px solid $offWhite;
 }
