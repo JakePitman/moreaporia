@@ -16,7 +16,6 @@ import {
   topRightCornerVariants,
   bottomLeftCornerVariants,
 } from "./aboutImageVariants";
-import useWindowDimensions from "../../shared/useWindowDimensions";
 
 type Props = {
   type: "1" | "2";

@@ -1,4 +1,10 @@
-import React, { useState, useEffect, forwardRef, useCallback } from "react";
+import React, {
+  useState,
+  useEffect,
+  forwardRef,
+  useCallback,
+  useContext,
+} from "react";
 import { motion, useAnimation } from "framer-motion";
 
 import styles from "./AboutPage.module.scss";
@@ -8,12 +14,12 @@ import {
   lowerLeftBackgroundVariants,
   lowerRightBackgroundVariants,
 } from "./aboutPageVariants";
-import useWindowDimensions from "../../shared/useWindowDimensions";
 import AboutTexts from "./AboutTexts";
+import BrowserContext from "../../shared/browserContext";
 
 const AboutPage = forwardRef<HTMLDivElement>((props, ref) => {
+  const { isLandscape } = useContext(BrowserContext);
   const [hasEnteredViewport, setHasEnteredViewport] = useState(false);
-  const { width, height } = useWindowDimensions();
   const [selectedNavOption, setSelectedNavOption] = useState<
     "work" | "jake" | "tech"
   >("jake");
@@ -63,7 +69,7 @@ const AboutPage = forwardRef<HTMLDivElement>((props, ref) => {
       animate={controls}
       viewport={{ once: true, margin: "-50%" }}
       className={
-        width > height ? styles.containerLandscape : styles.containerPortrait
+        isLandscape ? styles.containerLandscape : styles.containerPortrait
       }
       ref={ref}
     >

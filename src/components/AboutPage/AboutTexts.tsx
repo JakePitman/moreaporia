@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 
 import AboutText from "./AboutText";
 import styles from "./AboutTexts.module.scss";
-import useWindowDimensions from "../../shared/useWindowDimensions";
 import AboutHobbies from "./AboutHobbies";
 import AboutJakeContent from "./AboutJakeContent";
 import BrowserContext from "../../shared/browserContext";
