@@ -10,7 +10,8 @@ import BrowserContext from "../../shared/browserContext";
 
 import styles from "./AboutImage.module.scss";
 import {
-  aboutImageContainer1Variants,
+  aboutImageContainer1VariantsLandscape,
+  aboutImageContainer1VariantsPortrait,
   aboutImageContainer2Variants,
   aboutImageVariants,
   topRightCornerVariants,
@@ -22,10 +23,6 @@ type Props = {
   selectedNavOption: "work" | "jake" | "tech";
 };
 
-const aboutImageContainer1VariantsLandscape =
-  aboutImageContainer1Variants(true);
-const aboutImageContainer1VariantsPortrait =
-  aboutImageContainer1Variants(false);
 const aboutImageContainer2VariantsLandscape =
   aboutImageContainer2Variants(true);
 const aboutImageContainer2VariantsPortrait =
