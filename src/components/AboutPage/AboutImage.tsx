@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { motion } from "framer-motion";
 
 import kayak from "./pictures/kayak.png";
@@ -6,6 +6,7 @@ import beach from "./pictures/beach.png";
 import sahoGardens from "./pictures/saho_jake_gardens.png";
 import guitar from "./pictures/guitar.png";
 import tree from "./pictures/tree.png";
+import BrowserContext from "../../shared/browserContext";
 
 import styles from "./AboutImage.module.scss";
 import {
@@ -45,8 +46,7 @@ const optionToPictureMaps = {
 };
 
 const AboutImage = ({ type, selectedNavOption }: Props) => {
-  const { width, height } = useWindowDimensions();
-  const isLandscape = width > height;
+  const { isLandscape } = useContext(BrowserContext);
   const typeToVariantsMap = {
     "1": isLandscape
       ? aboutImageContainer1VariantsLandscape
