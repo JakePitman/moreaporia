@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { motion } from "framer-motion";
 import { FaGuitar, FaChess, FaTerminal } from "react-icons/fa";
 
@@ -7,9 +7,9 @@ import {
   cardVariantsLeftToRight,
   cardVariantsTopToBottom,
 } from "./flipCardVariants";
-import useWindowDimensions from "../../shared/useWindowDimensions";
 import colors from "../../shared/_colors.module.scss";
 import styles from "./AboutHobbies.module.scss";
+import BrowserContext from "../../shared/browserContext";
 
 const {
   gradient1,
@@ -90,8 +90,7 @@ const portraitLayout = () => (
 );
 
 const AboutHobbies = () => {
-  const { height, width } = useWindowDimensions();
-  const isLandscape = width > height;
+  const { isLandscape } = useContext(BrowserContext);
 
   return isLandscape ? landscapeLayout() : portraitLayout();
 };
