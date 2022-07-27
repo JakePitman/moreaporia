@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { motion } from "framer-motion";
 
 import AboutText from "./AboutText";
@@ -6,14 +6,14 @@ import styles from "./AboutTexts.module.scss";
 import useWindowDimensions from "../../shared/useWindowDimensions";
 import AboutHobbies from "./AboutHobbies";
 import AboutJakeContent from "./AboutJakeContent";
+import BrowserContext from "../../shared/browserContext";
 
 type Props = {
   selectedNavOption: "jake" | "work" | "tech" | null;
 };
 
 const AboutTexts = ({ selectedNavOption }: Props) => {
-  const { width, height } = useWindowDimensions();
-  const isLandscape = width > height;
+  const { isLandscape } = useContext(BrowserContext);
 
   if (selectedNavOption === "work") {
     return (
