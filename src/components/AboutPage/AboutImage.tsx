@@ -10,8 +10,10 @@ import BrowserContext from "../../shared/browserContext";
 
 import styles from "./AboutImage.module.scss";
 import {
-  aboutImageContainer1Variants,
-  aboutImageContainer2Variants,
+  aboutImageContainer1VariantsLandscape,
+  aboutImageContainer1VariantsPortrait,
+  aboutImageContainer2VariantsLandscape,
+  aboutImageContainer2VariantsPortrait,
   aboutImageVariants,
   topRightCornerVariants,
   bottomLeftCornerVariants,
@@ -21,15 +23,6 @@ type Props = {
   type: "1" | "2";
   selectedNavOption: "work" | "jake" | "tech";
 };
-
-const aboutImageContainer1VariantsLandscape =
-  aboutImageContainer1Variants(true);
-const aboutImageContainer1VariantsPortrait =
-  aboutImageContainer1Variants(false);
-const aboutImageContainer2VariantsLandscape =
-  aboutImageContainer2Variants(true);
-const aboutImageContainer2VariantsPortrait =
-  aboutImageContainer2Variants(false);
 
 const optionToPictureMaps = {
   "1": {
