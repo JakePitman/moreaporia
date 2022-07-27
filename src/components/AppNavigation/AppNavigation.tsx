@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
@@ -6,8 +6,8 @@ import { FiHome } from "react-icons/fi";
 
 import NavItem from "./NavItem";
 import styles from "./AppNavigation.module.scss";
-import useWindowDimensions from "../../shared/useWindowDimensions";
 import colors from "../../shared/_colors.module.scss";
+import BrowserContext from "../../shared/browserContext";
 
 const homeButtonVariants = {
   hidden: { opacity: 0 },
@@ -16,8 +16,7 @@ const homeButtonVariants = {
   },
 };
 const AppNavigation = () => {
-  const { height, width } = useWindowDimensions();
-  const isLandscape = width > height;
+  const { isLandscape } = useContext(BrowserContext);
 
   const pathname = useLocation().pathname;
 
