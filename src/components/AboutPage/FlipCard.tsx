@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import { motion } from "framer-motion";
 
 import styles from "./FlipCard.module.scss";
-import { tagVariants } from "./flipCardVariants";
-import useWindowDimensions from "../../shared/useWindowDimensions";
+import BrowserContext from "../../shared/browserContext";
+// import { tagVariants } from "./flipCardVariants";
 
 type Props = {
   rotate: number;
@@ -36,8 +36,7 @@ const FlipCard = ({
   children,
   variants,
 }: Props) => {
-  const { height, width } = useWindowDimensions();
-  const isLandscape = width > height;
+  const { isLandscape } = useContext(BrowserContext);
 
   return (
     <>
