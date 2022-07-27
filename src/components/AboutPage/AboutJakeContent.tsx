@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 
 import styles from "./AboutJakeContent.module.scss";
 import FlipCard from "./FlipCard";
@@ -7,13 +7,11 @@ import {
   cardVariantsBottomToTop,
 } from "./flipCardVariants";
 import colors from "../../shared/_colors.module.scss";
+import BrowserContext from "../../shared/browserContext";
 const { gradient1, gradient3, gradient5 } = colors;
 
-type Props = {
-  isLandscape: boolean;
-};
-
-const AboutJakeContent = ({ isLandscape }: Props) => {
+const AboutJakeContent = () => {
+  const { isLandscape } = useContext(BrowserContext);
   const firstFlipCardRotation = isLandscape ? 3 : -1;
 
   return (

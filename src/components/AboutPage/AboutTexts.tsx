@@ -42,7 +42,7 @@ const AboutTexts = ({ selectedNavOption }: Props) => {
           }
         >
           <AboutText visible={selectedNavOption === "jake"}>
-            <AboutJakeContent isLandscape={isLandscape} />
+            <AboutJakeContent />
           </AboutText>
         </motion.div>
         <motion.div
