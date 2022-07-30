@@ -5,7 +5,6 @@ import styles from "./AboutText.module.scss";
 
 type Props = {
   children: React.ReactNode;
-  visible: boolean;
 };
 
 const expandDefaults = {
@@ -15,10 +14,7 @@ const expandDefaults = {
   },
 };
 
-const AboutText = ({ children, visible }: Props) => {
-  if (!visible) {
-    return <></>;
-  }
+const AboutText = ({ children }: Props) => {
   return (
     <motion.div
       variants={{
