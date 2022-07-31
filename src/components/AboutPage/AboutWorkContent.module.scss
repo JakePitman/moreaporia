@@ -9,11 +9,9 @@
   }
 }
 .row {
-  outline: 1px solid green;
-
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   margin-bottom: 8vh;
 }
@@ -28,6 +26,7 @@
   max-width: 30vh;
   width: 15%;
   aspect-ratio: 1 / 1;
+  opacity: 0.7
 }
 
 
