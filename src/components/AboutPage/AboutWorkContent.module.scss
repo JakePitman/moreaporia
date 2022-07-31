@@ -13,6 +13,7 @@
 
   width: 100%;
   display: flex;
+  justify-content: space-between;
   align-items: center;
   margin-bottom: 8vh;
 }
@@ -22,6 +23,13 @@
   width: 30%;
   aspect-ratio: 1 / 1;
 }
+
+.flipCardContainerLandscapeSmall {
+  max-width: 30vh;
+  width: 15%;
+  aspect-ratio: 1 / 1;
+}
+
 
 .flipCardContainerPortrait {
   width: 70%;
