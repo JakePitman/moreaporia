@@ -1,22 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.9667808e.css",
-    "main.js": "/static/js/main.a543dea7.js",
+    "main.css": "/static/css/main.284caec4.css",
+    "main.js": "/static/js/main.10adff72.js",
     "static/js/232.627113bf.chunk.js": "/static/js/232.627113bf.chunk.js",
     "static/js/787.2fc9bcc6.chunk.js": "/static/js/787.2fc9bcc6.chunk.js",
-    "static/media/tree.png": "/static/media/tree.d1f1e6a4c567c9f4c6e7.png",
     "static/media/kayak.png": "/static/media/kayak.61ced05dac718427b3e7.png",
-    "static/media/saho_jake_gardens.png": "/static/media/saho_jake_gardens.76e7a1ea3e4b4e5df920.png",
-    "static/media/guitar.png": "/static/media/guitar.85b22beb0120ceee70b2.png",
-    "static/media/beach.png": "/static/media/beach.9f1f0e17bbd8e56c1d26.png",
+    "static/media/castle_hill.png": "/static/media/castle_hill.5e391771c0e49be30730.png",
+    "static/media/tree.png": "/static/media/tree.44ff3dc28bc831adbea4.png",
+    "static/media/beach.png": "/static/media/beach.8f4dc3a334f08d662abe.png",
+    "static/media/temple.png": "/static/media/temple.1470a0482c13b0f0282d.png",
+    "static/media/guitar.png": "/static/media/guitar.5f6d81c20cd05a6ac8ca.png",
     "index.html": "/index.html",
-    "main.9667808e.css.map": "/static/css/main.9667808e.css.map",
-    "main.a543dea7.js.map": "/static/js/main.a543dea7.js.map",
+    "main.284caec4.css.map": "/static/css/main.284caec4.css.map",
+    "main.10adff72.js.map": "/static/js/main.10adff72.js.map",
     "232.627113bf.chunk.js.map": "/static/js/232.627113bf.chunk.js.map",
     "787.2fc9bcc6.chunk.js.map": "/static/js/787.2fc9bcc6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9667808e.css",
-    "static/js/main.a543dea7.js"
+    "static/css/main.284caec4.css",
+    "static/js/main.10adff72.js"
   ]
 }
