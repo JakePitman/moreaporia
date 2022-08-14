@@ -4,11 +4,11 @@ import styles from "./AboutWorkContent.module.scss";
 import FlipCard from "./FlipCard";
 import {
   cardVariantsLeftToRight,
-  cardVariantsBottomToTop,
+  cardVariantsTopToBottom,
 } from "./flipCardVariants";
 import colors from "../../shared/_colors.module.scss";
 import BrowserContext from "../../shared/browserContext";
-const { gradient1, gradient3, gradient5 } = colors;
+const { gradient1, gradient2, gradient3, gradient4, gradient5 } = colors;
 
 const flipCardData = {
   landscape: [
@@ -56,14 +56,23 @@ const flipCardData = {
   ],
 };
 
+const portraitGradientsMap = [
+  [gradient4, gradient3],
+  [gradient3, gradient2],
+  [gradient2, gradient1],
+];
+
 const AboutJakeContent = () => {
   const { isLandscape } = useContext(BrowserContext);
+  const cardVariants = isLandscape
+    ? cardVariantsLeftToRight
+    : cardVariantsTopToBottom;
 
   return (
     <div className={styles.rowsContainer}>
       {flipCardData.landscape.map((row, rowNumber) => (
         <div className={styles.row}>
-          {row.map((cardData) => (
+          {row.map((cardData, cardNumber) => (
             <div
               className={
                 cardData.small
@@ -78,11 +87,13 @@ const AboutJakeContent = () => {
                 rotate={cardData.rotate}
                 tagRotation={5}
                 backgroundGradients={
-                  rowNumber === 0
-                    ? [gradient1, gradient3]
-                    : [gradient3, gradient5]
+                  isLandscape
+                    ? rowNumber === 0
+                      ? [gradient1, gradient3]
+                      : [gradient3, gradient5]
+                    : (portraitGradientsMap[cardNumber] as [string, string])
                 }
-                variants={cardVariantsLeftToRight}
+                variants={cardVariants}
               >
                 {cardData.children}
               </FlipCard>
