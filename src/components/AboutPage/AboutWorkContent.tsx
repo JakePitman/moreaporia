@@ -8,53 +8,11 @@ import {
 } from "./flipCardVariants";
 import colors from "../../shared/_colors.module.scss";
 import BrowserContext from "../../shared/browserContext";
+import {
+  flipCardDataLandscape,
+  flipCardDataPortrait,
+} from "./AboutWorkFlipCardData";
 const { gradient1, gradient2, gradient3, gradient4, gradient5 } = colors;
-
-const flipCardData = {
-  landscape: [
-    [
-      {
-        rotate: 3,
-        delay: 0,
-        children: <p className={styles.contentCardText}>First: Tooling!</p>,
-      },
-      {
-        rotate: -3,
-        delay: 0.2,
-        children: <p className={styles.contentCardText}>2</p>,
-        small: true,
-      },
-      {
-        rotate: 4,
-        delay: 0.4,
-        children: (
-          <p className={styles.contentCardText}>Third: Something better!</p>
-        ),
-      },
-    ],
-    [
-      {
-        rotate: -3,
-        delay: 0.1,
-        children: <p className={styles.contentCardText}>1</p>,
-        small: true,
-      },
-      {
-        rotate: 2,
-        delay: 0.3,
-        children: (
-          <p className={styles.contentCardText}>Second: Something else!</p>
-        ),
-      },
-      {
-        rotate: -2,
-        delay: 0.5,
-        children: <p className={styles.contentCardText}>3</p>,
-        small: true,
-      },
-    ],
-  ],
-};
 
 const portraitGradientsMap = [
   [gradient4, gradient3],
@@ -67,10 +25,13 @@ const AboutJakeContent = () => {
   const cardVariants = isLandscape
     ? cardVariantsLeftToRight
     : cardVariantsTopToBottom;
+  const flipCardData = isLandscape
+    ? flipCardDataLandscape
+    : flipCardDataPortrait;
 
   return (
     <div className={styles.rowsContainer}>
-      {flipCardData.landscape.map((row, rowNumber) => (
+      {flipCardData.map((row, rowNumber) => (
         <div className={styles.row}>
           {row.map((cardData, cardNumber) => (
             <div
@@ -94,6 +55,7 @@ const AboutJakeContent = () => {
                     : (portraitGradientsMap[cardNumber] as [string, string])
                 }
                 variants={cardVariants}
+                key={cardNumber}
               >
                 {cardData.children}
               </FlipCard>
