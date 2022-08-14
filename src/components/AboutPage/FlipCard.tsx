@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 
 import styles from "./FlipCard.module.scss";
 import BrowserContext from "../../shared/browserContext";
-// import { tagVariants } from "./flipCardVariants";
 
 type Props = {
   rotate: number;
