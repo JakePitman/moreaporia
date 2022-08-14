@@ -73,17 +73,3 @@ export const cardVariantsBottomToTop = {
   jakeActiveMove: BottomToTopMoveDefaults,
   jakeActiveExpand: BottomToTopActiveDefaults,
 };
-export const tagVariants = {
-  jakeActiveMove: {
-    right: -160,
-  },
-  jakeActiveExpand: ({ delay }: { delay: number }) => ({
-    left: "40%",
-    transform: "rotateY(180deg)",
-    transition: {
-      duration: 0.5,
-      delay: delay,
-      type: "spring",
-    },
-  }),
-};
