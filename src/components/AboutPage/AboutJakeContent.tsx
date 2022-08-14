@@ -25,10 +25,8 @@ const AboutJakeContent = () => {
         style={{ transform: `rotate(${firstFlipCardRotation}deg)` }}
       >
         <FlipCard
-          title="My cool card"
           delay={0}
           rotate={firstFlipCardRotation}
-          tagRotation={5}
           backgroundGradients={[gradient1, gradient3]}
           variants={
             isLandscape ? cardVariantsRightToLeft : cardVariantsBottomToTop
@@ -46,10 +44,8 @@ const AboutJakeContent = () => {
           style={{ transform: "rotate(-2deg)" }}
         >
           <FlipCard
-            title="My cool card"
             delay={0.1}
             rotate={-2}
-            tagRotation={5}
             backgroundGradients={[gradient3, gradient5]}
             variants={cardVariantsRightToLeft}
           >

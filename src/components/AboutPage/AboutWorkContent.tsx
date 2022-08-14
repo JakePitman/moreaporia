@@ -43,10 +43,8 @@ const AboutJakeContent = () => {
               style={{ transform: `rotate(${cardData.rotate}deg)` }}
             >
               <FlipCard
-                title="My cool card"
                 delay={cardData.delay}
                 rotate={cardData.rotate}
-                tagRotation={5}
                 backgroundGradients={
                   isLandscape
                     ? rowNumber === 0
