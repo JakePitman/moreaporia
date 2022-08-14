@@ -1,11 +1,11 @@
 import React, { useContext } from "react";
 import { motion } from "framer-motion";
 
-import kayak from "./pictures/kayak.png";
 import beach from "./pictures/beach.png";
-import sahoGardens from "./pictures/saho_jake_gardens.png";
 import guitar from "./pictures/guitar.png";
 import tree from "./pictures/tree.png";
+import castleHill from "./pictures/castle_hill.png";
+import temple from "./pictures/temple.png";
 import BrowserContext from "../../shared/browserContext";
 
 import styles from "./AboutImage.module.scss";
@@ -26,13 +26,13 @@ type Props = {
 
 const optionToPictureMaps = {
   "1": {
-    work: guitar,
+    work: temple,
     jake: null,
     tech: beach,
   },
   "2": {
-    work: sahoGardens,
-    jake: kayak,
+    work: guitar,
+    jake: castleHill,
     tech: tree,
   },
 };
