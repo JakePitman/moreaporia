@@ -8,8 +8,6 @@ import BrowserContext from "../../shared/browserContext";
 type Props = {
   rotate: number;
   delay: number;
-  title: string;
-  tagRotation: number;
   backgroundGradients: [string, string];
   children: React.ReactNode;
   variants: {};
@@ -30,8 +28,6 @@ const gradient = (
 const FlipCard = ({
   rotate,
   delay,
-  title,
-  tagRotation,
   backgroundGradients,
   children,
   variants,
@@ -60,24 +56,6 @@ const FlipCard = ({
           className={styles.back}
         />
       </motion.div>
-      {/* Tags, may or may not include */}
-      {/* {isLandscape && (
-        <div
-          style={{
-            transform: `rotate(${tagRotation}deg)`,
-          }}
-          className={styles.tagContainer}
-        >
-          <motion.div
-            className={styles.tag}
-            variants={tagVariants}
-            custom={{ delay: delay + 0.2 }}
-          >
-            <div className={styles.tagFront}>{title}</div>
-            <div className={styles.tagBack}>{title}</div>
-          </motion.div>
-        </div>
-      )} */}
     </>
   );
 };

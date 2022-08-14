@@ -18,14 +18,12 @@
 
 .workTextContainerLandscape {
   @include area-defaults;
-  border: 1px solid pink;
   right: 5vw;
   width: 60vw;
   height: 95%;
 }
 
 .workTextContainerPortrait {
-  border: 1px solid pink;
   @include area-defaults;
   position: absolute;
   bottom: 5vh;
@@ -64,7 +62,6 @@
 }
 
 .techTextContainerLandscape {
-  border: 1px solid pink;
   position: absolute;
   left: 5vw;
   width: 60vw;
@@ -76,7 +73,6 @@
 }
 
 .techTextContainerPortrait {
-  border: 1px solid pink;
   @include area-defaults;
   position: absolute;
   top: 5vh;

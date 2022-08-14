@@ -5,6 +5,7 @@ import AboutText from "./AboutText";
 import styles from "./AboutTexts.module.scss";
 import AboutHobbies from "./AboutHobbies";
 import AboutJakeContent from "./AboutJakeContent";
+import AboutWorkContent from "./AboutWorkContent";
 import BrowserContext from "../../shared/browserContext";
 
 type Props = {
@@ -23,8 +24,8 @@ const AboutTexts = ({ selectedNavOption }: Props) => {
             : styles.workTextContainerPortrait
         }
       >
-        <AboutText visible={selectedNavOption === "work"}>
-          <p className={styles.text}>My cool work</p>
+        <AboutText>
+          <AboutWorkContent />
         </AboutText>
       </motion.div>
     );
@@ -40,7 +41,7 @@ const AboutTexts = ({ selectedNavOption }: Props) => {
               : styles.jakeTextContainerLeftPortrait
           }
         >
-          <AboutText visible={selectedNavOption === "jake"}>
+          <AboutText>
             <AboutJakeContent />
           </AboutText>
         </motion.div>
@@ -51,7 +52,7 @@ const AboutTexts = ({ selectedNavOption }: Props) => {
               : styles.jakeTextContainerRightPortrait
           }
         >
-          <AboutText visible={selectedNavOption === "jake"}>
+          <AboutText>
             <AboutHobbies />
           </AboutText>
         </motion.div>
@@ -68,7 +69,7 @@ const AboutTexts = ({ selectedNavOption }: Props) => {
             : styles.techTextContainerPortrait
         }
       >
-        <AboutText visible={selectedNavOption === "tech"}>
+        <AboutText>
           <p className={styles.text}>My cool tech</p>
         </AboutText>
       </motion.div>

@@ -47,9 +47,7 @@ const landscapeLayout = () => (
         key={`hobby-card-${i}`}
       >
         <FlipCard
-          title={title}
           rotate={rotate}
-          tagRotation={tagRotation}
           delay={i / 10}
           backgroundGradients={colorGradients[i]}
           variants={cardVariantsLeftToRight}
@@ -72,9 +70,7 @@ const portraitLayout = () => (
         key={`hobby-card-${i}`}
       >
         <FlipCard
-          title={title}
           rotate={rotate}
-          tagRotation={0}
           delay={i / 10}
           backgroundGradients={colorGradients[i]}
           variants={cardVariantsTopToBottom}
