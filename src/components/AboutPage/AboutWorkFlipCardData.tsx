@@ -5,7 +5,13 @@ export const flipCardDataLandscape = [
     {
       rotate: 3,
       delay: 0,
-      children: <p className={styles.contentCardText}>First: Tooling!</p>,
+      children: (
+        <div className={styles.flipCardContentContainer}>
+          <b className={styles.contentCardTitle}>1. Tooling</b>
+          <p className={styles.contentCardText}>Engineer-facing utlity code</p>
+          <em className={styles.contentCardDate}>2019 - 2020</em>
+        </div>
+      ),
     },
     {
       rotate: -3,
@@ -17,7 +23,11 @@ export const flipCardDataLandscape = [
       rotate: 4,
       delay: 0.4,
       children: (
-        <p className={styles.contentCardText}>Third: Something better!</p>
+        <div className={styles.flipCardContentContainer}>
+          <b className={styles.contentCardTitle}>3. Design Systems</b>
+          <p className={styles.contentCardText}>Robust, reusable components</p>
+          <em className={styles.contentCardDate}>2022 - now</em>
+        </div>
       ),
     },
   ],
@@ -32,7 +42,11 @@ export const flipCardDataLandscape = [
       rotate: 2,
       delay: 0.3,
       children: (
-        <p className={styles.contentCardText}>Second: Something else!</p>
+        <div className={styles.flipCardContentContainer}>
+          <b className={styles.contentCardTitle}>2. Front End</b>
+          <p className={styles.contentCardText}>Customer-facing web pages</p>
+          <em className={styles.contentCardDate}>2020 - 2022</em>
+        </div>
       ),
     },
     {
