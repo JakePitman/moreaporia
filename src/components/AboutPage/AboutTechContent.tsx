@@ -1,18 +1,17 @@
 import React, { useContext } from "react";
 
-import styles from "./AboutWorkContent.module.scss";
+import styles from "./AboutTechContent.module.scss";
 import FlipCard from "./FlipCard";
 import {
   cardVariantsRightToLeft,
   cardVariantsBottomToTop,
-  cardVariantsLeftToRight,
 } from "./flipCardVariants";
 import colors from "../../shared/_colors.module.scss";
 import BrowserContext from "../../shared/browserContext";
 import {
   flipCardDataLandscape,
   flipCardDataPortrait,
-} from "./AboutWorkFlipCardData";
+} from "./AboutTechFlipCardData";
 const { gradient1, gradient2, gradient3, gradient4, gradient5 } = colors;
 
 const portraitGradientsMap = [
