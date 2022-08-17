@@ -3,8 +3,9 @@ import React, { useContext } from "react";
 import styles from "./AboutWorkContent.module.scss";
 import FlipCard from "./FlipCard";
 import {
+  cardVariantsRightToLeft,
+  cardVariantsBottomToTop,
   cardVariantsLeftToRight,
-  cardVariantsTopToBottom,
 } from "./flipCardVariants";
 import colors from "../../shared/_colors.module.scss";
 import BrowserContext from "../../shared/browserContext";
@@ -23,8 +24,8 @@ const portraitGradientsMap = [
 const AboutJakeContent = () => {
   const { isLandscape } = useContext(BrowserContext);
   const cardVariants = isLandscape
-    ? cardVariantsLeftToRight
-    : cardVariantsTopToBottom;
+    ? cardVariantsRightToLeft
+    : cardVariantsBottomToTop;
   const flipCardData = isLandscape
     ? flipCardDataLandscape
     : flipCardDataPortrait;
@@ -40,7 +41,9 @@ const AboutJakeContent = () => {
                   ? styles.flipCardContainerLandscapeSmall
                   : styles.flipCardContainerLandscape
               }
-              style={{ transform: `rotate(${cardData.rotate}deg)` }}
+              style={{
+                transform: `rotate(${cardData.rotate}deg)`,
+              }}
             >
               <FlipCard
                 delay={cardData.delay}

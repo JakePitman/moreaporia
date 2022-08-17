@@ -71,5 +71,9 @@ const BottomToTopActiveDefaults = ({ delay }: { delay: number }) => ({
 });
 export const cardVariantsBottomToTop = {
   jakeActiveMove: BottomToTopMoveDefaults,
+  techActiveMove: BottomToTopMoveDefaults,
+  workActiveMove: BottomToTopMoveDefaults,
+  workActiveExpand: BottomToTopActiveDefaults,
   jakeActiveExpand: BottomToTopActiveDefaults,
+  techActiveExpand: BottomToTopActiveDefaults,
 };
