@@ -12,7 +12,7 @@ import {
   flipCardDataLandscape,
   flipCardDataPortrait,
 } from "./AboutTechFlipCardData";
-const { gradient1, gradient2, gradient3, gradient4, gradient5 } = colors;
+const { gradient1, gradient2, gradient3, gradient4 } = colors;
 
 const landscapeGradientsMap = [
   [gradient1, gradient2],

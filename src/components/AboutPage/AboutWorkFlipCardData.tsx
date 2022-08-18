@@ -6,7 +6,7 @@ import { BsPuzzleFill } from "react-icons/bs";
 export const flipCardDataLandscape = [
   [
     {
-      rotate: 3,
+      rotate: 0,
       delay: 0,
       children: (
         <div className={styles.flipCardContentContainer}>
@@ -17,14 +17,14 @@ export const flipCardDataLandscape = [
       ),
     },
     {
-      rotate: -3,
-      delay: 0.2,
+      rotate: 2,
+      delay: 0.1,
       children: <FaDesktop size={"80%"} color={colors.primaryBackground} />,
       small: true,
     },
     {
-      rotate: 4,
-      delay: 0.4,
+      rotate: 0,
+      delay: 0.2,
       children: (
         <div className={styles.flipCardContentContainer}>
           <b className={styles.contentCardTitle}>3. Design Systems</b>
@@ -36,14 +36,14 @@ export const flipCardDataLandscape = [
   ],
   [
     {
-      rotate: -3,
-      delay: 0.1,
+      rotate: -2,
+      delay: 0,
       children: <FaTools size={"80%"} color={colors.primaryBackground} />,
       small: true,
     },
     {
-      rotate: 2,
-      delay: 0.3,
+      rotate: 0,
+      delay: 0.1,
       children: (
         <div className={styles.flipCardContentContainer}>
           <b className={styles.contentCardTitle}>2. Front End</b>
@@ -54,7 +54,7 @@ export const flipCardDataLandscape = [
     },
     {
       rotate: -2,
-      delay: 0.5,
+      delay: 0.3,
       children: <BsPuzzleFill size={"80%"} color={colors.primaryBackground} />,
       small: true,
     },
@@ -64,7 +64,7 @@ export const flipCardDataLandscape = [
 export const flipCardDataPortrait = [
   [
     {
-      rotate: 4,
+      rotate: 0,
       delay: 0.1,
       children: <p className={styles.contentCardText}>Tooling</p>,
     },
@@ -75,7 +75,7 @@ export const flipCardDataPortrait = [
       small: true,
     },
     {
-      rotate: -4,
+      rotate: 0,
       delay: 0.1,
       children: <p className={styles.contentCardText}>Design Systems</p>,
     },
