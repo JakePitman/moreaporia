@@ -14,6 +14,12 @@ import {
 } from "./AboutTechFlipCardData";
 const { gradient1, gradient2, gradient3, gradient4, gradient5 } = colors;
 
+const landscapeGradientsMap = [
+  [gradient1, gradient2],
+  [gradient2, gradient3],
+  [gradient3, gradient4],
+];
+
 const portraitGradientsMap = [
   [gradient4, gradient3],
   [gradient3, gradient2],
@@ -49,9 +55,7 @@ const AboutJakeContent = () => {
                 rotate={cardData.rotate}
                 backgroundGradients={
                   isLandscape
-                    ? rowNumber === 0
-                      ? [gradient1, gradient3]
-                      : [gradient3, gradient5]
+                    ? (landscapeGradientsMap[rowNumber] as [string, string])
                     : (portraitGradientsMap[cardNumber] as [string, string])
                 }
                 variants={cardVariants}

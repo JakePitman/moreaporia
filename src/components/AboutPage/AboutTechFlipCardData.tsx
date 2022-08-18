@@ -16,7 +16,7 @@ export const flipCardDataLandscape = [
     {
       rotate: 3,
       delay: 0,
-      children: <FaSass size={"80%"} color={colors.primaryBackground} />,
+      children: <SiJavascript size={"80%"} color={colors.primaryBackground} />,
       small: true,
     },
     {
@@ -48,7 +48,7 @@ export const flipCardDataLandscape = [
     {
       rotate: -2,
       delay: 0.5,
-      children: <SiJavascript size={"80%"} color={colors.primaryBackground} />,
+      children: <FaSass size={"80%"} color={colors.primaryBackground} />,
       small: true,
     },
   ],
@@ -81,7 +81,7 @@ export const flipCardDataPortrait = [
     {
       rotate: -4,
       delay: 0.2,
-      children: <FaSass size={"80%"} color={colors.primaryBackground} />,
+      children: <SiJavascript size={"80%"} color={colors.primaryBackground} />,
       small: true,
     },
     {
@@ -113,7 +113,7 @@ export const flipCardDataPortrait = [
     {
       rotate: 4,
       delay: 0.1,
-      children: <SiJavascript size={"80%"} color={colors.primaryBackground} />,
+      children: <FaSass size={"80%"} color={colors.primaryBackground} />,
       small: true,
     },
   ],
