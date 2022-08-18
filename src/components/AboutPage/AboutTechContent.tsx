@@ -41,11 +41,7 @@ const AboutJakeContent = () => {
         <div className={styles.row}>
           {row.map((cardData, cardNumber) => (
             <div
-              className={
-                cardData.small
-                  ? styles.flipCardContainerLandscapeSmall
-                  : styles.flipCardContainerLandscape
-              }
+              className={styles.flipCardContainerLandscape}
               style={{
                 transform: `rotate(${cardData.rotate}deg)`,
               }}
