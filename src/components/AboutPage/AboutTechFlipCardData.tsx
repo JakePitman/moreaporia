@@ -15,7 +15,7 @@ export const flipCardDataLandscape = [
   [
     {
       rotate: 2,
-      delay: 0,
+      delay: 0.3,
       children: <SiJavascript size={"80%"} color={colors.primaryBackground} />,
       small: true,
     },
@@ -27,7 +27,7 @@ export const flipCardDataLandscape = [
     },
     {
       rotate: 2,
-      delay: 0.4,
+      delay: 0.1,
       children: <SiTypescript size={"80%"} color={colors.primaryBackground} />,
       small: true,
     },
@@ -35,19 +35,19 @@ export const flipCardDataLandscape = [
   [
     {
       rotate: 0,
-      delay: 0.1,
+      delay: 0.3,
       children: <FaNode size={"80%"} color={colors.primaryBackground} />,
       small: true,
     },
     {
       rotate: 0,
-      delay: 0.3,
+      delay: 0.2,
       children: <FaMobileAlt size={"80%"} color={colors.primaryBackground} />,
       small: true,
     },
     {
       rotate: 0,
-      delay: 0.5,
+      delay: 0.1,
       children: <FaSass size={"80%"} color={colors.primaryBackground} />,
       small: true,
     },
@@ -55,7 +55,7 @@ export const flipCardDataLandscape = [
   [
     {
       rotate: -2,
-      delay: 0.1,
+      delay: 0.3,
       children: (
         <VscTerminalBash size={"80%"} color={colors.primaryBackground} />
       ),
@@ -63,13 +63,13 @@ export const flipCardDataLandscape = [
     },
     {
       rotate: -2,
-      delay: 0.3,
+      delay: 0.2,
       children: <FaNpm size={"80%"} color={colors.primaryBackground} />,
       small: true,
     },
     {
       rotate: -2,
-      delay: 0.5,
+      delay: 0.1,
       children: <FaDocker size={"80%"} color={colors.primaryBackground} />,
       small: true,
     },
