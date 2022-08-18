@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { FiGithub } from "react-icons/fi";
 import { FiCodepen } from "react-icons/fi";
 import { motion } from "framer-motion";
 import Spline from "@splinetool/react-spline";
+import BrowserContext from "../../shared/browserContext";
 
 import Icon from "../shared/Icon";
 import styles from "./LandingPage.module.scss";
@@ -12,6 +13,7 @@ const secondaryAnimationsDelay = 0.5;
 const secondaryAnimationsStagger = 0.1;
 
 const LandingPage = () => {
+  const { isLandscape } = useContext(BrowserContext);
   const [animationCompleted, setAnimationCompleted] = useState(false);
   const [splineStarted, setSplineStarted] = useState(false);
   return (
@@ -23,7 +25,7 @@ const LandingPage = () => {
             : styles.splineContainerWaiting
         }
       >
-        {animationCompleted && (
+        {animationCompleted && isLandscape && (
           <Spline
             scene="https://prod.spline.design/urecjewqLGNYS7lp/scene.splinecode"
             onStart={() => setSplineStarted(true)}
