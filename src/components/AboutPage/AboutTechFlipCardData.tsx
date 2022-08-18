@@ -14,19 +14,19 @@ import { VscTerminalBash } from "react-icons/vsc";
 export const flipCardDataLandscape = [
   [
     {
-      rotate: 3,
+      rotate: 2,
       delay: 0,
       children: <SiJavascript size={"80%"} color={colors.primaryBackground} />,
       small: true,
     },
     {
-      rotate: -3,
+      rotate: 2,
       delay: 0.2,
       children: <FaReact size={"80%"} color={colors.primaryBackground} />,
       small: true,
     },
     {
-      rotate: 4,
+      rotate: 2,
       delay: 0.4,
       children: <SiTypescript size={"80%"} color={colors.primaryBackground} />,
       small: true,
@@ -34,19 +34,19 @@ export const flipCardDataLandscape = [
   ],
   [
     {
-      rotate: -3,
+      rotate: 0,
       delay: 0.1,
       children: <FaNode size={"80%"} color={colors.primaryBackground} />,
       small: true,
     },
     {
-      rotate: 2,
+      rotate: 0,
       delay: 0.3,
       children: <FaMobileAlt size={"80%"} color={colors.primaryBackground} />,
       small: true,
     },
     {
-      rotate: -2,
+      rotate: 0,
       delay: 0.5,
       children: <FaSass size={"80%"} color={colors.primaryBackground} />,
       small: true,
@@ -54,7 +54,7 @@ export const flipCardDataLandscape = [
   ],
   [
     {
-      rotate: -3,
+      rotate: -2,
       delay: 0.1,
       children: (
         <VscTerminalBash size={"80%"} color={colors.primaryBackground} />
@@ -62,7 +62,7 @@ export const flipCardDataLandscape = [
       small: true,
     },
     {
-      rotate: 2,
+      rotate: -2,
       delay: 0.3,
       children: <FaNpm size={"80%"} color={colors.primaryBackground} />,
       small: true,
