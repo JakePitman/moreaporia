@@ -6,9 +6,9 @@ import { BrowserProvider } from "./shared/browserContext";
 import useWindowDimensions from "./shared/useWindowDimensions";
 
 // cache first AboutPage image before AboutPage loads
-import kayakImage from "./components/AboutPage/pictures/kayak.png";
+import firstAboutImage from "./components/AboutPage/pictures/castle_hill.png";
 const img = new Image();
-img.src = kayakImage;
+img.src = firstAboutImage;
 
 function App() {
   document.title = "Moreaporia";
