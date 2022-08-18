@@ -1,0 +1,63 @@
+.rowsContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  :last-child {
+    margin-bottom: 0;
+  }
+}
+.row {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 8vh;
+}
+
+.flipCardContainerLandscape {
+  max-width: 30vh;
+  width: 15%;
+  aspect-ratio: 1 / 1;
+}
+
+.flipCardContainerPortrait {
+  width: 70%;
+  height: 90%;
+}
+
+.flipCardContentContainer {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+$cardPadding: 10px;
+$cardFontSize: 130%;
+
+.contentCardTitle {
+  font-family: "Roboto Mono";
+  font-size: $cardFontSize;
+  text-align: left;
+  padding: $cardPadding;
+}
+
+.contentCardText {
+  font-family: "Roboto Mono";
+  text-align: center;
+  font-size: $cardFontSize;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 $cardPadding;
+}
+
+.contentCardDate {
+  font-family: "Roboto Mono";
+  font-size: $cardFontSize;
+  text-align: right;
+  padding: $cardPadding;
+}

@@ -6,6 +6,7 @@ import styles from "./AboutTexts.module.scss";
 import AboutHobbies from "./AboutHobbies";
 import AboutJakeContent from "./AboutJakeContent";
 import AboutWorkContent from "./AboutWorkContent";
+import AboutTechContent from "./AboutTechContent";
 import BrowserContext from "../../shared/browserContext";
 
 type Props = {
@@ -70,7 +71,7 @@ const AboutTexts = ({ selectedNavOption }: Props) => {
         }
       >
         <AboutText>
-          <p className={styles.text}>My cool tech</p>
+          <AboutTechContent />
         </AboutText>
       </motion.div>
     );
