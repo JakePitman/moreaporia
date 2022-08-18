@@ -79,48 +79,48 @@ export const flipCardDataLandscape = [
 export const flipCardDataPortrait = [
   [
     {
-      rotate: 4,
-      delay: 0.1,
+      rotate: -4,
+      delay: 0.2,
       children: <FaSass size={"80%"} color={colors.primaryBackground} />,
       small: true,
     },
     {
       rotate: 0,
-      delay: 0,
+      delay: 0.2,
       children: <FaReact size={"80%"} color={colors.primaryBackground} />,
       small: true,
     },
     {
-      rotate: -4,
-      delay: 0.1,
+      rotate: 4,
+      delay: 0.2,
       children: <SiTypescript size={"80%"} color={colors.primaryBackground} />,
       small: true,
     },
   ],
   [
     {
-      rotate: 4,
-      delay: 0.3,
+      rotate: -4,
+      delay: 0.1,
       children: <FaNode size={"80%"} color={colors.primaryBackground} />,
       small: true,
     },
     {
-      rotate: 0,
-      delay: 0.2,
+      rotate: 0.2,
+      delay: 0.1,
       children: <FaMobileAlt size={"80%"} color={colors.primaryBackground} />,
       small: true,
     },
     {
-      rotate: -4,
-      delay: 0.3,
+      rotate: 4,
+      delay: 0.1,
       children: <SiJavascript size={"80%"} color={colors.primaryBackground} />,
       small: true,
     },
   ],
   [
     {
-      rotate: 4,
-      delay: 0.3,
+      rotate: -4,
+      delay: 0,
       children: (
         <VscTerminalBash size={"80%"} color={colors.primaryBackground} />
       ),
@@ -128,13 +128,13 @@ export const flipCardDataPortrait = [
     },
     {
       rotate: 0,
-      delay: 0.2,
+      delay: 0,
       children: <FaNpm size={"80%"} color={colors.primaryBackground} />,
       small: true,
     },
     {
-      rotate: -4,
-      delay: 0.3,
+      rotate: 4,
+      delay: 0,
       children: <FaDocker size={"80%"} color={colors.primaryBackground} />,
       small: true,
     },
