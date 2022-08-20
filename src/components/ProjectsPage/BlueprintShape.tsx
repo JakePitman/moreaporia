@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 
 type Props = {
   shape: "square" | "circle";
+  color: string;
 };
 
 const variants = {
@@ -10,8 +11,12 @@ const variants = {
   visible: { opacity: 1, pathLength: 1, transition: { duration: 1 } },
 };
 
+type ShapeProps = {
+  color: string;
+};
+
 const shapeMap = {
-  square: (
+  square: ({ color }: ShapeProps) => (
     <motion.rect
       variants={variants}
       initial="hidden"
@@ -21,24 +26,25 @@ const shapeMap = {
       y="0.5"
       width="99%"
       height="99%"
-      stroke="#00F0FF"
+      stroke={color}
     />
   ),
-  circle: (
+  circle: ({ color }: ShapeProps) => (
     <motion.circle
       variants={variants}
       initial="hidden"
       animate="visible"
       id="Ellipse 1"
-      cx="184.5"
-      cy="163.5"
-      r="97"
-      stroke="white"
+      cx="50%"
+      cy="50%"
+      r="49%"
+      stroke={color}
     />
   ),
 };
 
-const BlueprintShape = ({ shape }: Props) => {
+const BlueprintShape = ({ shape, color }: Props) => {
+  const Shape = shapeMap[shape];
   return (
     <motion.svg
       initial="hidden"
@@ -47,9 +53,8 @@ const BlueprintShape = ({ shape }: Props) => {
       height="100%"
       viewBox="0 0 100 100"
       fill="none"
-      xmlns="http://www.w3.org/2000/svg"
     >
-      {shapeMap[shape]}
+      <Shape color={color} />
     </motion.svg>
   );
 };

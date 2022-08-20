@@ -13,10 +13,13 @@ const ProjectsPage = () => {
   return (
     <div className={styles.pageContainer}>
       <div className={styles.svgContainer}>
-        <BlueprintShape shape="square" />
+        <BlueprintShape shape="square" color="white" />
       </div>
       <div style={{ width: "600px", height: "600px" }}>
-        <BlueprintShape shape="square" />
+        <BlueprintShape shape="circle" color="white" />
+      </div>
+      <div style={{ width: "200px", height: "200px" }}>
+        <BlueprintShape shape="circle" color="red" />
       </div>
     </div>
   );
