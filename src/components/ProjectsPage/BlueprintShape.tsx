@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 type Props = {
   shape: "square" | "circle";
   color: string;
+  fill?: string;
 };
 
 const variants = {
@@ -13,10 +14,11 @@ const variants = {
 
 type ShapeProps = {
   color: string;
+  fill?: string;
 };
 
 const shapeMap = {
-  square: ({ color }: ShapeProps) => (
+  square: ({ color, fill = "none" }: ShapeProps) => (
     <motion.rect
       variants={variants}
       initial="hidden"
@@ -27,9 +29,10 @@ const shapeMap = {
       width="99%"
       height="99%"
       stroke={color}
+      fill={fill}
     />
   ),
-  circle: ({ color }: ShapeProps) => (
+  circle: ({ color, fill }: ShapeProps) => (
     <motion.circle
       variants={variants}
       initial="hidden"
@@ -39,11 +42,12 @@ const shapeMap = {
       cy="50%"
       r="49%"
       stroke={color}
+      fill={fill}
     />
   ),
 };
 
-const BlueprintShape = ({ shape, color }: Props) => {
+const BlueprintShape = ({ shape, color, fill }: Props) => {
   const Shape = shapeMap[shape];
   return (
     <motion.svg
@@ -54,7 +58,7 @@ const BlueprintShape = ({ shape, color }: Props) => {
       viewBox="0 0 100 100"
       fill="none"
     >
-      <Shape color={color} />
+      <Shape color={color} fill={fill} />
     </motion.svg>
   );
 };

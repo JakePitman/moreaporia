@@ -19,7 +19,11 @@ const ProjectsPage = () => {
         <BlueprintShape shape="circle" color="white" />
       </div>
       <div style={{ width: "200px", height: "200px" }}>
-        <BlueprintShape shape="circle" color="red" />
+        <BlueprintShape
+          shape="circle"
+          color="red"
+          fill="rgba(255,255,255, 0.5)"
+        />
       </div>
     </div>
   );
