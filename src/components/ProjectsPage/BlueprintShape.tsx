@@ -9,7 +9,8 @@ type Props = {
 
 const variants = {
   hidden: { opacity: 0, pathLength: 0 },
-  visible: { opacity: 1, pathLength: 1, transition: { duration: 1 } },
+  draw: { opacity: 1, pathLength: 1, transition: { duration: 1 } },
+  imagesAppear: { opacity: 0, transition: { duration: 1 } },
 };
 
 type ShapeProps = {
@@ -21,8 +22,6 @@ const shapeMap = {
   square: ({ color, fill = "none" }: ShapeProps) => (
     <motion.rect
       variants={variants}
-      initial="hidden"
-      animate="visible"
       id="Rectangle 1"
       x="0.5"
       y="0.5"
@@ -51,8 +50,7 @@ const BlueprintShape = ({ shape, color, fill }: Props) => {
   const Shape = shapeMap[shape];
   return (
     <motion.svg
-      initial="hidden"
-      animate="visible"
+      variants={variants}
       width="100%"
       height="100%"
       viewBox="0 0 100 100"

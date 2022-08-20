@@ -1,26 +1,41 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 
 import styles from "./ProjectsPage.module.scss";
 import BlueprintShape from "./BlueprintShape";
+import beach from "../AboutPage/pictures/beach.png";
+
+const imageVariants = {
+  hidden: { opacity: 0 },
+  imagesAppear: { opacity: 1, transition: { duration: 1 } },
+};
 
 const ProjectsPage = () => {
+  const controls = useAnimation();
+
+  const openingSequence = async () => {
+    await controls.start("hidden");
+    await controls.start("draw");
+    await controls.start("imagesAppear");
+  };
+
   return (
-    <div className={styles.pageContainer}>
-      <div className={styles.svgContainer}>
+    <motion.div
+      className={styles.pageContainer}
+      animate={controls}
+      initial="hidden"
+      onViewportEnter={() => openingSequence()}
+    >
+      <motion.div className={styles.shapeContainer}>
         <BlueprintShape shape="square" color="white" />
-      </div>
-      <div style={{ width: "600px", height: "600px" }}>
-        <BlueprintShape shape="circle" color="white" />
-      </div>
-      <div style={{ width: "200px", height: "200px" }}>
-        <BlueprintShape
-          shape="circle"
-          color="red"
-          fill="rgba(255,255,255, 0.5)"
+        <motion.img
+          src={beach}
+          alt=""
+          className={styles.image}
+          variants={imageVariants}
         />
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };
 
