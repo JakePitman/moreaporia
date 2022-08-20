@@ -10,9 +10,11 @@
   position: relative;
 }
 
+$containerWidth: 30vw;
+
 .shapeContainer {
-  width: 300px;
-  height: 300px;
+  width: $containerWidth;
+  height: calc($containerWidth / 1.35);
   position: relative;
 }
 

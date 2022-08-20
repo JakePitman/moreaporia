@@ -3,7 +3,7 @@ import { motion, useAnimation } from "framer-motion";
 
 import styles from "./ProjectsPage.module.scss";
 import BlueprintShape from "./BlueprintShape";
-import beach from "../AboutPage/pictures/beach.png";
+import listing from "./pictures/cot_listing.png";
 import Grid from "./Grid";
 
 const imageVariants = {
@@ -30,7 +30,7 @@ const ProjectsPage = () => {
       <motion.div className={styles.shapeContainer}>
         <BlueprintShape shape="square" color="white" />
         <motion.img
-          src={beach}
+          src={listing}
           alt=""
           className={styles.image}
           variants={imageVariants}
