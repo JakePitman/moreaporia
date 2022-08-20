@@ -4,11 +4,6 @@ import { motion } from "framer-motion";
 import styles from "./ProjectsPage.module.scss";
 import BlueprintShape from "./BlueprintShape";
 
-const svgVariants = {
-  hidden: { rotate: -180 },
-  visible: { rotate: 0, transition: { duration: 1 } },
-};
-
 const ProjectsPage = () => {
   return (
     <div className={styles.pageContainer}>
