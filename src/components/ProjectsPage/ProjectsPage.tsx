@@ -4,6 +4,7 @@ import { motion, useAnimation } from "framer-motion";
 import styles from "./ProjectsPage.module.scss";
 import BlueprintShape from "./BlueprintShape";
 import beach from "../AboutPage/pictures/beach.png";
+import Grid from "./Grid";
 
 const imageVariants = {
   hidden: { opacity: 0 },
@@ -26,7 +27,8 @@ const ProjectsPage = () => {
       initial="hidden"
       onViewportEnter={() => openingSequence()}
     >
-      <motion.div className={styles.shapeContainer}>
+      <Grid />
+      {/* <motion.div className={styles.shapeContainer}>
         <BlueprintShape shape="square" color="white" />
         <motion.img
           src={beach}
@@ -34,7 +36,7 @@ const ProjectsPage = () => {
           className={styles.image}
           variants={imageVariants}
         />
-      </motion.div>
+      </motion.div> */}
     </motion.div>
   );
 };

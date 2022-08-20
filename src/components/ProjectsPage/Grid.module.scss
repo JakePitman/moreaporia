@@ -1,0 +1,34 @@
+.container {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+}
+
+.rows {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.columns {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.rowBorder {
+  border-top: 0.5px dashed white;
+  opacity: 0.1;
+}
+
+.columnBorder {
+  border-left: 0.5px dashed white;
+  opacity: 0.1;
+}
