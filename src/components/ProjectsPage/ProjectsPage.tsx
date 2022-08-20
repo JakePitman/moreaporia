@@ -16,6 +16,7 @@ const ProjectsPage = () => {
 
   const openingSequence = async () => {
     await controls.start("hidden");
+    await controls.start("drawGrid");
     await controls.start("draw");
     await controls.start("imagesAppear");
   };
