@@ -1,4 +1,5 @@
 @import "../shared/Icon/Icon.module.scss";
+@import "../../shared/spacing.module";
 
 @mixin navbar {
   display: flex;
@@ -14,12 +15,12 @@
 
 .navbarLandscape {
   @include navbar;
-  height: 10vh;
+  height: $topNavHeightLandscape;
 }
 
 .navbarPortrait {
   @include navbar;
-  height: 5vh;
+  height: $topNavHeightPortrait;
 }
 
 .homeButton {

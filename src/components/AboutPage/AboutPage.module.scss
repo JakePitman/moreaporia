@@ -1,4 +1,5 @@
 @import "../../shared/colors.module.scss";
+@import "../../shared/spacing.module.scss";
 
 @mixin container {
   background: $primaryBackground;
@@ -9,17 +10,17 @@
   align-items: center;
   overflow: hidden;
   position: relative;
-  height: 90vh;
+  height: calc(100vh - $topNavHeightLandscape);
 }
 
 .containerLandscape {
-  margin-top: 10vh;
+  margin-top: $topNavHeightLandscape;
   @include container;
 }
 
 .containerPortrait {
-  margin-top: 5vh;
-  padding-top: 5vh;
+  margin-top: $topNavHeightPortrait;
+  padding-top: $topNavHeightPortrait;
   @include container;
 }
 
