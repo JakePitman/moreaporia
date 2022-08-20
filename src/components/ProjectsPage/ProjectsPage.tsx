@@ -15,8 +15,6 @@ const ProjectsPage = () => {
   const controls = useAnimation();
 
   const openingSequence = async () => {
-    await controls.start("hidden");
-    await controls.start("drawGrid");
     await controls.start("draw");
     await controls.start("imagesAppear");
   };
@@ -29,7 +27,7 @@ const ProjectsPage = () => {
       onViewportEnter={() => openingSequence()}
     >
       <Grid />
-      {/* <motion.div className={styles.shapeContainer}>
+      <motion.div className={styles.shapeContainer}>
         <BlueprintShape shape="square" color="white" />
         <motion.img
           src={beach}
@@ -37,7 +35,7 @@ const ProjectsPage = () => {
           className={styles.image}
           variants={imageVariants}
         />
-      </motion.div> */}
+      </motion.div>
     </motion.div>
   );
 };

@@ -9,7 +9,7 @@ type Props = {
 
 const variants = {
   hidden: { opacity: 0, pathLength: 0 },
-  draw: { opacity: 1, pathLength: 1, transition: { duration: 1 } },
+  draw: { opacity: 1, pathLength: 1, transition: { duration: 1.2 } },
   imagesAppear: { opacity: 0, transition: { duration: 1 } },
 };
 

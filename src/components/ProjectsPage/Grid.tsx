@@ -5,11 +5,13 @@ import styles from "./Grid.module.scss";
 
 const rowVariants = {
   hidden: { width: "0vw" },
-  drawGrid: { width: "100vw", transition: { duration: 1 } },
+  draw: { width: "100vw", transition: { duration: 0.7 } },
+  imagesAppear: { opacity: 0, transition: { duration: 1 } },
 };
 const columnVariants = {
   hidden: { height: "0vw" },
-  drawGrid: { height: "100vw", transition: { duration: 1 } },
+  draw: { height: "100vw", transition: { duration: 0.7 } },
+  imagesAppear: { opacity: 0, transition: { duration: 1 } },
 };
 
 const rows = new Array(35).fill(
