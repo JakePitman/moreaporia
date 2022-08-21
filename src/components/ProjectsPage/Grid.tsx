@@ -2,6 +2,8 @@ import React from "react";
 import { motion } from "framer-motion";
 
 import styles from "./Grid.module.scss";
+import gridDimensions from "./Grid.module.scss";
+const { rowCount, columnCount } = gridDimensions;
 
 const rowVariants = {
   hidden: { width: "0vw" },
@@ -14,8 +16,10 @@ const columnVariants = {
   imagesAppear: { opacity: 0, transition: { duration: 1 } },
 };
 
-const rows = new Array(22).fill(<motion.div className={styles.rowBorder} />);
-const columns = new Array(40).fill(
+const rows = new Array(parseInt(rowCount)).fill(
+  <motion.div className={styles.rowBorder} />
+);
+const columns = new Array(parseInt(columnCount)).fill(
   <motion.div className={styles.columnBorder} />
 );
 

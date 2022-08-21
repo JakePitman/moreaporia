@@ -22,7 +22,8 @@
   justify-content: space-around;
 }
 
-$rowHeight: 100vh / 22;
+$rowCount: 22;
+$rowHeight: 100vh / $rowCount;
 .rowBorder {
   border-top: 0.5px dashed white;
   border-bottom: 0.5px dashed white;
@@ -31,11 +32,17 @@ $rowHeight: 100vh / 22;
   margin-bottom: $rowHeight;
 }
 
-$columnWidth: 100vw / 40;
+$columnCount: 40;
+$columnWidth: 100vw / $columnCount;
 .columnBorder {
   border-left: 0.5px dashed white;
   border-right: 0.5px dashed white;
   opacity: 0.2;
   width: $columnWidth;
   margin-right: $columnWidth;
+}
+
+:export {
+  rowCount: $rowCount;
+  columnCount: $columnCount;
 }
