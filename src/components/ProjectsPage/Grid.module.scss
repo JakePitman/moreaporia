@@ -8,7 +8,6 @@
 
 .rows {
   position: absolute;
-  width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -18,18 +17,25 @@
 .columns {
   position: absolute;
   width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
 }
 
+$rowHeight: 100vh / 22;
 .rowBorder {
   border-top: 0.5px dashed white;
+  border-bottom: 0.5px dashed white;
   opacity: 0.2;
+  height: $rowHeight;
+  margin-bottom: $rowHeight;
 }
 
+$columnWidth: 100vw / 40;
 .columnBorder {
   border-left: 0.5px dashed white;
+  border-right: 0.5px dashed white;
   opacity: 0.2;
+  width: $columnWidth;
+  margin-right: $columnWidth;
 }

@@ -10,22 +10,24 @@ const rowVariants = {
 };
 const columnVariants = {
   hidden: { height: "0vw" },
-  draw: { height: "100vw", transition: { duration: 0.7 } },
+  draw: { height: "100vh", transition: { duration: 0.7 } },
   imagesAppear: { opacity: 0, transition: { duration: 1 } },
 };
 
-const rows = new Array(35).fill(
-  <motion.div className={styles.rowBorder} variants={rowVariants} />
-);
-const columns = new Array(60).fill(
-  <motion.div className={styles.columnBorder} variants={columnVariants} />
+const rows = new Array(22).fill(<motion.div className={styles.rowBorder} />);
+const columns = new Array(40).fill(
+  <motion.div className={styles.columnBorder} />
 );
 
 const Grid = () => {
   return (
     <motion.div className={styles.container}>
-      <motion.div className={styles.rows}>{rows}</motion.div>
-      <motion.div className={styles.columns}>{columns}</motion.div>
+      <motion.div className={styles.rows} variants={rowVariants}>
+        {rows}
+      </motion.div>
+      <motion.div className={styles.columns} variants={columnVariants}>
+        {columns}
+      </motion.div>
     </motion.div>
   );
 };
