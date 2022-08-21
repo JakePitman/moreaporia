@@ -7,4 +7,26 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+}
+
+$containerWidth: 30vw;
+
+.shapeContainer {
+  width: $containerWidth;
+  height: calc($containerWidth / 1.35);
+  position: relative;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+}
+
+.appImageContainer {
+  height: 80vh;
+  position: relative;
+  margin: 0 30px;
 }

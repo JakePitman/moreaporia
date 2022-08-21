@@ -1,0 +1,37 @@
+.container {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  overflow: hidden;
+}
+
+.rows {
+  position: absolute;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.columns {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.rowBorder {
+  border-top: 0.5px dashed white;
+  border-bottom: 0.5px dashed white;
+  opacity: 0.2;
+}
+
+$columnCount: 40;
+$columnWidth: 100vw / $columnCount;
+.columnBorder {
+  border-left: 0.5px dashed white;
+  border-right: 0.5px dashed white;
+  opacity: 0.2;
+}
