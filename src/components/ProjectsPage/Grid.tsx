@@ -33,7 +33,7 @@ const columns = (colCount: number, colWidth: string) =>
 const Grid = () => {
   const { width, height } = useWindowDimensions();
   const ratio = width / height;
-  const colCount = 40;
+  const colCount = Math.floor(width / 25);
   const colWidth = `${100 / colCount}vw`;
   const rowCount = Math.floor(colCount / ratio);
   const rowHeight = `${100 / rowCount}vh`;

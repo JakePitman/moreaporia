@@ -3,8 +3,9 @@ import { motion, useAnimation } from "framer-motion";
 
 import styles from "./ProjectsPage.module.scss";
 import BlueprintShape from "./BlueprintShape";
-import listing from "./pictures/cot_listing.png";
+import testBrown from "./pictures/test-brown.png";
 import Grid from "./Grid";
+import AppBlueprint from "./AppBlueprint";
 
 const imageVariants = {
   hidden: { opacity: 0 },
@@ -27,7 +28,16 @@ const ProjectsPage = () => {
       onViewportEnter={() => openingSequence()}
     >
       <Grid />
-      <motion.div className={styles.shapeContainer}>
+      <div className={styles.appImageContainer}>
+        <AppBlueprint />
+        <motion.img
+          src={testBrown}
+          alt=""
+          className={styles.image}
+          variants={imageVariants}
+        />
+      </div>
+      {/* <motion.div className={styles.shapeContainer}>
         <BlueprintShape shape="square" color="white" />
         <motion.img
           src={listing}
@@ -35,7 +45,7 @@ const ProjectsPage = () => {
           className={styles.image}
           variants={imageVariants}
         />
-      </motion.div>
+      </motion.div> */}
     </motion.div>
   );
 };
