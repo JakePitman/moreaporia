@@ -27,6 +27,7 @@ const AppBlueprint = () => {
           height="1077"
           stroke={colors.boldBlue}
           stroke-width="3"
+          transform="scale(1, -1) translate(0, -1079)"
         />
         <motion.line
           variants={variants}
