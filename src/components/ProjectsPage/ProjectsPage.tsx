@@ -4,8 +4,10 @@ import { motion, useAnimation } from "framer-motion";
 import styles from "./ProjectsPage.module.scss";
 import BlueprintShape from "./BlueprintShape";
 import testBrown from "./pictures/test-brown.png";
+import listBlue from "./pictures/list-blue.png";
 import Grid from "./Grid";
-import AppBlueprint from "./AppBlueprint";
+import TestAppBlueprint from "./TestAppBlueprint";
+import ListAppBlueprint from "./ListAppBlueprint";
 
 const imageVariants = {
   hidden: { opacity: 0 },
@@ -29,9 +31,18 @@ const ProjectsPage = () => {
     >
       <Grid />
       <div className={styles.appImageContainer}>
-        <AppBlueprint />
+        <TestAppBlueprint />
         <motion.img
           src={testBrown}
+          alt=""
+          className={styles.image}
+          variants={imageVariants}
+        />
+      </div>
+      <div className={styles.appImageContainer}>
+        <ListAppBlueprint />
+        <motion.img
+          src={listBlue}
           alt=""
           className={styles.image}
           variants={imageVariants}
