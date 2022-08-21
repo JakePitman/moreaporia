@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { motion, useAnimation } from "framer-motion";
 
 import styles from "./ProjectsPage.module.scss";
@@ -8,6 +8,7 @@ import listBlue from "./pictures/list-blue.png";
 import Grid from "./Grid";
 import TestAppBlueprint from "./TestAppBlueprint";
 import ListAppBlueprint from "./ListAppBlueprint";
+import BrowserContext from "../../shared/browserContext";
 
 const imageVariants = {
   hidden: { opacity: 0 },
@@ -16,6 +17,7 @@ const imageVariants = {
 
 const ProjectsPage = () => {
   const controls = useAnimation();
+  const { isLandscape } = useContext(BrowserContext);
 
   const openingSequence = async () => {
     await controls.start("draw");
@@ -39,15 +41,17 @@ const ProjectsPage = () => {
           variants={imageVariants}
         />
       </div>
-      <div className={styles.appImageContainer}>
-        <ListAppBlueprint />
-        <motion.img
-          src={listBlue}
-          alt=""
-          className={styles.image}
-          variants={imageVariants}
-        />
-      </div>
+      {isLandscape && (
+        <div className={styles.appImageContainer}>
+          <ListAppBlueprint />
+          <motion.img
+            src={listBlue}
+            alt=""
+            className={styles.image}
+            variants={imageVariants}
+          />
+        </div>
+      )}
       {/* <motion.div className={styles.shapeContainer}>
         <BlueprintShape shape="square" color="white" />
         <motion.img
