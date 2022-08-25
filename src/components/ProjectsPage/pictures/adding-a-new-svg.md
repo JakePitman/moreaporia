@@ -33,3 +33,7 @@ To make a more interesting effect, the main container rect can have its directio
 ```
 transform="scale(1, -1) translate(0, -<whatever height minus stroke-width is>)"
 ```
+
+## 9
+
+Put the SVG as a sibling to the image it was generated from. Image should animate in as SVG fades out
