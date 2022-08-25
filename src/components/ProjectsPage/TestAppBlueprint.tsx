@@ -13,252 +13,237 @@ const AppBlueprint = () => {
     <svg
       width="100%"
       height="100%"
-      viewBox="0 0 552 1080"
+      viewBox="0 0 550 1115"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <g id="app-blueprint">
+      <g id="brown-test-phone">
         <motion.rect
           variants={variants}
-          id="app-container"
-          x="1.5"
-          y="1.5"
-          width="549"
-          height="1077"
+          id="Rectangle 1"
+          x="3.5"
+          y="3.5"
+          width="543"
+          height="1108"
+          rx="66.5"
           stroke={colors.boldBlue}
-          stroke-width="3"
-          transform="scale(1, -1) translate(0, -1079)"
+          stroke-width="7"
+          transform="scale(1, -1) translate(0, -1115)"
         />
         <motion.line
           variants={variants}
-          id="title-bottom-border"
-          y1="85.5"
-          x2="552"
-          y2="85.5"
+          id="Line 1"
+          x1="29"
+          y1="70"
+          x2="175"
+          y2="70"
           stroke={colors.boldBlue}
-          stroke-width="3"
+          stroke-width="10"
         />
-        <motion.rect
+        <motion.line
           variants={variants}
-          id="notification-board"
-          x="285.5"
-          y="97.5"
-          width="250"
-          height="160"
+          id="Line 2"
+          x1="29"
+          y1="93.5"
+          x2="58"
+          y2="93.5"
           stroke={colors.boldBlue}
-          stroke-width="3"
-        />
-        <motion.rect
-          variants={variants}
-          id="movelist"
-          x="16.5"
-          y="97.5"
-          width="251"
-          height="339"
-          stroke={colors.boldBlue}
-          stroke-width="3"
-        />
-        <motion.rect
-          variants={variants}
-          id="settings-button"
-          x="285.5"
-          y="273.5"
-          width="250"
-          height="50"
-          stroke={colors.boldBlue}
-          stroke-width="3"
-        />
-        <motion.rect
-          variants={variants}
-          id="skip-button"
-          x="285.5"
-          y="329.5"
-          width="250"
-          height="50"
-          stroke={colors.boldBlue}
-          stroke-width="3"
-        />
-        <motion.rect
-          variants={variants}
-          id="hint-button"
-          x="285.5"
-          y="386.5"
-          width="250"
-          height="50"
-          stroke={colors.boldBlue}
-          stroke-width="3"
-        />
-        <motion.rect
-          variants={variants}
-          id="rank-8"
-          x="10.5"
-          y="453.5"
-          width="530"
-          height="63"
-          stroke={colors.boldBlue}
-          stroke-width="3"
-        />
-        <motion.rect
-          variants={variants}
-          id="file-a"
-          x="10.5"
-          y="453.5"
-          width="64"
-          height="531"
-          stroke={colors.boldBlue}
-          stroke-width="3"
-        />
-        <motion.rect
-          variants={variants}
-          id="file-c"
-          x="144.5"
-          y="454.5"
-          width="64"
-          height="531"
-          stroke={colors.boldBlue}
-          stroke-width="3"
-        />
-        <motion.rect
-          variants={variants}
-          id="file-e"
-          x="277.5"
-          y="454.5"
-          width="64"
-          height="531"
-          stroke={colors.boldBlue}
-          stroke-width="3"
-        />
-        <motion.rect
-          variants={variants}
-          id="file-g"
-          x="411.5"
-          y="454.5"
-          width="64"
-          height="531"
-          stroke={colors.boldBlue}
-          stroke-width="3"
-        />
-        <motion.rect
-          variants={variants}
-          id="rank-6"
-          x="11.5"
-          y="587.5"
-          width="530"
-          height="63"
-          stroke={colors.boldBlue}
-          stroke-width="3"
-        />
-        <motion.rect
-          variants={variants}
-          id="rank-4"
-          x="10.5"
-          y="721.5"
-          width="530"
-          height="63"
-          stroke={colors.boldBlue}
-          stroke-width="3"
-        />
-        <motion.rect
-          variants={variants}
-          id="rank-2"
-          x="10.5"
-          y="855.5"
-          width="530"
-          height="63"
-          stroke={colors.boldBlue}
-          stroke-width="3"
-        />
-        <motion.rect
-          variants={variants}
-          id="board-outline"
-          x="11.5"
-          y="453.5"
-          width="530"
-          height="532"
-          stroke={colors.boldBlue}
-          stroke-width="3"
+          stroke-width="7"
         />
         <motion.circle
           variants={variants}
-          id="top-nav-info"
-          cx="369"
-          cy="47"
+          id="Ellipse 1"
+          cx="364"
+          cy="79"
           r="13.5"
           stroke={colors.boldBlue}
           stroke-width="3"
         />
         <motion.circle
           variants={variants}
-          id="top-nav-help"
-          cx="439"
-          cy="47"
+          id="Ellipse 4"
+          cx="92.5"
+          cy="1046.5"
+          r="35"
+          stroke={colors.boldBlue}
+          stroke-width="3"
+        />
+        <motion.circle
+          variants={variants}
+          id="Ellipse 5"
+          cx="272.5"
+          cy="1046.5"
+          r="35"
+          stroke={colors.boldBlue}
+          stroke-width="3"
+        />
+        <motion.circle
+          variants={variants}
+          id="Ellipse 6"
+          cx="452.5"
+          cy="1046.5"
+          r="35"
+          stroke={colors.boldBlue}
+          stroke-width="3"
+        />
+        <motion.circle
+          variants={variants}
+          id="Ellipse 2"
+          cx="432"
+          cy="79"
           r="13.5"
           stroke={colors.boldBlue}
           stroke-width="3"
         />
         <motion.circle
           variants={variants}
-          id="top-nav-settings"
-          cx="510"
-          cy="47"
+          id="Ellipse 3"
+          cx="501"
+          cy="79"
           r="13.5"
           stroke={colors.boldBlue}
           stroke-width="3"
         />
-        <motion.line
+        <motion.rect
           variants={variants}
-          id="title-line-1"
-          x1="27"
-          y1="37.5"
-          x2="113"
-          y2="37.5"
-          stroke={colors.boldBlue}
-          stroke-width="5"
-        />
-        <motion.line
-          variants={variants}
-          id="subtitle-line"
-          x1="27"
-          y1="61"
-          x2="55"
-          y2="61"
-          stroke={colors.boldBlue}
-          stroke-width="4"
-        />
-        <motion.line
-          variants={variants}
-          id="title-line-2"
-          x1="124"
-          y1="37.5"
-          x2="173"
-          y2="37.5"
-          stroke={colors.boldBlue}
-          stroke-width="5"
-        />
-        <motion.circle
-          variants={variants}
-          id="home-test"
-          cx="276.5"
-          cy="1033.5"
-          r="32"
+          id="Rectangle 2"
+          x="19.5"
+          y="129.5"
+          width="245"
+          height="329"
           stroke={colors.boldBlue}
           stroke-width="3"
         />
-        <motion.circle
+        <motion.rect
           variants={variants}
-          id="home-record"
-          cx="91.5"
-          cy="1033.5"
-          r="32"
+          id="Rectangle 10"
+          x="75.5"
+          y="472.5"
+          width="66"
+          height="527"
           stroke={colors.boldBlue}
           stroke-width="3"
         />
-        <motion.circle
+        <motion.rect
           variants={variants}
-          id="home-list"
-          cx="459.5"
-          cy="1033.5"
-          r="32"
+          id="Rectangle 14"
+          x="10.5"
+          y="540.5"
+          width="525"
+          height="66"
+          stroke={colors.boldBlue}
+          stroke-width="3"
+        />
+        <motion.rect
+          variants={variants}
+          id="Rectangle 15"
+          x="10.5"
+          y="671.5"
+          width="525"
+          height="66"
+          stroke={colors.boldBlue}
+          stroke-width="3"
+        />
+        <motion.rect
+          variants={variants}
+          id="Rectangle 16"
+          x="10.5"
+          y="802.5"
+          width="525"
+          height="66"
+          stroke={colors.boldBlue}
+          stroke-width="3"
+        />
+        <motion.rect
+          variants={variants}
+          id="Rectangle 17"
+          x="10.5"
+          y="933.5"
+          width="525"
+          height="66"
+          stroke={colors.boldBlue}
+          stroke-width="3"
+        />
+        <motion.rect
+          variants={variants}
+          id="Rectangle 11"
+          x="206.5"
+          y="472.5"
+          width="66"
+          height="527"
+          stroke={colors.boldBlue}
+          stroke-width="3"
+        />
+        <motion.rect
+          variants={variants}
+          id="Rectangle 12"
+          x="336.5"
+          y="472.5"
+          width="66"
+          height="527"
+          stroke={colors.boldBlue}
+          stroke-width="3"
+        />
+        <motion.rect
+          variants={variants}
+          id="Rectangle 13"
+          x="469.5"
+          y="472.5"
+          width="66"
+          height="527"
+          stroke={colors.boldBlue}
+          stroke-width="3"
+        />
+        <motion.rect
+          variants={variants}
+          id="Rectangle 7"
+          x="10.5"
+          y="472.5"
+          width="525"
+          height="527"
+          stroke={colors.boldBlue}
+          stroke-width="3"
+        />
+        <motion.rect
+          variants={variants}
+          id="Rectangle 3"
+          x="281.5"
+          y="129.5"
+          width="243"
+          height="155"
+          stroke={colors.boldBlue}
+          stroke-width="3"
+        />
+        <motion.rect
+          variants={variants}
+          id="Rectangle 4"
+          x="280.5"
+          y="300.5"
+          width="246"
+          height="49"
+          rx="13.5"
+          stroke={colors.boldBlue}
+          stroke-width="3"
+        />
+        <motion.rect
+          variants={variants}
+          id="Rectangle 8"
+          x="280.5"
+          y="354.5"
+          width="246"
+          height="49"
+          rx="13.5"
+          stroke={colors.boldBlue}
+          stroke-width="3"
+        />
+        <motion.rect
+          variants={variants}
+          id="Rectangle 9"
+          x="280.5"
+          y="409.5"
+          width="246"
+          height="49"
+          rx="13.5"
           stroke={colors.boldBlue}
           stroke-width="3"
         />
