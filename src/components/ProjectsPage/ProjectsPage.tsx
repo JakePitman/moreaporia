@@ -3,8 +3,8 @@ import { motion, useAnimation } from "framer-motion";
 
 import styles from "./ProjectsPage.module.scss";
 import BlueprintShape from "./BlueprintShape";
-import testBrown from "./pictures/test-brown.png";
-import listBlue from "./pictures/list-blue.png";
+import testBrown from "./pictures/test-brown-phone.png";
+import listBlue from "./pictures/list-blue-phone.png";
 import Grid from "./Grid";
 import TestAppBlueprint from "./TestAppBlueprint";
 import ListAppBlueprint from "./ListAppBlueprint";

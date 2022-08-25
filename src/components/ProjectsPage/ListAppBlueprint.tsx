@@ -13,371 +13,200 @@ const AppBlueprint = () => {
     <svg
       width="100%"
       height="100%"
-      viewBox="0 0 552 1080"
+      viewBox="0 0 550 1115"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <g id="app-blueprint">
+      <g id="blue-list-phone">
         <motion.rect
-          id="app-container"
-          x="1.5"
-          y="-1.5"
-          width="549"
-          height="1077"
-          transform="matrix(1 0 0 -1 0 1077)"
-          stroke={colors.boldBlue}
-          stroke-width="3"
           variants={variants}
+          id="Rectangle 1"
+          x="3.5"
+          y="3.5"
+          width="543"
+          height="1108"
+          rx="66.5"
+          stroke={colors.boldBlue}
+          stroke-width="7"
+          transform="scale(1, -1) translate(0, -1115)"
         />
         <motion.line
-          id="title-bottom-border"
-          y1="85.5"
-          x2="552"
-          y2="85.5"
-          stroke={colors.boldBlue}
-          stroke-width="3"
           variants={variants}
+          id="Line 1"
+          x1="32"
+          y1="75"
+          x2="176"
+          y2="75"
+          stroke={colors.boldBlue}
+          stroke-width="10"
         />
-        <motion.rect
-          id="first-title-container"
-          x="16.5"
-          y="97.5"
-          width="519"
-          height="135"
-          stroke={colors.boldBlue}
-          stroke-width="3"
+        <motion.line
           variants={variants}
+          id="Line 3"
+          x1="86"
+          y1="713"
+          x2="219"
+          y2="713"
+          stroke={colors.boldBlue}
+          stroke-width="10"
         />
-        <motion.rect
-          id="third-title-container"
-          x="16.5"
-          y="776.5"
-          width="519"
-          height="135"
-          stroke={colors.boldBlue}
-          stroke-width="3"
+        <motion.line
           variants={variants}
+          id="Line 4"
+          x1="254"
+          y1="795"
+          x2="333"
+          y2="795"
+          stroke={colors.boldBlue}
+          stroke-width="10"
         />
-        <motion.rect
-          id="second-title-container"
-          x="16.5"
-          y="244.5"
-          width="519"
-          height="522"
-          stroke={colors.boldBlue}
-          stroke-width="3"
+        <motion.line
           variants={variants}
+          id="Line 5"
+          x1="360"
+          y1="795"
+          x2="472"
+          y2="795"
+          stroke={colors.boldBlue}
+          stroke-width="10"
         />
-        <motion.rect
-          id="first-item-checkbox"
-          x="73.5"
-          y="463.5"
-          width="24"
-          height="24"
-          stroke={colors.boldBlue}
-          stroke-width="3"
+        <motion.line
           variants={variants}
-        />
-        <motion.rect
-          id="first-item-pawn"
-          x="472.5"
-          y="452.5"
-          width="47"
-          height="47"
+          id="Line 2"
+          x1="32"
+          y1="97.5"
+          x2="61"
+          y2="97.5"
           stroke={colors.boldBlue}
-          stroke-width="3"
-          variants={variants}
-        />
-        <motion.rect
-          id="second-item-pawn"
-          x="472.5"
-          y="531.5"
-          width="47"
-          height="47"
-          stroke={colors.boldBlue}
-          stroke-width="3"
-          variants={variants}
-        />
-        <motion.rect
-          id="third-item-pawn"
-          x="472.5"
-          y="609.5"
-          width="47"
-          height="47"
-          stroke={colors.boldBlue}
-          stroke-width="3"
-          variants={variants}
-        />
-        <motion.rect
-          id="fourth-item-pawn"
-          x="472.5"
-          y="690.5"
-          width="47"
-          height="47"
-          stroke={colors.boldBlue}
-          stroke-width="3"
-          variants={variants}
-        />
-        <motion.rect
-          id="second-item-checkbox"
-          x="73.5"
-          y="543.5"
-          width="24"
-          height="24"
-          stroke={colors.boldBlue}
-          stroke-width="3"
-          variants={variants}
-        />
-        <motion.rect
-          id="third-item-checkbox"
-          x="73.5"
-          y="621.5"
-          width="24"
-          height="24"
-          stroke={colors.boldBlue}
-          stroke-width="3"
-          variants={variants}
-        />
-        <motion.rect
-          id="fourth-item-checkbox"
-          x="73.5"
-          y="701.5"
-          width="24"
-          height="24"
-          stroke={colors.boldBlue}
-          stroke-width="3"
-          variants={variants}
+          stroke-width="7"
         />
         <motion.circle
-          id="top-nav-info"
-          cx="369"
-          cy="47"
+          variants={variants}
+          id="Ellipse 1"
+          cx="365"
+          cy="84"
           r="13.5"
           stroke={colors.boldBlue}
           stroke-width="3"
-          variants={variants}
         />
         <motion.circle
-          id="top-nav-info_2"
-          cx="67.5"
-          cy="166.5"
-          r="18"
+          variants={variants}
+          id="Ellipse 4"
+          cx="96.5"
+          cy="1045.5"
+          r="35"
           stroke={colors.boldBlue}
           stroke-width="3"
-          variants={variants}
         />
         <motion.circle
-          id="top-nav-info_3"
-          cx="67.5"
-          cy="309.5"
-          r="18"
+          variants={variants}
+          id="Ellipse 5"
+          cx="274.5"
+          cy="1045.5"
+          r="35"
           stroke={colors.boldBlue}
           stroke-width="3"
-          variants={variants}
         />
         <motion.circle
-          id="top-nav-info_4"
-          cx="67.5"
-          cy="844.5"
-          r="18"
+          variants={variants}
+          id="Ellipse 6"
+          cx="452.5"
+          cy="1045.5"
+          r="35"
           stroke={colors.boldBlue}
           stroke-width="3"
-          variants={variants}
         />
         <motion.circle
-          id="top-nav-help"
-          cx="439"
-          cy="47"
+          variants={variants}
+          id="Ellipse 2"
+          cx="433"
+          cy="84"
           r="13.5"
           stroke={colors.boldBlue}
           stroke-width="3"
-          variants={variants}
         />
         <motion.circle
-          id="top-nav-settings"
-          cx="510"
-          cy="47"
+          variants={variants}
+          id="Ellipse 3"
+          cx="501"
+          cy="84"
           r="13.5"
           stroke={colors.boldBlue}
           stroke-width="3"
-          variants={variants}
         />
-        <motion.line
-          id="list"
-          x1="26"
-          y1="45.5"
-          x2="67"
-          y2="45.5"
-          stroke={colors.boldBlue}
-          stroke-width="5"
+        <motion.rect
           variants={variants}
-        />
-        <motion.line
-          id="first-title-line"
-          x1="125"
-          y1="168"
-          x2="206"
-          y2="168"
-          stroke={colors.boldBlue}
-          stroke-width="10"
-          variants={variants}
-        />
-        <motion.line
-          id="first-title-numbers"
-          x1="480"
-          y1="167.5"
-          x2="515"
-          y2="167.5"
-          stroke={colors.boldBlue}
-          stroke-width="5"
-          variants={variants}
-        />
-        <motion.line
-          id="second-title-numbers"
-          x1="480"
-          y1="310.5"
-          x2="515"
-          y2="310.5"
-          stroke={colors.boldBlue}
-          stroke-width="5"
-          variants={variants}
-        />
-        <motion.line
-          id="third-title-numbers"
-          x1="480"
-          y1="844.5"
-          x2="515"
-          y2="844.5"
-          stroke={colors.boldBlue}
-          stroke-width="5"
-          variants={variants}
-        />
-        <motion.line
-          id="second-title-line-1"
-          x1="125"
-          y1="311"
-          x2="221"
-          y2="311"
-          stroke={colors.boldBlue}
-          stroke-width="10"
-          variants={variants}
-        />
-        <motion.line
-          id="select-all"
-          x1="70"
-          y1="388.5"
-          x2="206"
-          y2="388.5"
-          stroke={colors.boldBlue}
-          stroke-width="5"
-          variants={variants}
-        />
-        <motion.line
-          id="first-item"
-          x1="143"
-          y1="476.5"
-          x2="185"
-          y2="476.5"
-          stroke={colors.boldBlue}
-          stroke-width="5"
-          variants={variants}
-        />
-        <motion.line
-          id="second-item"
-          x1="143"
-          y1="557.5"
-          x2="261"
-          y2="557.5"
-          stroke={colors.boldBlue}
-          stroke-width="5"
-          variants={variants}
-        />
-        <motion.line
-          id="third-item"
-          x1="143"
-          y1="635.5"
-          x2="264"
-          y2="635.5"
-          stroke={colors.boldBlue}
-          stroke-width="5"
-          variants={variants}
-        />
-        <motion.line
-          id="third-title-1"
-          x1="124"
-          y1="846"
-          x2="212"
-          y2="846"
-          stroke={colors.boldBlue}
-          stroke-width="10"
-          variants={variants}
-        />
-        <motion.line
-          id="third-title-2"
-          x1="227"
-          y1="846"
-          x2="331"
-          y2="846"
-          stroke={colors.boldBlue}
-          stroke-width="10"
-          variants={variants}
-        />
-        <motion.line
-          id="fourth-item"
-          x1="143"
-          y1="715.5"
-          x2="194"
-          y2="715.5"
-          stroke={colors.boldBlue}
-          stroke-width="5"
-          variants={variants}
-        />
-        <motion.line
-          id="select-all_2"
-          x1="318"
-          y1="388.5"
-          x2="479"
-          y2="388.5"
-          stroke={colors.boldBlue}
-          stroke-width="5"
-          variants={variants}
-        />
-        <motion.line
-          id="second-title-line-2"
-          x1="233"
-          y1="311"
-          x2="291"
-          y2="311"
-          stroke={colors.boldBlue}
-          stroke-width="10"
-          variants={variants}
-        />
-        <motion.circle
-          id="home-test"
-          cx="276.5"
-          cy="1033.5"
-          r="32"
+          id="Rectangle 2"
+          x="21.5"
+          y="133.5"
+          width="243"
+          height="327"
           stroke={colors.boldBlue}
           stroke-width="3"
-          variants={variants}
         />
-        <motion.circle
-          id="home-record"
-          cx="91.5"
-          cy="1033.5"
-          r="32"
+        <motion.rect
+          variants={variants}
+          id="Rectangle 7"
+          x="10.5"
+          y="470.5"
+          width="528"
+          height="530"
           stroke={colors.boldBlue}
           stroke-width="3"
-          variants={variants}
         />
-        <motion.circle
-          id="home-list"
-          cx="459.5"
-          cy="1033.5"
-          r="32"
+        <motion.rect
+          variants={variants}
+          id="Rectangle 3"
+          x="281.5"
+          y="133.5"
+          width="243"
+          height="155"
           stroke={colors.boldBlue}
           stroke-width="3"
+        />
+        <motion.rect
           variants={variants}
+          id="Rectangle 4"
+          x="281.5"
+          y="303.5"
+          width="243"
+          height="48"
+          rx="13.5"
+          stroke={colors.boldBlue}
+          stroke-width="3"
+        />
+        <motion.rect
+          variants={variants}
+          id="Rectangle 5"
+          x="281.5"
+          y="357.5"
+          width="243"
+          height="48"
+          rx="13.5"
+          stroke={colors.boldBlue}
+          stroke-width="3"
+        />
+        <motion.rect
+          variants={variants}
+          id="Rectangle 6"
+          x="281.5"
+          y="412.5"
+          width="243"
+          height="48"
+          rx="13.5"
+          stroke={colors.boldBlue}
+          stroke-width="3"
+        />
+        <motion.rect
+          variants={variants}
+          id="Rectangle 8"
+          x="51.5"
+          y="658.5"
+          width="444"
+          height="172"
+          rx="14.5"
+          stroke={colors.boldBlue}
+          stroke-width="3"
         />
       </g>
     </svg>
