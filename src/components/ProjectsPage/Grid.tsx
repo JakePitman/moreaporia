@@ -16,19 +16,21 @@ const columnVariants = {
 };
 
 const rows = (rowCount: number, rowHeight: string) =>
-  new Array(rowCount).fill(
+  Array.from({ length: rowCount }, (_, i) => (
     <motion.div
+      key={`row${i}`}
       className={styles.rowBorder}
       style={{ height: rowHeight, marginBottom: rowHeight }}
     />
-  );
+  ));
 const columns = (colCount: number, colWidth: string) =>
-  new Array(colCount).fill(
+  Array.from({ length: colCount }, (_, i) => (
     <motion.div
+      key={`col${i}`}
       className={styles.columnBorder}
       style={{ width: colWidth, marginRight: colWidth }}
     />
-  );
+  ));
 
 const Grid = () => {
   const { width, height } = useWindowDimensions();
