@@ -1,6 +1,7 @@
 import React from "react";
 import colors from "../../shared/_colors.module.scss";
 import { motion } from "framer-motion";
+import styles from "./Blueprint.module.scss";
 
 const variants = {
   hidden: { opacity: 0, pathLength: 0 },
@@ -16,6 +17,7 @@ const AppBlueprint = () => {
       viewBox="0 0 550 1115"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      className={styles.svg}
     >
       <g id="brown-test-phone">
         <motion.rect
