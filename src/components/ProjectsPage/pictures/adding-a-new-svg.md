@@ -16,7 +16,7 @@ Replace return value with new SVG (open the SVG in notes to get data)
 
 ## 5
 
-Change svg `width` & `height` to `100%`
+Change svg `width` & `height` to `100%` and add className{styles.svg} from "./Blueprint.module.scss"
 
 ## 6
 
