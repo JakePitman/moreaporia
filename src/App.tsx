@@ -17,7 +17,7 @@ function App() {
 
   return (
     <BrowserProvider value={{ isLandscape }}>
-      <Router basename="/moreaporia">
+      <Router>
         <div className="App">
           <AppNavigation />
           <AppRouter />
