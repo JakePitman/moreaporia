@@ -32,15 +32,34 @@ const AppNavigation = () => {
         delayChildren: 0.5,
       }}
     >
-      <Link to="/home">
+      <Link
+        to="/home"
+        className={pathname === "/home" ? styles.homeLinkHidden : ""}
+      >
         <motion.div className={styles.homeButton} variants={homeButtonVariants}>
-          <FiHome color={colors.primaryYellow} />
+          <FiHome
+            color={colors.primaryYellow}
+            size={isLandscape ? "" : "1.5rem"}
+            className={
+              pathname === "/home"
+                ? styles.homeSVGHidden
+                : styles.homeSVGVisible
+            }
+          />
         </motion.div>
       </Link>
       <div className={styles.rightNavItems}>
-        <NavItem title="About" to="/about" />
-        <NavItem title="Projects" to="/projects" />
-        <NavItem title="Contact" to="/contact" />
+        <NavItem title="About" to="/about" isActive={pathname === "/about"} />
+        <NavItem
+          title="Projects"
+          to="/projects"
+          isActive={pathname === "/projects"}
+        />
+        <NavItem
+          title="Contact"
+          to="/contact"
+          isActive={pathname === "/contact"}
+        />
       </div>
     </motion.div>
   );

@@ -23,6 +23,10 @@
   height: $topNavHeightPortrait;
 }
 
+.homeLinkHidden {
+  cursor: default
+}
+
 .homeButton {
   @include iconWrapper;
   display: flex;
@@ -32,4 +36,14 @@
 
 .rightNavItems {
   display: flex;
+}
+
+.homeSVGVisible {
+  opacity: 1;
+  transition: all 0.5s;
+}
+
+.homeSVGHidden {
+  opacity: 0;
+  transition: all 0.5s;
 }

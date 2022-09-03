@@ -3,6 +3,7 @@
 
 .listItem {
   display: flex;
+  flex-direction: column;
   font-size: 2vw;
   list-style-type: none;
   color: $offWhite;
@@ -10,11 +11,28 @@
   font-family: "Roboto Mono";
   cursor: pointer;
   height: max-content;
+  align-items: center;
+  justify-content: center;
 
   @media (max-width: $breakpointTablet) {
     font-size: 5vw;
     margin-right: 4vw;
   }
+}
+
+$indicatorWidth: 1px;
+$transition: all 0.5s;
+
+.activeIndicator {
+  width: 100%;
+  border: $indicatorWidth solid $primaryYellow;
+  transition: $transition
+}
+
+.inactiveIndicator {
+  width: 0%;
+  border: $indicatorWidth solid transparent;
+  transition:  $transition
 }
 
 .textContainer {
@@ -29,8 +47,16 @@
   z-index: 2;
 }
 
-.listItemFirstLetter {
+.itemText {
+  color: $offWhite;
+}
+
+.itemTextBoldHighlighted {
   color: $primaryYellow;
   font-family: "Roboto Mono";
   font-weight: 600;
+}
+
+.itemTextHighlighted {
+  color: $primaryYellow;
 }
