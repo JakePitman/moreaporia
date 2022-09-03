@@ -34,7 +34,10 @@ const AppNavigation = () => {
     >
       <Link to="/home">
         <motion.div className={styles.homeButton} variants={homeButtonVariants}>
-          <FiHome color={colors.primaryYellow} />
+          <FiHome
+            color={colors.primaryYellow}
+            size={isLandscape ? "" : "1.5rem"}
+          />
         </motion.div>
       </Link>
       <div className={styles.rightNavItems}>
