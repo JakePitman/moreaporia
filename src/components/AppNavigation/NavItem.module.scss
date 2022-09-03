@@ -3,6 +3,7 @@
 
 .listItem {
   display: flex;
+  flex-direction: column;
   font-size: 2vw;
   list-style-type: none;
   color: $offWhite;
@@ -15,6 +16,11 @@
     font-size: 5vw;
     margin-right: 4vw;
   }
+}
+
+.activeIndicator {
+  width: 100%;
+  border: 1px solid $primaryYellow;
 }
 
 .textContainer {
