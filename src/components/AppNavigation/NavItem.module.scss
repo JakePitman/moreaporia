@@ -11,6 +11,8 @@
   font-family: "Roboto Mono";
   cursor: pointer;
   height: max-content;
+  align-items: center;
+  justify-content: center;
 
   @media (max-width: $breakpointTablet) {
     font-size: 5vw;
@@ -19,14 +21,18 @@
 }
 
 $indicatorWidth: 1px;
+$transition: all 0.5s;
 
 .activeIndicator {
   width: 100%;
   border: $indicatorWidth solid $primaryYellow;
+  transition: $transition
 }
 
 .inactiveIndicator {
+  width: 0%;
   border: $indicatorWidth solid transparent;
+  transition:  $transition
 }
 
 .textContainer {
@@ -41,8 +47,16 @@ $indicatorWidth: 1px;
   z-index: 2;
 }
 
-.listItemFirstLetter {
+.itemText {
+  color: $offWhite;
+}
+
+.itemTextBoldHighlighted {
   color: $primaryYellow;
   font-family: "Roboto Mono";
   font-weight: 600;
+}
+
+.itemTextHighlighted {
+  color: $primaryYellow;
 }
