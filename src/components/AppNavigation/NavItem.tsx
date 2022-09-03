@@ -21,7 +21,9 @@ type Props = {
 const NavItem = ({ title, to, isActive }: Props) => {
   return (
     <motion.li variants={navItemVariants} className={styles.listItem}>
-      <div className={styles.activeIndicator} />
+      <div
+        className={isActive ? styles.activeIndicator : styles.inactiveIndicator}
+      />
       <div className={styles.textContainer}>
         <Link to={to} className={styles.clickArea} />
         <p className={styles.listItemFirstLetter}>{title.slice(0, 1)}</p>

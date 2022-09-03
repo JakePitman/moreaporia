@@ -18,9 +18,15 @@
   }
 }
 
+$indicatorWidth: 1px;
+
 .activeIndicator {
   width: 100%;
-  border: 1px solid $primaryYellow;
+  border: $indicatorWidth solid $primaryYellow;
+}
+
+.inactiveIndicator {
+  border: $indicatorWidth solid transparent;
 }
 
 .textContainer {
