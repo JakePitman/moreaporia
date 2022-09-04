@@ -1,11 +1,10 @@
 import React, { useContext } from "react";
-import { motion, useAnimation } from "framer-motion";
+import { motion } from "framer-motion";
 
 import styles from "./ProjectHighlight.module.scss";
 import BlueprintShape from "./BlueprintShape";
 import testBrown from "./pictures/test-brown-phone.png";
 import listBlue from "./pictures/list-blue-phone.png";
-import Grid from "./Grid";
 import TestAppBlueprint from "./TestAppBlueprint";
 import ListAppBlueprint from "./ListAppBlueprint";
 import BrowserContext from "../../shared/browserContext";
@@ -16,22 +15,10 @@ const imageVariants = {
 };
 
 const ProjectsPage = () => {
-  const controls = useAnimation();
   const { isLandscape } = useContext(BrowserContext);
 
-  const openingSequence = async () => {
-    await controls.start("draw");
-    await controls.start("imagesAppear");
-  };
-
   return (
-    <motion.div
-      className={styles.pageContainer}
-      animate={controls}
-      initial="hidden"
-      onViewportEnter={() => openingSequence()}
-    >
-      <Grid />
+    <motion.div className={styles.pageContainer}>
       <div className={styles.appImageContainer}>
         <TestAppBlueprint />
         <motion.img

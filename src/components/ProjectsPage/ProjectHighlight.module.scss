@@ -3,11 +3,11 @@
 .pageContainer {
   width: 100%;
   height: calc(100vh - $topNavHeightLandscape);
-  padding-top: $topNavHeightLandscape;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
+  overflow: hidden;
 }
 
 $containerWidth: 30vw;

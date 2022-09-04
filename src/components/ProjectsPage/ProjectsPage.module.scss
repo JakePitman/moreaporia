@@ -1,6 +1,10 @@
+@import "../../shared/spacing.module";
+
 .pageContainer {
   display: flex;
   flex-direction: column;
   width: 100%;
+  padding-top: $topNavHeightLandscape;
   overflow: hidden;
+  position: relative;
 }
