@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useState, useContext, useRef } from "react";
 import { motion } from "framer-motion";
 
 import styles from "./ProjectHighlight.module.scss";
@@ -33,25 +33,17 @@ const PortraitLayout = () => {
 const LandscapeLayout = () => {
   return (
     <motion.div className={styles.pageContainer}>
-      <div className={styles.appImageContainer}>
-        <TestAppBlueprint />
-        <motion.img
-          src={testBrown}
-          alt=""
-          className={styles.image}
-          variants={imageVariants}
-        />
-      </div>
-      <div className={styles.appImageContainer}>
-        <ListAppBlueprint />
-        <motion.img
-          src={listBlue}
-          alt=""
-          className={styles.image}
-          variants={imageVariants}
-        />
-      </div>
-      {/* <motion.div className={styles.shapeContainer}>
+      <div className={styles.landscapeLeftContainer}>
+        <div className={styles.appImageContainer}>
+          <TestAppBlueprint />
+          <motion.img
+            src={testBrown}
+            alt=""
+            className={styles.image}
+            variants={imageVariants}
+          />
+        </div>
+        {/* <motion.div className={styles.shapeContainer}>
         <BlueprintShape shape="square" color="white" />
         <motion.img
           src={listing}
@@ -60,6 +52,15 @@ const LandscapeLayout = () => {
           variants={imageVariants}
         />
       </motion.div> */}
+      </div>
+      <div className={styles.landscapeRightContainer}>
+        <p className={styles.text}>In the spotlight</p>
+        <h1 className={styles.title}>Chess Openings Trainer</h1>
+        <p className={styles.text}>
+          Build your chess openings repertoire by recording and testing
+          yourself!
+        </p>
+      </div>
     </motion.div>
   );
 };

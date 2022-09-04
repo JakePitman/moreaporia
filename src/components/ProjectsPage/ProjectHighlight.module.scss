@@ -1,4 +1,5 @@
 @import "../../shared/spacing.module";
+@import "../../shared/colors.module";
 
 .pageContainer {
   width: 100%;
@@ -7,7 +8,6 @@
   justify-content: center;
   align-items: center;
   position: relative;
-  overflow: hidden;
 }
 
 $containerWidth: 30vw;
@@ -18,12 +18,45 @@ $containerWidth: 30vw;
   position: relative;
 }
 
-.image {
-  height: 80vh;
+
+.landscapeLeftContainer {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.landscapeRightContainer {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
 
+$imageHeight: 80vh;
+.image {
+  height: $imageHeight;
+}
 .appImageContainer {
-  height: 80vh;
+  height: $imageHeight;
   position: relative;
   margin: 0 30px;
+}
+
+.text {
+  color: $lightBlue;
+  font-family: "Roboto Mono";
+  font-weight: bold;
+  text-align: center;
+  font-size: 2em;
+}
+
+.title {
+  color: $boldBlue;
+  font-family: "Tomorrow";
+  font-weight: bold;
+  font-size: 7em;
+  text-align: center;
 }
