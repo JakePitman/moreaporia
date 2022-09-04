@@ -1,29 +1,10 @@
 @import "../../shared/spacing.module";
 
 .pageContainer {
-  width: 100%;
-  height: calc(100vh - $topNavHeightLandscape);
-  padding-top: $topNavHeightLandscape;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  padding-top: $topNavHeightLandscape;
+  overflow: hidden;
   position: relative;
-}
-
-$containerWidth: 30vw;
-
-.shapeContainer {
-  width: $containerWidth;
-  height: calc($containerWidth / 1.35);
-  position: relative;
-}
-
-.image {
-  height: 80vh;
-}
-
-.appImageContainer {
-  height: 80vh;
-  position: relative;
-  margin: 0 30px;
 }

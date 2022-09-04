@@ -1,0 +1,62 @@
+@import "../../shared/spacing.module";
+@import "../../shared/colors.module";
+
+.pageContainer {
+  width: 100%;
+  height: calc(100vh - $topNavHeightLandscape);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+$containerWidth: 30vw;
+
+.shapeContainer {
+  width: $containerWidth;
+  height: calc($containerWidth / 1.35);
+  position: relative;
+}
+
+
+.landscapeLeftContainer {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.landscapeRightContainer {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+$imageHeight: 80vh;
+.image {
+  height: $imageHeight;
+}
+.appImageContainer {
+  height: $imageHeight;
+  position: relative;
+  margin: 0 30px;
+}
+
+.text {
+  color: $lightBlue;
+  font-family: "Roboto Mono";
+  font-weight: bold;
+  text-align: center;
+  font-size: 2em;
+}
+
+.title {
+  color: $boldBlue;
+  font-family: "Tomorrow";
+  font-weight: bold;
+  font-size: 7em;
+  text-align: center;
+}
