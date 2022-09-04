@@ -14,9 +14,7 @@ const imageVariants = {
   imagesAppear: { opacity: 1, transition: { duration: 1 } },
 };
 
-const ProjectsPage = () => {
-  const { isLandscape } = useContext(BrowserContext);
-
+const PortraitLayout = () => {
   return (
     <motion.div className={styles.pageContainer}>
       <div className={styles.appImageContainer}>
@@ -28,17 +26,31 @@ const ProjectsPage = () => {
           variants={imageVariants}
         />
       </div>
-      {isLandscape && (
-        <div className={styles.appImageContainer}>
-          <ListAppBlueprint />
-          <motion.img
-            src={listBlue}
-            alt=""
-            className={styles.image}
-            variants={imageVariants}
-          />
-        </div>
-      )}
+    </motion.div>
+  );
+};
+
+const LandscapeLayout = () => {
+  return (
+    <motion.div className={styles.pageContainer}>
+      <div className={styles.appImageContainer}>
+        <TestAppBlueprint />
+        <motion.img
+          src={testBrown}
+          alt=""
+          className={styles.image}
+          variants={imageVariants}
+        />
+      </div>
+      <div className={styles.appImageContainer}>
+        <ListAppBlueprint />
+        <motion.img
+          src={listBlue}
+          alt=""
+          className={styles.image}
+          variants={imageVariants}
+        />
+      </div>
       {/* <motion.div className={styles.shapeContainer}>
         <BlueprintShape shape="square" color="white" />
         <motion.img
@@ -50,6 +62,12 @@ const ProjectsPage = () => {
       </motion.div> */}
     </motion.div>
   );
+};
+
+const ProjectsPage = () => {
+  const { isLandscape } = useContext(BrowserContext);
+
+  return isLandscape ? <LandscapeLayout /> : <PortraitLayout />;
 };
 
 export default ProjectsPage;
