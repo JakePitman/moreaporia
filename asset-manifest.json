@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.7bbbe3fa.css",
-    "main.js": "/static/js/main.12a5de4a.js",
+    "main.css": "/static/css/main.a1dd5edb.css",
+    "main.js": "/static/js/main.a3eb4469.js",
     "static/js/232.627113bf.chunk.js": "/static/js/232.627113bf.chunk.js",
     "static/js/787.2fc9bcc6.chunk.js": "/static/js/787.2fc9bcc6.chunk.js",
     "static/media/castle_hill.png": "/static/media/castle_hill.5e391771c0e49be30730.png",
@@ -9,16 +9,15 @@
     "static/media/beach.png": "/static/media/beach.8f4dc3a334f08d662abe.png",
     "static/media/temple.png": "/static/media/temple.1470a0482c13b0f0282d.png",
     "static/media/guitar.png": "/static/media/guitar.5f6d81c20cd05a6ac8ca.png",
-    "static/media/list-blue-phone.png": "/static/media/list-blue-phone.52aa7657c8c088b23c74.png",
     "static/media/test-brown-phone.png": "/static/media/test-brown-phone.f8466e5131811add0ad7.png",
     "index.html": "/index.html",
-    "main.7bbbe3fa.css.map": "/static/css/main.7bbbe3fa.css.map",
-    "main.12a5de4a.js.map": "/static/js/main.12a5de4a.js.map",
+    "main.a1dd5edb.css.map": "/static/css/main.a1dd5edb.css.map",
+    "main.a3eb4469.js.map": "/static/js/main.a3eb4469.js.map",
     "232.627113bf.chunk.js.map": "/static/js/232.627113bf.chunk.js.map",
     "787.2fc9bcc6.chunk.js.map": "/static/js/787.2fc9bcc6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7bbbe3fa.css",
-    "static/js/main.12a5de4a.js"
+    "static/css/main.a1dd5edb.css",
+    "static/js/main.a3eb4469.js"
   ]
 }
