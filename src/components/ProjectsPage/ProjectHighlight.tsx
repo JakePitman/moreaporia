@@ -1,12 +1,10 @@
-import React, { useState, useContext, useRef } from "react";
+import React, { useContext } from "react";
 import { motion } from "framer-motion";
 
 import styles from "./ProjectHighlight.module.scss";
 import BlueprintShape from "./BlueprintShape";
 import testBrown from "./pictures/test-brown-phone.png";
-import listBlue from "./pictures/list-blue-phone.png";
 import TestAppBlueprint from "./TestAppBlueprint";
-import ListAppBlueprint from "./ListAppBlueprint";
 import BrowserContext from "../../shared/browserContext";
 
 const imageVariants = {
