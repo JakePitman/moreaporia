@@ -73,7 +73,9 @@ const LandscapeLayout = () => {
           Build your chess openings repertoire by recording and testing
           yourself!
         </motion.p>
-        <AppleStoreLogo />
+        <motion.div variants={textVariants}>
+          <AppleStoreLogo />
+        </motion.div>
       </motion.div>
     </motion.div>
   );
