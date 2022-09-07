@@ -1,17 +1,20 @@
-import React, { useState, useContext, useRef } from "react";
+import React, { useContext } from "react";
 import { motion } from "framer-motion";
 
 import styles from "./ProjectHighlight.module.scss";
-import BlueprintShape from "./BlueprintShape";
 import testBrown from "./pictures/test-brown-phone.png";
-import listBlue from "./pictures/list-blue-phone.png";
 import TestAppBlueprint from "./TestAppBlueprint";
-import ListAppBlueprint from "./ListAppBlueprint";
 import BrowserContext from "../../shared/browserContext";
+import AppleStoreLogo from "./AppleStoreLogo";
 
 const imageVariants = {
   hidden: { opacity: 0 },
   imagesAppear: { opacity: 1, transition: { duration: 1 } },
+};
+
+const textVariants = {
+  hidden: { opacity: 0, x: 100 },
+  draw: { opacity: 1, x: 0 },
 };
 
 const PortraitLayout = () => {
@@ -43,24 +46,37 @@ const LandscapeLayout = () => {
             variants={imageVariants}
           />
         </div>
-        {/* <motion.div className={styles.shapeContainer}>
-        <BlueprintShape shape="square" color="white" />
-        <motion.img
-          src={listing}
-          alt=""
-          className={styles.image}
-          variants={imageVariants}
-        />
-      </motion.div> */}
       </div>
-      <div className={styles.landscapeRightContainer}>
-        <p className={styles.text}>In the spotlight</p>
-        <h1 className={styles.title}>Chess Openings Trainer</h1>
-        <p className={styles.text}>
+      <motion.div
+        className={styles.landscapeRightContainer}
+        variants={{
+          draw: {
+            transition: { delayChildren: 0.2, staggerChildren: 0.1 },
+          },
+        }}
+      >
+        <motion.p className={styles.text} variants={textVariants}>
+          In the spotlight
+        </motion.p>
+        <div className={styles.titleContainer}>
+          <motion.h1 className={styles.title} variants={textVariants}>
+            Chess
+          </motion.h1>
+          <motion.h1 className={styles.title} variants={textVariants}>
+            Openings
+          </motion.h1>
+          <motion.h1 className={styles.title} variants={textVariants}>
+            Trainer
+          </motion.h1>
+        </div>
+        <motion.p className={styles.text} variants={textVariants}>
           Build your chess openings repertoire by recording and testing
           yourself!
-        </p>
-      </div>
+        </motion.p>
+        <motion.div variants={textVariants}>
+          <AppleStoreLogo />
+        </motion.div>
+      </motion.div>
     </motion.div>
   );
 };
