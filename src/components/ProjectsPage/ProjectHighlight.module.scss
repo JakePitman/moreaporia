@@ -18,7 +18,6 @@ $containerWidth: 30vw;
   position: relative;
 }
 
-
 .landscapeLeftContainer {
   width: 50%;
   height: 100%;
@@ -51,6 +50,12 @@ $imageHeight: 80vh;
   font-weight: bold;
   text-align: center;
   font-size: 2em;
+  font-family: "Myriad Pro";
+}
+
+.titleContainer {
+  display: flex;
+  flex-direction: column;
 }
 
 .title {

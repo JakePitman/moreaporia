@@ -1,0 +1,22 @@
+.container {
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px;
+  border-radius: 13px;
+}
+
+.textContainer {
+  color: black;
+  font-family: "Ariel";
+  margin-left: 10px;
+}
+
+.upperText {
+  font-size: 20px;
+}
+
+.lowerText {
+  font-size: 35px;
+}
