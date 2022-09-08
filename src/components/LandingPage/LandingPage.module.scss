@@ -42,12 +42,14 @@
 .splineContainerStarted {
   @include splineContainer;
   opacity: 0.3;
+  z-index: 1;
 }
 
 .midSection {
   width: max-content;
   display: flex;
   flex-direction: column;
+  z-index: 2;
 }
 
 .mainHeading {
@@ -91,6 +93,7 @@
   position: absolute;
 bottom: 0;
 height: 300px;
+z-index: 2;
 }
 
 .iconsContainer {
