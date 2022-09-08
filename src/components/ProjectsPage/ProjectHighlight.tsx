@@ -13,7 +13,7 @@ const imageVariants = {
 };
 
 const textVariants = {
-  hidden: { opacity: 0, x: 100 },
+  hidden: { opacity: 0, x: 50 },
   draw: { opacity: 1, x: 0 },
 };
 
