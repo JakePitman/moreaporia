@@ -1,8 +1,8 @@
 export const headingVariants = {
-  hidden: { opacity: 0, transform: "translateX(300)" },
+  hidden: { opacity: 0, x: 300 },
   visible: {
     opacity: 1,
-    transform: "translateX(0px)",
+    x: 0,
     transition: {
       duration: 0.5,
     },
