@@ -5,9 +5,9 @@ import { motion, useAnimation } from "framer-motion";
 import styles from "./NavItem.module.scss";
 
 const navItemVariants = {
-  hidden: { opacity: 0, transform: "translateX(-40px)" },
+  hidden: { opacity: 0, x: -40 },
   visible: {
-    transform: "translateX(0px)",
+    x: 0,
     opacity: 1,
   },
 };
