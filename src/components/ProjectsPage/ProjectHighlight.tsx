@@ -19,16 +19,25 @@ const textVariants = {
 
 const PortraitLayout = () => {
   return (
-    <motion.div className={styles.pageContainer}>
-      <div className={styles.appImageContainer}>
+    <motion.div className={styles.pageContainerPortrait}>
+      <motion.p className={styles.textPortrait} variants={textVariants}>
+        In the spotlight
+      </motion.p>
+      <div className={styles.appImageContainerPortrait}>
         <TestAppBlueprint />
         <motion.img
           src={testBrown}
           alt=""
-          className={styles.image}
+          className={styles.imagePortrait}
           variants={imageVariants}
         />
       </div>
+      <motion.h1 className={styles.titlePortrait} variants={textVariants}>
+        Chess Openings Trainer
+      </motion.h1>
+      <motion.div variants={textVariants}>
+        <AppleStoreLogo />
+      </motion.div>
     </motion.div>
   );
 };

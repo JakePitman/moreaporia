@@ -9,6 +9,11 @@
   align-items: center;
   position: relative;
 }
+.pageContainerPortrait {
+  @extend .pageContainer;
+  flex-direction: column;
+  justify-content: space-around;
+}
 
 $containerWidth: 30vw;
 
@@ -45,6 +50,15 @@ $imageHeight: 80vh;
   position: relative;
   margin: 0 30px;
 }
+$imageHeightPortrait: 50vh;
+.imagePortrait {
+  height: $imageHeightPortrait;
+}
+.appImageContainerPortrait {
+  height: $imageHeightPortrait;
+  position: relative;
+  margin: 0 30px;
+}
 
 .text {
   color: $lightBlue;
@@ -52,6 +66,10 @@ $imageHeight: 80vh;
   font-weight: bold;
   text-align: center;
   font-size: 2em;
+}
+.textPortrait {
+  @extend .text;
+  font-size: 1.5em;
 }
 
 .titleContainer {
@@ -65,4 +83,8 @@ $imageHeight: 80vh;
   font-weight: bold;
   font-size: 7em;
   text-align: center;
+}
+.titlePortrait {
+  @extend .title;
+  font-size: 2em;
 }
