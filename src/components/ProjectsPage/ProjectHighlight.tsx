@@ -6,6 +6,7 @@ import testBrown from "./pictures/test-brown-phone.png";
 import TestAppBlueprint from "./TestAppBlueprint";
 import BrowserContext from "../../shared/browserContext";
 import AppleStoreLogo from "./AppleStoreLogo";
+import BluePrintShape from "./BlueprintShape";
 
 const imageVariants = {
   hidden: { opacity: 0 },
@@ -35,9 +36,10 @@ const PortraitLayout = () => {
       <motion.h1 className={styles.titlePortrait} variants={textVariants}>
         Chess Openings Trainer
       </motion.h1>
-      <motion.div variants={textVariants}>
+      <div style={{ position: "relative" }}>
         <AppleStoreLogo size={80} />
-      </motion.div>
+        <BluePrintShape color="white" shape="square" />
+      </div>
     </motion.div>
   );
 };

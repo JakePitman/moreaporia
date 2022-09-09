@@ -13,7 +13,12 @@ const AppleStoreLogo = ({ size }: Props) => {
       rel="noreferrer"
       target="_blank"
       className={styles.container}
-      style={{ padding: `${size / 10}px`, borderRadius: `${size / 10}px` }}
+      style={{
+        width: `${size * 2.5}px`,
+        height: `${size * 0.7}px`,
+        padding: `${size / 10}px`,
+        borderRadius: `${size / 10}px`,
+      }}
     >
       <BsApple color="black" size={size / 2} />
       <div className={styles.textContainer}>
