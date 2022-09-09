@@ -36,7 +36,7 @@ const PortraitLayout = () => {
         Chess Openings Trainer
       </motion.h1>
       <motion.div variants={textVariants}>
-        <AppleStoreLogo />
+        <AppleStoreLogo size={80} />
       </motion.div>
     </motion.div>
   );
@@ -83,7 +83,7 @@ const LandscapeLayout = () => {
           yourself!
         </motion.p>
         <motion.div variants={textVariants}>
-          <AppleStoreLogo />
+          <AppleStoreLogo size={100} />
         </motion.div>
       </motion.div>
     </motion.div>
