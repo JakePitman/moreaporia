@@ -26,18 +26,14 @@ const textVariantsPortrait = {
 
 type SVGTextProps = {
   children: string;
+  element: (word: string) => React.ReactNode;
 };
 
-const SVGText = ({ children }: SVGTextProps) => (
+const SVGText = ({ children, element }: SVGTextProps) => (
   <div className={styles.titleContainer}>
     {children.split(" ").map((word) => (
       <div className={styles.svgContainer} style={{ marginRight: "10px" }}>
-        <motion.h1
-          className={styles.titlePortrait}
-          variants={textVariantsPortrait}
-        >
-          {word}
-        </motion.h1>
+        {element(word)}
         <BluePrintShape color={colors.boldBlue} shape="line" />
       </div>
     ))}
@@ -47,9 +43,21 @@ const SVGText = ({ children }: SVGTextProps) => (
 const PortraitLayout = () => {
   return (
     <motion.div className={styles.pageContainerPortrait}>
-      <motion.p className={styles.textPortrait} variants={textVariantsPortrait}>
+      {/* <motion.p className={styles.textPortrait} variants={textVariantsPortrait}>
         In the spotlight
-      </motion.p>
+      </motion.p> */}
+      <SVGText
+        element={(word) => (
+          <motion.p
+            className={styles.textPortrait}
+            variants={textVariantsPortrait}
+          >
+            {word}
+          </motion.p>
+        )}
+      >
+        In the spotlight
+      </SVGText>
       <div className={styles.appImageContainerPortrait}>
         <TestAppBlueprint />
         <motion.img
@@ -59,7 +67,18 @@ const PortraitLayout = () => {
           variants={imageVariants}
         />
       </div>
-      <SVGText>Chess Openings Trainer</SVGText>
+      <SVGText
+        element={(word) => (
+          <motion.h1
+            className={styles.titlePortrait}
+            variants={textVariantsPortrait}
+          >
+            {word}
+          </motion.h1>
+        )}
+      >
+        Chess Openings Trainer
+      </SVGText>
       <div className={styles.svgContainer}>
         <motion.div variants={textVariantsPortrait}>
           <AppleStoreLogo size={80} />
