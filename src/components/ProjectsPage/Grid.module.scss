@@ -23,15 +23,15 @@
 }
 
 .rowBorder {
-  border-top: 0.5px dashed white;
-  border-bottom: 0.5px dashed white;
+  border-top: 1px dashed white;
+  border-bottom: 1px dashed white;
   opacity: 0.2;
 }
 
 $columnCount: 40;
 $columnWidth: 100vw / $columnCount;
 .columnBorder {
-  border-left: 0.5px dashed white;
-  border-right: 0.5px dashed white;
+  border-left: 1px dashed white;
+  border-right: 1px dashed white;
   opacity: 0.2;
 }
