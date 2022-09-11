@@ -24,15 +24,23 @@ const textVariantsPortrait = {
   imagesAppear: { opacity: 1 },
 };
 
-type TitleSegmentProps = {
+type SVGTextProps = {
   children: string;
 };
-const TitleSegment = ({ children }: TitleSegmentProps) => (
-  <div className={styles.svgContainer} style={{ marginRight: "10px" }}>
-    <motion.h1 className={styles.titlePortrait} variants={textVariantsPortrait}>
-      {children}
-    </motion.h1>
-    <BluePrintShape color={colors.boldBlue} shape="line" />
+
+const SVGText = ({ children }: SVGTextProps) => (
+  <div className={styles.titleContainer}>
+    {children.split(" ").map((word) => (
+      <div className={styles.svgContainer} style={{ marginRight: "10px" }}>
+        <motion.h1
+          className={styles.titlePortrait}
+          variants={textVariantsPortrait}
+        >
+          {word}
+        </motion.h1>
+        <BluePrintShape color={colors.boldBlue} shape="line" />
+      </div>
+    ))}
   </div>
 );
 
@@ -51,11 +59,7 @@ const PortraitLayout = () => {
           variants={imageVariants}
         />
       </div>
-      <div className={styles.titleContainer}>
-        <TitleSegment>Chess</TitleSegment>
-        <TitleSegment>Openings</TitleSegment>
-        <TitleSegment>Trainer</TitleSegment>
-      </div>
+      <SVGText>Chess Openings Trainer</SVGText>
       <div className={styles.svgContainer}>
         <motion.div variants={textVariantsPortrait}>
           <AppleStoreLogo size={80} />
