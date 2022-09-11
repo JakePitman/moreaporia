@@ -7,6 +7,7 @@ import TestAppBlueprint from "./TestAppBlueprint";
 import BrowserContext from "../../shared/browserContext";
 import AppleStoreLogo from "./AppleStoreLogo";
 import BluePrintShape from "./BlueprintShape";
+import colors from "../../shared/_colors.module.scss";
 
 const imageVariants = {
   hidden: { opacity: 0 },
@@ -18,10 +19,15 @@ const textVariants = {
   draw: { opacity: 1, x: 0 },
 };
 
+const textVariantsPortrait = {
+  hidden: { opacity: 0 },
+  imagesAppear: { opacity: 1 },
+};
+
 const PortraitLayout = () => {
   return (
     <motion.div className={styles.pageContainerPortrait}>
-      <motion.p className={styles.textPortrait} variants={textVariants}>
+      <motion.p className={styles.textPortrait} variants={textVariantsPortrait}>
         In the spotlight
       </motion.p>
       <div className={styles.appImageContainerPortrait}>
@@ -33,12 +39,17 @@ const PortraitLayout = () => {
           variants={imageVariants}
         />
       </div>
-      <motion.h1 className={styles.titlePortrait} variants={textVariants}>
+      <motion.h1
+        className={styles.titlePortrait}
+        variants={textVariantsPortrait}
+      >
         Chess Openings Trainer
       </motion.h1>
       <div style={{ position: "relative" }}>
-        <AppleStoreLogo size={80} />
-        <BluePrintShape color="white" shape="square" />
+        <motion.div variants={textVariantsPortrait}>
+          <AppleStoreLogo size={80} />
+        </motion.div>
+        <BluePrintShape color={colors.boldBlue} shape="square" />
       </div>
     </motion.div>
   );

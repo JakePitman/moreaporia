@@ -56,6 +56,7 @@ const BlueprintShape = ({ shape, color, fill }: Props) => {
       viewBox="0 0 100 100"
       fill="none"
       preserveAspectRatio="none"
+      style={{ position: "absolute", top: 0, bottom: 0 }}
     >
       <Shape color={color} fill={fill} />
     </motion.svg>
