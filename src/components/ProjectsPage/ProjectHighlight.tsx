@@ -39,13 +39,16 @@ const PortraitLayout = () => {
           variants={imageVariants}
         />
       </div>
-      <motion.h1
-        className={styles.titlePortrait}
-        variants={textVariantsPortrait}
-      >
-        Chess Openings Trainer
-      </motion.h1>
-      <div style={{ position: "relative" }}>
+      <div className={styles.svgContainer}>
+        <motion.h1
+          className={styles.titlePortrait}
+          variants={textVariantsPortrait}
+        >
+          Chess Openings Trainer
+        </motion.h1>
+        <BluePrintShape color={colors.boldBlue} shape="line" />
+      </div>
+      <div className={styles.svgContainer}>
         <motion.div variants={textVariantsPortrait}>
           <AppleStoreLogo size={80} />
         </motion.div>

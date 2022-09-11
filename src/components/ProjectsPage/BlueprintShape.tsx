@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 
 type Props = {
-  shape: "square" | "circle";
+  shape: "square" | "circle" | "line";
   color: string;
   fill?: string;
 };
@@ -44,13 +44,24 @@ const shapeMap = {
       fill={fill}
     />
   ),
+  line: ({ color, fill }: ShapeProps) => (
+    <motion.line
+      variants={variants}
+      id="Line"
+      y1="60"
+      x2="276"
+      y2="60"
+      stroke={color}
+      fill={fill}
+      stroke-width="15"
+    />
+  ),
 };
 
 const BlueprintShape = ({ shape, color, fill }: Props) => {
   const Shape = shapeMap[shape];
   return (
     <motion.svg
-      variants={variants}
       width="100%"
       height="100%"
       viewBox="0 0 100 100"

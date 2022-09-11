@@ -88,3 +88,7 @@ $imageHeightPortrait: 50vh;
   @extend .title;
   font-size: 2em;
 }
+
+.svgContainer {
+  position: relative;
+}
