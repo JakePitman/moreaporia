@@ -10,7 +10,7 @@ const rowVariants = {
   imagesAppear: { opacity: 0, transition: { duration: 1 } },
 };
 const columnVariants = {
-  hidden: { height: "0vw" },
+  hidden: { height: "0vh" },
   draw: { height: "100vh", transition: { duration: 0.7 } },
   imagesAppear: { opacity: 0, transition: { duration: 1 } },
 };
