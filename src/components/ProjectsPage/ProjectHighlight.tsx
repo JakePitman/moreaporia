@@ -6,6 +6,8 @@ import testBrown from "./pictures/test-brown-phone.png";
 import TestAppBlueprint from "./TestAppBlueprint";
 import BrowserContext from "../../shared/browserContext";
 import AppleStoreLogo from "./AppleStoreLogo";
+import BluePrintShape from "./BlueprintShape";
+import colors from "../../shared/_colors.module.scss";
 
 const imageVariants = {
   hidden: { opacity: 0 },
@@ -17,17 +19,71 @@ const textVariants = {
   draw: { opacity: 1, x: 0 },
 };
 
+const textVariantsPortrait = {
+  hidden: { opacity: 0 },
+  imagesAppear: { opacity: 1 },
+};
+
+type SVGTextProps = {
+  children: string;
+  element: (word: string) => React.ReactNode;
+};
+
+const SVGText = ({ children, element }: SVGTextProps) => (
+  <div className={styles.titleContainer}>
+    {children.split(" ").map((word) => (
+      <div className={styles.svgContainer} style={{ marginRight: "10px" }}>
+        {element(word)}
+        <BluePrintShape color={colors.boldBlue} shape="line" />
+      </div>
+    ))}
+  </div>
+);
+
 const PortraitLayout = () => {
   return (
-    <motion.div className={styles.pageContainer}>
-      <div className={styles.appImageContainer}>
+    <motion.div className={styles.pageContainerPortrait}>
+      {/* <motion.p className={styles.textPortrait} variants={textVariantsPortrait}>
+        In the spotlight
+      </motion.p> */}
+      <SVGText
+        element={(word) => (
+          <motion.p
+            className={styles.textPortrait}
+            variants={textVariantsPortrait}
+          >
+            {word}
+          </motion.p>
+        )}
+      >
+        In the spotlight
+      </SVGText>
+      <div className={styles.appImageContainerPortrait}>
         <TestAppBlueprint />
         <motion.img
           src={testBrown}
           alt=""
-          className={styles.image}
+          className={styles.imagePortrait}
           variants={imageVariants}
         />
+      </div>
+      <SVGText
+        element={(word) => (
+          <motion.h1
+            className={styles.titlePortrait}
+            variants={textVariantsPortrait}
+          >
+            {word}
+          </motion.h1>
+        )}
+      >
+        Chess Openings Trainer
+      </SVGText>
+      <div className={styles.svgContainer}>
+        <motion.div variants={textVariantsPortrait}>
+          <AppleStoreLogo size={80} />
+        </motion.div>
+        <BluePrintShape color={colors.boldBlue} shape="square" />
       </div>
     </motion.div>
   );
@@ -74,7 +130,7 @@ const LandscapeLayout = () => {
           yourself!
         </motion.p>
         <motion.div variants={textVariants}>
-          <AppleStoreLogo />
+          <AppleStoreLogo size={100} />
         </motion.div>
       </motion.div>
     </motion.div>
