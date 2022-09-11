@@ -24,6 +24,18 @@ const textVariantsPortrait = {
   imagesAppear: { opacity: 1 },
 };
 
+type TitleSegmentProps = {
+  children: string;
+};
+const TitleSegment = ({ children }: TitleSegmentProps) => (
+  <div className={styles.svgContainer} style={{ marginRight: "10px" }}>
+    <motion.h1 className={styles.titlePortrait} variants={textVariantsPortrait}>
+      {children}
+    </motion.h1>
+    <BluePrintShape color={colors.boldBlue} shape="line" />
+  </div>
+);
+
 const PortraitLayout = () => {
   return (
     <motion.div className={styles.pageContainerPortrait}>
@@ -39,14 +51,10 @@ const PortraitLayout = () => {
           variants={imageVariants}
         />
       </div>
-      <div className={styles.svgContainer}>
-        <motion.h1
-          className={styles.titlePortrait}
-          variants={textVariantsPortrait}
-        >
-          Chess Openings Trainer
-        </motion.h1>
-        <BluePrintShape color={colors.boldBlue} shape="line" />
+      <div className={styles.titleContainer}>
+        <TitleSegment>Chess</TitleSegment>
+        <TitleSegment>Openings</TitleSegment>
+        <TitleSegment>Trainer</TitleSegment>
       </div>
       <div className={styles.svgContainer}>
         <motion.div variants={textVariantsPortrait}>
