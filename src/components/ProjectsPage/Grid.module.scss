@@ -12,6 +12,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  width: 100vw;
 }
 
 .columns {
@@ -20,6 +21,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  height: 100vh;
 }
 
 .rowBorder {

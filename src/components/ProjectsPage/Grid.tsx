@@ -5,13 +5,13 @@ import useWindowDimensions from "../../shared/useWindowDimensions";
 import styles from "./Grid.module.scss";
 
 const rowVariants = {
-  hidden: { width: "0vw" },
-  draw: { width: "100vw", transition: { duration: 0.7 } },
+  hidden: { scaleX: 0 },
+  draw: { scaleX: 1, transition: { duration: 0.7 } },
   imagesAppear: { opacity: 0, transition: { duration: 1 } },
 };
 const columnVariants = {
-  hidden: { height: "0vh" },
-  draw: { height: "100vh", transition: { duration: 0.7 } },
+  hidden: { scaleY: 0 },
+  draw: { scaleY: 1, transition: { duration: 0.7 } },
   imagesAppear: { opacity: 0, transition: { duration: 1 } },
 };
 
