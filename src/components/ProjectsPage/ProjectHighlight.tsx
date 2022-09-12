@@ -32,7 +32,7 @@ type SVGTextProps = {
 const SVGText = ({ children, element }: SVGTextProps) => (
   <div className={styles.titleContainer}>
     {children.split(" ").map((word) => (
-      <div className={styles.svgContainer} style={{ marginRight: "10px" }}>
+      <div className={styles.svgContainer} style={{ margin: "0 5px" }}>
         {element(word)}
         <BluePrintShape color={colors.boldBlue} shape="line" />
       </div>
