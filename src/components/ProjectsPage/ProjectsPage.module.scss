@@ -4,7 +4,16 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding-top: $topNavHeightLandscape;
   overflow: hidden;
   position: relative;
+}
+
+.pageContainerLandscape {
+  @extend .pageContainer;
+  padding-top: $topNavHeightLandscape;
+}
+
+.pageContainerPortrait {
+  @extend .pageContainer;
+  padding-top: $topNavHeightPortrait;
 }
