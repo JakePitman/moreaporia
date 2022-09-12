@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { motion } from "framer-motion";
-import { FaGuitar, FaChess, FaTerminal } from "react-icons/fa";
+import { FaGuitar, FaSwimmer, FaTerminal } from "react-icons/fa";
 
 import FlipCard from "./FlipCard";
 import {
@@ -27,12 +27,12 @@ const colorGradients: [string, string][] = [
 ];
 
 const flipCardDataLandscape = [
-  { title: "Chess", icon: <FaChess />, rotate: -15, tagRotation: 15 },
+  { title: "Chess", icon: <FaSwimmer />, rotate: -15, tagRotation: 15 },
   { title: "Guitar", icon: <FaGuitar />, rotate: -3, tagRotation: 5 },
   { title: "Code", icon: <FaTerminal />, rotate: 13, tagRotation: -6 },
 ];
 const flipCardDataPortrait = [
-  { title: "Chess", icon: <FaChess />, rotate: 8 },
+  { title: "Chess", icon: <FaSwimmer />, rotate: 8 },
   { title: "Guitar", icon: <FaGuitar />, rotate: 2 },
   { title: "Code", icon: <FaTerminal />, rotate: -10 },
 ];
