@@ -20,7 +20,7 @@ const AppleStoreLogo = ({ size }: Props) => {
         borderRadius: `${size / 10}px`,
       }}
     >
-      <BsApple color="black" size={size / 2} />
+      <BsApple color="white" size={size / 2} />
       <div className={styles.textContainer}>
         <p style={{ fontSize: `${size / 5}px` }}>Download on the</p>
         <p style={{ fontSize: `${size / 3}px` }}>App Store</p>

@@ -1,5 +1,6 @@
 .container {
-  background: white;
+  outline: 3px solid white;
+  background: black;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -9,7 +10,7 @@
 }
 
 .textContainer {
-  color: black;
+  color: white;
   margin-left: 10px;
 }
 
