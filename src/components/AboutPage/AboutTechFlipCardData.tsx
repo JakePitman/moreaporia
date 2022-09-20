@@ -1,4 +1,3 @@
-import styles from "./AboutWorkContent.module.scss";
 import colors from "../../shared/_colors.module.scss";
 import {
   FaNode,

@@ -11,14 +11,8 @@ import colors from "../../shared/_colors.module.scss";
 import styles from "./AboutHobbies.module.scss";
 import BrowserContext from "../../shared/browserContext";
 
-const {
-  gradient1,
-  gradient2,
-  gradient3,
-  gradient4,
-  gradient5,
-  primaryBackground,
-} = colors;
+const { gradient1, gradient2, gradient4, gradient5, primaryBackground } =
+  colors;
 
 const colorGradients: [string, string][] = [
   [gradient1, gradient2],
