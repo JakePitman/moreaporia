@@ -21,7 +21,7 @@ const ScrollIndicator = ({ absolute = false }: Props) => {
         duration: 1,
       }}
     >
-      <BsChevronDown size={50} color={colors.greyBlue} />
+      <BsChevronDown size={40} color={colors.greyBlue} />
     </motion.div>
   );
 };
