@@ -5,7 +5,11 @@ import { BsChevronDown } from "react-icons/bs";
 import styles from "./ScrollIndicator.module.scss";
 import colors from "../../shared/_colors.module.scss";
 
-const ScrollIndicator = () => {
+type Props = {
+  absolute?: boolean;
+};
+
+const ScrollIndicator = ({ absolute = false }: Props) => {
   return (
     <motion.div
       className={styles.container}
