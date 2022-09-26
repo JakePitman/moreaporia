@@ -3,6 +3,7 @@ import { motion, useAnimation } from "framer-motion";
 
 import BrowserContext from "../../shared/browserContext";
 import ProjectHighlight from "./ProjectHighlight";
+import ProjectsReel from "./ProjectsReel";
 import styles from "./ProjectsPage.module.scss";
 import Grid from "./Grid";
 
@@ -27,6 +28,7 @@ const ProjectsPage = () => {
     >
       <Grid />
       <ProjectHighlight />
+      <ProjectsReel />
     </motion.div>
   );
 };
