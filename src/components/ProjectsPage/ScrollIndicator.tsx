@@ -12,7 +12,7 @@ type Props = {
 const ScrollIndicator = ({ absolute = false }: Props) => {
   return (
     <motion.div
-      className={styles.container}
+      className={absolute ? styles.containerAbsolute : styles.containerRelative}
       animate={{ opacity: 1 }}
       transition={{
         delay: 5,
