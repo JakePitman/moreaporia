@@ -16,7 +16,7 @@ const Project = ({ title, year, children, tools, links }: Props) => {
   return (
     <div className={styles.container}>
       <div className={styles.imageContainer}></div>
-      <div className={styles.rightContainer}>
+      <div className={styles.infoContainer}>
         <div className={styles.rowGroup}>
           <h2 className={styles.title}>{title}</h2>
           <p className={styles.subtext} style={{ color: colors.lightBlue }}>
