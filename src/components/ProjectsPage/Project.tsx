@@ -2,32 +2,62 @@ import React from "react";
 
 import styles from "./Project.module.scss";
 import colors from "../../shared/_colors.module.scss";
+import { IconType } from "react-icons";
 
-const Project = () => {
+type Props = {
+  title: string;
+  year: string;
+  children: React.ReactNode;
+  tools: { name: string; href: string }[];
+  links: { Icon: IconType; href: string }[];
+};
+
+const Project = ({ title, year, children, tools, links }: Props) => {
   return (
     <div className={styles.container}>
       <div className={styles.imageContainer}></div>
       <div className={styles.rightContainer}>
         <div className={styles.rowGroup}>
-          <h2 className={styles.title}>Title goes here</h2>
+          <h2 className={styles.title}>{title}</h2>
           <p className={styles.subtext} style={{ color: colors.lightBlue }}>
-            22/22/2022
+            {year}
           </p>
         </div>
-        <div className={styles.bodyTextContainer}>
-          <p className={styles.bodyText}>
-            This project was lorem ipsum oogum boogum. Tutant meenage neetle
-            teetles. Indian yellow is the best colour nnnnno other color will
-            ever beat it buddyyyyyyyy
-          </p>
-          <p className={styles.bodyText}>
-            I must create a system, or be controlled by another man's. I will
-            not reason and compare; my business is to create.
-          </p>
-        </div>
+        <div className={styles.bodyTextContainer}>{children}</div>
         <div className={styles.rowGroup}>
-          <p className={styles.subtext}>React · Typescript · Scss</p>
-          <p className={styles.subtext}>framer-motion · lodash</p>
+          <p className={`${styles.subtext} ${styles.tools}`}>
+            {tools.map(({ name, href }, i) => {
+              return (
+                <>
+                  <a
+                    className={styles.tool}
+                    href={href}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    {name}
+                  </a>
+                  {i < tools.length - 1 ? (
+                    <p className={styles.toolSeparator}>·</p>
+                  ) : null}
+                </>
+              );
+            })}
+          </p>
+          <p className={styles.subtext}>
+            {links.map(({ Icon, href }, i) => {
+              return (
+                <>
+                  <a href={href} target="_blank" rel="noreferrer">
+                    <Icon color="yellow" size={30} />
+                  </a>
+                  {i < links.length - 1 ? (
+                    <p className={styles.toolSeparator}>·</p>
+                  ) : null}
+                </>
+              );
+            })}
+          </p>
         </div>
       </div>
     </div>

@@ -6,6 +6,7 @@ $containerHeight: 45vh;
   border: 1px solid pink;
   height: $containerHeight;
   display: flex;
+  margin: 50px 0;
 }
 
 .imageContainer {
@@ -49,8 +50,19 @@ $containerHeight: 45vh;
   padding: 15px;
 }
 
-.bodyText {
-  color: $primaryBackground;
-  font-family: "Roboto Mono";
-  font-size: 1.2em;
+.tools {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.tool {
+  color: $offWhite;
+  text-decoration: none;
+}
+
+.toolSeparator {
+  display: inline;
+  color: $greyBlue;
+  font-size: 2rem;
 }
