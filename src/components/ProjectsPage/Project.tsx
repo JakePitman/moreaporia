@@ -9,6 +9,10 @@ const infoVariants = {
   hidden: { opacity: 0, x: 100 },
   drawSVG: { opacity: 1, x: 0 },
 };
+const imageVariants = {
+  hidden: { opacity: 0 },
+  renderImage: { opacity: 1 },
+};
 
 type Props = {
   // Create images as size width: 960px, height: 800px
@@ -46,7 +50,12 @@ const Project = ({
       transition={{ staggerChildren: 0.1 }}
     >
       <div className={styles.imageContainer}>
-        <img src={imgSrc} className={styles.image} alt={imgAlt} />
+        <motion.img
+          src={imgSrc}
+          className={styles.image}
+          alt={imgAlt}
+          variants={imageVariants}
+        />
         <Blueprint />
       </div>
       <motion.div className={styles.infoContainer}>
