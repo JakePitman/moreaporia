@@ -28,8 +28,7 @@ const ProjectsReel = () => {
       >
         <p className={styles.bodyText}>
           This project was lorem ipsum oogum boogum. Tutant meenage neetle
-          teetles. Indian yellow is the best colour nnnnno other color will ever
-          beat it buddyyyyyyyy
+          teetles. Indian yellow is the best colour.
         </p>
         <p className={styles.bodyText}>
           I must create a system, or be controlled by another man's. I will not
