@@ -1,8 +1,14 @@
 import React from "react";
 
+import { motion, useAnimation } from "framer-motion";
 import styles from "./Project.module.scss";
 import colors from "../../shared/_colors.module.scss";
 import { IconType } from "react-icons";
+
+const infoVariants = {
+  hidden: { opacity: 0, x: 100 },
+  drawSVG: { opacity: 1, x: 0 },
+};
 
 type Props = {
   // Create images as size width: 960px, height: 800px
@@ -26,22 +32,47 @@ const Project = ({
   tools,
   links,
 }: Props) => {
+  const controls = useAnimation();
   return (
-    <div className={styles.container}>
+    <motion.div
+      className={styles.container}
+      animate={controls}
+      onViewportEnter={async () => {
+        await controls.start("drawSVG");
+        await controls.start("renderImage");
+      }}
+      viewport={{ once: true, margin: "-50%" }}
+      initial="hidden"
+      transition={{ staggerChildren: 0.1 }}
+    >
       <div className={styles.imageContainer}>
         <img src={imgSrc} className={styles.image} alt={imgAlt} />
         <Blueprint />
       </div>
-      <div className={styles.infoContainer}>
+      <motion.div className={styles.infoContainer}>
         <div className={styles.rowGroup}>
-          <h2 className={styles.title}>{title}</h2>
-          <p className={styles.subtext} style={{ color: colors.lightBlue }}>
+          <motion.h2 className={styles.title} variants={infoVariants}>
+            {title}
+          </motion.h2>
+          <motion.p
+            className={styles.subtext}
+            style={{ color: colors.lightBlue }}
+            variants={infoVariants}
+          >
             {year}
-          </p>
+          </motion.p>
         </div>
-        <div className={styles.bodyTextContainer}>{children}</div>
+        <motion.div
+          className={styles.bodyTextContainer}
+          variants={infoVariants}
+        >
+          {children}
+        </motion.div>
         <div className={styles.rowGroup}>
-          <p className={`${styles.subtext} ${styles.tools}`}>
+          <motion.p
+            className={`${styles.subtext} ${styles.tools}`}
+            variants={infoVariants}
+          >
             {tools.map(({ name, href }, i) => {
               return (
                 <>
@@ -59,8 +90,8 @@ const Project = ({
                 </>
               );
             })}
-          </p>
-          <p className={styles.subtext}>
+          </motion.p>
+          <motion.p className={styles.subtext} variants={infoVariants}>
             {links.map(({ Icon, href }, i) => {
               return (
                 <>
@@ -73,10 +104,10 @@ const Project = ({
                 </>
               );
             })}
-          </p>
+          </motion.p>
         </div>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };
 
