@@ -7,7 +7,11 @@ import { IconType } from "react-icons";
 
 const infoVariants = {
   hidden: { opacity: 0, x: 100 },
-  drawSVG: { opacity: 1, x: 0 },
+  drawSVG: (custom: number = 0) => ({
+    opacity: 1,
+    x: 0,
+    transition: { delay: custom },
+  }),
 };
 const imageVariants = {
   hidden: { opacity: 0 },
@@ -47,7 +51,6 @@ const Project = ({
       }}
       viewport={{ once: true, margin: "-50%" }}
       initial="hidden"
-      transition={{ staggerChildren: 0.1 }}
     >
       <div className={styles.imageContainer}>
         <motion.img
@@ -60,12 +63,17 @@ const Project = ({
       </div>
       <motion.div className={styles.infoContainer}>
         <div className={styles.rowGroup}>
-          <motion.h2 className={styles.title} variants={infoVariants}>
+          <motion.h2
+            className={styles.title}
+            custom={0}
+            variants={infoVariants}
+          >
             {title}
           </motion.h2>
           <motion.p
             className={styles.subtext}
             style={{ color: colors.lightBlue }}
+            custom={0.2}
             variants={infoVariants}
           >
             {year}
@@ -73,6 +81,7 @@ const Project = ({
         </div>
         <motion.div
           className={styles.bodyTextContainer}
+          custom={0.4}
           variants={infoVariants}
         >
           {children}
@@ -80,6 +89,7 @@ const Project = ({
         <div className={styles.rowGroup}>
           <motion.p
             className={`${styles.subtext} ${styles.tools}`}
+            custom={0.6}
             variants={infoVariants}
           >
             {tools.map(({ name, href }, i) => {
@@ -100,7 +110,11 @@ const Project = ({
               );
             })}
           </motion.p>
-          <motion.p className={styles.subtext} variants={infoVariants}>
+          <motion.p
+            className={styles.subtext}
+            custom={1}
+            variants={infoVariants}
+          >
             {links.map(({ Icon, href }, i) => {
               return (
                 <>
