@@ -5,6 +5,8 @@ import colors from "../../shared/_colors.module.scss";
 import { IconType } from "react-icons";
 
 type Props = {
+  imgSrc: string;
+  imgAlt: string;
   title: string;
   year: string;
   children: React.ReactNode;
@@ -12,10 +14,20 @@ type Props = {
   links: { Icon: IconType; href: string }[];
 };
 
-const Project = ({ title, year, children, tools, links }: Props) => {
+const Project = ({
+  imgSrc,
+  imgAlt,
+  title,
+  year,
+  children,
+  tools,
+  links,
+}: Props) => {
   return (
     <div className={styles.container}>
-      <div className={styles.imageContainer}></div>
+      <div className={styles.imageContainer}>
+        <img src={imgSrc} className={styles.image} alt={imgAlt} />
+      </div>
       <div className={styles.infoContainer}>
         <div className={styles.rowGroup}>
           <h2 className={styles.title}>{title}</h2>

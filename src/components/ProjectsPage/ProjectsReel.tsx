@@ -1,14 +1,17 @@
 import React from "react";
 import { motion } from "framer-motion";
-import styles from "./ProjectsReel.module.scss";
 import { FiGithub } from "react-icons/fi";
 
 import Project from "./Project";
+import styles from "./ProjectsReel.module.scss";
+import logicCalculatorImg from "./pictures/logic-calc.png";
 
 const ProjectsReel = () => {
   return (
     <motion.div className={styles.pageContainer}>
       <Project
+        imgSrc={logicCalculatorImg}
+        imgAlt={"Logic calculator"}
         title="Logic Calculator"
         year="2020"
         tools={[
