@@ -16,13 +16,18 @@ const ProjectsReel = () => {
         year="2020"
         tools={[
           { name: "Node", href: "https://nodejs.org/en/" },
+          { name: "TS", href: "https://www.typescriptlang.org/" },
           { name: "Inquirer", href: "https://www.npmjs.com/package/inquirer" },
+          {
+            name: "tty-table",
+            href: "https://www.npmjs.com/package/tty-table",
+          },
+          {
+            name: "figlet",
+            href: "https://www.npmjs.com/package/figlet",
+          },
         ]}
         links={[
-          {
-            Icon: FiGithub,
-            href: "https://github.com/JakePitman/logic-calculator",
-          },
           {
             Icon: FiGithub,
             href: "https://github.com/JakePitman/logic-calculator",
@@ -30,12 +35,12 @@ const ProjectsReel = () => {
         ]}
       >
         <p className={styles.bodyText}>
-          This project was lorem ipsum oogum boogum. Tutant meenage neetle
-          teetles. Indian yellow is the best colour.
+          Calculates all models of a given logical proposition or argument,
+          demonstrating whether it's valid or not.
         </p>
         <p className={styles.bodyText}>
-          I must create a system, or be controlled by another man's. I will not
-          reason and compare; my business is to create.
+          Teaching a computer how something works demands perfect understanding
+          of the subject. I learned a lot by making this.
         </p>
       </Project>
     </motion.div>

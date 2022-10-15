@@ -5,6 +5,7 @@ import colors from "../../shared/_colors.module.scss";
 import { IconType } from "react-icons";
 
 type Props = {
+  // Create images as size width: 960px, height: 800px
   imgSrc: string;
   imgAlt: string;
   title: string;

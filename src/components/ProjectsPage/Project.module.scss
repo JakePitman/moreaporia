@@ -3,14 +3,12 @@
 $containerHeight: 45vh;
 
 .container {
-  border: 1px solid pink;
   height: $containerHeight;
   display: flex;
   margin: 50px 0;
 }
 
 .imageContainer {
-  border: 1px solid white;
   width: calc($containerHeight * 1.2);
   height: 100%;
   display: flex;
@@ -22,7 +20,6 @@ $containerHeight: 45vh;
 }
 
 .infoContainer {
-  border: 1px solid yellow;
   width: calc($containerHeight * 1.2);
   height: 100%;
   display: flex;
@@ -46,7 +43,7 @@ $containerHeight: 45vh;
 
 .bodyTextContainer {
   background: linear-gradient(45deg, $gradient2, $gradient3);
-  width: 105%;
+  width: 102%;
   text-align: right;
   flex: 0.8;
   border-radius: 5px;
