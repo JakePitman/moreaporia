@@ -52,7 +52,7 @@ const Project = ({
         await controls.start("renderImage");
         setHasAnimated(true);
       }}
-      viewport={{ once: true, margin: "-50%" }}
+      viewport={{ once: true, margin: "-30%" }}
       initial="hidden"
     >
       <div className={styles.imageContainer}>
