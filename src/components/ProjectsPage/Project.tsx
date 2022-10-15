@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import { motion, useAnimation } from "framer-motion";
 import styles from "./Project.module.scss";
@@ -40,14 +40,17 @@ const Project = ({
   tools,
   links,
 }: Props) => {
+  const [hasAnimated, setHasAnimated] = useState(false);
   const controls = useAnimation();
   return (
     <motion.div
       className={styles.container}
       animate={controls}
       onViewportEnter={async () => {
+        if (hasAnimated) return;
         await controls.start("drawSVG");
         await controls.start("renderImage");
+        setHasAnimated(true);
       }}
       viewport={{ once: true, margin: "-50%" }}
       initial="hidden"
