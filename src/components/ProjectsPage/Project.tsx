@@ -8,6 +8,7 @@ type Props = {
   // Create images as size width: 960px, height: 800px
   imgSrc: string;
   imgAlt: string;
+  Blueprint: () => JSX.Element;
   title: string;
   year: string;
   children: React.ReactNode;
@@ -18,6 +19,7 @@ type Props = {
 const Project = ({
   imgSrc,
   imgAlt,
+  Blueprint,
   title,
   year,
   children,
@@ -28,6 +30,7 @@ const Project = ({
     <div className={styles.container}>
       <div className={styles.imageContainer}>
         <img src={imgSrc} className={styles.image} alt={imgAlt} />
+        <Blueprint />
       </div>
       <div className={styles.infoContainer}>
         <div className={styles.rowGroup}>

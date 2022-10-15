@@ -4,7 +4,8 @@ import { FiGithub } from "react-icons/fi";
 
 import Project from "./Project";
 import styles from "./ProjectsReel.module.scss";
-import logicCalculatorImg from "./pictures/logic-calc.png";
+import logicCalculatorImg from "./pictures/logic-calc/image.png";
+import LogicCalculatorBluePrint from "./pictures/logic-calc/Blueprint";
 
 const ProjectsReel = () => {
   return (
@@ -12,12 +13,16 @@ const ProjectsReel = () => {
       <Project
         imgSrc={logicCalculatorImg}
         imgAlt={"Logic calculator"}
+        Blueprint={LogicCalculatorBluePrint}
         title="Logic Calculator"
         year="2020"
         tools={[
           { name: "Node", href: "https://nodejs.org/en/" },
           { name: "TS", href: "https://www.typescriptlang.org/" },
-          { name: "Inquirer", href: "https://www.npmjs.com/package/inquirer" },
+          {
+            name: "Inquirer",
+            href: "https://github.com/SBoudrias/Inquirer.js",
+          },
           {
             name: "tty-table",
             href: "https://www.npmjs.com/package/tty-table",
