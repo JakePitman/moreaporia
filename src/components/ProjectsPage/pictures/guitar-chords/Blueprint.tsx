@@ -18,12 +18,12 @@ const AppBlueprint = () => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={styles.svg}
-      style={{ left: "5px", top: "1px" }}
+      // style={{ left: "5px", top: "1px" }}
     >
       <motion.rect
         variants={variants}
-        x="1.5"
-        y="1.5"
+        x="10.5"
+        y="4.5"
         width="386"
         height="786"
         rx="48.5"
@@ -32,8 +32,8 @@ const AppBlueprint = () => {
       />
       <motion.rect
         variants={variants}
-        x="557.5"
-        y="1.5"
+        x="566.5"
+        y="4.5"
         width="386"
         height="786"
         rx="48.5"
@@ -42,94 +42,94 @@ const AppBlueprint = () => {
       />
       <motion.line
         variants={variants}
-        x1="3"
-        y1="747.5"
-        x2="386"
-        y2="747.5"
+        x1="12"
+        y1="750.5"
+        x2="395"
+        y2="750.5"
         stroke={colors.boldBlue}
         stroke-width="3"
       />
       <motion.line
         variants={variants}
-        x1="559"
-        y1="747.5"
-        x2="942"
-        y2="747.5"
+        x1="568"
+        y1="750.5"
+        x2="951"
+        y2="750.5"
         stroke={colors.boldBlue}
         stroke-width="3"
       />
       <motion.line
         variants={variants}
-        x1="125.5"
-        y1="749"
-        x2="125.5"
-        y2="789"
+        x1="134.5"
+        y1="752"
+        x2="134.5"
+        y2="792"
         stroke={colors.boldBlue}
         stroke-width="3"
       />
       <motion.line
         variants={variants}
-        x1="681.5"
-        y1="749"
-        x2="681.5"
-        y2="789"
+        x1="690.5"
+        y1="752"
+        x2="690.5"
+        y2="792"
         stroke={colors.boldBlue}
         stroke-width="3"
       />
       <motion.line
         variants={variants}
-        x1="265.5"
-        y1="747"
-        x2="265.5"
-        y2="787"
+        x1="274.5"
+        y1="750"
+        x2="274.5"
+        y2="790"
         stroke={colors.boldBlue}
         stroke-width="3"
       />
       <motion.line
         variants={variants}
-        x1="821.5"
-        y1="747"
-        x2="821.5"
-        y2="787"
+        x1="830.5"
+        y1="750"
+        x2="830.5"
+        y2="790"
         stroke={colors.boldBlue}
         stroke-width="3"
       />
       <motion.circle
         variants={variants}
-        cx="54.5"
-        cy="767.5"
+        cx="63.5"
+        cy="770.5"
         r="14"
         stroke={colors.boldBlue}
         stroke-width="3"
       />
       <motion.circle
         variants={variants}
-        cx="615.5"
-        cy="767.5"
+        cx="624.5"
+        cy="770.5"
         r="14"
         stroke={colors.boldBlue}
         stroke-width="3"
       />
       <motion.circle
         variants={variants}
-        cx="333.5"
-        cy="767.5"
+        cx="342.5"
+        cy="770.5"
         r="14"
         stroke={colors.boldBlue}
         stroke-width="3"
       />
       <motion.circle
         variants={variants}
-        cx="889.5"
-        cy="767.5"
+        cx="898.5"
+        cy="770.5"
         r="14"
         stroke={colors.boldBlue}
         stroke-width="3"
       />
       <motion.rect
         variants={variants}
-        x="179.5"
-        y="753.5"
+        x="188.5"
+        y="756.5"
         width="28"
         height="28"
         stroke={colors.boldBlue}
@@ -137,8 +137,8 @@ const AppBlueprint = () => {
       />
       <motion.rect
         variants={variants}
-        x="739.5"
-        y="753.5"
+        x="748.5"
+        y="756.5"
         width="28"
         height="28"
         stroke={colors.boldBlue}
@@ -146,8 +146,8 @@ const AppBlueprint = () => {
       />
       <motion.rect
         variants={variants}
-        x="609.5"
-        y="614.5"
+        x="618.5"
+        y="617.5"
         width="84"
         height="66"
         stroke={colors.boldBlue}
@@ -155,8 +155,8 @@ const AppBlueprint = () => {
       />
       <motion.rect
         variants={variants}
-        x="835.5"
-        y="614.5"
+        x="844.5"
+        y="617.5"
         width="46"
         height="66"
         stroke={colors.boldBlue}
@@ -164,8 +164,8 @@ const AppBlueprint = () => {
       />
       <motion.rect
         variants={variants}
-        x="708.5"
-        y="706.5"
+        x="717.5"
+        y="709.5"
         width="15"
         height="15"
         stroke={colors.boldBlue}
@@ -173,8 +173,8 @@ const AppBlueprint = () => {
       />
       <motion.rect
         variants={variants}
-        x="734.5"
-        y="706.5"
+        x="743.5"
+        y="709.5"
         width="15"
         height="15"
         stroke={colors.boldBlue}
@@ -182,8 +182,8 @@ const AppBlueprint = () => {
       />
       <motion.rect
         variants={variants}
-        x="760.5"
-        y="706.5"
+        x="769.5"
+        y="709.5"
         width="15"
         height="15"
         stroke={colors.boldBlue}
@@ -191,8 +191,8 @@ const AppBlueprint = () => {
       />
       <motion.rect
         variants={variants}
-        x="786.5"
-        y="706.5"
+        x="795.5"
+        y="709.5"
         width="15"
         height="15"
         stroke={colors.boldBlue}
@@ -200,886 +200,886 @@ const AppBlueprint = () => {
       />
       <motion.rect
         variants={variants}
-        x="20.5"
-        y="43.5"
+        x="29.5"
+        y="46.5"
         width="90"
         height="90"
         stroke={colors.boldBlue}
       />
       <motion.rect
         variants={variants}
-        x="149.5"
-        y="43.5"
+        x="158.5"
+        y="46.5"
         width="90"
         height="90"
         stroke={colors.boldBlue}
       />
       <motion.rect
         variants={variants}
-        x="278.5"
-        y="43.5"
+        x="287.5"
+        y="46.5"
         width="90"
         height="90"
         stroke={colors.boldBlue}
       />
       <motion.rect
         variants={variants}
-        x="20.5"
-        y="247.5"
+        x="29.5"
+        y="250.5"
         width="90"
         height="90"
         stroke={colors.boldBlue}
       />
       <motion.rect
         variants={variants}
-        x="149.5"
-        y="247.5"
+        x="158.5"
+        y="250.5"
         width="90"
         height="90"
         stroke={colors.boldBlue}
       />
       <motion.rect
         variants={variants}
-        x="278.5"
-        y="247.5"
+        x="287.5"
+        y="250.5"
         width="90"
         height="90"
         stroke={colors.boldBlue}
       />
       <motion.rect
         variants={variants}
-        x="20.5"
-        y="451.5"
+        x="29.5"
+        y="454.5"
         width="90"
         height="90"
         stroke={colors.boldBlue}
       />
       <motion.rect
         variants={variants}
-        x="149.5"
-        y="451.5"
+        x="158.5"
+        y="454.5"
         width="90"
         height="90"
         stroke={colors.boldBlue}
       />
       <motion.rect
         variants={variants}
-        x="278.5"
-        y="451.5"
+        x="287.5"
+        y="454.5"
         width="90"
         height="90"
         stroke={colors.boldBlue}
       />
       <motion.rect
         variants={variants}
-        x="20.5"
-        y="655.5"
+        x="29.5"
+        y="658.5"
         width="90"
         height="90"
         stroke={colors.boldBlue}
       />
       <motion.rect
         variants={variants}
-        x="149.5"
-        y="655.5"
+        x="158.5"
+        y="658.5"
         width="90"
         height="90"
         stroke={colors.boldBlue}
       />
       <motion.rect
         variants={variants}
-        x="278.5"
-        y="655.5"
+        x="287.5"
+        y="658.5"
         width="90"
         height="90"
         stroke={colors.boldBlue}
       />
       <motion.rect
         variants={variants}
-        x="37.5"
-        y="43.5"
+        x="46.5"
+        y="46.5"
         width="18"
         height="90"
         stroke={colors.boldBlue}
       />
       <motion.rect
         variants={variants}
-        x="166.5"
-        y="43.5"
+        x="175.5"
+        y="46.5"
         width="18"
         height="90"
         stroke={colors.boldBlue}
       />
       <motion.rect
         variants={variants}
-        x="295.5"
-        y="43.5"
+        x="304.5"
+        y="46.5"
         width="18"
         height="90"
         stroke={colors.boldBlue}
       />
       <motion.rect
         variants={variants}
-        x="37.5"
-        y="247.5"
+        x="46.5"
+        y="250.5"
         width="18"
         height="90"
         stroke={colors.boldBlue}
       />
       <motion.rect
         variants={variants}
-        x="166.5"
-        y="247.5"
+        x="175.5"
+        y="250.5"
         width="18"
         height="90"
         stroke={colors.boldBlue}
       />
       <motion.rect
         variants={variants}
-        x="295.5"
-        y="247.5"
+        x="304.5"
+        y="250.5"
         width="18"
         height="90"
         stroke={colors.boldBlue}
       />
       <motion.rect
         variants={variants}
-        x="37.5"
-        y="451.5"
+        x="46.5"
+        y="454.5"
         width="18"
         height="90"
         stroke={colors.boldBlue}
       />
       <motion.rect
         variants={variants}
-        x="166.5"
-        y="451.5"
+        x="175.5"
+        y="454.5"
         width="18"
         height="90"
         stroke={colors.boldBlue}
       />
       <motion.rect
         variants={variants}
-        x="295.5"
-        y="451.5"
+        x="304.5"
+        y="454.5"
         width="18"
         height="90"
         stroke={colors.boldBlue}
       />
       <motion.rect
         variants={variants}
-        x="37.5"
-        y="655.5"
+        x="46.5"
+        y="658.5"
         width="18"
         height="90"
         stroke={colors.boldBlue}
       />
       <motion.rect
         variants={variants}
-        x="74.5"
-        y="43.5"
+        x="83.5"
+        y="46.5"
         width="18"
         height="90"
         stroke={colors.boldBlue}
       />
       <motion.rect
         variants={variants}
-        x="203.5"
-        y="43.5"
+        x="212.5"
+        y="46.5"
         width="18"
         height="90"
         stroke={colors.boldBlue}
       />
       <motion.rect
         variants={variants}
-        x="332.5"
-        y="43.5"
+        x="341.5"
+        y="46.5"
         width="18"
         height="90"
         stroke={colors.boldBlue}
       />
       <motion.rect
         variants={variants}
-        x="74.5"
-        y="247.5"
+        x="83.5"
+        y="250.5"
         width="18"
         height="90"
         stroke={colors.boldBlue}
       />
       <motion.rect
         variants={variants}
-        x="203.5"
-        y="247.5"
+        x="212.5"
+        y="250.5"
         width="18"
         height="90"
         stroke={colors.boldBlue}
       />
       <motion.rect
         variants={variants}
-        x="332.5"
-        y="247.5"
+        x="341.5"
+        y="250.5"
         width="18"
         height="90"
         stroke={colors.boldBlue}
       />
       <motion.rect
         variants={variants}
-        x="74.5"
-        y="451.5"
+        x="83.5"
+        y="454.5"
         width="18"
         height="90"
         stroke={colors.boldBlue}
       />
       <motion.rect
         variants={variants}
-        x="203.5"
-        y="451.5"
+        x="212.5"
+        y="454.5"
         width="18"
         height="90"
         stroke={colors.boldBlue}
       />
       <motion.rect
         variants={variants}
-        x="332.5"
-        y="451.5"
+        x="341.5"
+        y="454.5"
         width="18"
         height="90"
         stroke={colors.boldBlue}
       />
       <motion.rect
         variants={variants}
-        x="74.5"
-        y="655.5"
+        x="83.5"
+        y="658.5"
         width="18"
         height="90"
         stroke={colors.boldBlue}
       />
       <motion.rect
         variants={variants}
-        x="166.5"
-        y="655.5"
+        x="175.5"
+        y="658.5"
         width="18"
         height="90"
         stroke={colors.boldBlue}
       />
       <motion.rect
         variants={variants}
-        x="202.5"
-        y="655.5"
+        x="211.5"
+        y="658.5"
         width="18"
         height="90"
         stroke={colors.boldBlue}
       />
       <motion.rect
         variants={variants}
-        x="295.5"
-        y="655.5"
+        x="304.5"
+        y="658.5"
         width="18"
         height="90"
         stroke={colors.boldBlue}
       />
       <motion.rect
         variants={variants}
-        x="331.5"
-        y="655.5"
+        x="340.5"
+        y="658.5"
         width="18"
         height="90"
         stroke={colors.boldBlue}
       />
       <motion.rect
         variants={variants}
-        x="20.5"
-        y="67.5"
-        width="90"
-        height="22"
-        stroke={colors.boldBlue}
-      />
-      <motion.rect
-        variants={variants}
-        x="149.5"
-        y="67.5"
+        x="29.5"
+        y="70.5"
         width="90"
         height="22"
         stroke={colors.boldBlue}
       />
       <motion.rect
         variants={variants}
-        x="278.5"
-        y="67.5"
+        x="158.5"
+        y="70.5"
         width="90"
         height="22"
         stroke={colors.boldBlue}
       />
       <motion.rect
         variants={variants}
-        x="20.5"
-        y="271.5"
+        x="287.5"
+        y="70.5"
         width="90"
         height="22"
         stroke={colors.boldBlue}
       />
       <motion.rect
         variants={variants}
-        x="149.5"
-        y="271.5"
+        x="29.5"
+        y="274.5"
         width="90"
         height="22"
         stroke={colors.boldBlue}
       />
       <motion.rect
         variants={variants}
-        x="278.5"
-        y="271.5"
+        x="158.5"
+        y="274.5"
         width="90"
         height="22"
         stroke={colors.boldBlue}
       />
       <motion.rect
         variants={variants}
-        x="20.5"
-        y="475.5"
+        x="287.5"
+        y="274.5"
         width="90"
         height="22"
         stroke={colors.boldBlue}
       />
       <motion.rect
         variants={variants}
-        x="149.5"
-        y="475.5"
+        x="29.5"
+        y="478.5"
         width="90"
         height="22"
         stroke={colors.boldBlue}
       />
       <motion.rect
         variants={variants}
-        x="278.5"
-        y="475.5"
+        x="158.5"
+        y="478.5"
         width="90"
         height="22"
         stroke={colors.boldBlue}
       />
       <motion.rect
         variants={variants}
-        x="20.5"
-        y="679.5"
+        x="287.5"
+        y="478.5"
         width="90"
         height="22"
         stroke={colors.boldBlue}
       />
       <motion.rect
         variants={variants}
-        x="149.5"
-        y="679.5"
+        x="29.5"
+        y="682.5"
         width="90"
         height="22"
         stroke={colors.boldBlue}
       />
       <motion.rect
         variants={variants}
-        x="278.5"
-        y="679.5"
+        x="158.5"
+        y="682.5"
+        width="90"
+        height="22"
+        stroke={colors.boldBlue}
+      />
+      <motion.rect
+        variants={variants}
+        x="287.5"
+        y="682.5"
         width="90"
         height="22"
         stroke={colors.boldBlue}
       />
       <motion.line
         variants={variants}
-        x1="20"
-        y1="111.5"
-        x2="111"
-        y2="111.5"
+        x1="29"
+        y1="114.5"
+        x2="120"
+        y2="114.5"
         stroke={colors.boldBlue}
       />
       <motion.line
         variants={variants}
-        x1="149"
-        y1="111.5"
-        x2="240"
-        y2="111.5"
+        x1="158"
+        y1="114.5"
+        x2="249"
+        y2="114.5"
         stroke={colors.boldBlue}
       />
       <motion.line
         variants={variants}
-        x1="278"
-        y1="111.5"
-        x2="369"
-        y2="111.5"
+        x1="287"
+        y1="114.5"
+        x2="378"
+        y2="114.5"
         stroke={colors.boldBlue}
       />
       <motion.line
         variants={variants}
-        x1="20"
-        y1="315.5"
-        x2="111"
-        y2="315.5"
+        x1="29"
+        y1="318.5"
+        x2="120"
+        y2="318.5"
         stroke={colors.boldBlue}
       />
       <motion.line
         variants={variants}
-        x1="149"
-        y1="315.5"
-        x2="240"
-        y2="315.5"
+        x1="158"
+        y1="318.5"
+        x2="249"
+        y2="318.5"
         stroke={colors.boldBlue}
       />
       <motion.line
         variants={variants}
-        x1="278"
-        y1="315.5"
-        x2="369"
-        y2="315.5"
+        x1="287"
+        y1="318.5"
+        x2="378"
+        y2="318.5"
         stroke={colors.boldBlue}
       />
       <motion.line
         variants={variants}
-        x1="20"
-        y1="519.5"
-        x2="111"
-        y2="519.5"
+        x1="29"
+        y1="522.5"
+        x2="120"
+        y2="522.5"
         stroke={colors.boldBlue}
       />
       <motion.line
         variants={variants}
-        x1="149"
-        y1="519.5"
-        x2="240"
-        y2="519.5"
+        x1="158"
+        y1="522.5"
+        x2="249"
+        y2="522.5"
         stroke={colors.boldBlue}
       />
       <motion.line
         variants={variants}
-        x1="278"
-        y1="519.5"
-        x2="369"
-        y2="519.5"
+        x1="287"
+        y1="522.5"
+        x2="378"
+        y2="522.5"
         stroke={colors.boldBlue}
       />
       <motion.line
         variants={variants}
-        x1="20"
-        y1="723.5"
-        x2="111"
-        y2="723.5"
+        x1="29"
+        y1="726.5"
+        x2="120"
+        y2="726.5"
         stroke={colors.boldBlue}
       />
       <motion.line
         variants={variants}
-        x1="149"
-        y1="723.5"
-        x2="240"
-        y2="723.5"
+        x1="158"
+        y1="726.5"
+        x2="249"
+        y2="726.5"
         stroke={colors.boldBlue}
       />
       <motion.line
         variants={variants}
-        x1="278"
-        y1="723.5"
-        x2="369"
-        y2="723.5"
+        x1="287"
+        y1="726.5"
+        x2="378"
+        y2="726.5"
         stroke={colors.boldBlue}
       />
       <motion.circle
         variants={variants}
-        cx="55.5"
-        cy="78.5"
+        cx="64.5"
+        cy="81.5"
         r="6"
         stroke={colors.boldBlue}
       />
       <motion.circle
         variants={variants}
-        cx="184.5"
-        cy="78.5"
+        cx="193.5"
+        cy="81.5"
         r="6"
         stroke={colors.boldBlue}
       />
       <motion.circle
         variants={variants}
-        cx="295.5"
-        cy="100.5"
+        cx="304.5"
+        cy="103.5"
         r="6"
         stroke={colors.boldBlue}
       />
       <motion.circle
         variants={variants}
-        cx="313.5"
-        cy="100.5"
+        cx="322.5"
+        cy="103.5"
         r="6"
         stroke={colors.boldBlue}
       />
       <motion.circle
         variants={variants}
-        cx="37.5"
-        cy="305.5"
+        cx="46.5"
+        cy="308.5"
         r="6"
         stroke={colors.boldBlue}
       />
       <motion.circle
         variants={variants}
-        cx="184.5"
-        cy="327.5"
+        cx="193.5"
+        cy="330.5"
         r="6"
         stroke={colors.boldBlue}
       />
       <motion.circle
         variants={variants}
-        cx="313.5"
-        cy="327.5"
+        cx="322.5"
+        cy="330.5"
         r="6"
         stroke={colors.boldBlue}
       />
       <motion.circle
         variants={variants}
-        cx="55.5"
-        cy="508.5"
+        cx="64.5"
+        cy="511.5"
         r="6"
         stroke={colors.boldBlue}
       />
       <motion.circle
         variants={variants}
-        cx="184.5"
-        cy="509.5"
+        cx="193.5"
+        cy="512.5"
         r="6"
         stroke={colors.boldBlue}
       />
       <motion.circle
         variants={variants}
-        cx="313.5"
-        cy="486.5"
+        cx="322.5"
+        cy="489.5"
         r="6"
         stroke={colors.boldBlue}
       />
       <motion.circle
         variants={variants}
-        cx="55.5"
-        cy="713.5"
+        cx="64.5"
+        cy="716.5"
         r="6"
         stroke={colors.boldBlue}
-      />
-      <motion.circle
-        variants={variants}
-        cx="65.5"
-        cy="172.5"
-        r="14"
-        stroke={colors.boldBlue}
-        stroke-width="3"
-      />
-      <motion.circle
-        variants={variants}
-        cx="194.5"
-        cy="172.5"
-        r="14"
-        stroke={colors.boldBlue}
-        stroke-width="3"
-      />
-      <motion.circle
-        variants={variants}
-        cx="323.5"
-        cy="172.5"
-        r="14"
-        stroke={colors.boldBlue}
-        stroke-width="3"
-      />
-      <motion.circle
-        variants={variants}
-        cx="65.5"
-        cy="376.5"
-        r="14"
-        stroke={colors.boldBlue}
-        stroke-width="3"
-      />
-      <motion.circle
-        variants={variants}
-        cx="194.5"
-        cy="376.5"
-        r="14"
-        stroke={colors.boldBlue}
-        stroke-width="3"
-      />
-      <motion.circle
-        variants={variants}
-        cx="323.5"
-        cy="376.5"
-        r="14"
-        stroke={colors.boldBlue}
-        stroke-width="3"
-      />
-      <motion.circle
-        variants={variants}
-        cx="65.5"
-        cy="580.5"
-        r="14"
-        stroke={colors.boldBlue}
-        stroke-width="3"
-      />
-      <motion.circle
-        variants={variants}
-        cx="194.5"
-        cy="580.5"
-        r="14"
-        stroke={colors.boldBlue}
-        stroke-width="3"
-      />
-      <motion.circle
-        variants={variants}
-        cx="323.5"
-        cy="580.5"
-        r="14"
-        stroke={colors.boldBlue}
-        stroke-width="3"
       />
       <motion.circle
         variants={variants}
         cx="74.5"
-        cy="78.5"
-        r="6"
+        cy="175.5"
+        r="14"
         stroke={colors.boldBlue}
+        stroke-width="3"
       />
       <motion.circle
         variants={variants}
         cx="203.5"
-        cy="78.5"
-        r="6"
+        cy="175.5"
+        r="14"
         stroke={colors.boldBlue}
+        stroke-width="3"
       />
       <motion.circle
         variants={variants}
         cx="332.5"
-        cy="78.5"
-        r="6"
+        cy="175.5"
+        r="14"
         stroke={colors.boldBlue}
+        stroke-width="3"
       />
       <motion.circle
         variants={variants}
-        cx="55.5"
-        cy="305.5"
-        r="6"
+        cx="74.5"
+        cy="379.5"
+        r="14"
         stroke={colors.boldBlue}
+        stroke-width="3"
       />
       <motion.circle
         variants={variants}
         cx="203.5"
-        cy="327.5"
-        r="6"
+        cy="379.5"
+        r="14"
         stroke={colors.boldBlue}
+        stroke-width="3"
       />
       <motion.circle
         variants={variants}
         cx="332.5"
-        cy="327.5"
-        r="6"
+        cy="379.5"
+        r="14"
         stroke={colors.boldBlue}
+        stroke-width="3"
       />
       <motion.circle
         variants={variants}
         cx="74.5"
-        cy="508.5"
-        r="6"
+        cy="583.5"
+        r="14"
         stroke={colors.boldBlue}
+        stroke-width="3"
       />
       <motion.circle
         variants={variants}
         cx="203.5"
-        cy="509.5"
+        cy="583.5"
+        r="14"
+        stroke={colors.boldBlue}
+        stroke-width="3"
+      />
+      <motion.circle
+        variants={variants}
+        cx="332.5"
+        cy="583.5"
+        r="14"
+        stroke={colors.boldBlue}
+        stroke-width="3"
+      />
+      <motion.circle
+        variants={variants}
+        cx="83.5"
+        cy="81.5"
         r="6"
         stroke={colors.boldBlue}
       />
       <motion.circle
         variants={variants}
-        cx="295.5"
-        cy="509.5"
+        cx="212.5"
+        cy="81.5"
         r="6"
         stroke={colors.boldBlue}
       />
       <motion.circle
         variants={variants}
-        cx="74.5"
-        cy="713.5"
+        cx="341.5"
+        cy="81.5"
         r="6"
         stroke={colors.boldBlue}
       />
       <motion.circle
         variants={variants}
-        cx="92.5"
-        cy="78.5"
+        cx="64.5"
+        cy="308.5"
         r="6"
         stroke={colors.boldBlue}
       />
       <motion.circle
         variants={variants}
-        cx="221.5"
-        cy="56.5"
+        cx="212.5"
+        cy="330.5"
         r="6"
         stroke={colors.boldBlue}
       />
       <motion.circle
         variants={variants}
-        cx="221.5"
-        cy="327.5"
+        cx="341.5"
+        cy="330.5"
         r="6"
         stroke={colors.boldBlue}
       />
       <motion.circle
         variants={variants}
-        cx="350.5"
-        cy="305.5"
+        cx="83.5"
+        cy="511.5"
         r="6"
         stroke={colors.boldBlue}
       />
       <motion.circle
         variants={variants}
-        cx="92.5"
-        cy="508.5"
+        cx="212.5"
+        cy="512.5"
         r="6"
         stroke={colors.boldBlue}
       />
       <motion.circle
         variants={variants}
-        cx="221.5"
-        cy="486.5"
+        cx="304.5"
+        cy="512.5"
         r="6"
         stroke={colors.boldBlue}
       />
       <motion.circle
         variants={variants}
-        cx="350.5"
-        cy="464.5"
+        cx="83.5"
+        cy="716.5"
         r="6"
         stroke={colors.boldBlue}
       />
       <motion.circle
         variants={variants}
-        cx="92.5"
-        cy="690.5"
+        cx="101.5"
+        cy="81.5"
         r="6"
         stroke={colors.boldBlue}
       />
       <motion.circle
         variants={variants}
-        cx="202.5"
-        cy="691.5"
+        cx="230.5"
+        cy="59.5"
         r="6"
         stroke={colors.boldBlue}
       />
       <motion.circle
         variants={variants}
-        cx="239.5"
-        cy="690.5"
+        cx="230.5"
+        cy="330.5"
         r="6"
         stroke={colors.boldBlue}
       />
       <motion.circle
         variants={variants}
-        cx="368.5"
-        cy="668.5"
+        cx="359.5"
+        cy="308.5"
         r="6"
         stroke={colors.boldBlue}
       />
       <motion.circle
         variants={variants}
-        cx="331.5"
-        cy="690.5"
+        cx="101.5"
+        cy="511.5"
         r="6"
         stroke={colors.boldBlue}
       />
       <motion.circle
         variants={variants}
-        cx="349.5"
-        cy="713.5"
+        cx="230.5"
+        cy="489.5"
         r="6"
         stroke={colors.boldBlue}
       />
       <motion.circle
         variants={variants}
-        cx="220.5"
-        cy="713.5"
+        cx="359.5"
+        cy="467.5"
+        r="6"
+        stroke={colors.boldBlue}
+      />
+      <motion.circle
+        variants={variants}
+        cx="101.5"
+        cy="693.5"
+        r="6"
+        stroke={colors.boldBlue}
+      />
+      <motion.circle
+        variants={variants}
+        cx="211.5"
+        cy="694.5"
+        r="6"
+        stroke={colors.boldBlue}
+      />
+      <motion.circle
+        variants={variants}
+        cx="248.5"
+        cy="693.5"
+        r="6"
+        stroke={colors.boldBlue}
+      />
+      <motion.circle
+        variants={variants}
+        cx="377.5"
+        cy="671.5"
+        r="6"
+        stroke={colors.boldBlue}
+      />
+      <motion.circle
+        variants={variants}
+        cx="340.5"
+        cy="693.5"
+        r="6"
+        stroke={colors.boldBlue}
+      />
+      <motion.circle
+        variants={variants}
+        cx="358.5"
+        cy="716.5"
+        r="6"
+        stroke={colors.boldBlue}
+      />
+      <motion.circle
+        variants={variants}
+        cx="229.5"
+        cy="716.5"
         r="6"
         stroke={colors.boldBlue}
       />
       <motion.line
         variants={variants}
-        x1="58"
-        y1="140.5"
-        x2="74"
-        y2="140.5"
+        x1="67"
+        y1="143.5"
+        x2="83"
+        y2="143.5"
         stroke={colors.boldBlue}
         stroke-width="3"
       />
       <motion.line
         variants={variants}
-        x1="187"
-        y1="140.5"
-        x2="203"
-        y2="140.5"
+        x1="196"
+        y1="143.5"
+        x2="212"
+        y2="143.5"
         stroke={colors.boldBlue}
         stroke-width="3"
       />
       <motion.line
         variants={variants}
-        x1="316"
-        y1="140.5"
-        x2="332"
-        y2="140.5"
+        x1="325"
+        y1="143.5"
+        x2="341"
+        y2="143.5"
         stroke={colors.boldBlue}
         stroke-width="3"
       />
       <motion.line
         variants={variants}
-        x1="58"
-        y1="344.5"
-        x2="74"
-        y2="344.5"
+        x1="67"
+        y1="347.5"
+        x2="83"
+        y2="347.5"
         stroke={colors.boldBlue}
         stroke-width="3"
       />
       <motion.line
         variants={variants}
-        x1="187"
-        y1="344.5"
-        x2="203"
-        y2="344.5"
+        x1="196"
+        y1="347.5"
+        x2="212"
+        y2="347.5"
         stroke={colors.boldBlue}
         stroke-width="3"
       />
       <motion.line
         variants={variants}
-        x1="316"
-        y1="344.5"
-        x2="332"
-        y2="344.5"
+        x1="325"
+        y1="347.5"
+        x2="341"
+        y2="347.5"
         stroke={colors.boldBlue}
         stroke-width="3"
       />
       <motion.line
         variants={variants}
-        x1="58"
-        y1="548.5"
-        x2="74"
-        y2="548.5"
+        x1="67"
+        y1="551.5"
+        x2="83"
+        y2="551.5"
         stroke={colors.boldBlue}
         stroke-width="3"
       />
       <motion.line
         variants={variants}
-        x1="187"
-        y1="548.5"
-        x2="203"
-        y2="548.5"
+        x1="196"
+        y1="551.5"
+        x2="212"
+        y2="551.5"
         stroke={colors.boldBlue}
         stroke-width="3"
       />
       <motion.line
         variants={variants}
-        x1="316"
-        y1="548.5"
-        x2="332"
-        y2="548.5"
+        x1="325"
+        y1="551.5"
+        x2="341"
+        y2="551.5"
         stroke={colors.boldBlue}
         stroke-width="3"
       />
       <motion.rect
         variants={variants}
-        x="273.5"
-        y="50.5"
+        x="282.5"
+        y="53.5"
         width="100"
         height="12"
         rx="4.5"
@@ -1087,8 +1087,8 @@ const AppBlueprint = () => {
       />
       <motion.rect
         variants={variants}
-        x="15.5"
-        y="254.5"
+        x="24.5"
+        y="257.5"
         width="100"
         height="12"
         rx="4.5"
@@ -1096,8 +1096,8 @@ const AppBlueprint = () => {
       />
       <motion.rect
         variants={variants}
-        x="161.5"
-        y="276.5"
+        x="170.5"
+        y="279.5"
         width="84"
         height="12"
         rx="4.5"
@@ -1105,8 +1105,8 @@ const AppBlueprint = () => {
       />
       <motion.rect
         variants={variants}
-        x="290.5"
-        y="277.5"
+        x="299.5"
+        y="280.5"
         width="84"
         height="12"
         rx="4.5"
@@ -1114,8 +1114,8 @@ const AppBlueprint = () => {
       />
       <motion.rect
         variants={variants}
-        x="32.5"
-        y="458.5"
+        x="41.5"
+        y="461.5"
         width="84"
         height="12"
         rx="4.5"
@@ -1123,8 +1123,8 @@ const AppBlueprint = () => {
       />
       <motion.rect
         variants={variants}
-        x="32.5"
-        y="662.5"
+        x="41.5"
+        y="665.5"
         width="84"
         height="12"
         rx="4.5"
@@ -1132,8 +1132,8 @@ const AppBlueprint = () => {
       />
       <motion.rect
         variants={variants}
-        x="161.5"
-        y="458.5"
+        x="170.5"
+        y="461.5"
         width="84"
         height="12"
         rx="4.5"
@@ -1141,8 +1141,8 @@ const AppBlueprint = () => {
       />
       <motion.rect
         variants={variants}
-        x="635.5"
-        y="243.5"
+        x="644.5"
+        y="246.5"
         width="238"
         height="239"
         stroke={colors.boldBlue}
@@ -1150,8 +1150,8 @@ const AppBlueprint = () => {
       />
       <motion.rect
         variants={variants}
-        x="681.5"
-        y="243.5"
+        x="690.5"
+        y="246.5"
         width="48"
         height="239"
         stroke={colors.boldBlue}
@@ -1159,8 +1159,8 @@ const AppBlueprint = () => {
       />
       <motion.rect
         variants={variants}
-        x="622.5"
-        y="205.5"
+        x="631.5"
+        y="208.5"
         width="24"
         height="32"
         stroke={colors.boldBlue}
@@ -1168,8 +1168,8 @@ const AppBlueprint = () => {
       />
       <motion.rect
         variants={variants}
-        x="635.5"
-        y="309.5"
+        x="644.5"
+        y="312.5"
         width="238"
         height="57"
         stroke={colors.boldBlue}
@@ -1177,8 +1177,8 @@ const AppBlueprint = () => {
       />
       <motion.rect
         variants={variants}
-        x="778.5"
-        y="243.5"
+        x="787.5"
+        y="246.5"
         width="48"
         height="239"
         stroke={colors.boldBlue}
@@ -1186,83 +1186,83 @@ const AppBlueprint = () => {
       />
       <motion.line
         variants={variants}
-        x1="634"
-        y1="425.5"
-        x2="875"
-        y2="425.5"
+        x1="643"
+        y1="428.5"
+        x2="884"
+        y2="428.5"
         stroke={colors.boldBlue}
         stroke-width="3"
       />
       <motion.circle
         variants={variants}
-        cx="730"
-        cy="338"
+        cx="739"
+        cy="341"
         r="14.5"
         stroke={colors.boldBlue}
         stroke-width="3"
       />
       <motion.circle
         variants={variants}
-        cx="778"
-        cy="338"
+        cx="787"
+        cy="341"
         r="14.5"
         stroke={colors.boldBlue}
         stroke-width="3"
       />
       <motion.circle
         variants={variants}
-        cx="827"
-        cy="338"
+        cx="836"
+        cy="341"
         r="14.5"
         stroke={colors.boldBlue}
         stroke-width="3"
       />
       <motion.line
         variants={variants}
-        x1="681"
-        y1="42"
-        x2="832"
-        y2="42"
+        x1="690"
+        y1="45"
+        x2="841"
+        y2="45"
         stroke={colors.boldBlue}
         stroke-width="10"
       />
       <motion.line
         variants={variants}
-        x1="731"
-        y1="168.5"
-        x2="778"
-        y2="168.5"
+        x1="740"
+        y1="171.5"
+        x2="787"
+        y2="171.5"
         stroke={colors.boldBlue}
         stroke-width="5"
       />
       <motion.line
         variants={variants}
-        x1="731"
-        y1="504"
-        x2="778"
-        y2="504"
+        x1="740"
+        y1="507"
+        x2="787"
+        y2="507"
         stroke={colors.boldBlue}
         stroke-width="8"
       />
       <motion.circle
         variants={variants}
-        cx="680.5"
-        cy="221.5"
+        cx="689.5"
+        cy="224.5"
         r="16"
         stroke={colors.boldBlue}
         stroke-width="3"
       />
       <motion.circle
         variants={variants}
-        cx="874.5"
-        cy="221.5"
+        cx="883.5"
+        cy="224.5"
         r="16"
         stroke={colors.boldBlue}
         stroke-width="3"
       />
       <motion.path
         variants={variants}
-        d="M459.5 370.153L506 397L459.5 423.847L459.5 370.153Z"
+        d="M468.5 373.153L515 400L468.5 426.847L468.5 373.153Z"
         stroke={colors.boldBlue}
         stroke-width="3"
       />
