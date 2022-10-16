@@ -113,7 +113,7 @@ const Project = ({
           >
             {tools.map(({ name, href }, i) => {
               return (
-                <>
+                <React.Fragment key={i}>
                   <a
                     className={styles.tool}
                     href={href}
@@ -125,7 +125,7 @@ const Project = ({
                   {i < tools.length - 1 ? (
                     <p className={styles.toolSeparator}>·</p>
                   ) : null}
-                </>
+                </React.Fragment>
               );
             })}
           </motion.p>
@@ -138,14 +138,14 @@ const Project = ({
           >
             {links.map(({ Icon, href }, i) => {
               return (
-                <>
+                <React.Fragment key={i}>
                   <a href={href} target="_blank" rel="noreferrer">
                     <Icon color="yellow" size={30} />
                   </a>
                   {i < links.length - 1 ? (
                     <p className={styles.toolSeparator}>·</p>
                   ) : null}
-                </>
+                </React.Fragment>
               );
             })}
           </motion.p>
