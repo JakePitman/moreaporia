@@ -24,7 +24,7 @@ const imageVariants = {
   renderImage: { opacity: 1 },
 };
 
-type Props = {
+export type Props = {
   // Create images as size width: 960px, height: 800px
   imgSrc: string;
   imgAlt: string;
