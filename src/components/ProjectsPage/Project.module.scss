@@ -8,6 +8,10 @@ $containerHeight: 45vh;
   margin: 50px 0;
 }
 
+.containerReversed {
+  flex-direction: row-reverse;
+}
+
 .imageContainer {
   width: calc($containerHeight * 1.2);
   height: 100%;
@@ -29,6 +33,10 @@ $containerHeight: 45vh;
   justify-content: space-between;
 }
 
+.infoContainerReversed {
+  align-items: flex-start;
+}
+
 .title {
   font-family: "Tomorrow";
   color: $boldBlue;
@@ -39,13 +47,11 @@ $containerHeight: 45vh;
   font-family: "Roboto Mono";
   color: $offWhite;
   font-size: 1.5em;
-  text-align: right;
 }
 
 .bodyTextContainer {
   background: linear-gradient(45deg, $gradient2, $gradient3);
   width: 102%;
-  text-align: right;
   flex: 0.8;
   border-radius: 5px;
   display: flex;
@@ -71,4 +77,8 @@ $containerHeight: 45vh;
   display: inline;
   color: $greyBlue;
   font-size: 2rem;
+}
+
+.textAlignRight {
+  text-align: right;
 }

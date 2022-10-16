@@ -69,6 +69,7 @@ const ProjectsReel = () => {
             href: "https://github.com/JakePitman/logic-calculator",
           },
         ]}
+        isReversed
       >
         <p className={styles.bodyText}>
           Calculates all models of a given logical proposition or argument,

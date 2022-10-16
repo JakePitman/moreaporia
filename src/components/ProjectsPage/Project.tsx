@@ -4,8 +4,9 @@ import { motion, useAnimation } from "framer-motion";
 import styles from "./Project.module.scss";
 import colors from "../../shared/_colors.module.scss";
 import { IconType } from "react-icons";
+import classNames from "classnames";
 
-const infoVariants = {
+const infoVariantsDefault = {
   hidden: { opacity: 0, x: 100 },
   drawSVG: (custom: number = 0) => ({
     opacity: 1,
@@ -13,6 +14,11 @@ const infoVariants = {
     transition: { delay: custom },
   }),
 };
+const infoVariantsReversed = {
+  ...infoVariantsDefault,
+  hidden: { ...infoVariantsDefault.hidden, x: -100 },
+};
+
 const imageVariants = {
   hidden: { opacity: 0 },
   renderImage: { opacity: 1 },
@@ -28,6 +34,7 @@ type Props = {
   children: React.ReactNode;
   tools: { name: string; href: string }[];
   links: { Icon: IconType; href: string }[];
+  isReversed?: boolean;
 };
 
 const Project = ({
@@ -39,12 +46,18 @@ const Project = ({
   children,
   tools,
   links,
+  isReversed = false,
 }: Props) => {
   const [hasAnimated, setHasAnimated] = useState(false);
   const controls = useAnimation();
+  const infoVariants = isReversed ? infoVariantsReversed : infoVariantsDefault;
+
   return (
     <motion.div
-      className={styles.container}
+      className={classNames({
+        [styles.container]: true,
+        [styles.containerReversed]: isReversed,
+      })}
       animate={controls}
       onViewportEnter={async () => {
         if (hasAnimated) return;
@@ -64,7 +77,12 @@ const Project = ({
         />
         <Blueprint />
       </div>
-      <motion.div className={styles.infoContainer}>
+      <motion.div
+        className={classNames({
+          [styles.infoContainer]: true,
+          [styles.infoContainerReversed]: isReversed,
+        })}
+      >
         <div className={styles.rowGroup}>
           <motion.h2
             className={styles.title}
@@ -74,7 +92,10 @@ const Project = ({
             {title}
           </motion.h2>
           <motion.p
-            className={styles.subtext}
+            className={classNames({
+              [styles.subtext]: true,
+              [styles.textAlignRight]: !isReversed,
+            })}
             style={{ color: colors.lightBlue }}
             custom={0.2}
             variants={infoVariants}
@@ -83,7 +104,10 @@ const Project = ({
           </motion.p>
         </div>
         <motion.div
-          className={styles.bodyTextContainer}
+          className={classNames({
+            [styles.bodyTextContainer]: true,
+            [styles.textAlignRight]: !isReversed,
+          })}
           custom={0.4}
           variants={infoVariants}
         >
@@ -91,7 +115,11 @@ const Project = ({
         </motion.div>
         <div className={styles.rowGroup}>
           <motion.p
-            className={`${styles.subtext} ${styles.tools}`}
+            className={classNames({
+              [styles.subtext]: true,
+              [styles.tools]: true,
+              [styles.textAlignRight]: !isReversed,
+            })}
             custom={0.6}
             variants={infoVariants}
           >
@@ -114,7 +142,10 @@ const Project = ({
             })}
           </motion.p>
           <motion.p
-            className={styles.subtext}
+            className={classNames({
+              [styles.subtext]: true,
+              [styles.textAlignRight]: !isReversed,
+            })}
             custom={1}
             variants={infoVariants}
           >
