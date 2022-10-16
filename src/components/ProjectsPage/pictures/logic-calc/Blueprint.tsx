@@ -29,7 +29,6 @@ const AppBlueprint = () => {
           height="797"
           stroke={colors.boldBlue}
           stroke-width="3"
-          transform="scale(1, -1) translate(0, -800)"
         />
         <motion.rect
           variants={variants}

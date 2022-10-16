@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FiGithub } from "react-icons/fi";
+import { BsGithub } from "react-icons/bs";
 
 import Project from "./Project";
 import styles from "./ProjectsReel.module.scss";
@@ -27,7 +27,7 @@ const ProjectsReel = () => {
         ]}
         links={[
           {
-            Icon: FiGithub,
+            Icon: BsGithub,
             href: "https://github.com/JakePitman/change-theme",
           },
         ]}
@@ -65,7 +65,7 @@ const ProjectsReel = () => {
         ]}
         links={[
           {
-            Icon: FiGithub,
+            Icon: BsGithub,
             href: "https://github.com/JakePitman/logic-calculator",
           },
         ]}
