@@ -31,10 +31,12 @@ $containerHeight: 45vh;
   flex-direction: column;
   align-items: flex-end;
   justify-content: space-between;
+  align-items: flex-start;
 }
 
 .infoContainerReversed {
-  align-items: flex-start;
+  align-items: flex-end;
+  text-align: right;
 }
 
 .title {

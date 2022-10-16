@@ -7,7 +7,7 @@ import { IconType } from "react-icons";
 import classNames from "classnames";
 
 const infoVariantsDefault = {
-  hidden: { opacity: 0, x: 100 },
+  hidden: { opacity: 0, x: -100 },
   drawSVG: (custom: number = 0) => ({
     opacity: 1,
     x: 0,
@@ -16,7 +16,7 @@ const infoVariantsDefault = {
 };
 const infoVariantsReversed = {
   ...infoVariantsDefault,
-  hidden: { ...infoVariantsDefault.hidden, x: -100 },
+  hidden: { ...infoVariantsDefault.hidden, x: 100 },
 };
 
 const imageVariants = {
@@ -68,15 +68,6 @@ const Project = ({
       viewport={{ once: true, margin: "-30%" }}
       initial="hidden"
     >
-      <div className={styles.imageContainer}>
-        <motion.img
-          src={imgSrc}
-          className={styles.image}
-          alt={imgAlt}
-          variants={imageVariants}
-        />
-        <Blueprint />
-      </div>
       <motion.div
         className={classNames({
           [styles.infoContainer]: true,
@@ -94,7 +85,6 @@ const Project = ({
           <motion.p
             className={classNames({
               [styles.subtext]: true,
-              [styles.textAlignRight]: !isReversed,
             })}
             style={{ color: colors.lightBlue }}
             custom={0.2}
@@ -106,7 +96,6 @@ const Project = ({
         <motion.div
           className={classNames({
             [styles.bodyTextContainer]: true,
-            [styles.textAlignRight]: !isReversed,
           })}
           custom={0.4}
           variants={infoVariants}
@@ -118,7 +107,6 @@ const Project = ({
             className={classNames({
               [styles.subtext]: true,
               [styles.tools]: true,
-              [styles.textAlignRight]: !isReversed,
             })}
             custom={0.6}
             variants={infoVariants}
@@ -144,7 +132,6 @@ const Project = ({
           <motion.p
             className={classNames({
               [styles.subtext]: true,
-              [styles.textAlignRight]: !isReversed,
             })}
             custom={1}
             variants={infoVariants}
@@ -164,6 +151,15 @@ const Project = ({
           </motion.p>
         </div>
       </motion.div>
+      <div className={styles.imageContainer}>
+        <motion.img
+          src={imgSrc}
+          className={styles.image}
+          alt={imgAlt}
+          variants={imageVariants}
+        />
+        <Blueprint />
+      </div>
     </motion.div>
   );
 };
