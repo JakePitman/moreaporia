@@ -87,7 +87,7 @@ const Project = ({
               [styles.subtext]: true,
             })}
             style={{ color: colors.lightBlue }}
-            custom={0.2}
+            custom={0.1}
             variants={infoVariants}
           >
             {year}
@@ -97,7 +97,7 @@ const Project = ({
           className={classNames({
             [styles.bodyTextContainer]: true,
           })}
-          custom={0.4}
+          custom={0.2}
           variants={infoVariants}
         >
           {children}
@@ -108,7 +108,7 @@ const Project = ({
               [styles.subtext]: true,
               [styles.tools]: true,
             })}
-            custom={0.6}
+            custom={0.3}
             variants={infoVariants}
           >
             {tools.map(({ name, href }, i) => {
@@ -133,7 +133,7 @@ const Project = ({
             className={classNames({
               [styles.subtext]: true,
             })}
-            custom={1}
+            custom={0.4}
             variants={infoVariants}
           >
             {links.map(({ Icon, href }, i) => {
