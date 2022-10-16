@@ -96,6 +96,7 @@ const Project = ({
         <motion.div
           className={classNames({
             [styles.bodyTextContainer]: true,
+            [styles.bodyTextContainerReversed]: isReversed,
           })}
           custom={0.2}
           variants={infoVariants}

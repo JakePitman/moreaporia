@@ -42,7 +42,7 @@ $containerHeight: 45vh;
 .title {
   font-family: "Tomorrow";
   color: $boldBlue;
-  font-size: 4em;
+  font-size: 3.5em;
 }
 
 .subtext {
@@ -62,6 +62,10 @@ $containerHeight: 45vh;
   padding: 15px;
   opacity: 0.85;
   z-index: 1;
+}
+
+.bodyTextContainerReversed {
+  background: linear-gradient(45deg, $gradient3, $gradient2);
 }
 
 .tools {
