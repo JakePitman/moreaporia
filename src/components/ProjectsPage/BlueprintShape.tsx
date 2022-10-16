@@ -53,7 +53,7 @@ const shapeMap = {
       y2="60"
       stroke={color}
       fill={fill}
-      stroke-width="15"
+      strokeWidth="15"
     />
   ),
 };

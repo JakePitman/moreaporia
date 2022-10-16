@@ -28,7 +28,7 @@ const AppBlueprint = () => {
           width="957"
           height="797"
           stroke={colors.boldBlue}
-          stroke-width="3"
+          strokeWidth="3"
         />
         <motion.rect
           variants={variants}
@@ -38,7 +38,7 @@ const AppBlueprint = () => {
           width="88"
           height="119"
           stroke={colors.boldBlue}
-          stroke-width="2"
+          strokeWidth="2"
         />
         <motion.rect
           variants={variants}
@@ -48,7 +48,7 @@ const AppBlueprint = () => {
           width="96"
           height="119"
           stroke={colors.boldBlue}
-          stroke-width="2"
+          strokeWidth="2"
         />
         <motion.rect
           variants={variants}
@@ -58,7 +58,7 @@ const AppBlueprint = () => {
           width="32"
           height="119"
           stroke={colors.boldBlue}
-          stroke-width="2"
+          strokeWidth="2"
         />
         <motion.rect
           variants={variants}
@@ -68,7 +68,7 @@ const AppBlueprint = () => {
           width="87"
           height="119"
           stroke={colors.boldBlue}
-          stroke-width="2"
+          strokeWidth="2"
         />
         <motion.rect
           variants={variants}
@@ -78,7 +78,7 @@ const AppBlueprint = () => {
           width="81"
           height="119"
           stroke={colors.boldBlue}
-          stroke-width="2"
+          strokeWidth="2"
         />
         <motion.rect
           variants={variants}
@@ -88,7 +88,7 @@ const AppBlueprint = () => {
           width="81"
           height="119"
           stroke={colors.boldBlue}
-          stroke-width="2"
+          strokeWidth="2"
         />
         <motion.rect
           variants={variants}
@@ -98,7 +98,7 @@ const AppBlueprint = () => {
           width="88"
           height="119"
           stroke={colors.boldBlue}
-          stroke-width="2"
+          strokeWidth="2"
         />
         <motion.rect
           variants={variants}
@@ -108,7 +108,7 @@ const AppBlueprint = () => {
           width="84"
           height="119"
           stroke={colors.boldBlue}
-          stroke-width="2"
+          strokeWidth="2"
         />
         <motion.rect
           variants={variants}
@@ -118,7 +118,7 @@ const AppBlueprint = () => {
           width="850"
           height="254"
           stroke={colors.boldBlue}
-          stroke-width="2"
+          strokeWidth="2"
         />
         <motion.rect
           variants={variants}
@@ -128,7 +128,7 @@ const AppBlueprint = () => {
           width="850"
           height="51"
           stroke={colors.boldBlue}
-          stroke-width="2"
+          strokeWidth="2"
         />
         <motion.rect
           variants={variants}
@@ -138,7 +138,7 @@ const AppBlueprint = () => {
           width="850"
           height="51"
           stroke={colors.boldBlue}
-          stroke-width="2"
+          strokeWidth="2"
         />
         <motion.rect
           variants={variants}
@@ -148,7 +148,7 @@ const AppBlueprint = () => {
           width="46"
           height="254"
           stroke={colors.boldBlue}
-          stroke-width="2"
+          strokeWidth="2"
         />
         <motion.rect
           variants={variants}
@@ -158,7 +158,7 @@ const AppBlueprint = () => {
           width="46"
           height="254"
           stroke={colors.boldBlue}
-          stroke-width="2"
+          strokeWidth="2"
         />
         <motion.rect
           variants={variants}
@@ -168,7 +168,7 @@ const AppBlueprint = () => {
           width="46"
           height="254"
           stroke={colors.boldBlue}
-          stroke-width="2"
+          strokeWidth="2"
         />
         <motion.rect
           variants={variants}
@@ -178,7 +178,7 @@ const AppBlueprint = () => {
           width="46"
           height="254"
           stroke={colors.boldBlue}
-          stroke-width="2"
+          strokeWidth="2"
         />
         <motion.rect
           variants={variants}
@@ -188,7 +188,7 @@ const AppBlueprint = () => {
           width="46"
           height="254"
           stroke={colors.boldBlue}
-          stroke-width="2"
+          strokeWidth="2"
         />
         <motion.rect
           variants={variants}
@@ -198,7 +198,7 @@ const AppBlueprint = () => {
           width="46"
           height="254"
           stroke={colors.boldBlue}
-          stroke-width="2"
+          strokeWidth="2"
         />
         <motion.rect
           variants={variants}
@@ -208,7 +208,7 @@ const AppBlueprint = () => {
           width="86"
           height="119"
           stroke={colors.boldBlue}
-          stroke-width="2"
+          strokeWidth="2"
         />
         <motion.rect
           variants={variants}
@@ -218,7 +218,7 @@ const AppBlueprint = () => {
           width="90"
           height="119"
           stroke={colors.boldBlue}
-          stroke-width="2"
+          strokeWidth="2"
         />
         <motion.rect
           variants={variants}
@@ -228,7 +228,7 @@ const AppBlueprint = () => {
           width="85"
           height="119"
           stroke={colors.boldBlue}
-          stroke-width="2"
+          strokeWidth="2"
         />
         <motion.rect
           variants={variants}
@@ -238,7 +238,7 @@ const AppBlueprint = () => {
           width="86"
           height="119"
           stroke={colors.boldBlue}
-          stroke-width="2"
+          strokeWidth="2"
         />
         <motion.rect
           variants={variants}
@@ -248,7 +248,7 @@ const AppBlueprint = () => {
           width="75"
           height="119"
           stroke={colors.boldBlue}
-          stroke-width="2"
+          strokeWidth="2"
         />
         <motion.rect
           variants={variants}
@@ -258,7 +258,7 @@ const AppBlueprint = () => {
           width="86"
           height="119"
           stroke={colors.boldBlue}
-          stroke-width="2"
+          strokeWidth="2"
         />
         <motion.rect
           variants={variants}
@@ -268,7 +268,7 @@ const AppBlueprint = () => {
           width="86"
           height="119"
           stroke={colors.boldBlue}
-          stroke-width="2"
+          strokeWidth="2"
         />
         <motion.line
           variants={variants}
@@ -278,7 +278,7 @@ const AppBlueprint = () => {
           x2="843"
           y2="650"
           stroke={colors.boldBlue}
-          stroke-width="2"
+          strokeWidth="2"
         />
         <motion.line
           variants={variants}
@@ -288,7 +288,7 @@ const AppBlueprint = () => {
           x2="141"
           y2="422.5"
           stroke={colors.boldBlue}
-          stroke-width="5"
+          strokeWidth="5"
         />
         <motion.line
           variants={variants}
@@ -298,7 +298,7 @@ const AppBlueprint = () => {
           x2="153"
           y2="474.5"
           stroke={colors.boldBlue}
-          stroke-width="5"
+          strokeWidth="5"
         />
         <motion.line
           variants={variants}
@@ -308,7 +308,7 @@ const AppBlueprint = () => {
           x2="153"
           y2="524.5"
           stroke={colors.boldBlue}
-          stroke-width="5"
+          strokeWidth="5"
         />
         <motion.line
           variants={variants}
@@ -318,7 +318,7 @@ const AppBlueprint = () => {
           x2="153"
           y2="573.5"
           stroke={colors.boldBlue}
-          stroke-width="5"
+          strokeWidth="5"
         />
         <motion.line
           variants={variants}
@@ -328,7 +328,7 @@ const AppBlueprint = () => {
           x2="153"
           y2="624.5"
           stroke={colors.boldBlue}
-          stroke-width="5"
+          strokeWidth="5"
         />
         <motion.line
           variants={variants}
@@ -338,7 +338,7 @@ const AppBlueprint = () => {
           x2="117"
           y2="675.5"
           stroke={colors.boldBlue}
-          stroke-width="5"
+          strokeWidth="5"
         />
         <motion.line
           variants={variants}
@@ -348,7 +348,7 @@ const AppBlueprint = () => {
           x2="336"
           y2="700.5"
           stroke={colors.boldBlue}
-          stroke-width="5"
+          strokeWidth="5"
         />
         <motion.line
           variants={variants}
@@ -358,7 +358,7 @@ const AppBlueprint = () => {
           x2="221"
           y2="726.5"
           stroke={colors.boldBlue}
-          stroke-width="5"
+          strokeWidth="5"
         />
         <motion.line
           variants={variants}
@@ -368,7 +368,7 @@ const AppBlueprint = () => {
           x2="74"
           y2="750.5"
           stroke={colors.boldBlue}
-          stroke-width="5"
+          strokeWidth="5"
         />
         <motion.line
           variants={variants}
@@ -378,7 +378,7 @@ const AppBlueprint = () => {
           x2="358"
           y2="726.5"
           stroke={colors.boldBlue}
-          stroke-width="5"
+          strokeWidth="5"
         />
         <motion.line
           variants={variants}
@@ -388,7 +388,7 @@ const AppBlueprint = () => {
           x2="313"
           y2="675.5"
           stroke={colors.boldBlue}
-          stroke-width="5"
+          strokeWidth="5"
         />
         <motion.line
           variants={variants}
@@ -398,7 +398,7 @@ const AppBlueprint = () => {
           x2="221"
           y2="624.5"
           stroke={colors.boldBlue}
-          stroke-width="5"
+          strokeWidth="5"
         />
         <motion.line
           variants={variants}
@@ -408,7 +408,7 @@ const AppBlueprint = () => {
           x2="221"
           y2="573.5"
           stroke={colors.boldBlue}
-          stroke-width="5"
+          strokeWidth="5"
         />
         <motion.line
           variants={variants}
@@ -418,7 +418,7 @@ const AppBlueprint = () => {
           x2="418"
           y2="422.5"
           stroke={colors.boldBlue}
-          stroke-width="5"
+          strokeWidth="5"
         />
         <motion.line
           variants={variants}
@@ -428,7 +428,7 @@ const AppBlueprint = () => {
           x2="464"
           y2="422.5"
           stroke={colors.boldBlue}
-          stroke-width="5"
+          strokeWidth="5"
         />
         <motion.line
           variants={variants}
@@ -438,7 +438,7 @@ const AppBlueprint = () => {
           x2="509"
           y2="422.5"
           stroke={colors.boldBlue}
-          stroke-width="5"
+          strokeWidth="5"
         />
         <motion.line
           variants={variants}
@@ -448,7 +448,7 @@ const AppBlueprint = () => {
           x2="555"
           y2="422.5"
           stroke={colors.boldBlue}
-          stroke-width="5"
+          strokeWidth="5"
         />
         <motion.line
           variants={variants}
@@ -458,7 +458,7 @@ const AppBlueprint = () => {
           x2="601"
           y2="422.5"
           stroke={colors.boldBlue}
-          stroke-width="5"
+          strokeWidth="5"
         />
         <motion.line
           variants={variants}
@@ -468,7 +468,7 @@ const AppBlueprint = () => {
           x2="646"
           y2="422.5"
           stroke={colors.boldBlue}
-          stroke-width="5"
+          strokeWidth="5"
         />
         <motion.line
           variants={variants}
@@ -478,7 +478,7 @@ const AppBlueprint = () => {
           x2="692"
           y2="422.5"
           stroke={colors.boldBlue}
-          stroke-width="5"
+          strokeWidth="5"
         />
         <motion.line
           variants={variants}
@@ -488,7 +488,7 @@ const AppBlueprint = () => {
           x2="737"
           y2="422.5"
           stroke={colors.boldBlue}
-          stroke-width="5"
+          strokeWidth="5"
         />
         <motion.line
           variants={variants}
@@ -498,7 +498,7 @@ const AppBlueprint = () => {
           x2="783"
           y2="422.5"
           stroke={colors.boldBlue}
-          stroke-width="5"
+          strokeWidth="5"
         />
         <motion.line
           variants={variants}
@@ -508,7 +508,7 @@ const AppBlueprint = () => {
           x2="828"
           y2="422.5"
           stroke={colors.boldBlue}
-          stroke-width="5"
+          strokeWidth="5"
         />
         <motion.line
           variants={variants}
@@ -518,7 +518,7 @@ const AppBlueprint = () => {
           x2="874"
           y2="422.5"
           stroke={colors.boldBlue}
-          stroke-width="5"
+          strokeWidth="5"
         />
         <motion.line
           variants={variants}
@@ -528,7 +528,7 @@ const AppBlueprint = () => {
           x2="783"
           y2="474.5"
           stroke={colors.boldBlue}
-          stroke-width="5"
+          strokeWidth="5"
         />
         <motion.line
           variants={variants}
@@ -538,7 +538,7 @@ const AppBlueprint = () => {
           x2="783"
           y2="524.5"
           stroke={colors.boldBlue}
-          stroke-width="5"
+          strokeWidth="5"
         />
         <motion.line
           variants={variants}
@@ -548,7 +548,7 @@ const AppBlueprint = () => {
           x2="783"
           y2="573.5"
           stroke={colors.boldBlue}
-          stroke-width="5"
+          strokeWidth="5"
         />
         <motion.line
           variants={variants}
@@ -558,7 +558,7 @@ const AppBlueprint = () => {
           x2="783"
           y2="624.5"
           stroke={colors.boldBlue}
-          stroke-width="5"
+          strokeWidth="5"
         />
         <motion.line
           variants={variants}
@@ -568,7 +568,7 @@ const AppBlueprint = () => {
           x2="737"
           y2="474.5"
           stroke={colors.boldBlue}
-          stroke-width="5"
+          strokeWidth="5"
         />
         <motion.line
           variants={variants}
@@ -578,7 +578,7 @@ const AppBlueprint = () => {
           x2="737"
           y2="524.5"
           stroke={colors.boldBlue}
-          stroke-width="5"
+          strokeWidth="5"
         />
         <motion.line
           variants={variants}
@@ -588,7 +588,7 @@ const AppBlueprint = () => {
           x2="737"
           y2="573.5"
           stroke={colors.boldBlue}
-          stroke-width="5"
+          strokeWidth="5"
         />
         <motion.line
           variants={variants}
@@ -598,7 +598,7 @@ const AppBlueprint = () => {
           x2="737"
           y2="624.5"
           stroke={colors.boldBlue}
-          stroke-width="5"
+          strokeWidth="5"
         />
         <motion.line
           variants={variants}
@@ -608,7 +608,7 @@ const AppBlueprint = () => {
           x2="692"
           y2="474.5"
           stroke={colors.boldBlue}
-          stroke-width="5"
+          strokeWidth="5"
         />
         <motion.line
           variants={variants}
@@ -618,7 +618,7 @@ const AppBlueprint = () => {
           x2="692"
           y2="524.5"
           stroke={colors.boldBlue}
-          stroke-width="5"
+          strokeWidth="5"
         />
         <motion.line
           variants={variants}
@@ -628,7 +628,7 @@ const AppBlueprint = () => {
           x2="692"
           y2="573.5"
           stroke={colors.boldBlue}
-          stroke-width="5"
+          strokeWidth="5"
         />
         <motion.line
           variants={variants}
@@ -638,7 +638,7 @@ const AppBlueprint = () => {
           x2="692"
           y2="624.5"
           stroke={colors.boldBlue}
-          stroke-width="5"
+          strokeWidth="5"
         />
         <motion.line
           variants={variants}
@@ -648,7 +648,7 @@ const AppBlueprint = () => {
           x2="601"
           y2="474.5"
           stroke={colors.boldBlue}
-          stroke-width="5"
+          strokeWidth="5"
         />
         <motion.line
           variants={variants}
@@ -658,7 +658,7 @@ const AppBlueprint = () => {
           x2="601"
           y2="524.5"
           stroke={colors.boldBlue}
-          stroke-width="5"
+          strokeWidth="5"
         />
         <motion.line
           variants={variants}
@@ -668,7 +668,7 @@ const AppBlueprint = () => {
           x2="601"
           y2="573.5"
           stroke={colors.boldBlue}
-          stroke-width="5"
+          strokeWidth="5"
         />
         <motion.line
           variants={variants}
@@ -678,7 +678,7 @@ const AppBlueprint = () => {
           x2="601"
           y2="624.5"
           stroke={colors.boldBlue}
-          stroke-width="5"
+          strokeWidth="5"
         />
         <motion.line
           variants={variants}
@@ -688,7 +688,7 @@ const AppBlueprint = () => {
           x2="510"
           y2="474.5"
           stroke={colors.boldBlue}
-          stroke-width="5"
+          strokeWidth="5"
         />
         <motion.line
           variants={variants}
@@ -698,7 +698,7 @@ const AppBlueprint = () => {
           x2="509"
           y2="524.5"
           stroke={colors.boldBlue}
-          stroke-width="5"
+          strokeWidth="5"
         />
         <motion.line
           variants={variants}
@@ -708,7 +708,7 @@ const AppBlueprint = () => {
           x2="509"
           y2="573.5"
           stroke={colors.boldBlue}
-          stroke-width="5"
+          strokeWidth="5"
         />
         <motion.line
           variants={variants}
@@ -718,7 +718,7 @@ const AppBlueprint = () => {
           x2="509"
           y2="624.5"
           stroke={colors.boldBlue}
-          stroke-width="5"
+          strokeWidth="5"
         />
         <motion.line
           variants={variants}
@@ -728,7 +728,7 @@ const AppBlueprint = () => {
           x2="464"
           y2="474.5"
           stroke={colors.boldBlue}
-          stroke-width="5"
+          strokeWidth="5"
         />
         <motion.line
           variants={variants}
@@ -738,7 +738,7 @@ const AppBlueprint = () => {
           x2="464"
           y2="524.5"
           stroke={colors.boldBlue}
-          stroke-width="5"
+          strokeWidth="5"
         />
         <motion.line
           variants={variants}
@@ -748,7 +748,7 @@ const AppBlueprint = () => {
           x2="464"
           y2="573.5"
           stroke={colors.boldBlue}
-          stroke-width="5"
+          strokeWidth="5"
         />
         <motion.line
           variants={variants}
@@ -758,7 +758,7 @@ const AppBlueprint = () => {
           x2="464"
           y2="624.5"
           stroke={colors.boldBlue}
-          stroke-width="5"
+          strokeWidth="5"
         />
         <motion.line
           variants={variants}
@@ -768,7 +768,7 @@ const AppBlueprint = () => {
           x2="418"
           y2="474.5"
           stroke={colors.boldBlue}
-          stroke-width="5"
+          strokeWidth="5"
         />
         <motion.line
           variants={variants}
@@ -778,7 +778,7 @@ const AppBlueprint = () => {
           x2="418"
           y2="524.5"
           stroke={colors.boldBlue}
-          stroke-width="5"
+          strokeWidth="5"
         />
         <motion.line
           variants={variants}
@@ -788,7 +788,7 @@ const AppBlueprint = () => {
           x2="418"
           y2="573.5"
           stroke={colors.boldBlue}
-          stroke-width="5"
+          strokeWidth="5"
         />
         <motion.line
           variants={variants}
@@ -798,7 +798,7 @@ const AppBlueprint = () => {
           x2="418"
           y2="624.5"
           stroke={colors.boldBlue}
-          stroke-width="5"
+          strokeWidth="5"
         />
         <motion.line
           variants={variants}
@@ -808,7 +808,7 @@ const AppBlueprint = () => {
           x2="373"
           y2="422.5"
           stroke={colors.boldBlue}
-          stroke-width="5"
+          strokeWidth="5"
         />
         <motion.line
           variants={variants}
@@ -818,7 +818,7 @@ const AppBlueprint = () => {
           x2="328"
           y2="422.5"
           stroke={colors.boldBlue}
-          stroke-width="5"
+          strokeWidth="5"
         />
         <motion.line
           variants={variants}
@@ -828,7 +828,7 @@ const AppBlueprint = () => {
           x2="221"
           y2="524.5"
           stroke={colors.boldBlue}
-          stroke-width="5"
+          strokeWidth="5"
         />
         <motion.line
           variants={variants}
@@ -838,7 +838,7 @@ const AppBlueprint = () => {
           x2="221"
           y2="474.5"
           stroke={colors.boldBlue}
-          stroke-width="5"
+          strokeWidth="5"
         />
         <motion.line
           variants={variants}
@@ -848,7 +848,7 @@ const AppBlueprint = () => {
           x2="278"
           y2="422.5"
           stroke={colors.boldBlue}
-          stroke-width="5"
+          strokeWidth="5"
         />
       </g>
     </motion.svg>
