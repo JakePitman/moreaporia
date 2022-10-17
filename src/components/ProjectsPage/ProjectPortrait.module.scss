@@ -1,0 +1,51 @@
+@import "../../shared/colors.module.scss";
+
+$spacing: 5px;
+
+.container {
+  background: linear-gradient(45deg, $gradient2, $gradient3);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 10px 10px 20px;
+  width: 90vw;
+  margin: 20px 0;
+  padding: $spacing;
+}
+
+.title {
+  font-family: "Tomorrow";
+  color: $primaryBackground;
+  font-size: 2em;
+  text-align: left;
+  width: 100%;
+}
+
+.subtext {
+  font-family: "Roboto Mono";
+  color: $primaryBackground;
+  font-size: 1em;
+  text-align: left;
+  width: 100%;
+}
+
+.pictureContainer {
+  width: 100%;
+  background: $primaryBackground;
+  position: relative;
+  margin: $spacing 0;
+}
+
+.picture {
+  width: 100%;
+  opacity: 0;
+}
+
+.textAlignRight {
+  text-align: right;
+}
+
+.topSpacing {
+  margin-top: $spacing;
+}
