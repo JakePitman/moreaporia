@@ -8,6 +8,8 @@ import changeThemeImg from "./pictures/change-theme/image.png";
 import ChangeThemeBluePrint from "./pictures/change-theme/Blueprint";
 import guitarChordsImg from "./pictures/guitar-chords/image.png";
 import GuitarChordsBluePrint from "./pictures/guitar-chords/Blueprint";
+import gameOfLifeImg from "./pictures/game-of-life/image.png";
+import GameOfLifeBluePrint from "./pictures/game-of-life/Blueprint";
 
 const ProjectReelData: Props[] = [
   // CHANGE THEME
@@ -101,6 +103,7 @@ const ProjectReelData: Props[] = [
         href: "https://github.com/JakePitman/logic-calculator",
       },
     ],
+    isReversed: false,
     children: (
       <>
         <p className={styles.bodyText}>
@@ -110,6 +113,44 @@ const ProjectReelData: Props[] = [
         <p className={styles.bodyText}>
           Teaching a computer how something works demands perfect understanding
           of the subject. I learned a lot by making this.
+        </p>
+      </>
+    ),
+  },
+  // GAME OF LIFE
+  {
+    imgSrc: gameOfLifeImg,
+    imgAlt: "Game of life",
+    Blueprint: GameOfLifeBluePrint,
+    title: "Game of Life",
+    year: "2019",
+    tools: [
+      { name: "React", href: "https://reactjs.org/" },
+      {
+        name: "styled-components",
+        href: "https://styled-components.com/",
+      },
+    ],
+    links: [
+      {
+        Icon: BsGithub,
+        href: "https://github.com/JakePitman/game-of-life-react",
+      },
+    ],
+    isReversed: true,
+    children: (
+      <>
+        <p className={styles.bodyText}>
+          An app I built in my spare time when I got my first engineering job,
+          to build my React skills.
+        </p>
+        <p className={styles.bodyText}>
+          A set of rules determines whether a cell lives or dies between cycles.
+          Read more about this fascinating game{" "}
+          <a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life">
+            here
+          </a>
+          .
         </p>
       </>
     ),
