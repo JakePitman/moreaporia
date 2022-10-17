@@ -21,12 +21,12 @@ const colorGradients: [string, string][] = [
 ];
 
 const flipCardDataLandscape = [
-  { title: "Chess", icon: <FaSwimmer />, rotate: -15, tagRotation: 15 },
+  { title: "Swimmer", icon: <FaSwimmer />, rotate: -15, tagRotation: 15 },
   { title: "Guitar", icon: <FaGuitar />, rotate: -3, tagRotation: 5 },
   { title: "Code", icon: <FaTerminal />, rotate: 13, tagRotation: -6 },
 ];
 const flipCardDataPortrait = [
-  { title: "Chess", icon: <FaSwimmer />, rotate: 8 },
+  { title: "Swimmer", icon: <FaSwimmer />, rotate: 8 },
   { title: "Guitar", icon: <FaGuitar />, rotate: 2 },
   { title: "Code", icon: <FaTerminal />, rotate: -10 },
 ];

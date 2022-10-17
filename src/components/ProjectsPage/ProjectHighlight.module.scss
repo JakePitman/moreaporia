@@ -11,6 +11,7 @@
 }
 .pageContainerPortrait {
   @extend .pageContainer;
+  height: calc(100vh - $topNavHeightPortrait);
   flex-direction: column;
   justify-content: space-around;
 }
@@ -83,6 +84,7 @@ $imageHeightPortrait: 50vh;
   font-weight: bold;
   font-size: 7em;
   text-align: center;
+  padding: 0 10px;
 }
 .titlePortrait {
   @extend .title;

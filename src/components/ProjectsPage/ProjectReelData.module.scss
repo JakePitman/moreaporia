@@ -1,0 +1,8 @@
+@import "../../shared/colors.module.scss";
+
+.bodyText {
+  color: $primaryBackground;
+  font-family: "Roboto Mono";
+  font-size: 1.2em;
+  margin: 10px 0;
+}

@@ -8,6 +8,7 @@ import BrowserContext from "../../shared/browserContext";
 import AppleStoreLogo from "./AppleStoreLogo";
 import BluePrintShape from "./BlueprintShape";
 import colors from "../../shared/_colors.module.scss";
+import ScrollIndicator from "./ScrollIndicator";
 
 const imageVariants = {
   hidden: { opacity: 0 },
@@ -85,6 +86,7 @@ const PortraitLayout = () => {
         </motion.div>
         <BluePrintShape color={colors.boldBlue} shape="square" />
       </div>
+      <ScrollIndicator />
     </motion.div>
   );
 };
@@ -133,6 +135,7 @@ const LandscapeLayout = () => {
           <AppleStoreLogo size={100} />
         </motion.div>
       </motion.div>
+      <ScrollIndicator absolute />
     </motion.div>
   );
 };

@@ -1,0 +1,91 @@
+@import "../../shared/colors.module.scss";
+
+$containerHeight: 45vh;
+
+.container {
+  height: $containerHeight;
+  display: flex;
+  margin: 50px 0;
+}
+
+.containerReversed {
+  flex-direction: row-reverse;
+}
+
+.imageContainer {
+  width: calc($containerHeight * 1.2);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.image {
+  width: 100%;
+}
+
+.infoContainer {
+  width: calc($containerHeight * 1.2);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.infoContainerReversed {
+  align-items: flex-end;
+  text-align: right;
+}
+
+.title {
+  font-family: "Tomorrow";
+  color: $boldBlue;
+  font-size: 3.5em;
+}
+
+.subtext {
+  font-family: "Roboto Mono";
+  color: $offWhite;
+  font-size: 1.5em;
+}
+
+.bodyTextContainer {
+  background: linear-gradient(45deg, $gradient2, $gradient3);
+  width: 102%;
+  flex: 0.8;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 15px;
+  opacity: 0.85;
+  z-index: 1;
+  box-shadow: 10px 10px 20px;
+}
+
+.bodyTextContainerReversed {
+  background: linear-gradient(45deg, $gradient3, $gradient2);
+}
+
+.tools {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.tool {
+  color: $offWhite;
+  text-decoration: none;
+}
+
+.toolSeparator {
+  display: inline;
+  color: $greyBlue;
+  font-size: 2rem;
+}
+
+.textAlignRight {
+  text-align: right;
+}
