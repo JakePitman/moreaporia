@@ -24,9 +24,19 @@
   font-family: "Rock Salt";
   font-weight: bold;
   color: $boldBlue;
+  font-size: 1.6em;
 }
 
 .textSegment {
   font-family: Roboto mono;
   color: $offWhite;
+  font-size: 1.4em;
+}
+
+$textSpacing: 0.5em;
+.spacingLeft {
+  margin-left: $textSpacing;
+}
+.spacingRight {
+  margin-right: $textSpacing;
 }
