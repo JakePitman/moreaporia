@@ -86,7 +86,7 @@ const PortraitLayout = () => {
         </motion.div>
         <BluePrintShape color={colors.boldBlue} shape="square" />
       </div>
-      <ScrollIndicator />
+      <ScrollIndicator delay={1} />
     </motion.div>
   );
 };
@@ -135,7 +135,7 @@ const LandscapeLayout = () => {
           <AppleStoreLogo size={100} />
         </motion.div>
       </motion.div>
-      <ScrollIndicator absolute />
+      <ScrollIndicator delay={5} absolute />
     </motion.div>
   );
 };

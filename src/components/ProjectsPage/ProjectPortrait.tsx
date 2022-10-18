@@ -10,6 +10,14 @@ const imageVariants = {
   hidden: { opacity: 0 },
   renderImage: { opacity: 1 },
 };
+const textSectionVariants = ({ leftOffset }: { leftOffset: number }) => ({
+  hidden: { left: leftOffset, opacity: 0 },
+  drawSVG: {
+    left: 0,
+    opacity: 1,
+    transition: { duration: 0.4, type: "spring", bounce: 0.2 },
+  },
+});
 
 const ProjectPortrait = ({
   title,
@@ -33,12 +41,17 @@ const ProjectPortrait = ({
         await controls.start("renderImage");
         setHasAnimated(true);
       }}
-      viewport={{ once: true, margin: "-30%" }}
+      viewport={{ once: true, margin: "-50%" }}
       initial="hidden"
     >
-      <h2 className={styles.title}>{title}</h2>
-      <p className={styles.subtext}>{year}</p>
-      <motion.div className={styles.pictureContainer}>
+      <motion.div
+        className={styles.textSectionTop}
+        variants={textSectionVariants({ leftOffset: -500 })}
+      >
+        <h2 className={styles.title}>{title}</h2>
+        <p className={styles.subtext}>{year}</p>
+      </motion.div>
+      <div className={styles.pictureContainer}>
         <motion.img
           variants={imageVariants}
           className={styles.picture}
@@ -46,32 +59,37 @@ const ProjectPortrait = ({
           alt={imgAlt}
         />
         <Blueprint />
-      </motion.div>
-      <p className={classNames(styles.subtext, styles.textAlignRight)}>
-        {tools.map(({ name, href }, i) => (
-          <React.Fragment key={i}>
-            {`${name}${i < tools.length - 1 ? "·" : ""}`}
-          </React.Fragment>
-        ))}
-      </p>
-      <p
-        className={classNames(
-          styles.subtext,
-          styles.textAlignRight,
-          styles.topSpacing
-        )}
+      </div>
+      <motion.div
+        className={styles.textSectionBottom}
+        variants={textSectionVariants({ leftOffset: 500 })}
       >
-        {links.map(({ Icon, href }, i) => (
-          <React.Fragment key={i}>
-            <a href={href} target="_blank" rel="noreferrer">
-              <Icon color={colors.primaryBackground} size={25} />
-            </a>
-            {i < links.length - 1 ? (
-              <p className={styles.toolSeparator}>·</p>
-            ) : null}
-          </React.Fragment>
-        ))}
-      </p>
+        <p className={classNames(styles.subtext, styles.textAlignRight)}>
+          {tools.map(({ name, href }, i) => (
+            <React.Fragment key={i}>
+              {`${name}${i < tools.length - 1 ? "·" : ""}`}
+            </React.Fragment>
+          ))}
+        </p>
+        <p
+          className={classNames(
+            styles.subtext,
+            styles.textAlignRight,
+            styles.topSpacing
+          )}
+        >
+          {links.map(({ Icon, href }, i) => (
+            <React.Fragment key={i}>
+              <a href={href} target="_blank" rel="noreferrer">
+                <Icon color={colors.primaryBackground} size={25} />
+              </a>
+              {i < links.length - 1 ? (
+                <p className={styles.toolSeparator}>·</p>
+              ) : null}
+            </React.Fragment>
+          ))}
+        </p>
+      </motion.div>
     </motion.div>
   );
 };

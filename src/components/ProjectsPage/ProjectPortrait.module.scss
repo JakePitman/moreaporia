@@ -3,15 +3,14 @@
 $spacing: 5px;
 
 .container {
-  background: linear-gradient(45deg, $gradient2, $gradient3);
-  border-radius: 5px;
+  background: transparent;
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-shadow: 10px 10px 20px;
   width: 90vw;
   margin: 20px 0;
   padding: $spacing;
+  position: relative;
 }
 
 .title {
@@ -30,10 +29,43 @@ $spacing: 5px;
   width: 100%;
 }
 
+.textSection {
+  width: 100%;
+  background: linear-gradient(90deg, $gradient2, $gradient3);
+  position: relative;
+  padding: 0 10px;
+}
+.textSectionTop {
+  @extend .textSection;
+}
+.textSectionBottom {
+  @extend .textSection;
+}
+.textSectionTop:after {
+  content: '';
+  position: absolute;
+  top: 0; right: 0;
+  border-top: 40px solid $primaryBackground;
+  border-left: 40px solid transparent;
+  width: 0;
+}
+
+.textSectionBottom:after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0;
+  border-top: 40px solid transparent;
+  border-left: 40px solid $primaryBackground;
+  width: 0;
+}
+
+
 .pictureContainer {
   width: 100%;
+  height: 0%;
   background: $primaryBackground;
   position: relative;
+  background: $primaryBackground;
   margin: $spacing 0;
 }
 
