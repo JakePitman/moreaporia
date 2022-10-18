@@ -33,6 +33,7 @@ $spacing: 5px;
   width: 100%;
   background: linear-gradient(90deg, $gradient2, $gradient3);
   position: relative;
+  padding: 0 10px;
 }
 .textSectionTop {
   @extend .textSection;
