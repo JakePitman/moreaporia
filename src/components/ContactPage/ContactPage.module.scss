@@ -1,4 +1,14 @@
 @import "../../shared/_colors.module.scss";
+@import "../../shared/spacing.module.scss";
+
+.pageContainer {
+  width: 100%;
+  height: calc(100vh - $topNavHeightLandscape);
+  margin-top: $topNavHeightLandscape;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .textContainer {
 

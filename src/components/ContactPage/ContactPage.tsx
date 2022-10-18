@@ -14,6 +14,7 @@ const ContactPage = () => {
 
   return (
     <motion.div
+      className={styles.pageContainer}
       animate={controls}
       onViewportEnter={() => openingSequence()}
       initial="hidden"
