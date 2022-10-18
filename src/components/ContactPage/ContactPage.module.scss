@@ -1,4 +1,3 @@
-@import "../../shared/_colors.module.scss";
 @import "../../shared/spacing.module.scss";
 
 .pageContainer {
@@ -12,32 +11,4 @@
 
 .textContainer {
 
-}
-
-.textRow {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-.highlightedText {
-  font-family: "Rock Salt";
-  font-weight: bold;
-  color: $boldBlue;
-  font-size: 1.6em;
-  position: relative;
-}
-
-.textSegment {
-  font-family: Roboto mono;
-  color: $offWhite;
-  font-size: 1.4em;
-}
-
-$textSpacing: 0.5em;
-.spacingLeft {
-  margin-left: $textSpacing;
-}
-.spacingRight {
-  margin-right: $textSpacing;
 }
