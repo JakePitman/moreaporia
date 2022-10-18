@@ -6,16 +6,17 @@ import styles from "./ScrollIndicator.module.scss";
 import colors from "../../shared/_colors.module.scss";
 
 type Props = {
+  delay?: number;
   absolute?: boolean;
 };
 
-const ScrollIndicator = ({ absolute = false }: Props) => {
+const ScrollIndicator = ({ delay = 0, absolute = false }: Props) => {
   return (
     <motion.div
       className={absolute ? styles.containerAbsolute : styles.containerRelative}
       animate={{ opacity: 1 }}
       transition={{
-        delay: 5,
+        delay: delay,
         repeat: Infinity,
         repeatType: "reverse",
         duration: 1,
