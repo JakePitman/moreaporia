@@ -5,12 +5,37 @@ import classNames from "classnames";
 import BrowserContext from "../../shared/browserContext";
 import styles from "./ContactPage.module.scss";
 
+const highlightedTextVariants = ({
+  delay,
+  xOffset,
+  yOffset,
+}: {
+  delay: number;
+  xOffset: number;
+  yOffset: number;
+}) => ({
+  hidden: { opacity: 0, x: xOffset, y: yOffset, scale: 0.9 },
+  firstText: {
+    opacity: 1,
+    x: 0,
+    y: 0,
+    transition: { delay, duration: 4 - delay },
+  },
+  fade: { opacity: 0.5 },
+  secondText: { opacity: 1, scale: 1 },
+});
+const textSegmentVariants = {
+  hidden: { opacity: 0, scale: 0.9 },
+  secondText: { opacity: 1, scale: 1 },
+};
+
 const ContactPage = () => {
   const { isLandscape } = useContext(BrowserContext);
   const controls = useAnimation();
   const openingSequence = async () => {
-    await controls.start("draw");
-    await controls.start("imagesAppear");
+    await controls.start("firstText");
+    await controls.start("fade");
+    await controls.start("secondText");
   };
 
   return (
@@ -22,16 +47,36 @@ const ContactPage = () => {
     >
       <div className={styles.textContainer}>
         <div className={styles.textRow}>
-          <h3
+          <motion.h3
+            variants={highlightedTextVariants({
+              delay: 0.2,
+              xOffset: -30,
+              yOffset: -40,
+            })}
             className={classNames(styles.highlightedText, styles.spacingRight)}
           >
             Express
-          </h3>
-          <h3 className={styles.textSegment}>yourself</h3>
+          </motion.h3>
+          <motion.h3
+            variants={textSegmentVariants}
+            className={styles.textSegment}
+          >
+            yourself
+          </motion.h3>
         </div>
         <div className={styles.textRow}>
-          <h3 className={styles.textSegment}>This is</h3>
-          <h3
+          <motion.h3
+            variants={textSegmentVariants}
+            className={styles.textSegment}
+          >
+            This is
+          </motion.h3>
+          <motion.h3
+            variants={highlightedTextVariants({
+              delay: 0.4,
+              xOffset: 50,
+              yOffset: -20,
+            })}
             className={classNames(
               styles.highlightedText,
               styles.spacingLeft,
@@ -39,12 +84,27 @@ const ContactPage = () => {
             )}
           >
             your
-          </h3>
-          <h3 className={styles.textSegment}>chance to stand out</h3>
+          </motion.h3>
+          <motion.h3
+            variants={textSegmentVariants}
+            className={styles.textSegment}
+          >
+            chance to stand out
+          </motion.h3>
         </div>
         <div className={styles.textRow}>
-          <h3 className={styles.textSegment}>To create a</h3>
-          <h3
+          <motion.h3
+            variants={textSegmentVariants}
+            className={styles.textSegment}
+          >
+            To create a
+          </motion.h3>
+          <motion.h3
+            variants={highlightedTextVariants({
+              delay: 0.6,
+              xOffset: -50,
+              yOffset: 20,
+            })}
             className={classNames(
               styles.highlightedText,
               styles.spacingLeft,
@@ -52,12 +112,27 @@ const ContactPage = () => {
             )}
           >
             unique
-          </h3>
-          <h3 className={styles.textSegment}>platform</h3>
+          </motion.h3>
+          <motion.h3
+            variants={textSegmentVariants}
+            className={styles.textSegment}
+          >
+            platform
+          </motion.h3>
         </div>
         <div className={styles.textRow}>
-          <h3 className={styles.textSegment}>And to make your</h3>
-          <h3
+          <motion.h3
+            variants={textSegmentVariants}
+            className={styles.textSegment}
+          >
+            And to make your
+          </motion.h3>
+          <motion.h3
+            variants={highlightedTextVariants({
+              delay: 0.8,
+              xOffset: 30,
+              yOffset: 40,
+            })}
             className={classNames(
               styles.highlightedText,
               styles.spacingLeft,
@@ -65,8 +140,13 @@ const ContactPage = () => {
             )}
           >
             vision
-          </h3>
-          <h3 className={styles.textSegment}>a reality</h3>
+          </motion.h3>
+          <motion.h3
+            variants={textSegmentVariants}
+            className={styles.textSegment}
+          >
+            a reality
+          </motion.h3>
         </div>
       </div>
     </motion.div>
