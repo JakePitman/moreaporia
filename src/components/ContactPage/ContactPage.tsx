@@ -19,8 +19,14 @@ const ContactPage = () => {
     setAnimationCompleted(true);
   };
 
+  const splineContainerVariants = {
+    splineStarted: {
+      opacity: 1,
+    },
+  };
+
   useEffect(() => {
-    splineStarted && controls.start("finalFade");
+    splineStarted && controls.start("splineStarted");
   }, [splineStarted, controls]);
 
   return isLandscape ? (
@@ -30,12 +36,9 @@ const ContactPage = () => {
       onViewportEnter={() => openingSequence()}
       initial="hidden"
     >
-      <div
-        className={
-          splineStarted
-            ? styles.splineContainerStarted
-            : styles.splineContainerWaiting
-        }
+      <motion.div
+        variants={splineContainerVariants}
+        className={styles.splineContainer}
       >
         {animationCompleted && isLandscape && (
           <Spline
@@ -43,7 +46,7 @@ const ContactPage = () => {
             onStart={() => setSplineStarted(true)}
           />
         )}
-      </div>
+      </motion.div>
       <InitialText />
     </motion.div>
   ) : (

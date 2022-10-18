@@ -22,12 +22,12 @@ const highlightedTextVariants = ({
   },
   initialFade: { opacity: 0.5 },
   secondText: { opacity: 1, scale: 1 },
-  finalFade: { opacity: 0 },
+  splineStarted: { opacity: 0 },
 });
 const textSegmentVariants = {
   hidden: { opacity: 0, scale: 0.9 },
   secondText: { opacity: 1, scale: 1 },
-  finalFade: { opacity: 0 },
+  splineStarted: { opacity: 0 },
 };
 
 const InitialText = () => {

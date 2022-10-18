@@ -10,7 +10,8 @@
   position: relative;
 }
 
-@mixin splineContainer {
+.splineContainer {
+  opacity: 0;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -28,18 +29,7 @@
   }
   @media (max-width: 600px) {
     transform: scale(0.3)
-  }
-}
-
-.splineContainerWaiting {
-  @include splineContainer;
-  opacity: 0;
-}
-
-.splineContainerStarted {
-  @include splineContainer;
-  opacity: 0.3;
-  z-index: 1;
+  };
 }
 
 .textContainer {
