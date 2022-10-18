@@ -10,20 +10,6 @@ const imageVariants = {
   hidden: { opacity: 0 },
   renderImage: { opacity: 1 },
 };
-// const textSectionTopVariants = {
-//   hidden: { left: -400 },
-//   drawSVG: {
-//     left: 0,
-//     transition: { duration: 0.4, type: "spring", bounce: 0.2 },
-//   },
-// };
-// const textSectionBottomVariants = {
-//   hidden: { left: 400 },
-//   drawSVG: {
-//     left: 0,
-//     transition: { duration: 0.4, type: "spring", bounce: 0.2 },
-//   },
-// };
 const textSectionVariants = ({ leftOffset }: { leftOffset: number }) => ({
   hidden: { left: leftOffset },
   drawSVG: {
