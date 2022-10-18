@@ -20,12 +20,14 @@ const highlightedTextVariants = ({
     y: 0,
     transition: { delay, duration: 4 - delay },
   },
-  fade: { opacity: 0.5 },
+  initialFade: { opacity: 0.5 },
   secondText: { opacity: 1, scale: 1 },
+  finalFade: { opacity: 0 },
 });
 const textSegmentVariants = {
   hidden: { opacity: 0, scale: 0.9 },
   secondText: { opacity: 1, scale: 1 },
+  finalFade: { opacity: 0 },
 };
 
 const InitialText = () => {
