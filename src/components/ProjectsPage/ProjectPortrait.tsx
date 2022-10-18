@@ -54,7 +54,7 @@ const ProjectPortrait = ({
         await controls.start("renderImage");
         setHasAnimated(true);
       }}
-      viewport={{ once: true, margin: "-30%" }}
+      viewport={{ once: true, margin: "-50%" }}
       initial="hidden"
     >
       <motion.div
