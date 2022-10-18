@@ -1,0 +1,21 @@
+@import "../../shared/_colors.module.scss";
+
+.textContainer {
+
+}
+
+.textRow {
+  display: flex;
+  flex-direction: row;
+}
+
+.highlightedText {
+  font-family: "Rock Salt";
+  font-weight: bold;
+  color: $boldBlue;
+}
+
+.textSegment {
+  font-family: Roboto mono;
+  color: $offWhite;
+}

@@ -63,8 +63,7 @@ $imageHeightPortrait: 50vh;
 
 .text {
   color: $lightBlue;
-  font-family: "Roboto Mono";
-  font-weight: bold;
+  font-family: "Roboto Mono-bold";
   text-align: center;
   font-size: 2em;
 }
@@ -81,7 +80,6 @@ $imageHeightPortrait: 50vh;
 .title {
   color: $boldBlue;
   font-family: "Tomorrow";
-  font-weight: bold;
   font-size: 7em;
   text-align: center;
   padding: 0 10px;
