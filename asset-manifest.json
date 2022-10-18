@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.f1e9cf86.css",
-    "main.js": "/static/js/main.7dbbcce9.js",
+    "main.css": "/static/css/main.6c6c4862.css",
+    "main.js": "/static/js/main.af9747d9.js",
     "static/js/232.627113bf.chunk.js": "/static/js/232.627113bf.chunk.js",
     "static/js/787.2fc9bcc6.chunk.js": "/static/js/787.2fc9bcc6.chunk.js",
     "static/media/castle_hill.png": "/static/media/castle_hill.5e391771c0e49be30730.png",
@@ -11,14 +11,19 @@
     "static/media/guitar.png": "/static/media/guitar.5f6d81c20cd05a6ac8ca.png",
     "static/media/image.png": "/static/media/image.a3b395cc32b3a2b4c8c4.png",
     "static/media/test-brown-phone.png": "/static/media/test-brown-phone.f8466e5131811add0ad7.png",
+    "static/media/RockSalt-Regular.ttf": "/static/media/RockSalt-Regular.95f10efb43f0ccd46405.ttf",
+    "static/media/RobotoMono-Bold.ttf": "/static/media/RobotoMono-Bold.75b94c9034e8b3eabc95.ttf",
+    "static/media/RobotoMono-Regular.ttf": "/static/media/RobotoMono-Regular.34e46962590bff8eefe5.ttf",
+    "static/media/Tomorrow-ExtraLight.ttf": "/static/media/Tomorrow-ExtraLight.111dd621c03c0f978e98.ttf",
+    "static/media/Tomorrow-Regular.ttf": "/static/media/Tomorrow-Regular.2542f093e1f1d0812d57.ttf",
     "index.html": "/index.html",
-    "main.f1e9cf86.css.map": "/static/css/main.f1e9cf86.css.map",
-    "main.7dbbcce9.js.map": "/static/js/main.7dbbcce9.js.map",
+    "main.6c6c4862.css.map": "/static/css/main.6c6c4862.css.map",
+    "main.af9747d9.js.map": "/static/js/main.af9747d9.js.map",
     "232.627113bf.chunk.js.map": "/static/js/232.627113bf.chunk.js.map",
     "787.2fc9bcc6.chunk.js.map": "/static/js/787.2fc9bcc6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f1e9cf86.css",
-    "static/js/main.7dbbcce9.js"
+    "static/css/main.6c6c4862.css",
+    "static/js/main.af9747d9.js"
   ]
 }
