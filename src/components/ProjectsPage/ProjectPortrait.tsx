@@ -11,9 +11,10 @@ const imageVariants = {
   renderImage: { opacity: 1 },
 };
 const textSectionVariants = ({ leftOffset }: { leftOffset: number }) => ({
-  hidden: { left: leftOffset },
+  hidden: { left: leftOffset, opacity: 0 },
   drawSVG: {
     left: 0,
+    opacity: 1,
     transition: { duration: 0.4, type: "spring", bounce: 0.2 },
   },
 });
@@ -45,7 +46,7 @@ const ProjectPortrait = ({
     >
       <motion.div
         className={styles.textSectionTop}
-        variants={textSectionVariants({ leftOffset: -400 })}
+        variants={textSectionVariants({ leftOffset: -500 })}
       >
         <h2 className={styles.title}>{title}</h2>
         <p className={styles.subtext}>{year}</p>
@@ -61,7 +62,7 @@ const ProjectPortrait = ({
       </div>
       <motion.div
         className={styles.textSectionBottom}
-        variants={textSectionVariants({ leftOffset: 400 })}
+        variants={textSectionVariants({ leftOffset: 500 })}
       >
         <p className={classNames(styles.subtext, styles.textAlignRight)}>
           {tools.map(({ name, href }, i) => (
