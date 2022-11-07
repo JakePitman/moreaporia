@@ -4,7 +4,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@emailjs/browser": "^3.9.0",
     "@splinetool/react-spline": "^2.2.1",
     "@splinetool/runtime": "^0.9.78",
     "@testing-library/jest-dom": "^5.14.1",
