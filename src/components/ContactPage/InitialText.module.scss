@@ -1,5 +1,9 @@
 @import "../../shared/_colors.module.scss";
 
+.textContainer {
+  position: absolute;
+}
+
 .textRow {
   display: flex;
   flex-direction: row;
