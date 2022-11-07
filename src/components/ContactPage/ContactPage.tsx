@@ -5,6 +5,7 @@ import { motion, useAnimation } from "framer-motion";
 import BrowserContext from "../../shared/browserContext";
 import styles from "./ContactPage.module.scss";
 import InitialText from "./InitialText";
+import ContactForm from "./ContactForm";
 
 const ContactPage = () => {
   const { isLandscape } = useContext(BrowserContext);
@@ -36,6 +37,7 @@ const ContactPage = () => {
       onViewportEnter={() => openingSequence()}
       initial="hidden"
     >
+      <ContactForm />
       <motion.div
         variants={splineContainerVariants}
         className={styles.splineContainer}
