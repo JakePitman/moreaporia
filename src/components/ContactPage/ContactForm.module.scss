@@ -16,6 +16,7 @@ $standardPadding: 20px;
 }
 
 .heading {
+  position: relative;
   width: calc(100% - $standardPadding * 2);
   font-family: "Tomorrow";
   color: $boldBlue;
