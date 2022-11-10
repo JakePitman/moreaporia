@@ -38,7 +38,20 @@ $standardPadding: 20px;
   // }
 }
 
+@mixin fieldAnimation {
+  position: relative;
+  left: 0;
+  transition: left 0.5s;
+
+  &:focus {
+    outline: none;
+    left: 10px;
+  }
+}
+
 .inputField {
+  @include fieldAnimation;
+
   width: calc(100% - $standardPadding * 2);
   color: $boldBlue;
   background: $boldBlueBackground;
@@ -49,6 +62,8 @@ $standardPadding: 20px;
 }
 
 .textArea {
+  @include fieldAnimation;
+
   width: calc(100% - $standardPadding * 2);
   color: $boldBlue;
   background: $boldBlueBackground;
