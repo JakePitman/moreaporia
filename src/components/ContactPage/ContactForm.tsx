@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import colors from "../../shared/_colors.module.scss";
 
 import styles from "./ContactForm.module.scss";
 
@@ -25,6 +26,7 @@ const subsectionVariants = {
   },
   expandForm: {
     margin: 2,
+    borderColor: colors.boldBlue,
   },
 };
 
