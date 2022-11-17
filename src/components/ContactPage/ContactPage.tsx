@@ -30,7 +30,6 @@ const ContactPage = () => {
     const startSplineAnimation = async () => {
       await controls.start("splineStarted");
       await controls.start("slideFormFields");
-      await controls.start("expandForm");
     };
     splineStarted && startSplineAnimation();
   }, [splineStarted, controls]);

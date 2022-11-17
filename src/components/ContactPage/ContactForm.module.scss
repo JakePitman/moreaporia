@@ -13,6 +13,13 @@ $standardPadding: 20px;
   display: flex;
   flex-direction: column;
   width: 100%;
+  scale: 0.95;
+
+  transition: scale 0.5s;
+}
+
+.form.touched {
+  scale: 1;
 }
 
 .heading {
@@ -26,22 +33,13 @@ $standardPadding: 20px;
   border-left: 1px solid $boldBlue;
   border-right: 1px solid $boldBlue;
   padding: $standardPadding;
-
-  // TODO: Figure out how to make this work with a border
-  // &:after {
-  //   content: '';
-  //   position: absolute;
-  //   top: 0; right: 0;
-  //   border-top: 40px solid $primaryBackground;
-  //   border-left: 40px solid transparent;
-  //   width: 0;
-  // }
+  transition: margin 0.5s;
 }
 
 @mixin fieldAnimation {
   position: relative;
   left: 0;
-  transition: left 0.5s;
+  transition: left 0.5s, margin 0.5s;
 
   &:focus {
     outline: none;
@@ -83,6 +81,7 @@ $standardPadding: 20px;
   border-right: 1px solid $boldBlue;
   border-left: 1px solid $boldBlue;
   cursor: not-allowed;
+  transition: margin 0.5s;
 }
 
 .submitButtonContainer.validated {
@@ -122,6 +121,15 @@ $standardPadding: 20px;
   border: none;
   color: $boldBlue;
 }
+
+.touched > .heading,
+.touched > label > .inputField,
+.touched > label > .textArea,
+.touched > .submitButtonContainer {
+  margin: 2px;
+  border-color: $boldBlue;
+}
+
 
 .validated > .submitButton {
   color: $primaryYellow;
