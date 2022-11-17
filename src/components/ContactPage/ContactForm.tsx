@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import colors from "../../shared/_colors.module.scss";
+import classNames from "classnames";
 
 import styles from "./ContactForm.module.scss";
 
@@ -31,6 +32,8 @@ const subsectionVariants = {
 };
 
 const ContactForm = () => {
+  const [formIsValidated, setFormIsValidated] = useState(false);
+
   return (
     <div className={styles.container}>
       <motion.form
@@ -72,10 +75,14 @@ const ContactForm = () => {
           />
         </label>
         <motion.div
-          className={styles.submitButtonContainer}
+          className={classNames({
+            [styles.submitButtonContainer]: true,
+            [styles.validated]: formIsValidated,
+          })}
           variants={subsectionVariants}
         >
-          <div className={styles.submitButtonBackground} />
+          <div className={styles.submitButtonBackgroundDisabled} />
+          <div className={styles.submitButtonBackgroundActive} />
           <button className={styles.submitButton} type="submit">
             Send
           </button>

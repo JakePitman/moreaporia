@@ -82,19 +82,47 @@ $standardPadding: 20px;
   border-bottom: 1px solid $boldBlue;
   border-right: 1px solid $boldBlue;
   border-left: 1px solid $boldBlue;
+  cursor: not-allowed;
 }
 
-.submitButtonBackground {
+.submitButtonContainer.validated {
+  border-color: yellow;
+  cursor: auto;
+}
+
+@mixin submitButtonBackgroundDefaults {
   width: 100%;
   height: 100%;
   position: absolute;
-  background: $boldBlueBackground;
+  opacity: 0.1;
+}
+.submitButtonBackgroundDisabled {
+  @include submitButtonBackgroundDefaults();
+  background: $boldBlue;
+}
+.validated > .submitButtonBackgroundDisabled {
+  @include submitButtonBackgroundDefaults();
+  background: transparent;
+}
+.submitButtonBackgroundActive {
+  @include submitButtonBackgroundDefaults();
+  background: transparent;
+}
+.validated > .submitButtonBackgroundDisabled {
+  @include submitButtonBackgroundDefaults();
+  background: $primaryYellow;
 }
 
 .submitButton {
+  font-family: "Tomorrow";
   width: 100%;
   height: 100%;
   background: transparent;
   padding: $standardPadding;
   border: none;
+  color: $boldBlue;
+}
+
+.validated > .submitButton {
+  color: $primaryYellow;
 }
