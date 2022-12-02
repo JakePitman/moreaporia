@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import colors from "../../shared/_colors.module.scss";
 import classNames from "classnames";
-import { Formik } from "formik";
+import * as EmailValidator from "email-validator";
 
 import styles from "./ContactForm.module.scss";
 
@@ -28,105 +28,119 @@ const subsectionVariants = {
   },
 };
 
-type Errors = {
-  email?: string;
+const validateUsername = (value: string) => value.length > 0;
+const validateEmail = (value: string) => EmailValidator.validate(value);
+const validateMessage = (value: string) => value.length > 20;
+const fieldDefaults = {
+  value: "",
+  isValid: false,
+  hasBeenBlurred: false,
 };
 
 const ContactForm = () => {
+  const [usernameField, setUsernameField] = useState(fieldDefaults);
+  const [emailField, setEmailField] = useState(fieldDefaults);
+  const [messageField, setMessageField] = useState(fieldDefaults);
   const [formIsValidated, setFormIsValidated] = useState(false);
   const [hasBeenTouched, setHasBeenTouched] = useState(false);
 
   return (
     <div className={styles.container} onClick={() => setHasBeenTouched(true)}>
-      <Formik
-        initialValues={{ email: "", password: "" }}
-        validate={(values) => {
-          const errors: Errors = {};
-
-          if (!values.email) {
-            errors.email = "Required";
-          } else if (
-            !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
-          ) {
-            errors.email = "Invalid email address";
-          }
-
-          return errors;
+      <motion.form
+        variants={variants}
+        transition={{
+          staggerChildren: 0.1,
         }}
-        onSubmit={(values, { setSubmitting }) => {
-          setTimeout(() => {
-            alert(JSON.stringify(values, null, 2));
-
-            setSubmitting(false);
-          }, 400);
-        }}
+        className={classNames({
+          [styles.form]: true,
+          [styles.touched]: hasBeenTouched,
+        })}
+        action="https://formspree.io/f/xdojpqba"
+        method="POST"
       >
-        {({
-          values,
-          errors,
-          touched,
-          handleChange,
-          handleBlur,
-          handleSubmit,
-          isSubmitting,
-        }) => (
-          <motion.form
-            variants={variants}
-            transition={{
-              staggerChildren: 0.1,
-            }}
+        <motion.h2 variants={subsectionVariants} className={styles.heading}>
+          Contact me
+        </motion.h2>
+        <label>
+          <motion.input
+            variants={subsectionVariants}
             className={classNames({
-              [styles.form]: true,
-              [styles.touched]: hasBeenTouched,
+              [styles.inputField]: true,
+              [styles.invalidField]:
+                usernameField.hasBeenBlurred && !usernameField.isValid,
             })}
-            action="https://formspree.io/f/xdojpqba"
-            method="POST"
-          >
-            <motion.h2 variants={subsectionVariants} className={styles.heading}>
-              Contact me
-            </motion.h2>
-            <label>
-              <motion.input
-                variants={subsectionVariants}
-                className={styles.inputField}
-                type="username"
-                name="username"
-                placeholder="Your name..."
-              />
-            </label>
-            <label>
-              <motion.input
-                variants={subsectionVariants}
-                className={styles.inputField}
-                type="email"
-                name="email"
-                placeholder="Your email..."
-              />
-            </label>
-            <label>
-              <motion.textarea
-                variants={subsectionVariants}
-                className={styles.textArea}
-                name="message"
-                placeholder="Your message..."
-              />
-            </label>
-            <motion.div
-              className={classNames({
-                [styles.submitButtonContainer]: true,
-                [styles.validated]: formIsValidated,
-              })}
-              variants={subsectionVariants}
-            >
-              <div className={styles.submitButtonBackgroundDisabled} />
-              <div className={styles.submitButtonBackgroundActive} />
-              <button className={styles.submitButton} type="submit">
-                Send
-              </button>
-            </motion.div>
-          </motion.form>
-        )}
-      </Formik>
+            type="username"
+            name="username"
+            placeholder="Your name..."
+            onBlur={() =>
+              setUsernameField({ ...usernameField, hasBeenBlurred: true })
+            }
+            onChange={(e) =>
+              setUsernameField({
+                ...usernameField,
+                isValid: validateUsername(e.target.value),
+              })
+            }
+          />
+        </label>
+        <label>
+          <motion.input
+            variants={subsectionVariants}
+            className={classNames({
+              [styles.inputField]: true,
+              [styles.invalidField]:
+                emailField.hasBeenBlurred && !emailField.isValid,
+            })}
+            type="email"
+            name="email"
+            placeholder="Your email..."
+            onBlur={() =>
+              setEmailField({ ...emailField, hasBeenBlurred: true })
+            }
+            onChange={(e) =>
+              setEmailField({
+                ...emailField,
+                isValid: validateEmail(e.target.value),
+              })
+            }
+          />
+        </label>
+        <label>
+          <motion.textarea
+            variants={subsectionVariants}
+            className={classNames({
+              [styles.textArea]: true,
+              [styles.invalidField]:
+                messageField.hasBeenBlurred && !messageField.isValid,
+            })}
+            name="message"
+            placeholder="Your message..."
+            onBlur={() =>
+              setMessageField({ ...messageField, hasBeenBlurred: true })
+            }
+            onChange={(e) =>
+              setMessageField({
+                ...messageField,
+                isValid: validateMessage(e.target.value),
+              })
+            }
+          />
+        </label>
+        <motion.div
+          className={classNames({
+            [styles.submitButtonContainer]: true,
+            [styles.validated]: formIsValidated,
+          })}
+          variants={subsectionVariants}
+        >
+          <div className={styles.submitButtonBackgroundDisabled} />
+          <div className={styles.submitButtonBackgroundActive} />
+          <button className={styles.submitButton} type="submit">
+            Send
+          </button>
+        </motion.div>
+      </motion.form>
+      )
     </div>
   );
 };

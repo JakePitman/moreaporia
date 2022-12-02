@@ -21,6 +21,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 
   transform: scale(1);
   @media (max-width: 1024px) {

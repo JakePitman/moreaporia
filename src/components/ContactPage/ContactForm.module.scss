@@ -72,6 +72,10 @@ $standardPadding: 20px;
   resize: none;
 }
 
+.invalidField {
+  border-color: red !important;
+}
+
 .submitButtonContainer {
   position: relative;
   width: 100%;

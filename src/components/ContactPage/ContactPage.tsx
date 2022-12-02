@@ -53,7 +53,7 @@ const ContactPage = () => {
           />
         )}
       </motion.div>
-      <InitialText />
+      {/* <InitialText /> */}
     </motion.div>
   ) : (
     <></>
