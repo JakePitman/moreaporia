@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import colors from "../../shared/_colors.module.scss";
 import classNames from "classnames";
@@ -43,6 +43,12 @@ const ContactForm = () => {
   const [messageField, setMessageField] = useState(fieldDefaults);
   const [formIsValidated, setFormIsValidated] = useState(false);
   const [hasBeenTouched, setHasBeenTouched] = useState(false);
+
+  useEffect(() => {
+    setFormIsValidated(
+      usernameField.isValid && emailField.isValid && messageField.isValid
+    );
+  }, [usernameField.isValid, emailField.isValid, messageField.isValid]);
 
   return (
     <div className={styles.container} onClick={() => setHasBeenTouched(true)}>
