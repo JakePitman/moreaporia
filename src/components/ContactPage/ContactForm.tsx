@@ -61,6 +61,7 @@ const ContactForm = () => {
           [styles.form]: true,
           [styles.touched]: hasBeenTouched,
         })}
+        onSubmit={() => alert("SUBMITTING")}
         action="https://formspree.io/f/xdojpqba"
         method="POST"
       >
