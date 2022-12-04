@@ -22,10 +22,6 @@ const subsectionVariants = {
   slideFormFields: {
     translateX: 0,
   },
-  expandForm: {
-    margin: 2,
-    borderColor: colors.boldBlue,
-  },
 };
 
 const validateUsername = (value: string) => value.length > 0;
@@ -113,7 +109,13 @@ const ContactForm = () => {
         </label>
         <label>
           <motion.textarea
-            variants={subsectionVariants}
+            variants={{
+              ...subsectionVariants,
+              expandFormFields: {
+                height: "20vh",
+                transition: { type: "tween", duration: 0.2 },
+              },
+            }}
             className={classNames({
               [styles.textArea]: true,
               [styles.invalidField]:
