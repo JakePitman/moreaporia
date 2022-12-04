@@ -23,11 +23,13 @@ const highlightedTextVariants = ({
   initialFade: { opacity: 0.5 },
   secondText: { opacity: 1, scale: 1 },
   splineStarted: { opacity: 0 },
+  slideFormFields: { display: "none" },
 });
 const textSegmentVariants = {
   hidden: { opacity: 0, scale: 0.9 },
   secondText: { opacity: 1, scale: 1 },
   splineStarted: { opacity: 0 },
+  slideFormFields: { display: "none" },
 };
 
 const InitialText = () => {
