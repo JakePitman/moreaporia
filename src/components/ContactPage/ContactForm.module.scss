@@ -73,7 +73,9 @@ $standardPadding: 20px;
 }
 
 .invalidField {
-  border-color: red !important;
+  border-color: $hotPink !important;
+  background: $hotPinkBackground;
+  color: $hotPink;
 }
 
 .submitButtonContainer {
@@ -106,12 +108,12 @@ $standardPadding: 20px;
 }
 .submitButtonBackgroundActive {
   @include submitButtonBackgroundDefaults();
+  background: $primaryYellowBackground;
   opacity: 0;
   transition: opacity 0.5s;
 }
 .validated > .submitButtonBackgroundActive {
   @include submitButtonBackgroundDefaults();
-  background: $primaryYellowBackground;
   opacity: 1;
 }
 
