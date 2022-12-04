@@ -1,0 +1,145 @@
+@import "../../shared/_colors.module.scss";
+
+$standardPadding: 20px;
+
+.container {
+  z-index: 100;
+  position: absolute;
+  left: 50px;
+  width: 25vw;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  scale: 0.95;
+
+  transition: scale 0.5s;
+}
+
+.form.touched {
+  scale: 1;
+}
+
+.heading {
+  position: relative;
+  width: calc(100% - $standardPadding * 2);
+  font-family: "Tomorrow";
+  color: $boldBlue;
+  background: $boldBlueBackground;
+  border: 1px solid transparent;
+  border-top: 1px solid $boldBlue;
+  border-left: 1px solid $boldBlue;
+  border-right: 1px solid $boldBlue;
+  padding: $standardPadding;
+  transition: margin 0.5s;
+}
+
+@mixin fieldAnimation {
+  position: relative;
+  left: 0;
+  transition: left 0.5s, margin 0.5s;
+
+  &:focus {
+    outline: none;
+    left: 10px;
+  }
+}
+
+.inputField {
+  @include fieldAnimation;
+
+  width: calc(100% - $standardPadding * 2);
+  color: $boldBlue;
+  background: $boldBlueBackground;
+  border: 1px solid $boldBlueBackground;
+  border-left: 1px solid $boldBlue;
+  border-right: 1px solid $boldBlue;
+  padding: $standardPadding;
+}
+
+.textArea {
+  @include fieldAnimation;
+
+  width: calc(100% - $standardPadding * 2);
+  color: $boldBlue;
+  background: $boldBlueBackground;
+  border: 1px solid $boldBlueBackground;
+  border-left: 1px solid $boldBlue;
+  border-right: 1px solid $boldBlue;
+  padding: $standardPadding;
+  resize: none;
+}
+
+.invalidField {
+  border-color: red !important;
+}
+
+.submitButtonContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border: 1px solid $boldBlueBackground;
+  border-bottom: 1px solid $boldBlue;
+  border-right: 1px solid $boldBlue;
+  border-left: 1px solid $boldBlue;
+  cursor: not-allowed;
+  transition: margin 0.5s;
+}
+
+
+@mixin submitButtonBackgroundDefaults {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.submitButtonBackgroundDisabled {
+  @include submitButtonBackgroundDefaults();
+  background: $boldBlueBackground;
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+.validated > .submitButtonBackgroundDisabled {
+  @include submitButtonBackgroundDefaults();
+  opacity: 0;
+}
+.submitButtonBackgroundActive {
+  @include submitButtonBackgroundDefaults();
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.validated > .submitButtonBackgroundActive {
+  @include submitButtonBackgroundDefaults();
+  background: $primaryYellowBackground;
+  opacity: 1;
+}
+
+.submitButton {
+  font-family: "Tomorrow";
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  padding: $standardPadding;
+  border: none;
+  color: $boldBlue;
+  position: relative;
+  z-index: 2
+}
+
+.touched > .heading,
+.touched > label > .inputField,
+.touched > label > .textArea,
+.touched > .submitButtonContainer {
+  margin: 2px;
+  border-color: $boldBlue;
+}
+
+.validated {
+  border-color: $primaryYellow !important;
+  cursor: auto;
+}
+
+.validated > .submitButton {
+  color: $primaryYellow;
+}

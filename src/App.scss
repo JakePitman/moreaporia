@@ -1,7 +1,25 @@
-// Roboto Mono: regular | semi-bold
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;600&display=swap");
-
 @import "./shared/colors.module.scss";
+
+@font-face {
+  font-family: "Rock Salt";
+  src: url(./fonts/RockSalt-Regular.ttf);
+}
+@font-face {
+  font-family: "Tomorrow";
+  src: url(./fonts/Tomorrow-Regular.ttf);
+}
+@font-face {
+  font-family: "Tomorrow-extra-light";
+  src: url(./fonts/Tomorrow-ExtraLight.ttf);
+}
+@font-face {
+  font-family: "Roboto Mono";
+  src: url(./fonts/RobotoMono-Regular.ttf);
+}
+@font-face {
+  font-family: "Roboto Mono-bold";
+  src: url(./fonts/RobotoMono-Bold.ttf);
+}
 
 .App {
   width: 100%;
