@@ -142,7 +142,11 @@ const ContactForm = () => {
         >
           <div className={styles.submitButtonBackgroundDisabled} />
           <div className={styles.submitButtonBackgroundActive} />
-          <button className={styles.submitButton} type="submit">
+          <button
+            className={styles.submitButton}
+            type="submit"
+            disabled={!formIsValidated}
+          >
             Send
           </button>
         </motion.div>

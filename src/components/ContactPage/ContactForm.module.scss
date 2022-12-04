@@ -123,6 +123,8 @@ $standardPadding: 20px;
   padding: $standardPadding;
   border: none;
   color: $boldBlue;
+  position: relative;
+  z-index: 2
 }
 
 .touched > .heading,
