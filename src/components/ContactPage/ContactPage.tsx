@@ -36,7 +36,7 @@ const ContactPage = () => {
     splineStarted && startSplineAnimation();
   }, [splineStarted, controls]);
 
-  return isLandscape ? (
+  return (
     <motion.div
       className={styles.pageContainer}
       animate={controls}
@@ -57,8 +57,6 @@ const ContactPage = () => {
       </motion.div>
       <InitialText />
     </motion.div>
-  ) : (
-    <></>
   );
 };
 

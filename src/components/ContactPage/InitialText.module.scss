@@ -14,14 +14,14 @@
   font-family: "Rock Salt";
   font-weight: bold;
   color: $boldBlue;
-  font-size: 1.6em;
+  font-size: max(20px, 2vw);
   position: relative;
 }
 
 .textSegment {
   font-family: Roboto mono;
   color: $offWhite;
-  font-size: 1.4em;
+  font-size: max(15px, 1.8vw);
 }
 
 $textSpacing: 0.5em;
