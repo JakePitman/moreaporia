@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import { motion } from "framer-motion";
-import colors from "../../shared/_colors.module.scss";
 import classNames from "classnames";
 import * as EmailValidator from "email-validator";
 
+import BrowserContext from "../../shared/browserContext";
 import styles from "./ContactForm.module.scss";
 
 const variants = {
@@ -34,6 +34,7 @@ const fieldDefaults = {
 };
 
 const ContactForm = () => {
+  const { isLandscape } = useContext(BrowserContext);
   const [usernameField, setUsernameField] = useState(fieldDefaults);
   const [emailField, setEmailField] = useState(fieldDefaults);
   const [messageField, setMessageField] = useState(fieldDefaults);
@@ -47,7 +48,12 @@ const ContactForm = () => {
   }, [usernameField.isValid, emailField.isValid, messageField.isValid]);
 
   return (
-    <div className={styles.container} onClick={() => setHasBeenTouched(true)}>
+    <div
+      className={
+        isLandscape ? styles.containerLandscape : styles.containerPortrait
+      }
+      onClick={() => setHasBeenTouched(true)}
+    >
       <motion.form
         variants={variants}
         transition={{
