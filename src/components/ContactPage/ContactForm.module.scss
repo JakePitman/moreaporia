@@ -2,11 +2,15 @@
 
 $standardPadding: 20px;
 
-.container {
+.containerLandscape {
   z-index: 100;
   position: absolute;
   left: 50px;
   width: 25vw;
+}
+
+.containerPortrait {
+  width: 85%
 }
 
 .form {

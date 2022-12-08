@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useCallback, useContext, useEffect, useState } from "react";
 import Spline from "@splinetool/react-spline";
 import { motion, useAnimation } from "framer-motion";
 
@@ -27,16 +27,21 @@ const ContactPage = () => {
     },
   };
 
-  useEffect(() => {
-    const startSplineAnimation = async () => {
-      await controls.start("splineStarted");
-      await controls.start("slideFormFields");
-      await controls.start("expandFormFields");
-    };
-    splineStarted && startSplineAnimation();
-  }, [splineStarted, controls]);
+  const runPostTextAnimation = useCallback(async () => {
+    await controls.start("splineStarted");
+    await controls.start("slideFormFields");
+    await controls.start("expandFormFields");
+  }, [controls]);
 
-  return isLandscape ? (
+  useEffect(() => {
+    splineStarted && runPostTextAnimation();
+  }, [splineStarted, runPostTextAnimation]);
+
+  useEffect(() => {
+    animationCompleted && !isLandscape && runPostTextAnimation();
+  }, [animationCompleted, isLandscape, runPostTextAnimation]);
+
+  return (
     <motion.div
       className={styles.pageContainer}
       animate={controls}
@@ -57,8 +62,6 @@ const ContactPage = () => {
       </motion.div>
       <InitialText />
     </motion.div>
-  ) : (
-    <></>
   );
 };
 
