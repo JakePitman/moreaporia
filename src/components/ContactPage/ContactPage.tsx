@@ -36,6 +36,15 @@ const ContactPage = () => {
     splineStarted && startSplineAnimation();
   }, [splineStarted, controls]);
 
+  useEffect(() => {
+    const startFormAnimation = async () => {
+      await controls.start("splineStarted");
+      await controls.start("slideFormFields");
+      await controls.start("expandFormFields");
+    };
+    animationCompleted && !isLandscape && startFormAnimation();
+  }, [animationCompleted, controls, isLandscape]);
+
   return (
     <motion.div
       className={styles.pageContainer}
