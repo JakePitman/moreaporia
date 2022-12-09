@@ -38,6 +38,7 @@ $standardPadding: 20px;
   border-right: 1px solid $boldBlue;
   padding: $standardPadding;
   transition: margin 0.5s;
+  border-radius: 5px 5px 0 0;
 }
 
 @mixin fieldAnimation {
@@ -94,6 +95,7 @@ $standardPadding: 20px;
   border-left: 1px solid $boldBlue;
   cursor: not-allowed;
   transition: margin 0.5s;
+  border-radius: 0 0 5px 5px;
 }
 
 
@@ -101,6 +103,7 @@ $standardPadding: 20px;
   width: 100%;
   height: 100%;
   position: absolute;
+  border-radius: inherit;
 }
 .submitButtonBackgroundDisabled {
   @include submitButtonBackgroundDefaults();
@@ -132,7 +135,7 @@ $standardPadding: 20px;
   border: none;
   color: $boldBlue;
   position: relative;
-  z-index: 2
+  z-index: 2;
 }
 
 .touched > .heading,
@@ -141,6 +144,7 @@ $standardPadding: 20px;
 .touched > .submitButtonContainer {
   margin: 2px;
   border-color: $boldBlue;
+  border-radius: 5px;
 }
 
 .validated {
