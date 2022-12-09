@@ -61,6 +61,7 @@ $standardPadding: 20px;
   border-left: 1px solid $boldBlue;
   border-right: 1px solid $boldBlue;
   padding: $standardPadding;
+  font-size: 16px;
 }
 
 .textArea {
@@ -74,6 +75,7 @@ $standardPadding: 20px;
   border-right: 1px solid $boldBlue;
   padding: $standardPadding;
   resize: none;
+  font-size: 16px;
 }
 
 .invalidField {
