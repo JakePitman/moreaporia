@@ -17,8 +17,6 @@ const ContactPage = () => {
     await controls.start("firstText");
     await controls.start("initialFade");
     await controls.start("secondText");
-
-    setTimeout(() => setAnimationCompleted(true), 5000);
   };
 
   const splineContainerVariants = {
@@ -60,7 +58,7 @@ const ContactPage = () => {
           />
         )}
       </motion.div>
-      <InitialText />
+      <InitialText setAnimationCompleted={setAnimationCompleted} />
     </motion.div>
   );
 };
