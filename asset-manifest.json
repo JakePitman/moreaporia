@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.9b224881.css",
-    "main.js": "/static/js/main.33f97e30.js",
+    "main.css": "/static/css/main.67b38b34.css",
+    "main.js": "/static/js/main.0e8eb8b4.js",
     "static/js/232.627113bf.chunk.js": "/static/js/232.627113bf.chunk.js",
     "static/js/787.2fc9bcc6.chunk.js": "/static/js/787.2fc9bcc6.chunk.js",
     "static/media/castle_hill.png": "/static/media/castle_hill.5e391771c0e49be30730.png",
@@ -17,13 +17,13 @@
     "static/media/Tomorrow-ExtraLight.ttf": "/static/media/Tomorrow-ExtraLight.111dd621c03c0f978e98.ttf",
     "static/media/Tomorrow-Regular.ttf": "/static/media/Tomorrow-Regular.2542f093e1f1d0812d57.ttf",
     "index.html": "/index.html",
-    "main.9b224881.css.map": "/static/css/main.9b224881.css.map",
-    "main.33f97e30.js.map": "/static/js/main.33f97e30.js.map",
+    "main.67b38b34.css.map": "/static/css/main.67b38b34.css.map",
+    "main.0e8eb8b4.js.map": "/static/js/main.0e8eb8b4.js.map",
     "232.627113bf.chunk.js.map": "/static/js/232.627113bf.chunk.js.map",
     "787.2fc9bcc6.chunk.js.map": "/static/js/787.2fc9bcc6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9b224881.css",
-    "static/js/main.33f97e30.js"
+    "static/css/main.67b38b34.css",
+    "static/js/main.0e8eb8b4.js"
   ]
 }
