@@ -31,12 +31,6 @@ const textSegmentVariants = {
   splineStarted: { opacity: 0 },
   slideFormFields: { display: "none" },
 };
-const letsGoButtonVariants = {
-  hidden: { opacity: 0, scale: 0.9 },
-  secondText: { opacity: 1, scale: 1, transition: { delay: 1, duration: 2 } },
-  splineStarted: { opacity: 0 },
-  slideFormFields: { display: "none" },
-};
 
 type Props = {
   setAnimationCompleted: React.Dispatch<React.SetStateAction<boolean>>;
@@ -150,7 +144,7 @@ const InitialText = ({ setAnimationCompleted }: Props) => {
       <motion.button
         className={styles.letsGoButton}
         onClick={() => setAnimationCompleted(true)}
-        variants={letsGoButtonVariants}
+        variants={textSegmentVariants}
       >
         Let's go
       </motion.button>

@@ -2,12 +2,16 @@
 
 .textContainer {
   position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .textRow {
   display: flex;
   flex-direction: row;
   align-items: center;
+  width: 100%;
 }
 
 .highlightedText {
@@ -30,4 +34,14 @@ $textSpacing: 0.5em;
 }
 .spacingRight {
   margin-right: $textSpacing;
+}
+
+.letsGoButton {
+  color: $primaryYellow;
+  font-size: max(20px, 1.8vw);
+  font-family: Tomorrow;
+  margin-top: 50px;
+
+  border: none;
+  background: none;
 }
